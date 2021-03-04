@@ -28,7 +28,7 @@ const sideNavigation = (props) => {
                 <div className="mr-3">
                   <a href="#">
                     <img
-                      src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                      src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                       width="38"
                       height="38"
                       className="rounded-circle"
