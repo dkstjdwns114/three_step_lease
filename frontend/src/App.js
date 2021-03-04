@@ -24,8 +24,10 @@ export default class App extends Component {
         <div className="page-content">
           <SideNavbar />
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/coordinate_map" component={CoordinateMapPage} />
+            <div className="content-wrapper">
+              <Route exact path="/" component={HomePage} />
+              <Route path="/coordinate_map" component={CoordinateMapPage} />
+            </div>
           </Switch>
         </div>
       </Router>
