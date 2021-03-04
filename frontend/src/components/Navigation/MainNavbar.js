@@ -8,14 +8,17 @@ const mainNavigation = (props) => {
       <div class="navbar-header navbar-dark d-none d-md-flex align-items-md-center">
         <div class="navbar-brand navbar-brand-md">
           <a href="index.html" class="d-inline-block">
-            <img src="../../../../global_assets/images/logo_light.png" alt="" />
+            <img
+              src="https://res.cloudinary.com/anstagram123/image/upload/v1614875896/dev_setups/logo_light_pettms.png"
+              alt=""
+            />
           </a>
         </div>
 
         <div class="navbar-brand navbar-brand-xs">
           <a href="index.html" class="d-inline-block">
             <img
-              src="../../../../global_assets/images/logo_icon_light.png"
+              src="https://res.cloudinary.com/anstagram123/image/upload/v1614876568/dev_setups/logo_c1n8cr.png"
               alt=""
             />
           </a>
@@ -27,7 +30,10 @@ const mainNavigation = (props) => {
       <div class="d-flex flex-1 d-md-none">
         <div class="navbar-brand mr-auto">
           <a href="index.html" class="d-inline-block">
-            <img src="../../../../global_assets/images/logo_dark.png" alt="" />
+            <img
+              src="https://res.cloudinary.com/anstagram123/image/upload/v1614875300/dev_setups/logo_dark_cwjgcz.png"
+              alt=""
+            />
           </a>
         </div>
 
@@ -82,7 +88,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -105,7 +111,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -128,7 +134,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -151,7 +157,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -174,7 +180,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -295,7 +301,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3 position-relative">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -324,7 +330,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3 position-relative">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -351,7 +357,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -379,7 +385,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -405,7 +411,7 @@ const mainNavigation = (props) => {
                   <li class="media">
                     <div class="mr-3">
                       <img
-                        src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                        src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                         width="36"
                         height="36"
                         class="rounded-circle"
@@ -465,7 +471,7 @@ const mainNavigation = (props) => {
               data-toggle="dropdown"
             >
               <img
-                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                src="https://res.cloudinary.com/anstagram123/image/upload/v1614876015/dev_setups/placeholder_jwn8zg.jpg"
                 class="rounded-circle mr-2"
                 height="34"
                 alt=""
