@@ -1,10 +1,11 @@
 .overlaybox {
   position: relative;
-  width: 180px;
-  height: 90px;
+  width: 68px;
+  height: 55px;
   background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/box_movie.png")
     no-repeat;
-  padding: 15px 10px;
+  padding: 10px 0;
+  box-shadow: 1px 1px 1px 1px gray;
 }
 .overlaybox div,
 ul {
@@ -17,57 +18,26 @@ ul {
 }
 .overlaybox .boxtitle {
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-align: center;
 }
 .overlaybox ul {
-  width: 160px;
+  width: 68px;
   text-align: center;
 }
 .overlaybox li {
   position: relative;
-  margin-bottom: 2px;
-  background: #2b2d36;
-  padding: 5px 10px;
-  color: #aaabaf;
+  /* margin-bottom: 2px; */
+  /* background: #2b2d36; */
+  /* padding: 5px 8px; */
+  color: rgb(224, 223, 223);
   line-height: 1;
 }
 .overlaybox li span {
   display: inline-block;
 }
 .overlaybox li .title {
-  font-size: 16px;
-}
-.overlaybox ul .arrow {
-  position: absolute;
-  margin-top: 8px;
-  right: 25px;
-  width: 5px;
-  height: 3px;
-  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/updown.png")
-    no-repeat;
-}
-.overlaybox li .up {
-  background-position: 0 -40px;
-}
-.overlaybox li .down {
-  background-position: 0 -60px;
-}
-.overlaybox li .count {
-  position: absolute;
-  margin-top: 5px;
-  right: 15px;
-  font-size: 10px;
-}
-.overlaybox li:hover {
-  color: #fff;
-  background: #d24545;
-}
-.overlaybox li:hover .up {
-  background-position: 0 0px;
-}
-.overlaybox li:hover .down {
-  background-position: 0 -20px;
+  font-size: 11px;
 }
