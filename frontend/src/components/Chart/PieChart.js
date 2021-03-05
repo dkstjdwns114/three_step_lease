@@ -53,8 +53,8 @@ const pieChart = (props) => {
             <div class="chart-container has-scroll text-center">
               <div class="d-inline-block">
                 <Chart
-                  width={"600px"}
-                  height={"400px"}
+                  width={"500px"}
+                  height={"320px"}
                   chartType="PieChart"
                   loader={<div>Loading Chart</div>}
                   data={[
