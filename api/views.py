@@ -10,14 +10,12 @@ cluster = MongoClient("mongodb://test1:KQ2DmS5BaPpKIBxL@cluster0-shard-00-00.6v2
 
 db = cluster["three-step"]
 
-
-# Create your views here.
 class mainView(APIView):
     def get(self,request):
         return JsonResponse(self.get_data(), json_dumps_params={'ensure_ascii': True})
 
     def get_data(self):
-        print("testView에 들어옴")
+        print("mainView에 들어옴")
         main_info = db['main_info']
 
         busan = db['busan20']
@@ -106,3 +104,25 @@ class mainView(APIView):
         }
 
 
+class cityView(APIView):
+    def get(self, request):
+        return JsonResponse(self.get_data(), json_dumps_params={'ensure_ascii': True})
+
+    def get_data(self):
+        print("cityView에 들어옴")
+    
+        return{
+            'title' : "City View",
+        }
+
+
+class sameCoordinatesView(APIView):
+    def get(self, request):
+        return JsonResponse(self.get_data(), json_dumps_params={'ensure_ascii': True})
+
+    def get_data(self):
+        print("sameCoordinatesView에 들어옴")
+    
+        return{
+            'title' : "Same coordinates View",
+        }
