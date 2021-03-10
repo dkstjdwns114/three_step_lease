@@ -18,11 +18,12 @@ export default class App extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <Router>
         <MainNavbar />
         <div className="page-content">
-          <SideNavbar />
+          <Route path="/" component={SideNavbar} />
           <Switch>
             <div className="content-wrapper">
               <Route exact path="/" component={HomePage} />

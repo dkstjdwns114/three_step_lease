@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const sideNavigation = (props) => {
+const sideNavigation = ({ location }) => {
   return (
     <>
       {/* Main sidebar */}
@@ -32,14 +32,26 @@ const sideNavigation = (props) => {
                 <i className="icon-menu" title="Main"></i>
               </li>
               <li className="nav-item">
-                <Link to="#" className="nav-link">
+                <Link
+                  to="/"
+                  className={
+                    location.pathname === "/" ? "nav-link active" : "nav-link"
+                  }
+                >
                   <i className="icon-home4"></i>
-                  <span>
-                    Main
-                    {/* <span className="d-block font-weight-normal opacity-50">
-                      No active orders
-                    </span> */}
-                  </span>
+                  <span>Main</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/coordinate_map"
+                  className={
+                    location.pathname === "/coordinate_map"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  <i className="icon-sphere"></i> <span>Same Coordinates</span>
                 </Link>
               </li>
               <li className="nav-item nav-item-submenu">
@@ -54,7 +66,7 @@ const sideNavigation = (props) => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="#" className="nav-link active">
+                    <Link to="#" className="nav-link">
                       Layout 2
                     </Link>
                   </li>
@@ -255,14 +267,6 @@ const sideNavigation = (props) => {
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li className="nav-item">
-                <a
-                  href="../../../RTL/default/full/index.html"
-                  className="nav-link"
-                >
-                  <i className="icon-width"></i> <span>RTL version</span>
-                </a>
               </li>
             </ul>
           </div>
