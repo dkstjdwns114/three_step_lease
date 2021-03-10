@@ -59,8 +59,9 @@ export default class HomePage extends Component {
                 {/* /pies */}
               </div>
               <MainMap
-                cardTitle={"2020년 전국 폐업 현황"}
+                cardTitle={"2020년 시도별 폐업 현황"}
                 cities={this.state.ctprvnNm20}
+                numberComma={this.numberWithCommas}
               />
             </div>
           </h2>

@@ -1,9 +1,46 @@
 import React, { useEffect } from "react";
 const { kakao } = window;
-import { Link } from "react-router-dom";
 
 const MainMap = (props) => {
   useEffect(() => {
+    let busan;
+    let chungbuk;
+    let chungnam;
+    let daegu;
+    let daejeon;
+    let gangwon;
+    let gwangju;
+    let gyeonggi;
+    let gyeongbuk;
+    let gyeongnam;
+    let incheon;
+    let jeju;
+    let jeonbuk;
+    let jeonnam;
+    let sejong;
+    let seoul;
+    let ulsan;
+
+    props.cities.forEach((res) => {
+      res.city === "busan" && (busan = res.count);
+      res.city === "chungbuk" && (chungbuk = res.count);
+      res.city === "chungnam" && (chungnam = res.count);
+      res.city === "daegu" && (daegu = res.count);
+      res.city === "daejeon" && (daejeon = res.count);
+      res.city === "gangwon" && (gangwon = res.count);
+      res.city === "gwangju" && (gwangju = res.count);
+      res.city === "gyeonggi" && (gyeonggi = res.count);
+      res.city === "gyeongbuk" && (gyeongbuk = res.count);
+      res.city === "gyeongnam" && (gyeongnam = res.count);
+      res.city === "incheon" && (incheon = res.count);
+      res.city === "jeju" && (jeju = res.count);
+      res.city === "jeonbuk" && (jeonbuk = res.count);
+      res.city === "jeonnam" && (jeonnam = res.count);
+      res.city === "sejong" && (sejong = res.count);
+      res.city === "seoul" && (seoul = res.count);
+      res.city === "ulsan" && (ulsan = res.count);
+    });
+
     const container = document.getElementById("map_marker_simple");
     const options = {
       center: new kakao.maps.LatLng(35.6783, 127.9558),
@@ -25,7 +62,7 @@ const MainMap = (props) => {
           <div class="boxtitle">경기</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(gyeonggi)}개</span>
             </li>
           </ul>
         </div>
@@ -49,7 +86,7 @@ const MainMap = (props) => {
           <div class="boxtitle">서울</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(seoul)}개</span>
             </li>
           </ul>
         </div>
@@ -73,7 +110,7 @@ const MainMap = (props) => {
           <div class="boxtitle">인천</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(incheon)}개</span>
             </li>
           </ul>
         </div>
@@ -97,7 +134,7 @@ const MainMap = (props) => {
           <div class="boxtitle">강원</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(gangwon)}개</span>
             </li>
           </ul>
         </div>
@@ -121,7 +158,7 @@ const MainMap = (props) => {
           <div class="boxtitle">충북</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(chungbuk)}개</span>
             </li>
           </ul>
         </div>
@@ -145,7 +182,7 @@ const MainMap = (props) => {
           <div class="boxtitle">경북</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(gyeongbuk)}개</span>
             </li>
           </ul>
         </div>
@@ -169,7 +206,7 @@ const MainMap = (props) => {
           <div class="boxtitle">충남</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(chungnam)}개</span>
             </li>
           </ul>
         </div>
@@ -193,7 +230,7 @@ const MainMap = (props) => {
           <div class="boxtitle">세종</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(sejong)}개</span>
             </li>
           </ul>
         </div>
@@ -217,7 +254,7 @@ const MainMap = (props) => {
           <div class="boxtitle">대전</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(daejeon)}개</span>
             </li>
           </ul>
         </div>
@@ -241,7 +278,7 @@ const MainMap = (props) => {
           <div class="boxtitle">대구</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(daegu)}개</span>
             </li>
           </ul>
         </div>
@@ -265,7 +302,7 @@ const MainMap = (props) => {
           <div class="boxtitle">전북</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(jeonbuk)}개</span>
             </li>
           </ul>
         </div>
@@ -289,7 +326,7 @@ const MainMap = (props) => {
           <div class="boxtitle">광주</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(gwangju)}개</span>
             </li>
           </ul>
         </div>
@@ -313,7 +350,7 @@ const MainMap = (props) => {
           <div class="boxtitle">전남</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(gyeongnam)}개</span>
             </li>
           </ul>
         </div>
@@ -337,7 +374,7 @@ const MainMap = (props) => {
           <div class="boxtitle">경남</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(jeonnam)}개</span>
             </li>
           </ul>
         </div>
@@ -361,7 +398,7 @@ const MainMap = (props) => {
           <div class="boxtitle">부산</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(busan)}개</span>
             </li>
           </ul>
         </div>
@@ -385,7 +422,7 @@ const MainMap = (props) => {
           <div class="boxtitle">울산</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(ulsan)}개</span>
             </li>
           </ul>
         </div>
@@ -409,7 +446,7 @@ const MainMap = (props) => {
           <div class="boxtitle">제주</div>
           <ul>
             <li class="up">
-              <span class="title">${"123,123개"}</span>
+              <span class="title">${props.numberComma(jeju)}개</span>
             </li>
           </ul>
         </div>
@@ -435,7 +472,7 @@ const MainMap = (props) => {
         </div>
 
         <div class="card-body">
-          <p class="mb-3">
+          {/* <p class="mb-3">
             Example of basic map <code>markers</code>. A marker identifies a
             location on a map. By default, a marker uses a standard image.
             Markers can display custom images, in which case they are usually
@@ -443,8 +480,7 @@ const MainMap = (props) => {
             <code>Marker</code>. Markers are designed to be interactive, you can
             allow users to move a marker on the map by setting the marker's{" "}
             <code>draggable</code> property to <code>true</code>.
-          </p>
-
+          </p> */}
           <div
             class="map-container"
             id="map_marker_simple"
