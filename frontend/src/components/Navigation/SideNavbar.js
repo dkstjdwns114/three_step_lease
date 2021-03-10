@@ -44,9 +44,9 @@ const sideNavigation = ({ location }) => {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/coordinate_map"
+                  to="/same_coordinates"
                   className={
-                    location.pathname === "/coordinate_map"
+                    location.pathname === "/same_coordinates"
                       ? "nav-link active"
                       : "nav-link"
                   }
