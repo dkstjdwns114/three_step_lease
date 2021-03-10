@@ -122,7 +122,35 @@ class sameCoordinatesView(APIView):
 
     def get_data(self):
         print("sameCoordinatesView에 들어옴")
+        main_info = db['main_info']
+        same_coordinates = db['same_coordinates']
+
+        most_area = main_info.find_one({"_id": ObjectId("6048e1f9fba67adf5ccb3855")})
+
+        most_coordinates = main_info.find_one({"_id": ObjectId("6048e6f323a6210c89719201")})
+
+        same_coordinates_info = same_coordinates.find({})
+
+        coordinates_list = []
+
+        for location in same_coordinates_info:
+            coordinates_list.append({'lon': location['lon'], 'lat': location['lat']})
     
-        return{
+        return {
             'title' : "Same coordinates View",
+            'most_area': [
+                {'rate': 1, 'info': most_area['top1']},
+                {'rate': 2, 'info': most_area['top2']},
+                {'rate': 3, 'info': most_area['top3']},
+                {'rate': 4, 'info': most_area['top4']},
+                {'rate': 5, 'info': most_area['top5']},
+            ],
+            'most_coordinates': [
+                {'rate': 1, 'info': most_coordinates['top1']},
+                {'rate': 2, 'info': most_coordinates['top2']},
+                {'rate': 3, 'info': most_coordinates['top3']},
+                {'rate': 4, 'info': most_coordinates['top4']},
+                {'rate': 5, 'info': most_coordinates['top5']},
+            ],
+            'same_coordinates': coordinates_list
         }
