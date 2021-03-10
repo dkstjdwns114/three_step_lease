@@ -3,5 +3,5 @@ from .views import index
 
 urlpatterns = [
     path('', index),
-    path('coordinate_map', index),
+    path('same_coordinates', index),
 ]
