@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { render } from "react-dom";
 import HomePage from "./pages/HomePage";
-import CoordinateMapPage from "./pages/CoordinateMapPage";
+import CoordinateMapPage from "./pages/SameCoordinatesPage";
 import MainNavbar from "./components/Navigation/MainNavbar";
 import SideNavbar from "./components/Navigation/SideNavbar";
 
@@ -18,7 +18,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <Router>
         <MainNavbar />
@@ -27,7 +26,7 @@ export default class App extends Component {
           <Switch>
             <div className="content-wrapper">
               <Route exact path="/" component={HomePage} />
-              <Route path="/coordinate_map" component={CoordinateMapPage} />
+              <Route path="/same_coordinates" component={CoordinateMapPage} />
             </div>
           </Switch>
         </div>
