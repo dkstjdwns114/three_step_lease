@@ -75,13 +75,17 @@ WSGI_APPLICATION = 'three_step.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+"default": {
+    "ENGINE": "djongo",
+    "CLIENT": {
+        "host": "mongodb://test1:KQ2DmS5BaPpKIBxL@cluster0-shard-00-00.6v20o.mongodb.net:27017,cluster0-shard-00-01.6v20o.mongodb.net:27017,cluster0-shard-00-02.6v20o.mongodb.net:27017/three-step?ssl=true&replicaSet=atlas-1s13em-shard-0&authSource=admin&retryWrites=true&w=majority",
+        "username": "test1",
+        "password": "KQ2DmS5BaPpKIBxL",
+        "name": 'three-step',
+        "authMechanism": "SCRAM-SHA-1",
+    },
+}}
 
 
 # Password validation
