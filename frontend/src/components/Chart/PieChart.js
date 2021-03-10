@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Chart from "react-google-charts";
 
@@ -28,6 +28,9 @@ const pieOptions = {
     },
     {
       color: "#97b552"
+    },
+    {
+      color: "#e6693e"
     }
   ],
   chartArea: {
@@ -39,17 +42,46 @@ const pieOptions = {
   backgroundColor: "transparent"
 };
 
-const pieChart = (props) => {
+const PieChart = (props) => {
+  const [qCnt, setQCnt] = useState(0);
+  const [pCnt, setPCnt] = useState(0);
+  const [rCnt, setRCnt] = useState(0);
+  const [dCnt, setDCnt] = useState(0);
+  const [nCnt, setNCnt] = useState(0);
+  const [sCnt, setSCnt] = useState(0);
+  const [fCnt, setFCnt] = useState(0);
+  const [oCnt, setOCnt] = useState(0);
+  const [lCnt, setLCnt] = useState(0);
+  const [totalCnt, setTotalCnt] = useState(0);
+
+  useEffect(() => {
+    let total = 0;
+    props.indsLcls.forEach((res) => {
+      res.type === "소매" && setDCnt(res.count);
+      res.type === "생활서비스" && setFCnt(res.count);
+      res.type === "부동산" && setLCnt(res.count);
+      res.type === "관광/여가/오락" && setNCnt(res.count);
+      res.type === "숙박" && setOCnt(res.count);
+      res.type === "스포츠" && setPCnt(res.count);
+      res.type === "음식" && setQCnt(res.count);
+      res.type === "학문/교육" && setRCnt(res.count);
+      res.type === "의료" && setSCnt(res.count);
+      total += res.count;
+    });
+    setTotalCnt(total);
+  }, []);
   return (
     <>
       <div class="col-md-6">
         <div class="card">
           <div class="card-header header-elements-inline">
-            <h5 class="card-title">{props.cardTitle}</h5>
+            <h5 class="card-title">
+              {props.cardTitle}
+              <br />
+              (총 {props.numberComma(totalCnt)}개)
+            </h5>
           </div>
-
           <div class="card-body">
-            {/* <p class="mb-3">설명</p> */}
             <div class="chart-container has-scroll text-center">
               <div class="d-inline-block">
                 <Chart
@@ -58,12 +90,16 @@ const pieChart = (props) => {
                   chartType="PieChart"
                   loader={<div>Loading Chart</div>}
                   data={[
-                    ["Task", "Hours per Day"],
-                    ["음식점", 10],
-                    ["의료시설", 2],
-                    ["Commute", 2],
-                    ["Watch TV", 2],
-                    ["Sleep", 7]
+                    ["", ""],
+                    ["소매", dCnt],
+                    ["생활서비스", fCnt],
+                    ["부동산", lCnt],
+                    ["관광/여가/오락", nCnt],
+                    ["숙박", oCnt],
+                    ["스포츠", pCnt],
+                    ["음식", qCnt],
+                    ["학문/교육", rCnt],
+                    ["의료", sCnt]
                   ]}
                   options={pieOptions}
                 />
@@ -76,4 +112,4 @@ const pieChart = (props) => {
   );
 };
 
-export default pieChart;
+export default PieChart;
