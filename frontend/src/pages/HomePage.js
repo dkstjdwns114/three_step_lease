@@ -41,10 +41,10 @@ export default class HomePage extends Component {
         {this.state.isLoading ? (
           <h2>Loading...</h2>
         ) : (
-          <h2>
+          <>
             <PageHeader headerTitle={"메인 페이지"} />
-            <div class="content">
-              <div class="row">
+            <div className="content">
+              <div className="row">
                 {/* Pies */}
                 <PieChart
                   cardTitle={"2019년 업종별 폐업 현황"}
@@ -64,7 +64,7 @@ export default class HomePage extends Component {
                 numberComma={this.numberWithCommas}
               />
             </div>
-          </h2>
+          </>
         )}
       </>
     );

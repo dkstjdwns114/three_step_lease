@@ -72,18 +72,18 @@ const PieChart = (props) => {
   }, []);
   return (
     <>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header header-elements-inline">
-            <h5 class="card-title">
+      <div className="col-md-6">
+        <div className="card">
+          <div className="card-header header-elements-inline">
+            <h5 className="card-title">
               {props.cardTitle}
               <br />
               (총 {props.numberComma(totalCnt)}개)
             </h5>
           </div>
-          <div class="card-body">
-            <div class="chart-container has-scroll text-center">
-              <div class="d-inline-block">
+          <div className="card-body">
+            <div className="chart-container has-scroll text-center">
+              <div className="d-inline-block">
                 <Chart
                   width={"500px"}
                   height={"320px"}
