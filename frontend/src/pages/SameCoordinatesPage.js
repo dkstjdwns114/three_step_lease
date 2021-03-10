@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BasicTable from "../components/Table/BasicTable";
 import PageHeader from "../components/Navigation/PageHeader";
+import SameCoordinatesMap from "../components/Map/SameCoordinatesMap";
 
 export default class SameCoordinatesPage extends Component {
   state = {
@@ -51,6 +52,10 @@ export default class SameCoordinatesPage extends Component {
                   contents={this.state.most_coordinates}
                 />
               </div>
+              <SameCoordinatesMap
+                cardTitle={"2019년, 2020년 모두 폐업한 상가"}
+                coordinates={this.state.same_coordinates}
+              />
             </div>
           </>
         )}
