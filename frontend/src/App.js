@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import CoordinateMapPage from "./pages/SameCoordinatesPage";
 import MainNavbar from "./components/Navigation/MainNavbar";
 import SideNavbar from "./components/Navigation/SideNavbar";
+import CityPage from "./pages/CityPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ export default class App extends Component {
             <div className="content-wrapper">
               <Route exact path="/" component={HomePage} />
               <Route path="/same_coordinates" component={CoordinateMapPage} />
+              <Route path="/city/:code" component={CityPage} />
             </div>
           </Switch>
         </div>
