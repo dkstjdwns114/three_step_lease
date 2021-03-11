@@ -134,7 +134,7 @@ class sameCoordinatesView(APIView):
         coordinates_list = []
 
         for location in same_coordinates_info:
-            coordinates_list.append({'lon': location['lon'], 'lat': location['lat']})
+            coordinates_list.append({'rdmAdr': location['rdmAdr'], 'lon': location['lon'], 'lat': location['lat']})
     
         return {
             'title' : "Same coordinates View",
