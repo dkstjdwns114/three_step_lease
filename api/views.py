@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import JsonResponse
 from pymongo import MongoClient
@@ -116,41 +117,39 @@ class cityView(APIView):
         }
 
 
-class sameCoordinatesView(APIView):
-    def get(self, request):
-        return JsonResponse(self.get_data(), json_dumps_params={'ensure_ascii': True})
+@api_view(['GET'])
+def sameCoordinatesView(request):
+    main_info = db['main_info']
+    same_coordinates = db['same_coordinates']
 
-    def get_data(self):
-        print("sameCoordinatesView에 들어옴")
-        main_info = db['main_info']
-        same_coordinates = db['same_coordinates']
+    most_area = main_info.find_one({"_id": ObjectId("6048e1f9fba67adf5ccb3855")})
 
-        most_area = main_info.find_one({"_id": ObjectId("6048e1f9fba67adf5ccb3855")})
+    most_coordinates = main_info.find_one({"_id": ObjectId("6048e6f323a6210c89719201")})
 
-        most_coordinates = main_info.find_one({"_id": ObjectId("6048e6f323a6210c89719201")})
+    same_coordinates_info = same_coordinates.find({})
 
-        same_coordinates_info = same_coordinates.find({})
+    coordinates_list = []
 
-        coordinates_list = []
+    for location in same_coordinates_info:
+        coordinates_list.append({'rdmAdr': location['rdmAdr'], 'lon': location['lon'], 'lat': location['lat']})
 
-        for location in same_coordinates_info:
-            coordinates_list.append({'rdmAdr': location['rdmAdr'], 'lon': location['lon'], 'lat': location['lat']})
-    
-        return {
-            'title' : "Same coordinates View",
-            'most_area': [
-                {'rate': 1, 'info': most_area['top1']},
-                {'rate': 2, 'info': most_area['top2']},
-                {'rate': 3, 'info': most_area['top3']},
-                {'rate': 4, 'info': most_area['top4']},
-                {'rate': 5, 'info': most_area['top5']},
-            ],
-            'most_coordinates': [
-                {'rate': 1, 'info': most_coordinates['top1']},
-                {'rate': 2, 'info': most_coordinates['top2']},
-                {'rate': 3, 'info': most_coordinates['top3']},
-                {'rate': 4, 'info': most_coordinates['top4']},
-                {'rate': 5, 'info': most_coordinates['top5']},
-            ],
-            'same_coordinates': coordinates_list
-        }
+    api_urls = {
+        'title' : "Same coordinates View",
+        'most_area': [
+            {'rate': 1, 'info': most_area['top1']},
+            {'rate': 2, 'info': most_area['top2']},
+            {'rate': 3, 'info': most_area['top3']},
+            {'rate': 4, 'info': most_area['top4']},
+            {'rate': 5, 'info': most_area['top5']},
+        ],
+        'most_coordinates': [
+            {'rate': 1, 'info': most_coordinates['top1']},
+            {'rate': 2, 'info': most_coordinates['top2']},
+            {'rate': 3, 'info': most_coordinates['top3']},
+            {'rate': 4, 'info': most_coordinates['top4']},
+            {'rate': 5, 'info': most_coordinates['top5']},
+        ],
+        'same_coordinates': coordinates_list
+    }
+
+    return Response(api_urls)
