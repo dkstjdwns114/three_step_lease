@@ -17,7 +17,7 @@ const BasicTable = (props) => {
                 <tr>
                   <th>Rate</th>
                   <th>Address</th>
-                  <th>Count</th>
+                  <th>Total</th>
                   <th>Remarks</th>
                 </tr>
               </thead>
