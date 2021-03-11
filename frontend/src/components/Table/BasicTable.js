@@ -22,11 +22,11 @@ const BasicTable = (props) => {
                 </tr>
               </thead>
               <tbody>
-                {props.contents.map((area) => {
+                {props.contents.map((area, idx) => {
                   return (
                     <tr>
-                      <td>{area.rate}</td>
-                      <td>{area.info.location}</td>
+                      <td>{idx + 1}</td>
+                      <td>{area.info.rdmAdr}</td>
                       <td>{area.info.cnt}개</td>
                       <td>{area.info.trait ? area.info.trait : "-"}</td>
                     </tr>
