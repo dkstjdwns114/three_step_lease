@@ -137,18 +137,18 @@ def sameCoordinatesView(request):
     api_json = {
         'title' : "Same coordinates View",
         'most_area': [
-            {'rate': 1, 'info': most_area['top1']},
-            {'rate': 2, 'info': most_area['top2']},
-            {'rate': 3, 'info': most_area['top3']},
-            {'rate': 4, 'info': most_area['top4']},
-            {'rate': 5, 'info': most_area['top5']},
+            {'info': most_area['top1']},
+            {'info': most_area['top2']},
+            {'info': most_area['top3']},
+            {'info': most_area['top4']},
+            {'info': most_area['top5']},
         ],
         'most_coordinates': [
-            {'rate': 1, 'info': most_coordinates['top1']},
-            {'rate': 2, 'info': most_coordinates['top2']},
-            {'rate': 3, 'info': most_coordinates['top3']},
-            {'rate': 4, 'info': most_coordinates['top4']},
-            {'rate': 5, 'info': most_coordinates['top5']},
+            {'info': most_coordinates['top1']},
+            {'info': most_coordinates['top2']},
+            {'info': most_coordinates['top3']},
+            {'info': most_coordinates['top4']},
+            {'info': most_coordinates['top5']},
         ],
         'same_coordinates': coordinates_list
     }
