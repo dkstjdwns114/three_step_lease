@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('main', views.mainView),
-    path('city', views.cityView.as_view()),
+    path('city/<str:pk>/', views.cityView),
     path('same_coordinates', views.sameCoordinatesView),
 ]

@@ -103,16 +103,19 @@ def mainView(request):
     return Response(api_json)
 
 
-class cityView(APIView):
-    def get(self, request):
-        return JsonResponse(self.get_data(), json_dumps_params={'ensure_ascii': True})
+@api_view(['GET'])
+def cityView(request, pk):
+    cities_info = db['city_info']
 
-    def get_data(self):
-        print("cityView에 들어옴")
-    
-        return{
-            'title' : "City View",
-        }
+    city_info = cities_info.find_one({"ctprvnCd": pk })
+
+    api_json = {
+        "title" : city_info['ctprvnNm'],
+        "indsLclsCds": city_info['indsLclsCds'],
+        "signgus": city_info['signgus'],
+        "most_coordinates": city_info['most_coordinates']
+    }
+    return Response(api_json)
 
 
 @api_view(['GET'])
