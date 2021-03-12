@@ -16,6 +16,10 @@ export default class SameCoordinatesPage extends Component {
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = () => {
     fetch("/api/same_coordinates")
       .then((res) => {
         return res.json();
@@ -29,7 +33,7 @@ export default class SameCoordinatesPage extends Component {
           same_coordinates: resData.same_coordinates
         });
       });
-  }
+  };
 
   render() {
     return (

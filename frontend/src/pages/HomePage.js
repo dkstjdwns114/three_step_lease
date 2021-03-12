@@ -17,6 +17,11 @@ export default class HomePage extends Component {
   }
 
   componentDidMount() {
+    this.setState({ path: this.props.match.path });
+    this.fetchData();
+  }
+
+  fetchData = () => {
     fetch("/api/main")
       .then((res) => {
         return res.json();
@@ -30,7 +35,7 @@ export default class HomePage extends Component {
           indsLcls20: resData.indsLcls20
         });
       });
-  }
+  };
 
   numberWithCommas = (n) => {
     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
