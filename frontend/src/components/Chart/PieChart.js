@@ -35,8 +35,8 @@ const pieOptions = {
   ],
   chartArea: {
     left: 50,
-    width: "90%",
-    height: "90%"
+    width: "100%",
+    height: "100%"
   },
   fontName: "Roboto",
   backgroundColor: "transparent"
@@ -53,6 +53,7 @@ const PieChart = (props) => {
   const [oCnt, setOCnt] = useState(0);
   const [lCnt, setLCnt] = useState(0);
   const [totalCnt, setTotalCnt] = useState(0);
+  const [chartHeight, setChartHeight] = useState("");
 
   useEffect(() => {
     let total = 0;
@@ -69,6 +70,11 @@ const PieChart = (props) => {
       total += res.count;
     });
     setTotalCnt(total);
+    if (props.path === "/") {
+      setChartHeight("340px");
+    } else if (props.path === "/city/:code") {
+      setChartHeight("230px");
+    }
   }, []);
   return (
     <>
@@ -85,8 +91,8 @@ const PieChart = (props) => {
             <div className="chart-container has-scroll text-center">
               <div className="d-inline-block">
                 <Chart
-                  width={"500px"}
-                  height={"320px"}
+                  width="500px"
+                  height={chartHeight}
                   chartType="PieChart"
                   loader={<div>Loading Chart</div>}
                   data={[
