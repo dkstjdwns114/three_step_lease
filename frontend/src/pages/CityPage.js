@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PageHeader from "../components/Navigation/PageHeader";
 import PieChart from "../components/Chart/PieChart";
-import BasicTable from "../components/Table/BasicTable";
+import Top5Table from "../components/Table/Top5Table";
+import SignguTable from "../components/Table/SignguTable";
 
 export default class CityPage extends Component {
   state = {
@@ -18,7 +19,11 @@ export default class CityPage extends Component {
   }
 
   componentDidMount() {
-    console.log("City Page에 들어옴!!!");
+    this.setState({ path: this.props.match.path });
+    this.fetchData();
+  }
+
+  fetchData = () => {
     let cityCode = this.props.match.params.code;
     fetch(`/api/city/${cityCode}`)
       .then((res) => {
@@ -34,6 +39,12 @@ export default class CityPage extends Component {
           cityName: resData.title
         });
       });
+  };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.match.params.code !== prevProps.match.params.code) {
+      this.fetchData();
+    }
   }
 
   numberWithCommas = (n) => {
@@ -56,12 +67,18 @@ export default class CityPage extends Component {
                   numberComma={this.numberWithCommas}
                   path={this.state.path}
                 />
-                <BasicTable
+                <Top5Table
                   cardTitle={`${this.state.cityName} 지역별 Top5`}
                   cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 지역 Top5"}
                   contents={this.state.most_coordinates}
                 />
               </div>
+              <SignguTable
+                cardTitle={`${this.state.cityName} 현황`}
+                cardDesc={"시/구 별 현황"}
+                numberComma={this.numberWithCommas}
+                contents={this.state.signgus}
+              />
             </div>
           </>
         )}
