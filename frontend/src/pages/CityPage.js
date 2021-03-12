@@ -9,7 +9,8 @@ export default class CityPage extends Component {
     cityName: "",
     indsLclsCds: [],
     signgus: [],
-    most_coordinates: []
+    most_coordinates: [],
+    path: ""
   };
 
   constructor(props) {
@@ -53,6 +54,7 @@ export default class CityPage extends Component {
                   cardTitle={`${this.state.cityName} 2020년 업종별 폐업 현황`}
                   indsLcls={this.state.indsLclsCds}
                   numberComma={this.numberWithCommas}
+                  path={this.state.path}
                 />
                 <BasicTable
                   cardTitle={`${this.state.cityName} 지역별 Top5`}

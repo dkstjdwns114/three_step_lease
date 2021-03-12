@@ -8,7 +8,8 @@ export default class HomePage extends Component {
     isLoading: true,
     ctprvnNm20: [],
     indsLcls19: [],
-    indsLcls20: []
+    indsLcls20: [],
+    path: ""
   };
 
   constructor(props) {
@@ -50,11 +51,13 @@ export default class HomePage extends Component {
                   cardTitle={"2019년 업종별 폐업 현황"}
                   indsLcls={this.state.indsLcls19}
                   numberComma={this.numberWithCommas}
+                  path={this.state.path}
                 />
                 <PieChart
                   cardTitle={"2020년 업종별 폐업 현황"}
                   indsLcls={this.state.indsLcls20}
                   numberComma={this.numberWithCommas}
+                  path={this.state.path}
                 />
                 {/* /pies */}
               </div>
