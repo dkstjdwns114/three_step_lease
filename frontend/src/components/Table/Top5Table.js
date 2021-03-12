@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const BasicTable = (props) => {
+const top5Table = (props) => {
   return (
     <>
       {/* Bordered table */}
@@ -27,7 +27,7 @@ const BasicTable = (props) => {
                     <tr>
                       <td>{idx + 1}</td>
                       <td>{area.info.rdmAdr}</td>
-                      <td>{area.info.cnt}개</td>
+                      <td>{area.info.cnt}</td>
                       <td>{area.info.trait ? area.info.trait : "-"}</td>
                     </tr>
                   );
@@ -42,4 +42,4 @@ const BasicTable = (props) => {
   );
 };
 
-export default BasicTable;
+export default top5Table;
