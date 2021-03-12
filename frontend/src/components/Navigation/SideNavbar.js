@@ -18,8 +18,6 @@ const sideNavigation = ({ location }) => {
           </a>
         </div>
         {/* sidebar mobile toggler */}
-        {console.log("location", location)}
-        {console.log()}
         {/* Sidebar content */}
         <div className="sidebar-content">
           {/* Main navigation */}
