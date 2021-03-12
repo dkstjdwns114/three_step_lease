@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BasicTable from "../components/Table/BasicTable";
+import Top5Table from "../components/Table/Top5Table";
 import PageHeader from "../components/Navigation/PageHeader";
 import SameCoordinatesMap from "../components/Map/SameCoordinatesMap";
 
@@ -45,12 +45,12 @@ export default class SameCoordinatesPage extends Component {
             <PageHeader headerTitle={"2019년, 2020년 모두 폐업한 상가"} />
             <div className="content">
               <div className="row">
-                <BasicTable
+                <Top5Table
                   cardTitle={"지역별 Top5"}
                   cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 지역 Top5"}
                   contents={this.state.most_area}
                 />
-                <BasicTable
+                <Top5Table
                   cardTitle={"좌표별 Top5"}
                   cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 주소 Top5"}
                   contents={this.state.most_coordinates}
