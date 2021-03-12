@@ -18,7 +18,8 @@ const sideNavigation = ({ location }) => {
           </a>
         </div>
         {/* sidebar mobile toggler */}
-
+        {console.log("location", location)}
+        {console.log()}
         {/* Sidebar content */}
         <div className="sidebar-content">
           {/* Main navigation */}
@@ -55,216 +56,220 @@ const sideNavigation = ({ location }) => {
                 </Link>
               </li>
               <li className="nav-item nav-item-submenu">
-                <Link to="#" className="nav-link">
-                  <i className="icon-copy"></i> <span>Layouts</span>
-                </Link>
-
-                <ul className="nav nav-group-sub" data-submenu-title="Layouts">
-                  <li className="nav-item">
-                    <Link to="#" className="nav-link">
-                      Default layout
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="#" className="nav-link">
-                      Layout 2
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="#" className="nav-link">
-                      Layout 3
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="#" className="nav-link">
-                      Layout 3
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="#" className="nav-link">
-                      Layout 3
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="#" className="nav-link disabled">
-                      Layout 6{" "}
-                      <span className="badge bg-transparent align-self-center ml-auto">
-                        Coming soon
-                      </span>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item nav-item-submenu">
-                <a href="#" className="nav-link">
-                  <i className="icon-color-sampler"></i> <span>Themes</span>
-                </a>
-
-                <ul className="nav nav-group-sub" data-submenu-title="Themes">
-                  <li className="nav-item">
-                    <a href="index.html" className="nav-link active">
-                      Default
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      href="../../../LTR/material/full/index.html"
-                      className="nav-link"
-                    >
-                      Material
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      href="../../../LTR/dark/full/index.html"
-                      className="nav-link"
-                    >
-                      Dark
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      href="../../../LTR/clean/full/index.html"
-                      className="nav-link disabled"
-                    >
-                      Clean{" "}
-                      <span className="badge bg-transparent align-self-center ml-auto">
-                        Coming soon
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item nav-item-submenu">
-                <a href="#" className="nav-link">
-                  <i className="icon-stack"></i> <span>Starter kit</span>
-                </a>
-
-                <ul
-                  className="nav nav-group-sub"
-                  data-submenu-title="Starter kit"
+                <Link
+                  to="#"
+                  className={
+                    location.pathname.substr(1, 4) === "city"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
                 >
+                  <i className="icon-copy"></i> <span>Cities</span>
+                </Link>
+                <ul className="nav nav-group-sub" data-submenu-title="Cities">
                   <li className="nav-item">
-                    <a
-                      href="../seed/layout_nav_horizontal.html"
-                      className="nav-link"
+                    <Link
+                      to="/city/42"
+                      className={
+                        location.pathname.substr(6, 2) === "42"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
                     >
-                      Horizontal navigation
-                    </a>
+                      강원
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a href="../seed/sidebar_none.html" className="nav-link">
-                      No sidebar
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="../seed/sidebar_main.html" className="nav-link">
-                      1 sidebar
-                    </a>
-                  </li>
-                  <li className="nav-item nav-item-submenu">
-                    <a href="#" className="nav-link">
-                      2 sidebars
-                    </a>
-                    <ul className="nav nav-group-sub">
-                      <li className="nav-item">
-                        <a
-                          href="../seed/sidebar_secondary.html"
-                          className="nav-link"
-                        >
-                          Secondary sidebar
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
-                          href="../seed/sidebar_right.html"
-                          className="nav-link"
-                        >
-                          Right sidebar
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item nav-item-submenu">
-                    <a href="#" className="nav-link">
-                      3 sidebars
-                    </a>
-                    <ul className="nav nav-group-sub">
-                      <li className="nav-item">
-                        <a
-                          href="../seed/sidebar_right_hidden.html"
-                          className="nav-link"
-                        >
-                          Right sidebar hidden
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
-                          href="../seed/sidebar_right_visible.html"
-                          className="nav-link"
-                        >
-                          Right sidebar visible
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item nav-item-submenu">
-                    <a href="#" className="nav-link">
-                      Content sidebars
-                    </a>
-                    <ul className="nav nav-group-sub">
-                      <li className="nav-item">
-                        <a
-                          href="../seed/sidebar_content_left.html"
-                          className="nav-link"
-                        >
-                          Left sidebar
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
-                          href="../seed/sidebar_content_right.html"
-                          className="nav-link"
-                        >
-                          Right sidebar
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item">
-                    <a href="../seed/layout_boxed.html" className="nav-link">
-                      Boxed layout
-                    </a>
-                  </li>
-                  <li className="nav-item-divider"></li>
-                  <li className="nav-item">
-                    <a
-                      href="../seed/navbar_fixed_main.html"
-                      className="nav-link"
+                    <Link
+                      to="/city/41"
+                      className={
+                        location.pathname.substr(6, 2) === "41"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
                     >
-                      Fixed main navbar
-                    </a>
+                      경기
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a
-                      href="../seed/navbar_fixed_secondary.html"
-                      className="nav-link"
+                    <Link
+                      to="/city/48"
+                      className={
+                        location.pathname.substr(6, 2) === "48"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
                     >
-                      Fixed secondary navbar
-                    </a>
+                      경남
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a
-                      href="../seed/navbar_fixed_both.html"
-                      className="nav-link"
+                    <Link
+                      to="/city/47"
+                      className={
+                        location.pathname.substr(6, 2) === "47"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
                     >
-                      Both navbars fixed
-                    </a>
+                      경북
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a href="../seed/layout_fixed.html" className="nav-link">
-                      Fixed layout
-                    </a>
+                    <Link
+                      to="/city/29"
+                      className={
+                        location.pathname.substr(6, 2) === "29"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      광주
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/27"
+                      className={
+                        location.pathname.substr(6, 2) === "27"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      대구
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/30"
+                      className={
+                        location.pathname.substr(6, 2) === "30"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      대전
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/26"
+                      className={
+                        location.pathname.substr(6, 2) === "26"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      부산
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/11"
+                      className={
+                        location.pathname.substr(6, 2) === "11"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      서울
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/36"
+                      className={
+                        location.pathname.substr(6, 2) === "36"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      세종
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/31"
+                      className={
+                        location.pathname.substr(6, 2) === "31"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      울산
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/28"
+                      className={
+                        location.pathname.substr(6, 2) === "28"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      인천
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/46"
+                      className={
+                        location.pathname.substr(6, 2) === "46"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      전남
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/45"
+                      className={
+                        location.pathname.substr(6, 2) === "45"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      전북
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/50"
+                      className={
+                        location.pathname.substr(6, 2) === "50"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      제주
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/44"
+                      className={
+                        location.pathname.substr(6, 2) === "44"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      충남
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="/city/43"
+                      className={
+                        location.pathname.substr(6, 2) === "43"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      충북
+                    </Link>
                   </li>
                 </ul>
               </li>
