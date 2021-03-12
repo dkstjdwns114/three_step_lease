@@ -25,7 +25,7 @@ const signguTable = (props) => {
                 return (
                   <tr>
                     <td>{idx + 1}</td>
-                    <td>{area.code}</td>
+                    <td>{area.name}</td>
                     <td>{props.numberComma(area.cnt)}</td>
                     <td>{area.trait ? area.trait : "-"}</td>
                   </tr>
