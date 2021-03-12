@@ -177,7 +177,7 @@ const MainMap = (props) => {
 
     // 경북
     let gyeongbukContent = `
-      <a href=47>
+      <a href="/city/47">
         <div class="overlaybox">
           <div class="boxtitle">경북</div>
           <ul>
