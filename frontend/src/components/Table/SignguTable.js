@@ -6,7 +6,6 @@ const signguTable = (props) => {
     <>
       {/* Bordered table */}
       <div className="card">
-        {console.log(props.contents)}
         <div className="card-header header-elements-inline">
           <h5 className="card-title">{props.cardTitle}</h5>
         </div>
