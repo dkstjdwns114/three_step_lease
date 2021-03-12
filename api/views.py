@@ -44,12 +44,10 @@ def cityView(request, pk):
 
 @api_view(['GET'])
 def sameCoordinatesView(request):
-    main_info = db['main_info']
+    main_api = db['main_api']
     same_coordinates = db['same_coordinates']
 
-    most_area = main_info.find_one({"_id": ObjectId("6048e1f9fba67adf5ccb3855")})
-
-    most_coordinates = main_info.find_one({"_id": ObjectId("6048e6f323a6210c89719201")})
+    page_info = main_api.find_one({"_id": ObjectId("604b2995d7d574b83dc7ca48")})
 
     same_coordinates_info = same_coordinates.find({})
 
@@ -60,20 +58,8 @@ def sameCoordinatesView(request):
 
     api_json = {
         'title' : "Same coordinates View",
-        'most_area': [
-            {'info': most_area['top1']},
-            {'info': most_area['top2']},
-            {'info': most_area['top3']},
-            {'info': most_area['top4']},
-            {'info': most_area['top5']},
-        ],
-        'most_coordinates': [
-            {'info': most_coordinates['top1']},
-            {'info': most_coordinates['top2']},
-            {'info': most_coordinates['top3']},
-            {'info': most_coordinates['top4']},
-            {'info': most_coordinates['top5']},
-        ],
+        'most_area': page_info['most_area'],
+        'most_coordinates': page_info['most_coordinates'],
         'same_coordinates': coordinates_list
     }
 

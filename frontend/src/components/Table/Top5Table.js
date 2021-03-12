@@ -26,9 +26,9 @@ const top5Table = (props) => {
                   return (
                     <tr>
                       <td>{idx + 1}</td>
-                      <td>{area.info.rdmAdr}</td>
-                      <td>{area.info.cnt}</td>
-                      <td>{area.info.trait ? area.info.trait : "-"}</td>
+                      <td>{area.rdmAdr}</td>
+                      <td>{area.cnt}</td>
+                      <td>{area.trait ? area.trait : "-"}</td>
                     </tr>
                   );
                 })}
