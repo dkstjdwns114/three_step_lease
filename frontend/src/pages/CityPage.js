@@ -3,6 +3,7 @@ import PageHeader from "../components/Navigation/PageHeader";
 import PieChart from "../components/Chart/PieChart";
 import Top5Table from "../components/Table/Top5Table";
 import SignguTable from "../components/Table/SignguTable";
+import Loading from "../components/Loading/Loading";
 
 export default class CityPage extends Component {
   state = {
@@ -55,7 +56,7 @@ export default class CityPage extends Component {
     return (
       <>
         {this.state.isLoading ? (
-          <h2>Loading...</h2>
+          <Loading />
         ) : (
           <>
             <PageHeader headerTitle={`${this.state.cityName} 폐업 현황`} />

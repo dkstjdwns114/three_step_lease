@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Top5Table from "../components/Table/Top5Table";
 import PageHeader from "../components/Navigation/PageHeader";
 import SameCoordinatesMap from "../components/Map/SameCoordinatesMap";
+import Loading from "../components/Loading/Loading";
 
 export default class SameCoordinatesPage extends Component {
   state = {
@@ -39,7 +40,7 @@ export default class SameCoordinatesPage extends Component {
     return (
       <>
         {this.state.isLoading ? (
-          <h2>Loading...</h2>
+          <Loading />
         ) : (
           <>
             <PageHeader headerTitle={"2019년, 2020년 모두 폐업한 상가"} />

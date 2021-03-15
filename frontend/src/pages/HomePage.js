@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PageHeader from "../components/Navigation/PageHeader";
 import PieChart from "../components/Chart/PieChart";
 import MainMap from "../components/Map/MainMap";
+import Loading from "../components/Loading/Loading";
 
 export default class HomePage extends Component {
   state = {
@@ -45,7 +46,7 @@ export default class HomePage extends Component {
     return (
       <>
         {this.state.isLoading ? (
-          <h2>Loading...</h2>
+          <Loading />
         ) : (
           <>
             <PageHeader headerTitle={"메인 페이지"} />
