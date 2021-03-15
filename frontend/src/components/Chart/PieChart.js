@@ -81,13 +81,10 @@ const PieChart = (props) => {
       <div className="col-md-6">
         <div className="card">
           <div className="card-header header-elements-inline">
-            <h5 className="card-title">
-              {props.cardTitle}
-              <br />
-              (총 {props.numberComma(totalCnt)}개)
-            </h5>
+            <h5 className="card-title">{props.cardTitle}</h5>
           </div>
           <div className="card-body">
+            <p class="mb-3">{`총 ${props.numberComma(totalCnt)}개`}</p>
             <div className="chart-container has-scroll text-center">
               <div className="d-inline-block">
                 <Chart
