@@ -350,7 +350,7 @@ const MainMap = (props) => {
           <div class="boxtitle">전남</div>
           <ul>
             <li class="up">
-              <span class="title">${props.numberComma(gyeongnam)}개</span>
+              <span class="title">${props.numberComma(jeonnam)}개</span>
             </li>
           </ul>
         </div>
@@ -374,7 +374,7 @@ const MainMap = (props) => {
           <div class="boxtitle">경남</div>
           <ul>
             <li class="up">
-              <span class="title">${props.numberComma(jeonnam)}개</span>
+              <span class="title">${props.numberComma(gyeongnam)}개</span>
             </li>
           </ul>
         </div>

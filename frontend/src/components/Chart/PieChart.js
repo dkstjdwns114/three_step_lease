@@ -75,7 +75,7 @@ const PieChart = (props) => {
     } else if (props.path === "/city/:code") {
       setChartHeight("230px");
     }
-  }, []);
+  }, [props]);
   return (
     <>
       <div className="col-md-6">
