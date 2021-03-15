@@ -35,6 +35,10 @@ export default class SameCoordinatesPage extends Component {
       });
   };
 
+  numberWithCommas = (n) => {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   render() {
     return (
       <>
@@ -57,7 +61,10 @@ export default class SameCoordinatesPage extends Component {
                 />
               </div>
               <SameCoordinatesMap
-                cardTitle={"2019년, 2020년 모두 폐업한 상가"}
+                cardTitle={"지도"}
+                cardDesc={`2019년, 2020년 모두 폐업한 상가 위치 총 ${this.numberWithCommas(
+                  this.state.same_coordinates.length
+                )}개`}
                 coordinates={this.state.same_coordinates}
               />
             </div>

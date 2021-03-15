@@ -68,6 +68,7 @@ export default class HomePage extends Component {
               </div>
               <MainMap
                 cardTitle={"2020년 시도별 폐업 현황"}
+                cardDesc={`도시 클릭시 해당 도시의 상세페이지로 이동합니다.`}
                 cities={this.state.ctprvnNm20}
                 numberComma={this.numberWithCommas}
               />

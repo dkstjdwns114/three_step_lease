@@ -69,7 +69,7 @@ export default class CityPage extends Component {
                 />
                 <Top5Table
                   cardTitle={`${this.state.cityName} 지역별 Top5`}
-                  cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 지역 Top5"}
+                  cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 주소 Top5"}
                   contents={this.state.most_coordinates}
                 />
               </div>
