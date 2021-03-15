@@ -50,7 +50,8 @@ const sideNavigation = ({ location }) => {
                       : "nav-link"
                   }
                 >
-                  <i className="icon-sphere"></i> <span>Same Coordinates</span>
+                  <i className="icon-location4"></i>{" "}
+                  <span>Same Coordinates</span>
                 </Link>
               </li>
               <li className="nav-item nav-item-submenu">
@@ -62,7 +63,7 @@ const sideNavigation = ({ location }) => {
                       : "nav-link"
                   }
                 >
-                  <i className="icon-copy"></i> <span>Cities</span>
+                  <i className="icon-city"></i> <span>Cities</span>
                 </Link>
                 <ul className="nav nav-group-sub" data-submenu-title="Cities">
                   <li className="nav-item">
