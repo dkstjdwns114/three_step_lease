@@ -32,17 +32,8 @@ const TestMap = (props) => {
         <div class="card-header header-elements-inline">
           <h5 class="card-title">{props.cardTitle}</h5>
         </div>
-
         <div class="card-body">
-          {/* <p class="mb-3">
-            Example of basic map <code>markers</code>. A marker identifies a
-            location on a map. By default, a marker uses a standard image.
-            Markers can display custom images, in which case they are usually
-            referred to as "icons." Markers and icons are objects of type{" "}
-            <code>Marker</code>. Markers are designed to be interactive, you can
-            allow users to move a marker on the map by setting the marker's{" "}
-            <code>draggable</code> property to <code>true</code>.
-          </p> */}
+          <p class="mb-3">{props.cardDesc}</p>
           <div
             class="map-container"
             id="map_marker_simple"
