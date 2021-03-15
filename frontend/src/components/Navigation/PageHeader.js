@@ -29,15 +29,6 @@ const pageHeader = (props) => {
               <i className="icon-more"></i>
             </Link>
           </div>
-
-          <div className="header-elements d-none">
-            <div className="breadcrumb justify-content-center">
-              <Link to="#" className="breadcrumb-elements-item">
-                <i className="icon-comment-discussion mr-2"></i>
-                Support
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
       {/* /page header */}
