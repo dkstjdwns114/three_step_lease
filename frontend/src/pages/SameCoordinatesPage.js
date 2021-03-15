@@ -26,7 +26,6 @@ export default class SameCoordinatesPage extends Component {
         return res.json();
       })
       .then((resData) => {
-        console.log(resData);
         this.setState({
           isLoading: false,
           most_area: resData.most_area,

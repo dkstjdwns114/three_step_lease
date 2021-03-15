@@ -31,7 +31,6 @@ export default class CityPage extends Component {
         return res.json();
       })
       .then((resData) => {
-        console.log(resData);
         this.setState({
           isLoading: false,
           indsLclsCds: resData.indsLclsCds,
