@@ -24,7 +24,7 @@ const TestMap = (props) => {
     });
 
     clusterer.addMarkers(markers);
-  }, []);
+  }, [props]);
 
   return (
     <>

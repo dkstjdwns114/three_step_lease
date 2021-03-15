@@ -462,7 +462,7 @@ const MainMap = (props) => {
     });
     jejuOverlay.setMap(map);
     // end 제주
-  }, []);
+  }, [props]);
 
   return (
     <>
