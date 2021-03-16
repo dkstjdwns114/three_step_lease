@@ -5,7 +5,7 @@ const Loading = (props) => {
   return (
     <>
       <div class="card animated rotateIn">
-        <div class="card-body" style={{ textAlign: "center" }}>
+        <div className="card-body" style={{ textAlign: "center" }}>
           Loading...
         </div>
       </div>
