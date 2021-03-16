@@ -23,7 +23,7 @@ const top5Table = (props) => {
               <tbody>
                 {props.contents.map((area, idx) => {
                   return (
-                    <tr>
+                    <tr key={area.rdmAdr}>
                       <td>{idx + 1}</td>
                       <td>{area.rdmAdr}</td>
                       <td>{area.cnt}</td>
