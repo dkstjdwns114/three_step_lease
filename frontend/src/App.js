@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  Redirect
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { render } from "react-dom";
 import HomePage from "./pages/HomePage";
 import CoordinateMapPage from "./pages/SameCoordinatesPage";
