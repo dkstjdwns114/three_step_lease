@@ -3,11 +3,11 @@ Description=uWSGI service
 After=syslog.target
 
 [Service]
-ExecStart=sudo /home/ubuntu/myvenv/bin/uwsgi -i ~/srv/three_step_lease/.config/uwsgi/mysite.ini
+ExecStart= /home/ubuntu/myvenv/bin/uwsgi -i ~/srv/three_step_lease/.config/uwsgi/mysite.ini
 
 Restart=always
 KillSignal=SIGQUIT
-Type=notify
+Type=simple
 StandardError=syslog
 NotifyAccess=all
 
