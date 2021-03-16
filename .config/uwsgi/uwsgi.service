@@ -7,7 +7,7 @@ ExecStart= /home/ubuntu/myvenv/bin/uwsgi -i ~/srv/three_step_lease/.config/uwsgi
 
 Restart=always
 KillSignal=SIGQUIT
-Type=simple
+Type=notify
 StandardError=syslog
 NotifyAccess=all
 
