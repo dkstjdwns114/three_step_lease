@@ -10,8 +10,8 @@ const sideNavigation = ({ location }) => {
         <div className="sidebar-mobile-toggler text-center">
           <Link to="#" className="sidebar-mobile-main-toggle">
             <i className="icon-arrow-left8"></i>
-          Navigation
           </Link>
+          Menu
           <Link to="#" className="sidebar-mobile-expand">
             <i className="icon-screen-full"></i>
             <i className="icon-screen-normal"></i>
