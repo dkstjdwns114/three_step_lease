@@ -12,10 +12,6 @@ export default class SameCoordinatesPage extends Component {
     same_coordinates: []
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.fetchData();
   }

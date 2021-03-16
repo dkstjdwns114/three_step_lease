@@ -15,10 +15,6 @@ export default class CityPage extends Component {
     path: ""
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.setState({ path: this.props.match.path });
     this.fetchData();

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const signguTable = (props) => {
   return (
@@ -23,7 +22,7 @@ const signguTable = (props) => {
             <tbody>
               {props.contents.map((area, idx) => {
                 return (
-                  <tr>
+                  <tr key={area.name + idx}>
                     <td>{idx + 1}</td>
                     <td>{area.name}</td>
                     <td>{props.numberComma(area.cnt)}</td>

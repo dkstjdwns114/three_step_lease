@@ -28,14 +28,14 @@ const TestMap = (props) => {
 
   return (
     <>
-      <div class="card">
-        <div class="card-header header-elements-inline">
-          <h5 class="card-title">{props.cardTitle}</h5>
+      <div className="card">
+        <div className="card-header header-elements-inline">
+          <h5 className="card-title">{props.cardTitle}</h5>
         </div>
-        <div class="card-body">
-          <p class="mb-3">{props.cardDesc}</p>
+        <div className="card-body">
+          <p className="mb-3">{props.cardDesc}</p>
           <div
-            class="map-container"
+            className="map-container"
             id="map_marker_simple"
             style={{ height: "600px" }}
           ></div>
