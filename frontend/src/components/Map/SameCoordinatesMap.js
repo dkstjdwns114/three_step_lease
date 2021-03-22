@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 const { kakao } = window;
 
-const TestMap = (props) => {
+const SameCoordinatesMap = (props) => {
   useEffect(() => {
     const container = document.getElementById("map_marker_simple");
 
@@ -45,4 +45,4 @@ const TestMap = (props) => {
   );
 };
 
-export default TestMap;
+export default SameCoordinatesMap;
