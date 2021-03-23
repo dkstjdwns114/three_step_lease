@@ -4,7 +4,6 @@ import { render } from "react-dom";
 import HomePage from "./pages/HomePage";
 import CoordinateMapPage from "./pages/SameCoordinatesPage";
 import MainNavbar from "./components/Navigation/MainNavbar";
-import SideNavbar from "./components/Navigation/SideNavbar";
 import CityPage from "./pages/CityPage";
 
 export default class App extends Component {
@@ -16,7 +15,6 @@ export default class App extends Component {
     return (
       <Router>
         <MainNavbar />
-        <Route path="/" component={SideNavbar} />
         <div className="page-content">
           <Switch>
             <div className="content-wrapper">
