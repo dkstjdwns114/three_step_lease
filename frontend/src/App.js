@@ -16,8 +16,8 @@ export default class App extends Component {
     return (
       <Router>
         <MainNavbar />
+        <Route path="/" component={SideNavbar} />
         <div className="page-content">
-          <Route path="/" component={SideNavbar} />
           <Switch>
             <div className="content-wrapper">
               <Route exact path="/" component={HomePage} />
