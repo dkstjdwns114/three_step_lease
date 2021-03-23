@@ -49,7 +49,7 @@
     </script>
   </head>
   <body class="animsition dashboard">
-    <div id="app"></div>
+    <div id="page"></div>
     <script src="{% static "frontend/main.js" %}"></script>
 
     <!-- Core JS files -->
@@ -68,8 +68,9 @@
     <script src="{% static "remark_template/global/vendor/intro-js/intro.js" %}"></script>
     <script src="{% static "remark_template/global/vendor/screenfull/screenfull.js" %}"></script>
     <script src="{% static "remark_template/global/vendor/slidepanel/jquery-slidePanel.js" %}"></script>
-    <script src="{% static "remark_template/global/vendor/chartist/chartist.min.js" %}"></script>
-    <script src="{% static "remark_template/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.js" %}"></script>
+    {% comment %} <script src="{% static "remark_template/global/vendor/chartist/chartist.min.js" %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static "remark_template/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.js" %}"></script> {% endcomment %}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="{% static "remark_template/global/vendor/jvectormap/jquery-jvectormap.min.js" %}"></script>
     <script src="{% static "remark_template/global/vendor/jvectormap/maps/jquery-jvectormap-world-mill-en.js" %}"></script>
     <script src="{% static "remark_template/global/vendor/matchheight/jquery.matchHeight-min.js" %}"></script>
