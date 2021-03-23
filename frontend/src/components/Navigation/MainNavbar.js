@@ -31,9 +31,11 @@ const mainNavigation = (props) => {
           <img
             className="navbar-brand-logo"
             src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
-            title="THREESTEP"
+            title="THREESTEPLEASE"
           />
-          <span className="navbar-brand-text hidden-xs-down">THREESTEP</span>
+          <span className="navbar-brand-text hidden-xs-down">
+            THREESTEPLEASE
+          </span>
         </div>
         <button
           type="button"
@@ -834,12 +836,12 @@ const mainNavigation = (props) => {
               <img
                 className="navbar-brand-logo navbar-brand-logo-normal"
                 src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
-                title="THREESTEP"
+                title="THREESTEPLEASE"
               />
               <img
                 className="navbar-brand-logo navbar-brand-logo-special"
                 src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
-                title="THREESTEP"
+                title="THREESTEPLEASE"
               />
             </a>
           </div>
