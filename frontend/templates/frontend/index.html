@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js css-menubar" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +7,10 @@
     <meta name="description" content="bootstrap material admin template">
     <meta name="author" content="">
     <title>Three step lease</title>
+    
     {% load static %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="{% static "remark_template/assets/images/apple-touch-icon.png" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "remark_template/assets/images/favicon.ico" %}" rel="stylesheet" type="text/css">
 
     <!-- Kakao map Script -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6e8d82d5653799b98e999a92db205ba6&libraries=clusterer,services"></script>
@@ -89,7 +91,7 @@
     <!-- Config -->
     <script src="{% static "remark_template/global/js/config/colors.js" %}"></script>
     <script src="{% static "remark_template/assets/js/config/tour.js" %}"></script>
-    <script>Config.set('assets', '../assets');</script>
+    <script>Config.set('assets', './assets');</script>
 
     <!-- Page -->
     <script src="{% static "remark_template/assets/js/Site.js" %}"></script>

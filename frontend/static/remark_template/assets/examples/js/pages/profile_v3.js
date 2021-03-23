@@ -40,7 +40,7 @@
         }
       }
     });
-  } //bind input focus
+  } //bind input focus 
 
 
   (0, _jquery.default)('.wall-comment-reply .form-control').on('focus', function (event) {

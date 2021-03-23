@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define("/Site", ["exports", "jquery", "Config", "Base", "Menubar", "GridMenu", "Sidebar", "PageAside"], factory);
+    define("/Site", ["exports", "jquery", "Config", "Base", "Menubar", "Sidebar", "PageAside"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("jquery"), require("Config"), require("Base"), require("Menubar"), require("GridMenu"), require("Sidebar"), require("PageAside"));
+    factory(exports, require("jquery"), require("Config"), require("Base"), require("Menubar"), require("Sidebar"), require("PageAside"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.jQuery, global.Config, global.Base, global.SectionMenubar, global.SectionGridMenu, global.SectionSidebar, global.SectionPageAside);
+    factory(mod.exports, global.jQuery, global.Config, global.Base, global.SectionMenubar, global.SectionSidebar, global.SectionPageAside);
     global.Site = mod.exports;
   }
-})(this, function (_exports, _jquery, _Config, _Base2, _Menubar, _GridMenu, _Sidebar, _PageAside) {
+})(this, function (_exports, _jquery, _Config, _Base2, _Menubar, _Sidebar, _PageAside) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -22,7 +22,6 @@
   _jquery = babelHelpers.interopRequireDefault(_jquery);
   _Base2 = babelHelpers.interopRequireDefault(_Base2);
   _Menubar = babelHelpers.interopRequireDefault(_Menubar);
-  _GridMenu = babelHelpers.interopRequireDefault(_GridMenu);
   _Sidebar = babelHelpers.interopRequireDefault(_Sidebar);
   _PageAside = babelHelpers.interopRequireDefault(_PageAside);
   var DOC = document;
@@ -42,23 +41,19 @@
     babelHelpers.createClass(Site, [{
       key: "initialize",
       value: function initialize() {
-        var _this = this;
-
+        babelHelpers.get(babelHelpers.getPrototypeOf(Site.prototype), "initialize", this).call(this);
         this.startLoading();
         this.initializePluginAPIs();
         this.initializePlugins();
         this.initComponents();
-        setTimeout(function () {
-          _this.setDefaultState();
-        }, 500);
       }
     }, {
       key: "process",
       value: function process() {
+        babelHelpers.get(babelHelpers.getPrototypeOf(Site.prototype), "process", this).call(this);
         this.polyfillIEWidth();
         this.initBootstrap();
         this.setupMenubar();
-        this.setupGridMenu();
         this.setupFullScreen();
         this.setupMegaNavbar();
         this.setupWave();
@@ -73,60 +68,18 @@
     }, {
       key: "_getDefaultMeunbarType",
       value: function _getDefaultMeunbarType() {
-        var breakpoint = this.getCurrentBreakpoint();
-        var type = false;
-
-        if ($BODY.data('autoMenubar') === false || $BODY.is('.site-menubar-keep')) {
-          if ($BODY.hasClass('site-menubar-fold')) {
-            type = 'fold';
-          } else if ($BODY.hasClass('site-menubar-unfold')) {
-            type = 'unfold';
-          }
+        if ($BODY.hasClass('site-menubar-open')) {
+          return 'open';
         }
 
-        switch (breakpoint) {
-          case 'lg':
-            type = type || 'unfold';
-            break;
-
-          case 'md':
-          case 'sm':
-            type = type || 'fold';
-            break;
-
-          case 'xs':
-            type = 'hide';
-            break;
-          // no default
-        }
-
-        return type;
-      }
-    }, {
-      key: "setDefaultState",
-      value: function setDefaultState() {
-        var defaultState = this.getDefaultState(); // menubar
-
-        this.menubar.change(defaultState.menubarType); // gridmenu
-
-        this.gridmenu.toggle(defaultState.gridmenu);
-      }
-    }, {
-      key: "getDefaultState",
-      value: function getDefaultState() {
-        var menubarType = this._getDefaultMeunbarType();
-
-        return {
-          menubarType: menubarType,
-          gridmenu: false
-        };
+        return 'hide';
       }
     }, {
       key: "menubarType",
       value: function menubarType(type) {
         var toggle = function toggle($el) {
           $el.toggleClass('hided', !(type === 'open'));
-          $el.toggleClass('unfolded', !(type === 'fold'));
+          $el.toggleClass('unfolded', !(type === 'open'));
         };
 
         (0, _jquery.default)('[data-toggle="menubar"]').each(function () {
@@ -143,12 +96,8 @@
     }, {
       key: "initComponents",
       value: function initComponents() {
-        var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
         this.menubar = new _Menubar.default({
           $el: (0, _jquery.default)('.site-menubar')
-        });
-        this.gridmenu = new _GridMenu.default({
-          $el: (0, _jquery.default)('.site-gridmenu')
         });
         this.sidebar = new _Sidebar.default();
         var $aside = (0, _jquery.default)('.page-aside');
@@ -193,6 +142,8 @@
     }, {
       key: "setupFullScreen",
       value: function setupFullScreen() {
+        // Fullscreen
+        // ==========
         if (typeof screenfull !== 'undefined') {
           $DOC.on('click', '[data-toggle="fullscreen"]', function () {
             if (screenfull.enabled) {
@@ -210,25 +161,10 @@
         }
       }
     }, {
-      key: "setupGridMenu",
-      value: function setupGridMenu() {
-        var self = this;
-        $DOC.on('click', '[data-toggle="gridmenu"]', function () {
-          var $this = (0, _jquery.default)(this);
-          var isOpened = self.gridmenu.isOpened;
-
-          if (isOpened) {
-            $this.addClass('active').attr('aria-expanded', true);
-          } else {
-            $this.removeClass('active').attr('aria-expanded', false);
-          }
-
-          self.gridmenu.toggle(!isOpened);
-        });
-      }
-    }, {
       key: "setupMegaNavbar",
       value: function setupMegaNavbar() {
+        // Mega navbar setup
+        // =================
         $DOC.on('click', '.navbar-mega .dropdown-menu', function (e) {
           e.stopPropagation();
         }).on('show.bs.dropdown', function (e) {
@@ -263,41 +199,40 @@
     }, {
       key: "setupMenubar",
       value: function setupMenubar() {
-        var _this2 = this;
+        var _this = this;
 
         (0, _jquery.default)(document).on('click', '[data-toggle="menubar"]', function () {
-          var type = _this2.menubar.type;
+          var type = _this.menubar.type;
 
           switch (type) {
-            case 'fold':
-              type = 'unfold';
-              break;
-
-            case 'unfold':
-              type = 'fold';
-              break;
-
             case 'open':
+              $BODY.removeClass('site-menubar-fixed');
               type = 'hide';
               break;
 
             case 'hide':
+              $BODY.addClass('site-menubar-fixed');
               type = 'open';
               break;
             // no default
           }
 
-          _this2.menubar.change(type);
+          _this.menubar.change(type);
 
-          _this2.menubarType(type);
+          _this.menubarType(type);
 
           return false;
         });
-        Breakpoints.on('change', function () {
-          _this2.menubar.type = _this2._getDefaultMeunbarType();
-
-          _this2.menubar.change(_this2.menubar.type);
-        });
+      }
+    }, {
+      key: "setupWave",
+      value: function setupWave() {
+        if (typeof Waves !== 'undefined') {
+          Waves.init();
+          Waves.attach('.site-menu-item > a', ['waves-classic']);
+          Waves.attach('.site-navbar .navbar-toolbar a', ['waves-light', 'waves-round']);
+          Waves.attach('.btn', ['waves-light', 'waves-round']);
+        }
       }
     }, {
       key: "setupNavbarCollpase",
@@ -317,19 +252,16 @@
       value: function startLoading() {
         if (typeof _jquery.default.fn.animsition === 'undefined') {
           return false;
-        } // let loadingType = 'default';
+        } // let loadingType = "default";
 
 
-        var assets = (0, _Config.get)('assets');
         $BODY.animsition({
           inClass: 'fade-in',
-          outClass: 'fade-out',
           inDuration: 800,
-          outDuration: 500,
           loading: true,
           loadingClass: 'loader-overlay',
           loadingParentElement: 'html',
-          loadingInner: "\n      <div class=\"loader-content\">\n        <div class=\"loader-index\">\n          <div></div>\n          <div></div>\n          <div></div>\n          <div></div>\n          <div></div>\n          <div></div>\n        </div>\n      </div>",
+          loadingInner: "\n      <div class=\"loader-content\">\n        <div class=\"loader-index\">\n           <div></div>\n           <div></div>\n           <div></div>\n           <div></div>\n           <div></div>\n           <div></div>\n        </div>\n      </div>",
           onLoadEvent: true
         });
       }
@@ -365,16 +297,6 @@
         //   window.localStorage.setItem('startTour', true);
         // }
 
-      }
-    }, {
-      key: "setupWave",
-      value: function setupWave() {
-        if (typeof Waves !== 'undefined') {
-          Waves.init();
-          Waves.attach('.site-menu-item > a', ['waves-classic']);
-          Waves.attach('.site-navbar .navbar-toolbar a', ['waves-light', 'waves-round']);
-          Waves.attach('.btn', ['waves-classic']);
-        }
       }
     }]);
     return Site;

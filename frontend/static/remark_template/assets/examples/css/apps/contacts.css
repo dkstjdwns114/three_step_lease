@@ -85,3 +85,22 @@
     right: 0;
     -webkit-transform: none;
             transform: none; } }
+
+.app-contacts .page {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  @media (min-width: 1600px) {
+    .app-contacts .page {
+      max-width: 1540px; } }
+  @media (min-width: 1200px) and (max-width: 1599.98px) {
+    .app-contacts .page {
+      max-width: 1140px; } }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .app-contacts .page {
+      max-width: 932px; } }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .app-contacts .page {
+      max-width: 708px; } }
+  @media (max-width: 767.98px) {
+    .app-contacts .page {
+      margin: 0; } }

@@ -19,9 +19,6 @@
       position: 'right',
       intro: 'Offcanvas Menu <p class=\'content\'>It is nice custom navigation for desktop users and a seek off-canvas menu for tablet and mobile users</p>'
     }, {
-      element: '#toggleFullscreen',
-      intro: 'Full Screen <p class=\'content\'>Click this button you can view the admin template in full screen</p>'
-    }, {
       element: '#toggleChat',
       position: 'left',
       intro: 'Quick Conversations <p class=\'content\'>This is a sidebar dialog box for user conversations list, you can even create a quick conversation with other users</p>'

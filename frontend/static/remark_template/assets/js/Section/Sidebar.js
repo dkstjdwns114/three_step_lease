@@ -53,7 +53,7 @@
             skin: 'site-sidebar',
             dragTolerance: 80,
             template: function template(options) {
-              return "<div class=\"".concat(options.classes.base, " ").concat(options.classes.base, "-").concat(options.direction, "\">\n      <div class=\"").concat(options.classes.content, " site-sidebar-content\"></div>\n      <div class=\"slidePanel-handler\"></div>\n      </div>");
+              return "<div class=\"".concat(options.classes.base, " ").concat(options.classes.base, "-").concat(options.direction, "\">\n          <div class=\"").concat(options.classes.content, " site-sidebar-content\"></div>\n          <div class=\"slidePanel-handler\"></div>\n          </div>");
             },
             afterLoad: function afterLoad() {
               var self = this;

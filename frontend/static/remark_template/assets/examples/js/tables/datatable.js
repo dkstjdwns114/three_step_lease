@@ -53,7 +53,7 @@
         initComplete: function initComplete() {
           this.api().columns().every(function () {
             var column = this;
-            var select = (0, _jquery.default)('<select class="form-control w-full"><option value=""></option></select>').appendTo((0, _jquery.default)(column.footer()).empty()).on('change', function () {
+            var select = (0, _jquery.default)('<select class="form-control width-full"><option value=""></option></select>').appendTo((0, _jquery.default)(column.footer()).empty()).on('change', function () {
               var val = _jquery.default.fn.dataTable.util.escapeRegex((0, _jquery.default)(this).val());
 
               column.search(val ? '^' + val + '$' : '', true, false).draw();

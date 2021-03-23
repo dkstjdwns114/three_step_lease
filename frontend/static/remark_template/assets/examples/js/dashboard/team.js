@@ -17,9 +17,10 @@
   (0, _jquery.default)(document).ready(function ($$$1) {
     (0, _Site.run)();
   }); // Top Line Chart With Tooltips
-  // ----------------------------
+  // ------------------------------
 
   (function () {
+    // options for style
     var options = {
       showArea: true,
       low: 0,
@@ -77,12 +78,11 @@
             "class": 'ct-point-content'
           });
         }
-      });
+      }); //end create
     };
 
     newScoreLineChart("#teamCompletedWidget .ct-chart", labelList, series1List, series2List, options);
   })(); // item dialog
-  // -----------
 
 
   (function () {

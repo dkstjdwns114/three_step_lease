@@ -19,7 +19,7 @@
   _exports.default = void 0;
   _jquery = babelHelpers.interopRequireDefault(_jquery);
   _Component2 = babelHelpers.interopRequireDefault(_Component2);
-  var $BODY = (0, _jquery.default)('body');
+  var $BODY = (0, _jquery.default)('body'); // const $HTML = $('html');
 
   var PageAside =
   /*#__PURE__*/
@@ -48,8 +48,8 @@
     }
 
     babelHelpers.createClass(PageAside, [{
-      key: "process",
-      value: function process() {
+      key: "processed",
+      value: function processed() {
         var _this2 = this;
 
         if ($BODY.is('.page-aside-fixed') || $BODY.is('.page-aside-scroll')) {
@@ -71,7 +71,7 @@
             } else {
               _this2.$el.off('transitionend');
 
-              _this2.scrollable.update();
+              _this2.scrollable.disable();
             }
           }
         });

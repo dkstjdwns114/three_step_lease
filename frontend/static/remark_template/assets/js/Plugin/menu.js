@@ -120,7 +120,7 @@
           if (link) {
             window.location = link;
           }
-        }).on('touchend.site.menu', '> .site-menu-item > a', function () {
+        }).on('touchend.site.menu', '> .site-menu-item > a', function (e) {
           var $item = $(this).parent('.site-menu-item');
 
           if (self.folded === true) {
@@ -182,9 +182,10 @@
     }, {
       key: "position",
       value: function position($item, $dropdown) {
-        var itemHeight = $item.find('> a').outerHeight();
-        var menubarHeight = this.outerHeight;
         var offsetTop = $item.position().top;
+        var dropdownHeight = $dropdown.outerHeight();
+        var menubarHeight = this.outerHeight;
+        var itemHeight = $item.find('> a').outerHeight();
         $dropdown.removeClass('site-menu-sub-up').css('max-height', '');
 
         if (offsetTop > menubarHeight / 2) {

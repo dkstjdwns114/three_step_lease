@@ -177,3 +177,22 @@
     float: none;
     display: block;
     margin-top: 20px; } }
+
+.app-media .page {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  @media (min-width: 1600px) {
+    .app-media .page {
+      max-width: 1540px; } }
+  @media (min-width: 1200px) and (max-width: 1599.98px) {
+    .app-media .page {
+      max-width: 1140px; } }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .app-media .page {
+      max-width: 932px; } }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .app-media .page {
+      max-width: 708px; } }
+  @media (max-width: 767.98px) {
+    .app-media .page {
+      margin: 0; } }
