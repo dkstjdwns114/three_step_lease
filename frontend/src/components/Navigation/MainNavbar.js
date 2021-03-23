@@ -397,7 +397,7 @@ const mainNavigation = (props) => {
               />
               <img
                 className="navbar-brand-logo navbar-brand-logo-special"
-                src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
+                src="https://res.cloudinary.com/anstagram123/image/upload/v1616518702/dev_setups/black_small_logo_i8satl.png"
                 title="THREESTEPLEASE"
               />
             </a>
