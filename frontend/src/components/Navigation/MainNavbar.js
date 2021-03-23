@@ -30,10 +30,10 @@ const mainNavigation = (props) => {
         >
           <img
             className="navbar-brand-logo"
-            src="https://res.cloudinary.com/anstagram123/image/upload/v1614876568/dev_setups/logo_c1n8cr.png"
-            title="Remark"
+            src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
+            title="THREESTEP"
           />
-          <span className="navbar-brand-text hidden-xs-down"> Remark</span>
+          <span className="navbar-brand-text hidden-xs-down">THREESTEP</span>
         </div>
         <button
           type="button"
@@ -833,13 +833,13 @@ const mainNavigation = (props) => {
             <a href="index.html">
               <img
                 className="navbar-brand-logo navbar-brand-logo-normal"
-                src="https://res.cloudinary.com/anstagram123/image/upload/v1614876568/dev_setups/logo_c1n8cr.png"
-                title="Remark"
+                src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
+                title="THREESTEP"
               />
               <img
                 className="navbar-brand-logo navbar-brand-logo-special"
-                src="https://res.cloudinary.com/anstagram123/image/upload/v1615877068/dev_setups/three_step_favicon_mib2ln.png"
-                title="Remark"
+                src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
+                title="THREESTEP"
               />
             </a>
           </div>
