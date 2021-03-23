@@ -42,7 +42,7 @@ const TestMap = (props) => {
       });
       clusterer.addMarkers(markers);
     }, [1000]);
-  }, [props]);
+  }, []);
 
   return (
     <>
