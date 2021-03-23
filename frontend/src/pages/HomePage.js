@@ -69,12 +69,12 @@ export default class HomePage extends Component {
                 cities={this.state.ctprvnNm20}
                 numberComma={this.numberWithCommas}
               />
-              <TestMap
+              {/* <TestMap
                 cardTitle={"TestMap"}
                 cardDesc={`TestMap입니다.`}
                 cities={this.state.ctprvnNm20}
                 numberComma={this.numberWithCommas}
-              />
+              /> */}
             </div>
           </>
         )}
