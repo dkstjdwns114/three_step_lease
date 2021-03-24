@@ -174,7 +174,7 @@ const ChartistTest = (props) => {
   return (
     <>
       <div className="col-xxl-12 col-md-12">
-        <div className="card card-shadow">
+        <div className="card">
           <div className="card-block p-0 h-full">
             <div
               className="pt-30 px-30"

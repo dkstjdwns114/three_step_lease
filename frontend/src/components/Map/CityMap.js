@@ -467,21 +467,19 @@ const CityMap = (props) => {
   return (
     <>
       <div className="col-xxl-6 col-lg-6 col-md-12">
-        <div class="card card-shadow">
+        <div class="card">
           <div class="card-block p-0 p-30 h-full">
-            <div className="card card-shadow">
-              <div class="counter text-left">
-                <span class="counter-number">{props.cardTitle}</span>
-                <div class="counter-label text-uppercase mb-20">
-                  {props.cardDesc}
-                </div>
+            <div class="counter text-left">
+              <span class="counter-number">{props.cardTitle}</span>
+              <div class="counter-label text-uppercase mb-20">
+                {props.cardDesc}
               </div>
-              <div
-                className="map-container"
-                id="map_marker_simple"
-                style={{ height: "600px" }}
-              ></div>
             </div>
+            <div
+              className="map-container mt-30"
+              id="map_marker_simple"
+              style={{ height: "600px" }}
+            ></div>
           </div>
         </div>
       </div>
