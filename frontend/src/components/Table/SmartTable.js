@@ -43,7 +43,7 @@ const SmartTableTest = (props) => {
             <SmartDataTable
               data={tableData}
               name="test-table"
-              className="tablesaw table-striped table-bordered table-hover"
+              className="tablesaw table-striped table-bordered table-hover fs-3"
               sortable
             />
           </div>
