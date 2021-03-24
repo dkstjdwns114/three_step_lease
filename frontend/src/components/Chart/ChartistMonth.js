@@ -174,19 +174,19 @@ const ChartistTest = (props) => {
   return (
     <>
       <div className="col-xxl-12 col-md-12">
-        <div className="card card-shadow" id="chartThreeLinearea">
+        <div className="card card-shadow">
           <div className="card-block p-0 h-full">
             <div
               className="pt-30 px-30"
               style={{ height: "calc(100% - 250px);" }}
             >
               <div className="row">
-                <div className="col-8">
+                <div className="col-8 pt-30 px-30">
                   <p className="font-size-20 grey-700">CSS ANIMATION</p>
                   <p>Quisque volutpat condimentum velit. Class aptent taciti</p>
                 </div>
 
-                <div className="col-4">
+                <div className="col-4 pt-30 px-30">
                   <div className="float-right clearfix">
                     <ul className="list-unstyled">
                       <li className="mb-5">
@@ -222,7 +222,7 @@ const ChartistTest = (props) => {
                 </div>
               </div>
             </div>
-            <div className="row row-lg">
+            <div className="row pt-30 px-30">
               <div className="col-lg-6">
                 <div className="ct-chart1" style={{ height: "300px" }}></div>
               </div>
