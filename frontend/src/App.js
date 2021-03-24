@@ -16,7 +16,6 @@ export default class App extends Component {
     return (
       <Router>
         <MainNavbar />
-        {/* <div className="page-content container-fluid"> */}
         <Switch>
           <div className="content-wrapper">
             {/* <Route exact path="/" component={PrevHome} /> */}
@@ -28,7 +27,6 @@ export default class App extends Component {
             <Route path="/city/:code" component={PrevCityPage} />
           </div>
         </Switch>
-        {/* </div> */}
       </Router>
     );
   }

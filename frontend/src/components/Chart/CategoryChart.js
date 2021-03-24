@@ -35,13 +35,6 @@ const data = {
 };
 
 const options = {
-  legend: {
-    position: "top"
-  },
-  title: {
-    display: true,
-    text: "Chart.js Radar Chart"
-  },
   scale: {
     reverse: false,
     gridLines: {
@@ -65,7 +58,6 @@ const options = {
 const categoryChart = (props) => {
   return (
     <>
-      {/* <div className="panel-body"> */}
       <div className="col-xxl-3 col-lg-6 col-md-12">
         <div class="card card-shadow">
           <div class="card-block p-0 p-30 h-full">
@@ -80,7 +72,6 @@ const categoryChart = (props) => {
             </div>
           </div>
         </div>
-        {/* </div> */}
       </div>
     </>
   );

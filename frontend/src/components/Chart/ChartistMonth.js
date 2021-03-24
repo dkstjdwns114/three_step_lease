@@ -173,8 +173,7 @@ const ChartistTest = (props) => {
 
   return (
     <>
-      {/* <!-- Panel line css animation Chart --> */}
-      <div className="col-xxl-6 col-md-12">
+      <div className="col-xxl-12 col-md-12">
         <div className="card card-shadow" id="chartThreeLinearea">
           <div className="card-block p-0 h-full">
             <div
