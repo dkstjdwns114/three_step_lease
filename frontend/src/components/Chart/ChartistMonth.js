@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
+import Chartist from "chartist";
+import ChartistTooltip from "chartist-plugin-tooltips-updated";
+import SmartTable from "../Table/SmartTable";
 
 const ChartistTest = (props) => {
   useEffect(() => {
-    let Chartist = require("chartist");
-
-    animationChart(Chartist, ".ct-chart1");
-    animationChart(Chartist, ".ct-chart2");
+    animationChart(".ct-chart1");
+    animationChart(".ct-chart2");
   }, []);
 
-  const animationChart = (Chartist, chartClassName) => {
+  const animationChart = (chartClassName) => {
     let labelArray = [];
     chartClassName === ".ct-chart1" &&
       (labelArray = ["Jan", "2", "3", "4", "5", "6"]);
@@ -20,14 +21,45 @@ const ChartistTest = (props) => {
       {
         labels: labelArray,
         series: [
-          [12, 9, 7, 8, 5, 4],
-          [4, 5, 3, 7, 3, 5],
-          [5, 3, 4, 5, 6, 3],
-          [3, 4, 5, 6, 7, 6]
+          [
+            { meta: "2019 Open", value: 1 },
+            { meta: "2019 Open", value: 9 },
+            { meta: "2019 Open", value: 8 },
+            { meta: "2019 Open", value: 3 },
+            { meta: "2019 Open", value: 8 },
+            { meta: "2019 Open", value: 7 }
+          ],
+          [
+            { meta: "Jan", value: 1 },
+            { meta: "Feb", value: 5 },
+            { meta: "Mar", value: 8 },
+            { meta: "Apr", value: 3 },
+            { meta: "May", value: 12 },
+            { meta: "Jun", value: 17 }
+          ],
+          [
+            { meta: "Jan", value: 7 },
+            { meta: "Feb", value: 9 },
+            { meta: "Mar", value: 4 },
+            { meta: "Apr", value: 5 },
+            { meta: "May", value: 12 },
+            { meta: "Jun", value: 6 }
+          ],
+          [
+            { meta: "Jan", value: 1 },
+            { meta: "Feb", value: 12 },
+            { meta: "Mar", value: 8 },
+            { meta: "Apr", value: 5 },
+            { meta: "May", value: 12 },
+            { meta: "Jun", value: 20 }
+          ]
         ]
       },
       {
-        low: 0
+        low: 0,
+        high: 20,
+        // fullWidth: true,
+        plugins: [ChartistTooltip()]
       }
     );
 
@@ -145,7 +177,7 @@ const ChartistTest = (props) => {
       <div className="row">
         <div className="col-xxl-6 col-md-12">
           <div className="card card-shadow" id="chartThreeLinearea">
-            <div className="card-block p-0 h-full">
+            <div className="card-block p-10 h-full">
               <div
                 className="pt-30 px-30"
                 style={{ height: "calc(100% - 250px);" }}
@@ -202,6 +234,7 @@ const ChartistTest = (props) => {
                   <div className="ct-chart2" style={{ height: "250px" }}></div>
                 </div>
               </div>
+              <SmartTable />
             </div>
           </div>
         </div>
