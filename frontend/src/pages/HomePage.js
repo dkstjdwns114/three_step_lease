@@ -47,7 +47,10 @@ export default class HomeTest extends Component {
         ) : (
           <>
             <div className="page-content container-fluid">
-              <ChartistTest />
+              <div className="row" data-plugin="matchHeight" data-by-row="true">
+                <ChartistTest />
+                <CategoryChart />
+              </div>
             </div>
           </>
         )}

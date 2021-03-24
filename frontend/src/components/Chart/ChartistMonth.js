@@ -174,68 +174,64 @@ const ChartistTest = (props) => {
   return (
     <>
       {/* <!-- Panel line css animation Chart --> */}
-      <div className="row">
-        <div className="col-xxl-6 col-md-12">
-          <div className="card card-shadow" id="chartThreeLinearea">
-            <div className="card-block p-10 h-full">
-              <div
-                className="pt-30 px-30"
-                style={{ height: "calc(100% - 250px);" }}
-              >
-                <div className="row">
-                  <div className="col-8">
-                    <p className="font-size-20 grey-700">CSS ANIMATION</p>
-                    <p>
-                      Quisque volutpat condimentum velit. Class aptent taciti
-                    </p>
-                  </div>
+      <div className="col-xxl-6 col-md-12">
+        <div className="card card-shadow" id="chartThreeLinearea">
+          <div className="card-block p-0 h-full">
+            <div
+              className="pt-30 px-30"
+              style={{ height: "calc(100% - 250px);" }}
+            >
+              <div className="row">
+                <div className="col-8">
+                  <p className="font-size-20 grey-700">CSS ANIMATION</p>
+                  <p>Quisque volutpat condimentum velit. Class aptent taciti</p>
+                </div>
 
-                  <div className="col-4">
-                    <div className="float-right clearfix">
-                      <ul className="list-unstyled">
-                        <li className="mb-5">
-                          <i
-                            className="icon md-circle green-600 mr-5"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Diretary intake
-                        </li>
-                        <li className="mb-5">
-                          <i
-                            className="icon md-circle orange-600 mr-5"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Motion
-                        </li>
-                        <li className="mb-5">
-                          <i
-                            className="icon md-circle red-600 mr-5"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Other
-                        </li>
-                        <li className="mb-5">
-                          <i
-                            className="icon md-circle red-600 mr-5"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Other
-                        </li>
-                      </ul>
-                    </div>
+                <div className="col-4">
+                  <div className="float-right clearfix">
+                    <ul className="list-unstyled">
+                      <li className="mb-5">
+                        <i
+                          className="icon md-circle green-600 mr-5"
+                          aria-hidden="true"
+                        ></i>{" "}
+                        Diretary intake
+                      </li>
+                      <li className="mb-5">
+                        <i
+                          className="icon md-circle orange-600 mr-5"
+                          aria-hidden="true"
+                        ></i>{" "}
+                        Motion
+                      </li>
+                      <li className="mb-5">
+                        <i
+                          className="icon md-circle red-600 mr-5"
+                          aria-hidden="true"
+                        ></i>{" "}
+                        Other
+                      </li>
+                      <li className="mb-5">
+                        <i
+                          className="icon md-circle red-600 mr-5"
+                          aria-hidden="true"
+                        ></i>{" "}
+                        Other
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div className="row row-lg">
-                <div className="col-lg-6">
-                  <div className="ct-chart1" style={{ height: "250px" }}></div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="ct-chart2" style={{ height: "250px" }}></div>
-                </div>
-              </div>
-              <SmartTable />
             </div>
+            <div className="row row-lg">
+              <div className="col-lg-6">
+                <div className="ct-chart1" style={{ height: "250px" }}></div>
+              </div>
+              <div className="col-lg-6">
+                <div className="ct-chart2" style={{ height: "250px" }}></div>
+              </div>
+            </div>
+            <SmartTable />
           </div>
         </div>
       </div>
