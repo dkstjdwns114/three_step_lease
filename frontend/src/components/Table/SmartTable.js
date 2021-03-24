@@ -7,7 +7,7 @@ const SmartTableTest = (props) => {
   useEffect(() => {
     setTableData([
       {
-        value: "2019년 개업",
+        classification: "2019년 개업",
         name1: "apple",
         name2: "apple",
         name3: "apple",
@@ -21,7 +21,7 @@ const SmartTableTest = (props) => {
         phone_number: "010-1111-1111"
       },
       {
-        value: "2019년 폐업",
+        classification: "2019년 폐업",
         name1: "apple",
         name2: "apple",
         name3: "apple",
@@ -35,7 +35,7 @@ const SmartTableTest = (props) => {
         phone_number: "010-2222-2222"
       },
       {
-        value: "2020년 개업",
+        classification: "2020년 개업",
         name1: "apple",
         name2: "apple",
         name3: "apple",
@@ -49,7 +49,7 @@ const SmartTableTest = (props) => {
         phone_number: "010-3333-3333"
       },
       {
-        value: "2020년 폐업",
+        classification: "2020년 폐업",
         name1: "apple",
         name2: "apple",
         name3: "apple",
