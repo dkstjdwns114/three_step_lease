@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import PageHeader from "../components/Navigation/PageHeader";
-import PieChart from "../components/Chart/PieChart";
-import Top5Table from "../components/Table/Top5Table";
-import SignguTable from "../components/Table/SignguTable";
-import Loading from "../components/Loading/Loading";
+import PrevPageHeader from "../components/Navigation/PrevPageHeader";
+import PrevPieChart from "../components/Chart/PrevPieChart";
+import PrevTop5Table from "../components/Table/PrevTop5Table";
+import PrevSignguTable from "../components/Table/PrevSignguTable";
+import PrevLoading from "../components/Loading/PrevLoading";
 
 export default class CityPage extends Component {
   state = {
@@ -51,25 +51,25 @@ export default class CityPage extends Component {
     return (
       <>
         {this.state.isLoading ? (
-          <Loading />
+          <PrevLoading />
         ) : (
           <>
-            <PageHeader headerTitle={`${this.state.cityName} 폐업 현황`} />
+            <PrevPageHeader headerTitle={`${this.state.cityName} 폐업 현황`} />
             <div className="content">
               <div className="row">
-                <PieChart
+                <PrevPieChart
                   cardTitle={`${this.state.cityName} 2020년 업종별 폐업 현황`}
                   indsLcls={this.state.indsLclsCds}
                   numberComma={this.numberWithCommas}
                   path={this.state.path}
                 />
-                <Top5Table
+                <PrevTop5Table
                   cardTitle={`${this.state.cityName} 지역별 Top5`}
                   cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 주소 Top5"}
                   contents={this.state.most_coordinates}
                 />
               </div>
-              <SignguTable
+              <PrevSignguTable
                 cardTitle={`${this.state.cityName} 현황`}
                 cardDesc={"시/구 별 현황"}
                 numberComma={this.numberWithCommas}

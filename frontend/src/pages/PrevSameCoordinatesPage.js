@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Top5Table from "../components/Table/Top5Table";
-import PageHeader from "../components/Navigation/PageHeader";
-import SameCoordinatesMap from "../components/Map/SameCoordinatesMap";
-import Loading from "../components/Loading/Loading";
+import PrevTop5Table from "../components/Table/PrevTop5Table";
+import PrevPageHeader from "../components/Navigation/PrevPageHeader";
+import PrevSameCoordinatesMap from "../components/Map/PrevSameCoordinatesMap";
+import PrevLoading from "../components/Loading/PrevLoading";
 
 export default class SameCoordinatesPage extends Component {
   state = {
@@ -39,24 +39,24 @@ export default class SameCoordinatesPage extends Component {
     return (
       <>
         {this.state.isLoading ? (
-          <Loading />
+          <PrevLoading />
         ) : (
           <>
-            <PageHeader headerTitle={"2019년, 2020년 모두 폐업한 상가"} />
+            <PrevPageHeader headerTitle={"2019년, 2020년 모두 폐업한 상가"} />
             <div className="content">
               <div className="row">
-                <Top5Table
+                <PrevTop5Table
                   cardTitle={"지역별 Top5"}
                   cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 지역 Top5"}
                   contents={this.state.most_area}
                 />
-                <Top5Table
+                <PrevTop5Table
                   cardTitle={"좌표별 Top5"}
                   cardDesc={"2019년, 2020년 모두 폐업한 상가가 많은 주소 Top5"}
                   contents={this.state.most_coordinates}
                 />
               </div>
-              <SameCoordinatesMap
+              <PrevSameCoordinatesMap
                 cardTitle={"지도"}
                 cardDesc={`2019년, 2020년 모두 폐업한 상가 위치 총 ${this.numberWithCommas(
                   this.state.same_coordinates.length
