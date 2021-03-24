@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { render } from "react-dom";
-import HomePage from "./pages/HomePage";
-import CoordinateMapPage from "./pages/SameCoordinatesPage";
+import PrevHome from "./pages/PrevHome";
+import PrevSameCoordinatesPage from "./pages/PrevSameCoordinatesPage";
 import MainNavbar from "./components/Navigation/MainNavbar";
-import CityPage from "./pages/CityPage";
-import HomeTest from "./pages/HomeTest";
+import PrevCityPage from "./pages/PrevCityPage";
+import HomePage from "./pages/HomePage";
 
 export default class App extends Component {
   constructor(props) {
@@ -19,10 +19,13 @@ export default class App extends Component {
         {/* <div className="page-content container-fluid"> */}
         <Switch>
           <div className="content-wrapper">
-            {/* <Route exact path="/" component={HomePage} /> */}
-            <Route exact path="/" component={HomeTest} />
-            <Route path="/same_coordinates" component={CoordinateMapPage} />
-            <Route path="/city/:code" component={CityPage} />
+            {/* <Route exact path="/" component={PrevHome} /> */}
+            <Route exact path="/" component={HomePage} />
+            <Route
+              path="/same_coordinates"
+              component={PrevSameCoordinatesPage}
+            />
+            <Route path="/city/:code" component={PrevCityPage} />
           </div>
         </Switch>
         {/* </div> */}
