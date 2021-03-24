@@ -67,7 +67,7 @@ const SmartTableTest = (props) => {
 
   return (
     <>
-      <div className="col-xxl-6">
+      <div className="col-xxl-12">
         {/* <!-- Panel Kitchen Sink --> */}
         <div className="panel">
           <header className="panel-heading">

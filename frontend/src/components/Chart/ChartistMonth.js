@@ -234,7 +234,6 @@ const ChartistTest = (props) => {
           </div>
         </div>
       </div>
-      {/* <!-- End Panel Pie --> */}
     </>
   );
 };

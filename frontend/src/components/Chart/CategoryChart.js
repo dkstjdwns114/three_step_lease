@@ -58,7 +58,7 @@ const options = {
 const categoryChart = (props) => {
   return (
     <>
-      <div className="col-xxl-3 col-lg-6 col-md-12">
+      <div className="col-xxl-6 col-lg-6 col-md-12">
         <div class="card card-shadow">
           <div class="card-block p-0 p-30 h-full">
             <div className="card card-shadow">
@@ -68,7 +68,7 @@ const categoryChart = (props) => {
                   views of your project
                 </div>
               </div>
-              <Radar data={data} options={options} width={130} height={130} />
+              <Radar data={data} options={options} width={150} height={150} />
             </div>
           </div>
         </div>
