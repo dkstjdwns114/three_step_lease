@@ -177,7 +177,7 @@ const mainNavigation = (props) => {
                           >
                             <img
                               className="w-full"
-                              src="../../global/photos/placeholder.png"
+                              // src="../../global/photos/placeholder.png"
                               alt="..."
                             />
                           </a>
@@ -189,7 +189,7 @@ const mainNavigation = (props) => {
                           >
                             <img
                               className="w-full"
-                              src="../../global/photos/placeholder.png"
+                              // src="../../global/photos/placeholder.png"
                               alt="..."
                             />
                           </a>
@@ -201,7 +201,7 @@ const mainNavigation = (props) => {
                           >
                             <img
                               className="w-full"
-                              src="../../global/photos/placeholder.png"
+                              // src="../../global/photos/placeholder.png"
                               alt="..."
                             />
                           </a>
@@ -213,7 +213,7 @@ const mainNavigation = (props) => {
                           >
                             <img
                               className="w-full"
-                              src="../../global/photos/placeholder.png"
+                              // src="../../global/photos/placeholder.png"
                               alt="..."
                             />
                           </a>
@@ -225,7 +225,7 @@ const mainNavigation = (props) => {
                           >
                             <img
                               className="w-full"
-                              src="../../global/photos/placeholder.png"
+                              // src="../../global/photos/placeholder.png"
                               alt="..."
                             />
                           </a>
@@ -237,7 +237,7 @@ const mainNavigation = (props) => {
                           >
                             <img
                               className="w-full"
-                              src="../../global/photos/placeholder.png"
+                              // src="../../global/photos/placeholder.png"
                               alt="..."
                             />
                           </a>
