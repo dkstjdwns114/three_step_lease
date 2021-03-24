@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 const mainNavigation = (props) => {
   return (
     <nav
-      className="site-navbar navbar navbar-default navbar-fixed-top navbar-mega navbar-inverse bg-cyan-600"
+      className="site-navbar navbar navbar-default navbar-fixed-top navbar-mega bg-cyan-600"
       role="navigation"
     >
       <div className="navbar-header">
