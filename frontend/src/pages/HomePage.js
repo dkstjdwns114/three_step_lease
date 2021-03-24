@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PrevPageHeader from "../components/Navigation/PrevPageHeader";
 import PrevPieChart from "../components/Chart/PrevPieChart";
-import PrevMainMap from "../components/Map/PrevMainMap";
 import PrevLoading from "../components/Loading/PrevLoading";
 import TestMap from "../components/Map/TestMap";
 import ChartistTest from "../components/Chart/ChartistMonth";
 import CategoryChart from "../components/Chart/CategoryChart";
+import CityMap from "../components/Map/CityMap";
 
 export default class HomeTest extends Component {
   state = {
@@ -51,6 +51,12 @@ export default class HomeTest extends Component {
               <div className="row" data-plugin="matchHeight" data-by-row="true">
                 <ChartistTest />
                 <CategoryChart />
+                {/* <CityMap
+                  cardTitle={"2020년 시도별 폐업 현황"}
+                  cardDesc={`도시 클릭시 해당 도시의 상세페이지로 이동합니다.`}
+                  cities={this.state.ctprvnNm20}
+                  numberComma={this.numberWithCommas}
+                /> */}
               </div>
             </div>
           </>
