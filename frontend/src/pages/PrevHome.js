@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrevPageHeader from "../components/Navigation/PrevPageHeader";
 import PrevPieChart from "../components/Chart/PrevPieChart";
-import MainMap from "../components/Map/MainMap";
+import PrevMainMap from "../components/Map/PrevMainMap";
 import PrevLoading from "../components/Loading/PrevLoading";
 import TestMap from "../components/Map/TestMap";
 
@@ -63,7 +63,7 @@ export default class HomePage extends Component {
                 />
                 {/* /pies */}
               </div>
-              <MainMap
+              <PrevMainMap
                 cardTitle={"2020년 시도별 폐업 현황"}
                 cardDesc={`도시 클릭시 해당 도시의 상세페이지로 이동합니다.`}
                 cities={this.state.ctprvnNm20}

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import PrevPageHeader from "../components/Navigation/PrevPageHeader";
 import PrevPieChart from "../components/Chart/PrevPieChart";
-import MainMap from "../components/Map/MainMap";
+import PrevMainMap from "../components/Map/PrevMainMap";
 import PrevLoading from "../components/Loading/PrevLoading";
 import TestMap from "../components/Map/TestMap";
 import ChartistTest from "../components/Chart/ChartistMonth";
+import CategoryChart from "../components/Chart/CategoryChart";
 
 export default class HomeTest extends Component {
   state = {
