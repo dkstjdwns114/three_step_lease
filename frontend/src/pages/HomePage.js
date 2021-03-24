@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import PrevPageHeader from "../components/Navigation/PrevPageHeader";
-import PrevPieChart from "../components/Chart/PrevPieChart";
 import PrevLoading from "../components/Loading/PrevLoading";
-import TestMap from "../components/Map/TestMap";
 import ChartistMonth from "../components/Chart/ChartistMonth";
 import CategoryChart from "../components/Chart/CategoryChart";
 import CityMap from "../components/Map/CityMap";
@@ -11,9 +8,16 @@ import TabsAccording from "../components/Tab/TabsAccording";
 export default class HomeTest extends Component {
   state = {
     isLoading: true,
-    ctprvnNm20: [],
-    indsLcls19: [],
-    indsLcls20: [],
+    type_close_19: [],
+    type_open_19: [],
+    type_close_20: [],
+    type_open_20: [],
+    city_close_20: [],
+    month_close_19: [],
+    month_open_19: [],
+    month_close_20: [],
+    month_open_20: [],
+    nationwide_most_close_20: [],
     path: ""
   };
 
@@ -30,9 +34,16 @@ export default class HomeTest extends Component {
       .then((resData) => {
         this.setState({
           isLoading: false,
-          ctprvnNm20: resData.ctprvnNm20,
-          indsLcls19: resData.indsLcls19,
-          indsLcls20: resData.indsLcls20
+          type_close_19: resData.type_close_19,
+          type_open_19: resData.type_open_19,
+          type_close_20: resData.type_close_20,
+          type_open_20: resData.type_open_20,
+          city_close_20: resData.city_close_20,
+          month_close_19: resData.month_close_19,
+          month_open_19: resData.month_open_19,
+          month_close_20: resData.month_close_20,
+          month_open_20: resData.month_open_20,
+          nationwide_most_close_20: resData.nationwide_most_close_20
         });
       });
   };
@@ -50,12 +61,18 @@ export default class HomeTest extends Component {
           <>
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
-                <ChartistMonth />
+                <ChartistMonth
+                  month_close_19={this.state.month_close_19}
+                  month_open_19={this.state.month_open_19}
+                  month_close_20={this.state.month_close_20}
+                  month_open_20={this.state.month_open_20}
+                  numberComma={this.numberWithCommas}
+                />
                 <CategoryChart />
                 <CityMap
                   cardTitle={"2020년 시도별 폐업 현황"}
                   cardDesc={`도시 클릭시 해당 도시의 상세페이지로 이동합니다.`}
-                  cities={this.state.ctprvnNm20}
+                  cities={this.state.city_close_20}
                   numberComma={this.numberWithCommas}
                 />
                 <TabsAccording />

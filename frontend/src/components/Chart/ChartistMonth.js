@@ -5,59 +5,78 @@ import SmartTable from "../Table/SmartTable";
 
 const ChartistTest = (props) => {
   useEffect(() => {
-    animationChart(".ct-chart1");
-    animationChart(".ct-chart2");
+    let close_first_19 = [];
+    let open_first_19 = [];
+    let close_first_20 = [];
+    let open_first_20 = [];
+
+    let close_latter_19 = [];
+    let open_latter_19 = [];
+    let close_latter_20 = [];
+    let open_latter_20 = [];
+
+    let first_month = [];
+    let latter_month = [];
+
+    props.month_close_19.forEach((data) => {
+      data.month_num <= 6
+        ? (close_first_19.push({ meta: "2019 Close", value: data.count }),
+          first_month.push(data.month))
+        : (close_latter_19.push({ meta: "2019 Close", value: data.count }),
+          latter_month.push(data.month));
+    });
+    props.month_open_19.forEach((data) => {
+      data.month_num <= 6
+        ? open_first_19.push({ meta: "2019 Open", value: data.count })
+        : open_latter_19.push({ meta: "2019 Open", value: data.count });
+    });
+    props.month_close_20.forEach((data) => {
+      data.month_num <= 6
+        ? close_first_20.push({ meta: "2020 Close", value: data.count })
+        : close_latter_20.push({ meta: "2020 Close", value: data.count });
+    });
+    props.month_open_20.forEach((data) => {
+      data.month_num <= 6
+        ? open_first_20.push({ meta: "2020 Open", value: data.count })
+        : open_latter_20.push({ meta: "2020 Open", value: data.count });
+    });
+
+    setTimeout(() => {
+      animationChart(
+        ".ct-chart1",
+        first_month,
+        close_first_19,
+        open_first_19,
+        close_first_20,
+        open_first_20
+      );
+      animationChart(
+        ".ct-chart2",
+        latter_month,
+        close_latter_19,
+        open_latter_19,
+        close_latter_20,
+        open_latter_20
+      );
+    }, 500);
   }, []);
 
-  const animationChart = (chartClassName) => {
-    let labelArray = [];
-    chartClassName === ".ct-chart1" &&
-      (labelArray = ["Jan", "2", "3", "4", "5", "6"]);
-    chartClassName === ".ct-chart2" &&
-      (labelArray = ["7", "8", "9", "10", "11", "12"]);
-
+  const animationChart = (
+    chartClassName,
+    labelArray,
+    close19,
+    open19,
+    close20,
+    open20
+  ) => {
     let chart = new Chartist.Line(
       chartClassName,
       {
         labels: labelArray,
-        series: [
-          [
-            { meta: "2019 Open", value: 1 },
-            { meta: "2019 Open", value: 9 },
-            { meta: "2019 Open", value: 8 },
-            { meta: "2019 Open", value: 3 },
-            { meta: "2019 Open", value: 8 },
-            { meta: "2019 Open", value: 7 }
-          ],
-          [
-            { meta: "Jan", value: 1 },
-            { meta: "Feb", value: 5 },
-            { meta: "Mar", value: 8 },
-            { meta: "Apr", value: 3 },
-            { meta: "May", value: 12 },
-            { meta: "Jun", value: 17 }
-          ],
-          [
-            { meta: "Jan", value: 7 },
-            { meta: "Feb", value: 9 },
-            { meta: "Mar", value: 4 },
-            { meta: "Apr", value: 5 },
-            { meta: "May", value: 12 },
-            { meta: "Jun", value: 6 }
-          ],
-          [
-            { meta: "Jan", value: 1 },
-            { meta: "Feb", value: 12 },
-            { meta: "Mar", value: 8 },
-            { meta: "Apr", value: 5 },
-            { meta: "May", value: 12 },
-            { meta: "Jun", value: 20 }
-          ]
-        ]
+        series: [close19, open19, close20, open20]
       },
       {
-        low: 0,
-        high: 20,
+        low: 5000,
         // fullWidth: true,
         plugins: [ChartistTooltip()]
       }
@@ -230,7 +249,13 @@ const ChartistTest = (props) => {
                 <div className="ct-chart2" style={{ height: "300px" }}></div>
               </div>
             </div>
-            <SmartTable />
+            <SmartTable
+              month_close_19={props.month_close_19}
+              month_open_19={props.month_open_19}
+              month_close_20={props.month_close_20}
+              month_open_20={props.month_open_20}
+              numberComma={props.numberComma}
+            />
           </div>
         </div>
       </div>
