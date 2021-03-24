@@ -5,59 +5,74 @@ import SmartTable from "../Table/SmartTable";
 
 const ChartistTest = (props) => {
   useEffect(() => {
-    let close_first_19 = [];
-    let open_first_19 = [];
-    let close_first_20 = [];
-    let open_first_20 = [];
+    // mobile
+    // let close_first_19 = [];
+    // let open_first_19 = [];
+    // let close_first_20 = [];
+    // let open_first_20 = [];
 
-    let close_latter_19 = [];
-    let open_latter_19 = [];
-    let close_latter_20 = [];
-    let open_latter_20 = [];
+    // let close_latter_19 = [];
+    // let open_latter_19 = [];
+    // let close_latter_20 = [];
+    // let open_latter_20 = [];
 
-    let first_month = [];
-    let latter_month = [];
+    // let first_month = [];
+    // let latter_month = [];
+
+    // props.month_close_19.forEach((data) => {
+    //   data.month_num <= 6
+    //     ? (close_first_19.push({ meta: "2019 Close", value: data.count }),
+    //       first_month.push(data.month))
+    //     : (close_latter_19.push({ meta: "2019 Close", value: data.count }),
+    //       latter_month.push(data.month));
+    // });
+    // props.month_open_19.forEach((data) => {
+    //   data.month_num <= 6
+    //     ? open_first_19.push({ meta: "2019 Open", value: data.count })
+    //     : open_latter_19.push({ meta: "2019 Open", value: data.count });
+    // });
+    // props.month_close_20.forEach((data) => {
+    //   data.month_num <= 6
+    //     ? close_first_20.push({ meta: "2020 Close", value: data.count })
+    //     : close_latter_20.push({ meta: "2020 Close", value: data.count });
+    // });
+    // props.month_open_20.forEach((data) => {
+    //   data.month_num <= 6
+    //     ? open_first_20.push({ meta: "2020 Open", value: data.count })
+    //     : open_latter_20.push({ meta: "2020 Open", value: data.count });
+    // });
+
+    // web
+    let close_19 = [];
+    let open_19 = [];
+    let close_20 = [];
+    let open_20 = [];
+
+    let month = [];
 
     props.month_close_19.forEach((data) => {
-      data.month_num <= 6
-        ? (close_first_19.push({ meta: "2019 Close", value: data.count }),
-          first_month.push(data.month))
-        : (close_latter_19.push({ meta: "2019 Close", value: data.count }),
-          latter_month.push(data.month));
+      close_19.push({ meta: "2019 Close", value: data.count });
     });
     props.month_open_19.forEach((data) => {
-      data.month_num <= 6
-        ? open_first_19.push({ meta: "2019 Open", value: data.count })
-        : open_latter_19.push({ meta: "2019 Open", value: data.count });
+      open_19.push({ meta: "2019 Close", value: data.count });
     });
     props.month_close_20.forEach((data) => {
-      data.month_num <= 6
-        ? close_first_20.push({ meta: "2020 Close", value: data.count })
-        : close_latter_20.push({ meta: "2020 Close", value: data.count });
+      close_20.push({ meta: "2019 Close", value: data.count });
     });
     props.month_open_20.forEach((data) => {
-      data.month_num <= 6
-        ? open_first_20.push({ meta: "2020 Open", value: data.count })
-        : open_latter_20.push({ meta: "2020 Open", value: data.count });
+      open_20.push({ meta: "2019 Close", value: data.count });
     });
 
     setTimeout(() => {
-      animationChart(
-        ".ct-chart1",
-        first_month,
-        close_first_19,
-        open_first_19,
-        close_first_20,
-        open_first_20
-      );
-      animationChart(
-        ".ct-chart2",
-        latter_month,
-        close_latter_19,
-        open_latter_19,
-        close_latter_20,
-        open_latter_20
-      );
+      animationChart(".ct-chart1", month, close_19, open_19, close_20, open_20);
+      // animationChart(
+      //   ".ct-chart2",
+      //   latter_month,
+      //   close_latter_19,
+      //   open_latter_19,
+      //   close_latter_20,
+      //   open_latter_20
+      // );
     }, 500);
   }, []);
 
@@ -178,16 +193,17 @@ const ChartistTest = (props) => {
       }
     });
 
-    // chart.on("created", function () {
-    //   if (window.__exampleAnimateTimeout) {
-    //     clearTimeout(window.__exampleAnimateTimeout);
-    //     window.__exampleAnimateTimeout = null;
-    //   }
-    //   window.__exampleAnimateTimeout = setTimeout(
-    //     chart.update.bind(chart),
-    //     30000
-    //   );
-    // });
+    // mobile은 주석
+    chart.on("created", function () {
+      if (window.__exampleAnimateTimeout) {
+        clearTimeout(window.__exampleAnimateTimeout);
+        window.__exampleAnimateTimeout = null;
+      }
+      window.__exampleAnimateTimeout = setTimeout(
+        chart.update.bind(chart),
+        30000
+      );
+    });
   };
 
   return (
@@ -242,12 +258,14 @@ const ChartistTest = (props) => {
               </div>
             </div>
             <div className="row pt-30 px-30">
-              <div className="col-lg-6">
-                <div className="ct-chart1" style={{ height: "300px" }}></div>
+              {/* mobile은 col-lg-6으로 변경 */}
+              <div className="col-lg-12">
+                <div className="ct-chart1" style={{ height: "500px" }}></div>
               </div>
-              <div className="col-lg-6">
+              {/* mobile */}
+              {/* <div className="col-lg-6">
                 <div className="ct-chart2" style={{ height: "300px" }}></div>
-              </div>
+              </div> */}
             </div>
             <SmartTable
               month_close_19={props.month_close_19}
