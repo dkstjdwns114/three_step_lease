@@ -29,7 +29,7 @@ const data = {
       pointBackgroundColor: "rgba(151,187,205,1)",
       hoverPointBackgroundColor: "#fff",
       pointHighlightStroke: "rgba(151,187,205,1)",
-      data: ["4", "5", "6", "1", "2", "7", "1000"]
+      data: ["4", "5", "6", "1", "2", "7", "20"]
     }
   ]
 };
@@ -76,7 +76,7 @@ const categoryChart = (props) => {
                   views of your project
                 </div>
               </div>
-              <Radar data={data} options={options} width={150} height={150} />
+              <Radar data={data} options={options} width={130} height={130} />
             </div>
           </div>
         </div>
