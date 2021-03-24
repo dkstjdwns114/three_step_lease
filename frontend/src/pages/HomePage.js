@@ -6,7 +6,7 @@ import TestMap from "../components/Map/TestMap";
 import ChartistMonth from "../components/Chart/ChartistMonth";
 import CategoryChart from "../components/Chart/CategoryChart";
 import CityMap from "../components/Map/CityMap";
-import TabsAccording from "../components/Table/TabsAccording";
+import TabsAccording from "../components/Tab/TabsAccording";
 
 export default class HomeTest extends Component {
   state = {

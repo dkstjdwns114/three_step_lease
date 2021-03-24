@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SmartTableTest from "./SmartTable";
-import FixedHeaderTable from "./FixedHeaderTable";
+import FixedHeaderTable from "../Table/FixedHeaderTable";
 
 const TabsAccording = (props) => {
   return (
@@ -9,7 +8,6 @@ const TabsAccording = (props) => {
         {/* <!-- Example Continuous Accordion --> */}
         <div class="card">
           <div class="card-block p-0 p-30 h-full">
-            {/* <div className="card"> */}
             <div class="counter text-left">
               <h4 class="example-title">Continuous Accordion</h4>
               <div
@@ -70,7 +68,7 @@ const TabsAccording = (props) => {
                     role="tabpanel"
                   >
                     <div className="panel-body">
-                      <SmartTableTest />
+                      <FixedHeaderTable />
                     </div>
                   </div>
                 </div>
@@ -98,13 +96,12 @@ const TabsAccording = (props) => {
                     role="tabpanel"
                   >
                     <div className="panel-body">
-                      <SmartTableTest />
+                      <FixedHeaderTable />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* </div> */}
           </div>
         </div>
         {/* <!-- End Example Continuous Accordion --> */}
