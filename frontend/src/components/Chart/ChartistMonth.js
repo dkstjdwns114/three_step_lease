@@ -225,10 +225,10 @@ const ChartistTest = (props) => {
             </div>
             <div className="row row-lg">
               <div className="col-lg-6">
-                <div className="ct-chart1" style={{ height: "250px" }}></div>
+                <div className="ct-chart1" style={{ height: "300px" }}></div>
               </div>
               <div className="col-lg-6">
-                <div className="ct-chart2" style={{ height: "250px" }}></div>
+                <div className="ct-chart2" style={{ height: "300px" }}></div>
               </div>
             </div>
             <SmartTable />
