@@ -478,7 +478,7 @@ const CityMap = (props) => {
             <div
               className="map-container mt-30"
               id="map_marker_simple"
-              style={{ height: "600px" }}
+              style={{ height: "650px" }}
             ></div>
           </div>
         </div>
