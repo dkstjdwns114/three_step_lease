@@ -6,12 +6,12 @@ const TabsAccording = (props) => {
     <>
       <div className="col-xxl-12 col-lg-12 col-md-12">
         {/* <!-- Example Continuous Accordion --> */}
-        <div class="card">
-          <div class="card-block p-0 p-30 h-full">
-            <div class="counter text-left">
-              <h4 class="example-title">Continuous Accordion</h4>
+        <div className="card">
+          <div className="card-block p-0 p-30 h-full">
+            <div className="counter text-left">
+              <h4 className="example-title">Continuous Accordion</h4>
               <div
-                class="panel-group panel-group-continuous"
+                className="panel-group panel-group-continuous"
                 id="exampleAccordionContinuous"
                 aria-multiselectable="true"
                 role="tablist"

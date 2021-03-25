@@ -87,11 +87,11 @@ const CategoryChart = (props) => {
   return (
     <>
       <div className="col-xxl-6 col-lg-6 col-md-12">
-        <div class="card">
-          <div class="card-block p-0 p-30 h-full">
-            <div class="counter text-left">
-              <span class="counter-number">3650</span>
-              <div class="counter-label text-uppercase mb-20">
+        <div className="card">
+          <div className="card-block p-0 p-30 h-full">
+            <div className="counter text-left">
+              <span className="counter-number">3650</span>
+              <div className="counter-label text-uppercase mb-20">
                 views of your project
               </div>
             </div>
