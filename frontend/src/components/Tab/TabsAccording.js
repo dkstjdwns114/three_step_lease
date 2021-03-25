@@ -30,7 +30,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousOne"
                       aria-expanded="true"
                     >
-                      Collapsible Group Item #1
+                      1. {props.nationwide_most_close_20[0].address} / 총{" "}
+                      {props.nationwide_most_close_20[0].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -40,7 +41,9 @@ const TabsAccording = (props) => {
                     role="tabpanel"
                   >
                     <div className="panel-body">
-                      <FixedHeaderTable />
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[0].stores_info}
+                      />
                     </div>
                   </div>
                 </div>
@@ -58,7 +61,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousTwo"
                       aria-expanded="false"
                     >
-                      Collapsible Group Item #2
+                      2. {props.nationwide_most_close_20[1].address} / 총{" "}
+                      {props.nationwide_most_close_20[1].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -68,7 +72,9 @@ const TabsAccording = (props) => {
                     role="tabpanel"
                   >
                     <div className="panel-body">
-                      <FixedHeaderTable />
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[1].stores_info}
+                      />
                     </div>
                   </div>
                 </div>
@@ -86,7 +92,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousThree"
                       aria-expanded="false"
                     >
-                      Collapsible Group Item #3
+                      3. {props.nationwide_most_close_20[2].address} / 총{" "}
+                      {props.nationwide_most_close_20[2].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -96,7 +103,226 @@ const TabsAccording = (props) => {
                     role="tabpanel"
                   >
                     <div className="panel-body">
-                      <FixedHeaderTable />
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[2].stores_info}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="panel mb-3">
+                  <div
+                    className="panel-heading"
+                    id="exampleHeadingContinuousFour"
+                    role="tab"
+                  >
+                    <a
+                      className="panel-title collapsed"
+                      data-parent="#exampleAccordionContinuous"
+                      data-toggle="collapse"
+                      href="#exampleCollapseContinuousFour"
+                      aria-controls="exampleCollapseContinuousFour"
+                      aria-expanded="false"
+                    >
+                      4. {props.nationwide_most_close_20[3].address} / 총{" "}
+                      {props.nationwide_most_close_20[3].count}개 가게 폐업
+                    </a>
+                  </div>
+                  <div
+                    className="panel-collapse collapse"
+                    id="exampleCollapseContinuousFour"
+                    aria-labelledby="exampleHeadingContinuousFour"
+                    role="tabpanel"
+                  >
+                    <div className="panel-body">
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[3].stores_info}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="panel mb-3">
+                  <div
+                    className="panel-heading"
+                    id="exampleHeadingContinuousFive"
+                    role="tab"
+                  >
+                    <a
+                      className="panel-title collapsed"
+                      data-parent="#exampleAccordionContinuous"
+                      data-toggle="collapse"
+                      href="#exampleCollapseContinuousFive"
+                      aria-controls="exampleCollapseContinuousFive"
+                      aria-expanded="false"
+                    >
+                      5. {props.nationwide_most_close_20[4].address} / 총{" "}
+                      {props.nationwide_most_close_20[4].count}개 가게 폐업
+                    </a>
+                  </div>
+                  <div
+                    className="panel-collapse collapse"
+                    id="exampleCollapseContinuousFive"
+                    aria-labelledby="exampleHeadingContinuousFive"
+                    role="tabpanel"
+                  >
+                    <div className="panel-body">
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[4].stores_info}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="panel mb-3">
+                  <div
+                    className="panel-heading"
+                    id="exampleHeadingContinuousSix"
+                    role="tab"
+                  >
+                    <a
+                      className="panel-title collapsed"
+                      data-parent="#exampleAccordionContinuous"
+                      data-toggle="collapse"
+                      href="#exampleCollapseContinuousSix"
+                      aria-controls="exampleCollapseContinuousSix"
+                      aria-expanded="false"
+                    >
+                      6. {props.nationwide_most_close_20[5].address} / 총{" "}
+                      {props.nationwide_most_close_20[5].count}개 가게 폐업
+                    </a>
+                  </div>
+                  <div
+                    className="panel-collapse collapse"
+                    id="exampleCollapseContinuousSix"
+                    aria-labelledby="exampleHeadingContinuousSix"
+                    role="tabpanel"
+                  >
+                    <div className="panel-body">
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[5].stores_info}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="panel mb-3">
+                  <div
+                    className="panel-heading"
+                    id="exampleHeadingContinuousSeven"
+                    role="tab"
+                  >
+                    <a
+                      className="panel-title collapsed"
+                      data-parent="#exampleAccordionContinuous"
+                      data-toggle="collapse"
+                      href="#exampleCollapseContinuousSeven"
+                      aria-controls="exampleCollapseContinuousSeven"
+                      aria-expanded="false"
+                    >
+                      7. {props.nationwide_most_close_20[6].address} / 총{" "}
+                      {props.nationwide_most_close_20[6].count}개 가게 폐업
+                    </a>
+                  </div>
+                  <div
+                    className="panel-collapse collapse"
+                    id="exampleCollapseContinuousSeven"
+                    aria-labelledby="exampleHeadingContinuousSeven"
+                    role="tabpanel"
+                  >
+                    <div className="panel-body">
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[6].stores_info}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="panel mb-3">
+                  <div
+                    className="panel-heading"
+                    id="exampleHeadingContinuousEight"
+                    role="tab"
+                  >
+                    <a
+                      className="panel-title collapsed"
+                      data-parent="#exampleAccordionContinuous"
+                      data-toggle="collapse"
+                      href="#exampleCollapseContinuousEight"
+                      aria-controls="exampleCollapseContinuousEight"
+                      aria-expanded="false"
+                    >
+                      8. {props.nationwide_most_close_20[7].address} / 총{" "}
+                      {props.nationwide_most_close_20[7].count}개 가게 폐업
+                    </a>
+                  </div>
+                  <div
+                    className="panel-collapse collapse"
+                    id="exampleCollapseContinuousEight"
+                    aria-labelledby="exampleHeadingContinuousEight"
+                    role="tabpanel"
+                  >
+                    <div className="panel-body">
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[7].stores_info}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="panel mb-3">
+                  <div
+                    className="panel-heading"
+                    id="exampleHeadingContinuousNine"
+                    role="tab"
+                  >
+                    <a
+                      className="panel-title collapsed"
+                      data-parent="#exampleAccordionContinuous"
+                      data-toggle="collapse"
+                      href="#exampleCollapseContinuousNine"
+                      aria-controls="exampleCollapseContinuousNine"
+                      aria-expanded="false"
+                    >
+                      9. {props.nationwide_most_close_20[8].address} / 총{" "}
+                      {props.nationwide_most_close_20[8].count}개 가게 폐업
+                    </a>
+                  </div>
+                  <div
+                    className="panel-collapse collapse"
+                    id="exampleCollapseContinuousNine"
+                    aria-labelledby="exampleHeadingContinuousNine"
+                    role="tabpanel"
+                  >
+                    <div className="panel-body">
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[8].stores_info}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="panel mb-3">
+                  <div
+                    className="panel-heading"
+                    id="exampleHeadingContinuousTen"
+                    role="tab"
+                  >
+                    <a
+                      className="panel-title collapsed"
+                      data-parent="#exampleAccordionContinuous"
+                      data-toggle="collapse"
+                      href="#exampleCollapseContinuousTen"
+                      aria-controls="exampleCollapseContinuousTen"
+                      aria-expanded="false"
+                    >
+                      10. {props.nationwide_most_close_20[9].address} / 총{" "}
+                      {props.nationwide_most_close_20[9].count}개 가게 폐업
+                    </a>
+                  </div>
+                  <div
+                    className="panel-collapse collapse"
+                    id="exampleCollapseContinuousTen"
+                    aria-labelledby="exampleHeadingContinuousTen"
+                    role="tabpanel"
+                  >
+                    <div className="panel-body">
+                      <FixedHeaderTable
+                        dataArr={props.nationwide_most_close_20[9].stores_info}
+                      />
                     </div>
                   </div>
                 </div>

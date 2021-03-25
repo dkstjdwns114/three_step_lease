@@ -80,7 +80,9 @@ export default class HomeTest extends Component {
                   cities={this.state.city_close_20}
                   numberComma={this.numberWithCommas}
                 />
-                <TabsAccording />
+                <TabsAccording
+                  nationwide_most_close_20={this.state.nationwide_most_close_20}
+                />
               </div>
             </div>
           </>
