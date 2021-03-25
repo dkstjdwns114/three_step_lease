@@ -6,7 +6,6 @@ const CategoryChart = (props) => {
   const [options, setOptions] = useState({});
 
   useEffect(() => {
-    console.log(props);
     setOptions({
       scale: {
         reverse: false,
