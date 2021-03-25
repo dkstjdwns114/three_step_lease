@@ -21,25 +21,25 @@ const ChartistTest = (props) => {
 
     // props.month_close_19.forEach((data) => {
     //   data.month_num <= 6
-    //     ? (close_first_19.push({ meta: "2019 Close", value: data.count }),
+    //     ? (close_first_19.push({ meta: "2019년 폐업", value: data.count }),
     //       first_month.push(data.month))
-    //     : (close_latter_19.push({ meta: "2019 Close", value: data.count }),
+    //     : (close_latter_19.push({ meta: "2019년 폐업", value: data.count }),
     //       latter_month.push(data.month));
     // });
     // props.month_open_19.forEach((data) => {
     //   data.month_num <= 6
-    //     ? open_first_19.push({ meta: "2019 Open", value: data.count })
-    //     : open_latter_19.push({ meta: "2019 Open", value: data.count });
+    //     ? open_first_19.push({ meta: "2019년 개업", value: data.count })
+    //     : open_latter_19.push({ meta: "2019년 개업", value: data.count });
     // });
     // props.month_close_20.forEach((data) => {
     //   data.month_num <= 6
-    //     ? close_first_20.push({ meta: "2020 Close", value: data.count })
-    //     : close_latter_20.push({ meta: "2020 Close", value: data.count });
+    //     ? close_first_20.push({ meta: "2020년 폐업", value: data.count })
+    //     : close_latter_20.push({ meta: "2020년 폐업", value: data.count });
     // });
     // props.month_open_20.forEach((data) => {
     //   data.month_num <= 6
-    //     ? open_first_20.push({ meta: "2020 Open", value: data.count })
-    //     : open_latter_20.push({ meta: "2020 Open", value: data.count });
+    //     ? open_first_20.push({ meta: "2020년 개업", value: data.count })
+    //     : open_latter_20.push({ meta: "2020년 개업", value: data.count });
     // });
 
     // web
@@ -51,16 +51,16 @@ const ChartistTest = (props) => {
     let month = [];
 
     props.month_close_19.forEach((data) => {
-      close_19.push({ meta: "2019 Close", value: data.count });
+      close_19.push({ meta: "2019년 폐업", value: data.count });
     });
     props.month_open_19.forEach((data) => {
-      open_19.push({ meta: "2019 Close", value: data.count });
+      open_19.push({ meta: "2019년 개업", value: data.count });
     });
     props.month_close_20.forEach((data) => {
-      close_20.push({ meta: "2019 Close", value: data.count });
+      close_20.push({ meta: "2020년 폐업", value: data.count });
     });
     props.month_open_20.forEach((data) => {
-      open_20.push({ meta: "2019 Close", value: data.count });
+      open_20.push({ meta: "2020년 개업", value: data.count });
     });
 
     setTimeout(() => {
