@@ -23,7 +23,7 @@ const SmartTableTest = (props) => {
       open20[data.abbreviations] = props.numberComma(data.count);
     });
     setTimeout(() => {
-      setTableData([close19, open19, close20, open20]);
+      setTableData([close19, close20, open19, open20]);
     }, 500);
   }, []);
 
