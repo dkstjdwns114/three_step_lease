@@ -83,7 +83,12 @@ export default class HomePage extends Component {
                   type_close_20={this.state.type_close_20}
                   type_open_20={this.state.type_open_20}
                 />
-                <TypeDetailView />
+                <TypeDetailView
+                  type_detail_close_19={this.state.type_detail_close_19}
+                  type_detail_open_19={this.state.type_detail_open_19}
+                  type_detail_close_20={this.state.type_detail_close_20}
+                  type_detail_open_20={this.state.type_detail_open_20}
+                />
                 {/* <CityMap
                   cardTitle={"2020년 시도별 폐업 현황"}
                   cardDesc={`도시 클릭시 해당 도시의 상세페이지로 이동합니다.`}
