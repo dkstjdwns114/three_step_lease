@@ -4,6 +4,7 @@ import ChartistMonth from "../components/Chart/ChartistMonth";
 import CategoryChart from "../components/Chart/CategoryChart";
 import CityMap from "../components/Map/CityMap";
 import TabsAccording from "../components/Tab/TabsAccording";
+import MainMonthView from "../components/View/MainMonthView";
 
 export default class HomeTest extends Component {
   state = {
@@ -61,13 +62,20 @@ export default class HomeTest extends Component {
           <>
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
-                <ChartistMonth
+                <MainMonthView
                   month_close_19={this.state.month_close_19}
                   month_open_19={this.state.month_open_19}
                   month_close_20={this.state.month_close_20}
                   month_open_20={this.state.month_open_20}
                   numberComma={this.numberWithCommas}
                 />
+                {/* <ChartistMonth
+                  month_close_19={this.state.month_close_19}
+                  month_open_19={this.state.month_open_19}
+                  month_close_20={this.state.month_close_20}
+                  month_open_20={this.state.month_open_20}
+                  numberComma={this.numberWithCommas}
+                /> */}
                 <CategoryChart
                   type_close_19={this.state.type_close_19}
                   type_open_19={this.state.type_open_19}
