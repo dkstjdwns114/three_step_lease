@@ -13,34 +13,58 @@ const TypeDetailYearsBtn = (props) => {
       <div className="example example-buttons">
         <div className="btn-group btn-group-justified">
           <div className="btn-group" role="group">
-            <button type="button" className="btn btn-primary">
+            <button
+              type="button"
+              className="btn btn-primary"
+              // onClick={props.changeYearsValue("type_detail_close_19")}
+            >
               <i className="icon md-star" aria-hidden="true"></i>
               <br />
-              <span className="text-uppercase hidden-sm-down">Favourites</span>
+              <span className="text-uppercase hidden-sm-down">
+                2019년도 폐업
+              </span>
             </button>
           </div>
 
           <div className="btn-group" role="group">
-            <button type="button" className="btn btn-info">
+            <button
+              type="button"
+              className="btn btn-info"
+              // onClick={props.changeYearsValue("type_detail_open_19")}
+            >
               <i className="icon md-time" aria-hidden="true"></i>
               <br />
-              <span className="text-uppercase hidden-sm-down">Recent</span>
+              <span className="text-uppercase hidden-sm-down">
+                2019년도 개업
+              </span>
             </button>
           </div>
 
           <div className="btn-group" role="group">
-            <button type="button" className="btn btn-success">
+            <button
+              type="button"
+              className="btn btn-success"
+              // onClick={props.changeYearsValue("type_detail_close_20")}
+            >
               <i className="icon md-account" aria-hidden="true"></i>
               <br />
-              <span className="text-uppercase hidden-sm-down">Contacts</span>
+              <span className="text-uppercase hidden-sm-down">
+                2020년도 폐업
+              </span>
             </button>
           </div>
 
           <div className="btn-group" role="group">
-            <button type="button" className="btn btn-success">
+            <button
+              type="button"
+              className="btn btn-success"
+              // onClick={props.changeYearsValue("type_detail_open_20")}
+            >
               <i className="icon md-account" aria-hidden="true"></i>
               <br />
-              <span className="text-uppercase hidden-sm-down">Contacts</span>
+              <span className="text-uppercase hidden-sm-down">
+                2020년도 개업
+              </span>
             </button>
           </div>
         </div>
