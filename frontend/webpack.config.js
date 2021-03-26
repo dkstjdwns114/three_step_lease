@@ -33,5 +33,10 @@ module.exports = {
         NODE_ENV: JSON.stringify("production")
       }
     })
-  ]
+  ],
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  }
 };
