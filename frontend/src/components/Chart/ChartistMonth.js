@@ -90,7 +90,7 @@ const ChartistTest = (props) => {
         series: [close19, open19, close20, open20]
       },
       {
-        low: 12500,
+        low: 17500,
         // fullWidth: true,
         plugins: [ChartistTooltip()]
       }
