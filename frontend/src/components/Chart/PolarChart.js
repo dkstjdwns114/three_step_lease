@@ -6,6 +6,7 @@ const PolarChart = (props) => {
   const [data, setData] = useState({});
 
   useEffect(() => {
+    console.log(props);
     // let labelArr = [];
     // let datasetsArr = [];
     // let close_19_data = [];
@@ -52,7 +53,7 @@ const PolarChart = (props) => {
     //   });
     setDataAndOptions();
     // }, 500);
-  }, []);
+  }, [props.yearsValue]);
 
   const setDataAndOptions = () => {
     setData({

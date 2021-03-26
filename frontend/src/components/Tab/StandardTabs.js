@@ -1,10 +1,109 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PolarChart from "../Chart/PolarChart";
 
 const StandardTabs = (props) => {
+  const [years, setYears] = useState("");
+  const [animal_close_19, set_animal_close_19] = useState({});
+  const [culture_close_19, set_culture_close_19] = useState({});
+  const [environment_close_19, set_environment_close_19] = useState({});
+  const [food_close_19, set_food_close_19] = useState({});
+  const [health_close_19, set_health_close_19] = useState({});
+  const [life_close_19, set_life_close_19] = useState({});
+  const [other_close_19, set_other_close_19] = useState({});
+  const [animal_close_20, set_animal_close_20] = useState({});
+  const [culture_close_20, set_culture_close_20] = useState({});
+  const [environment_close_20, set_environment_close_20] = useState({});
+  const [food_close_20, set_food_close_20] = useState({});
+  const [health_close_20, set_health_close_20] = useState({});
+  const [life_close_20, set_life_close_20] = useState({});
+  const [other_close_20, set_other_close_20] = useState({});
+  const [animal_open_19, set_animal_open_19] = useState({});
+  const [culture_open_19, set_culture_open_19] = useState({});
+  const [environment_open_19, set_environment_open_19] = useState({});
+  const [food_open_19, set_food_open_19] = useState({});
+  const [health_open_19, set_health_open_19] = useState({});
+  const [life_open_19, set_life_open_19] = useState({});
+  const [other_open_19, set_other_open_19] = useState({});
+  const [animal_open_20, set_animal_open_20] = useState({});
+  const [culture_open_20, set_culture_open_20] = useState({});
+  const [environment_open_20, set_environment_open_20] = useState({});
+  const [food_open_20, set_food_open_20] = useState({});
+  const [health_open_20, set_health_open_20] = useState({});
+  const [life_open_20, set_life_open_20] = useState({});
+  const [other_open_20, set_other_open_20] = useState({});
+
   useEffect(() => {
-    console.log(props.yearsValue);
-  }, [props]);
+    setYears(props.yearsValue);
+    props.type_detail_close_19.forEach((data) => {
+      if (data["category"] === "animal") {
+        set_animal_close_19(data);
+      } else if (data["category"] === "culture") {
+        set_culture_close_19(data);
+      } else if (data["category"] === "environment") {
+        set_environment_close_19(data);
+      } else if (data["category"] === "food") {
+        set_food_close_19(data);
+      } else if (data["category"] === "health") {
+        set_health_close_19(data);
+      } else if (data["category"] === "life") {
+        set_life_close_19(data);
+      } else if (data["category"] === "other") {
+        set_other_close_19(data);
+      }
+    });
+    props.type_detail_close_20.forEach((data) => {
+      if (data["category"] === "animal") {
+        set_animal_close_20(data);
+      } else if (data["category"] === "culture") {
+        set_culture_close_20(data);
+      } else if (data["category"] === "environment") {
+        set_environment_close_20(data);
+      } else if (data["category"] === "food") {
+        set_food_close_20(data);
+      } else if (data["category"] === "health") {
+        set_health_close_20(data);
+      } else if (data["category"] === "life") {
+        set_life_close_20(data);
+      } else if (data["category"] === "other") {
+        set_other_close_20(data);
+      }
+    });
+    props.type_detail_open_19.forEach((data) => {
+      if (data["category"] === "animal") {
+        set_animal_open_19(data);
+      } else if (data["category"] === "culture") {
+        set_culture_open_19(data);
+      } else if (data["category"] === "environment") {
+        set_environment_open_19(data);
+      } else if (data["category"] === "food") {
+        set_food_open_19(data);
+      } else if (data["category"] === "health") {
+        set_health_open_19(data);
+      } else if (data["category"] === "life") {
+        set_life_open_19(data);
+      } else if (data["category"] === "other") {
+        set_other_open_19(data);
+      }
+    });
+    props.type_detail_open_20.forEach((data) => {
+      if (data["category"] === "animal") {
+        set_animal_open_20(data);
+      } else if (data["category"] === "culture") {
+        set_culture_open_20(data);
+      } else if (data["category"] === "environment") {
+        set_environment_open_20(data);
+      } else if (data["category"] === "food") {
+        set_food_open_20(data);
+      } else if (data["category"] === "health") {
+        set_health_open_20(data);
+      } else if (data["category"] === "life") {
+        set_life_open_20(data);
+      } else if (data["category"] === "other") {
+        set_other_open_20(data);
+      }
+    });
+  }, [props.yearsValue]);
+
   return (
     <>
       <div className="example-wrap">
@@ -94,7 +193,13 @@ const StandardTabs = (props) => {
               id="exampleTabsOne"
               role="tabpanel"
             >
-              <PolarChart />
+              <PolarChart
+                yearsValue={years}
+                close_19={animal_close_19}
+                close_20={animal_close_20}
+                open_19={animal_open_19}
+                open_20={animal_open_20}
+              />
             </div>
             <div className="tab-pane" id="exampleTabsTwo" role="tabpanel">
               Negant parvos fructu nostram mutans supplicii ac dissentias, maius
