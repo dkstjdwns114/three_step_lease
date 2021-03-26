@@ -15,9 +15,10 @@ db = cluster["three-step"]
 def mainView(request):
     main_api = db['local_data_api']
 
-    main_data = main_api.find_one({"_id": ObjectId("60586c8dd8133683b6873f03")})
-    month_data = main_api.find_one({"_id": ObjectId("60593e8b4496e774152d0135")})
-    same_address_data = main_api.find_one({"_id": ObjectId("605950dbaa32a27df572863e")})
+    main_data = main_api.find_one({"_id": ObjectId("605df841edbe1c94c43aa8c2")})
+    month_data = main_api.find_one({"_id": ObjectId("605dfbcf892151899bd2569d")})
+    same_address_data = main_api.find_one({"_id": ObjectId("605e031ec45a68634c5dab17")})
+    type_detail_data = main_api.find_one({"_id": ObjectId("605dfb4bb1e716ecc4e2cb52")})
 
     api_json = {
         'title' : "Main View",
@@ -25,13 +26,17 @@ def mainView(request):
         'type_open_19' : main_data['type_open_19'],
         'type_close_20' : main_data['type_close_20'],
         'type_open_20' : main_data['type_open_20'],
+        'type_detail_close_19' : type_detail_data['type_detail_close_19'],
+        'type_detail_open_19' : type_detail_data['type_detail_open_19'],
+        'type_detail_close_20' : type_detail_data['type_detail_close_20'],
+        'type_detail_open_20' : type_detail_data['type_detail_open_20'],
         'city_close_20' : main_data['city_close_20'],
         'city_close_20' : main_data['city_close_20'],
         'month_close_19' : month_data['month_close_19'],
         'month_open_19' : month_data['month_open_19'],
         'month_close_20' : month_data['month_close_20'],
         'month_open_20' : month_data['month_open_20'],
-        'nationwide_most_close_20' : same_address_data['nationwide']
+        'nationwide_most_close_20' : same_address_data['nationwide'],
     }
 
     return Response(api_json)
