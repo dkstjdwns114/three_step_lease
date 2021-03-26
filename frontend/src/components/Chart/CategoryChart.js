@@ -11,18 +11,22 @@ const CategoryChart = (props) => {
         reverse: false,
         gridLines: {
           color: [
-            "black",
-            "red",
-            "orange",
-            "yellow",
-            "green",
-            "blue",
-            "indigo",
-            "violet"
+            "#424242",
+            "#F50057",
+            "#9FA8DA",
+            "#64B5F6",
+            "#FF7043",
+            "#AED581",
+            "#B3E5FC",
+            "#F06292",
+            "#42A5F5",
+            "#9C27B0",
+            "#FF1744"
           ]
         },
         ticks: {
-          beginAtZero: true
+          suggestedMin: 5000,
+          suggestedMax: 200000
         }
       }
     });
