@@ -6,7 +6,7 @@ import TabsAccording from "../components/Tab/TabsAccording";
 import MainMonthView from "../components/View/MainMonthView";
 import TypeDetailView from "../components/View/TypeDetailView";
 
-export default class HomeTest extends Component {
+export default class HomePage extends Component {
   state = {
     isLoading: true,
     type_close_19: [],
