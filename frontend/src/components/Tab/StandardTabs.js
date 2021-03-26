@@ -4,12 +4,12 @@ import PolarChart from "../Chart/PolarChart";
 const StandardTabs = (props) => {
   return (
     <>
-      <div class="example-wrap">
-        <div class="nav-tabs-horizontal" data-plugin="tabs">
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item" role="presentation">
+      <div className="example-wrap">
+        <div className="nav-tabs-horizontal" data-plugin="tabs">
+          <ul className="nav nav-tabs" role="tablist">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link active"
+                className="nav-link active"
                 data-toggle="tab"
                 href="#exampleTabsOne"
                 aria-controls="exampleTabsOne"
@@ -18,9 +18,9 @@ const StandardTabs = (props) => {
                 동물
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link"
+                className="nav-link"
                 data-toggle="tab"
                 href="#exampleTabsTwo"
                 aria-controls="exampleTabsTwo"
@@ -29,9 +29,9 @@ const StandardTabs = (props) => {
                 문화
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link"
+                className="nav-link"
                 data-toggle="tab"
                 href="#exampleTabsThree"
                 aria-controls="exampleTabsThree"
@@ -40,9 +40,9 @@ const StandardTabs = (props) => {
                 자연환경
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link"
+                className="nav-link"
                 data-toggle="tab"
                 href="#exampleTabsFour"
                 aria-controls="exampleTabsFour"
@@ -51,9 +51,9 @@ const StandardTabs = (props) => {
                 식품
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link"
+                className="nav-link"
                 data-toggle="tab"
                 href="#exampleTabsFive"
                 aria-controls="exampleTabsFive"
@@ -62,9 +62,9 @@ const StandardTabs = (props) => {
                 건강
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link"
+                className="nav-link"
                 data-toggle="tab"
                 href="#exampleTabsSix"
                 aria-controls="exampleTabsSix"
@@ -73,9 +73,9 @@ const StandardTabs = (props) => {
                 생활
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link"
+                className="nav-link"
                 data-toggle="tab"
                 href="#exampleTabsSeven"
                 aria-controls="exampleTabsSeven"
@@ -85,24 +85,28 @@ const StandardTabs = (props) => {
               </a>
             </li>
           </ul>
-          <div class="tab-content pt-20">
-            <div class="tab-pane active" id="exampleTabsOne" role="tabpanel">
+          <div className="tab-content pt-20">
+            <div
+              className="tab-pane active"
+              id="exampleTabsOne"
+              role="tabpanel"
+            >
               <PolarChart />
             </div>
-            <div class="tab-pane" id="exampleTabsTwo" role="tabpanel">
+            <div className="tab-pane" id="exampleTabsTwo" role="tabpanel">
               Negant parvos fructu nostram mutans supplicii ac dissentias, maius
               tibi licebit ruinae philosophia. Salutatus repellere titillaret
               expetendum ipsi. Cupiditates intellegam exercitumque privatio
               concederetur, sempiternum, verbis malint dissensio nullas
               noctesque earumque.
             </div>
-            <div class="tab-pane" id="exampleTabsThree" role="tabpanel">
+            <div className="tab-pane" id="exampleTabsThree" role="tabpanel">
               Benivole horrent tantalo fuisset adamare fugiendam tractatos
               indicaverunt animis chaere, brevi minuendas, ubi angoribus iisque
               deorsum audita haec dedocendi utilitas. Panaetium erimus platonem
               varias imperitos animum, iudiciorumque operis multa disputando.
             </div>
-            <div class="tab-pane" id="exampleTabsFour" role="tabpanel">
+            <div className="tab-pane" id="exampleTabsFour" role="tabpanel">
               Metus subtilius texit consilio fugiendam, opinionum levius amici
               inertissimae pecuniae tribus ordiamur, alienus artes solitudo,
               minime praesidia proficiscuntur reiciat detracta involuta veterum.
