@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PolarChart from "../Chart/PolarChart";
 
 const StandardTabs = (props) => {
+  useEffect(() => {
+    console.log(props.yearsValue);
+  }, [props]);
   return (
     <>
       <div className="example-wrap">
