@@ -57,7 +57,7 @@ const CityMap = (props) => {
 
     // 경기
     let gyeonggidoContent = `
-      <a href="/city/41">
+      <a href="/city/gyeonggi">
         <div class="overlaybox">
           <div class="boxtitle">경기</div>
           <ul>
@@ -81,7 +81,7 @@ const CityMap = (props) => {
 
     // 서울
     let seoulContent = `
-      <a href="/city/11">
+      <a href="/city/seoul">
         <div class="overlaybox">
           <div class="boxtitle">서울</div>
           <ul>
@@ -105,7 +105,7 @@ const CityMap = (props) => {
 
     // 인천
     let incheonContent = `
-      <a href="/city/28">
+      <a href="/city/incheon">
         <div class="overlaybox">
           <div class="boxtitle">인천</div>
           <ul>
@@ -129,7 +129,7 @@ const CityMap = (props) => {
 
     // 강원
     let gangwondoContent = `
-      <a href="/city/42">
+      <a href="/city/gangwon">
         <div class="overlaybox">
           <div class="boxtitle">강원</div>
           <ul>
@@ -153,7 +153,7 @@ const CityMap = (props) => {
 
     // 충북
     let chungbukContent = `
-      <a href="/city/43">
+      <a href="/city/chungbuk">
         <div class="overlaybox">
           <div class="boxtitle">충북</div>
           <ul>
@@ -177,7 +177,7 @@ const CityMap = (props) => {
 
     // 경북
     let gyeongbukContent = `
-      <a href="/city/47">
+      <a href="/city/gyeongbuk">
         <div class="overlaybox">
           <div class="boxtitle">경북</div>
           <ul>
@@ -201,7 +201,7 @@ const CityMap = (props) => {
 
     // 충남
     let chungnamContent = `
-      <a href="/city/44">
+      <a href="/city/chungnam">
         <div class="overlaybox">
           <div class="boxtitle">충남</div>
           <ul>
@@ -225,7 +225,7 @@ const CityMap = (props) => {
 
     // 세종
     let sejongContent = `
-      <a href="/city/36">
+      <a href="/city/sejong">
         <div class="overlaybox">
           <div class="boxtitle">세종</div>
           <ul>
@@ -249,7 +249,7 @@ const CityMap = (props) => {
 
     // 대전
     let daejeonContent = `
-      <a href="/city/30">
+      <a href="/city/daejeon">
         <div class="overlaybox">
           <div class="boxtitle">대전</div>
           <ul>
@@ -273,7 +273,7 @@ const CityMap = (props) => {
 
     // 대구
     let daeguContent = `
-      <a href="/city/27">
+      <a href="/city/daegu">
         <div class="overlaybox">
           <div class="boxtitle">대구</div>
           <ul>
@@ -297,7 +297,7 @@ const CityMap = (props) => {
 
     // 전북
     let jeonbukContent = `
-      <a href="/city/45">
+      <a href="/city/jeonbuk">
         <div class="overlaybox">
           <div class="boxtitle">전북</div>
           <ul>
@@ -321,7 +321,7 @@ const CityMap = (props) => {
 
     // 광주
     let gwangjuContent = `
-      <a href="/city/29">
+      <a href="/city/gwangju">
         <div class="overlaybox">
           <div class="boxtitle">광주</div>
           <ul>
@@ -345,7 +345,7 @@ const CityMap = (props) => {
 
     // 전남
     let jeonnamContent = `
-      <a href="/city/46">
+      <a href="/city/jeonnam">
         <div class="overlaybox">
           <div class="boxtitle">전남</div>
           <ul>
@@ -369,7 +369,7 @@ const CityMap = (props) => {
 
     // 경남
     let gyeongnamContent = `
-      <a href="/city/48">
+      <a href="/city/gyeongnam">
         <div class="overlaybox">
           <div class="boxtitle">경남</div>
           <ul>
@@ -393,7 +393,7 @@ const CityMap = (props) => {
 
     // 부산
     let busanContent = `
-      <a href="/city/26">
+      <a href="/city/busan">
         <div class="overlaybox">
           <div class="boxtitle">부산</div>
           <ul>
@@ -417,7 +417,7 @@ const CityMap = (props) => {
 
     // 울산
     let ulsanContent = `
-      <a href="/city/31">
+      <a href="/city/ulsan">
         <div class="overlaybox">
           <div class="boxtitle">울산</div>
           <ul>
@@ -441,7 +441,7 @@ const CityMap = (props) => {
 
     // 제주
     let jejuContent = `
-      <a href="/city/50">
+      <a href="/city/jeju">
         <div class="overlaybox">
           <div class="boxtitle">제주</div>
           <ul>
