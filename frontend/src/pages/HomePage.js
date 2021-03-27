@@ -6,6 +6,8 @@ import TabsAccording from "../components/Tab/TabsAccording";
 import MainMonthView from "../components/View/MainMonthView";
 import TypeDetailView from "../components/View/TypeDetailView";
 
+import PrevSameCoordinatesPage from "./PrevSameCoordinatesPage";
+
 export default class HomePage extends Component {
   state = {
     isLoading: true,
@@ -98,6 +100,7 @@ export default class HomePage extends Component {
                   cities={this.state.city_close_20}
                   numberComma={this.numberWithCommas}
                 />
+                {/* <PrevSameCoordinatesPage /> */}
               </div>
             </div>
           </>
