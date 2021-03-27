@@ -13,12 +13,12 @@ db = cluster["three-step"]
 
 @api_view(['GET'])
 def mainView(request):
-    main_api = db['local_data_api']
+    local_data_api = db['local_data_api']
 
-    main_data = main_api.find_one({"_id": ObjectId("605df841edbe1c94c43aa8c2")})
-    month_data = main_api.find_one({"_id": ObjectId("605dfbcf892151899bd2569d")})
-    same_address_data = main_api.find_one({"_id": ObjectId("605e031ec45a68634c5dab17")})
-    type_detail_data = main_api.find_one({"_id": ObjectId("605dfb4bb1e716ecc4e2cb52")})
+    main_data = local_data_api.find_one({"_id": ObjectId("605df841edbe1c94c43aa8c2")})
+    month_data = local_data_api.find_one({"_id": ObjectId("605dfbcf892151899bd2569d")})
+    same_address_data = local_data_api.find_one({"_id": ObjectId("605e031ec45a68634c5dab17")})
+    type_detail_data = local_data_api.find_one({"_id": ObjectId("605dfb4bb1e716ecc4e2cb52")})
 
     api_json = {
         'title' : "Main View",
