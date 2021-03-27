@@ -44,15 +44,33 @@ def mainView(request):
 
 @api_view(['GET'])
 def cityView(request, pk):
-    cities_info = db['city_info']
+    local_data_api = db['local_data_api']
+    same_address = db['same_address']
 
-    city_info = cities_info.find_one({"ctprvnCd": pk })
+    city_month_data = local_data_api.find_one({"_id": ObjectId("605dfc0d7fb553970c67a7cc")})
+    city_type_data = local_data_api.find_one({"_id": ObjectId("605f217642042fcf807328c1")})
+    city_type_detail_data = local_data_api.find_one({"_id": ObjectId("605f00e95a0006ee67ba21c3")})
+    most_close_20 = local_data_api.find_one({"_id": ObjectId("605e031ec45a68634c5dab17")})
+
+    city_same_address_info = same_address.find({"city": pk})
+
+    month_data = city_month_data[pk]
+    type_data = city_type_data[pk]
+    type_detail_data = city_type_detail_data[pk]
+    most_close_20 = most_close_20[pk]
+
+    same_address_list = []
+
+    for info in city_same_address_info:
+        same_address_list.append({"address": info['address'], "stores_info": info['stores_info']})
 
     api_json = {
-        "title" : city_info['ctprvnNm'],
-        "indsLclsCds": city_info['indsLclsCds'],
-        "signgus": city_info['signgus'],
-        "most_coordinates": city_info['most_coordinates']
+        "title" : pk + " Data",
+        "month_data": month_data,
+        "type_data": type_data,
+        "type_detail_data": type_detail_data,
+        "most_close_20": most_close_20,
+        "same_address": same_address_list
     }
     return Response(api_json)
 
