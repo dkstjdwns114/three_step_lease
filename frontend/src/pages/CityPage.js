@@ -6,6 +6,7 @@ import PrevSignguTable from "../components/Table/PrevSignguTable";
 import PrevLoading from "../components/Loading/PrevLoading";
 import CityMonthLineChart from "../components/Chart/CityMonthLineChart";
 import CityMonthView from "../components/View/CityMonthView";
+import CityTypeStackedBar from "../components/Chart/CityTypeStackedBar";
 
 export default class CityPage extends Component {
   state = {
@@ -99,6 +100,7 @@ export default class CityPage extends Component {
                   month_close_20={this.state.month_close_20}
                   month_open_20={this.state.month_open_20}
                 />
+                <CityTypeStackedBar />
                 {/* <CityMonthLineChart />
                 <div className="content">
                   <div className="row">
