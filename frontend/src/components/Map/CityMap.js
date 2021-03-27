@@ -3,6 +3,25 @@ const { kakao } = window;
 
 const CityMap = (props) => {
   useEffect(() => {
+    let value = props.valueStr;
+    let cities = props.city_close_20;
+
+    if (value === "city_close_19") {
+      cities = props.city_close_19;
+    } else if (value === "city_open_19") {
+      cities = props.city_open_19;
+    } else if (value === "city_close_20") {
+      cities = props.city_close_20;
+    } else if (value === "city_open_20") {
+      cities = props.city_open_20;
+    }
+
+    setTimeout(() => {
+      kakaoMapHandler(cities);
+    }, 500);
+  }, [props.valueStr]);
+
+  const kakaoMapHandler = (cities) => {
     let busan;
     let chungbuk;
     let chungnam;
@@ -21,7 +40,7 @@ const CityMap = (props) => {
     let seoul;
     let ulsan;
 
-    props.cities.forEach((res) => {
+    cities.forEach((res) => {
       res.city === "busan" && (busan = res.count);
       res.city === "chungbuk" && (chungbuk = res.count);
       res.city === "chungnam" && (chungnam = res.count);
@@ -462,27 +481,15 @@ const CityMap = (props) => {
     });
     jejuOverlay.setMap(map);
     // end 제주
-  }, [props]);
+  };
 
   return (
     <>
-      <div className="col-xxl-4 col-lg-4 col-md-12">
-        <div class="card">
-          <div class="card-block p-0 p-30 h-full">
-            <div class="counter text-left">
-              <span class="counter-number">{props.cardTitle}</span>
-              <div class="counter-label text-uppercase mb-20">
-                {props.cardDesc}
-              </div>
-            </div>
-            <div
-              className="map-container mt-30"
-              id="city_map"
-              style={{ height: "650px" }}
-            ></div>
-          </div>
-        </div>
-      </div>
+      <div
+        className="map-container mt-30"
+        id="city_map"
+        style={{ height: "650px" }}
+      ></div>
     </>
   );
 };
