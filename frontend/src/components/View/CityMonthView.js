@@ -22,7 +22,12 @@ const CityMonthView = (props) => {
             </div>
             <div className="row pt-30 px-30">
               <div className="col-lg-12">
-                <CityMonthLineChart />
+                <CityMonthLineChart
+                  month_close_19={props.month_close_19}
+                  month_open_19={props.month_open_19}
+                  month_close_20={props.month_close_20}
+                  month_open_20={props.month_open_20}
+                />
               </div>
               {/* <SmartTable
                 month_close_19={props.month_close_19}

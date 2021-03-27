@@ -6,58 +6,62 @@ const CityMonthLineChart = (props) => {
   const [options, setOptions] = useState({});
 
   useEffect(() => {
-    // let myLabels = [];
-    // let myData = [];
-    // if (props.yearsValue === "type_detail_close_19") {
-    //   props.close_19.type_list.forEach((list) => {
-    //     myLabels.push(list.kor_type);
-    //     myData.push(list.count);
-    //   });
-    // } else if (props.yearsValue === "type_detail_open_19") {
-    //   props.open_19.type_list.forEach((list) => {
-    //     myLabels.push(list.kor_type);
-    //     myData.push(list.count);
-    //   });
-    // } else if (props.yearsValue === "type_detail_close_20") {
-    //   props.close_20.type_list.forEach((list) => {
-    //     myLabels.push(list.kor_type);
-    //     myData.push(list.count);
-    //   });
-    // } else if (props.yearsValue === "type_detail_open_20") {
-    //   props.open_20.type_list.forEach((list) => {
-    //     myLabels.push(list.kor_type);
-    //     myData.push(list.count);
-    //   });
-    // }
-    // setTimeout(() => {
-    setDataAndOptions();
-    // }, 500);
-  }, [props.yearsValue]);
+    let close_19_data = [];
+    let open_19_data = [];
+    let close_20_data = [];
+    let open_20_data = [];
 
-  const setDataAndOptions = () => {
+    let labelsArr = [];
+    let datasetsArr = [];
+
+    props.month_close_19.forEach((data) => {
+      labelsArr.push(data.month);
+      close_19_data.push(data.count);
+    });
+    props.month_open_19.forEach((data) => {
+      open_19_data.push(data.count);
+    });
+    props.month_close_20.forEach((data) => {
+      close_20_data.push(data.count);
+    });
+    props.month_open_20.forEach((data) => {
+      open_20_data.push(data.count);
+    });
+    setTimeout(() => {
+      datasetsArr.push({
+        label: "2019년 폐업",
+        data: close_19_data,
+        fill: true,
+        backgroundColor: "rgba(178, 235, 242, 0.3)",
+        borderColor: "#4DD0E1"
+      });
+      datasetsArr.push({
+        label: "2019년 개업",
+        data: open_19_data,
+        fill: false,
+        borderColor: "#81C784"
+      });
+      datasetsArr.push({
+        label: "2020년 폐업",
+        data: close_20_data,
+        fill: true,
+        backgroundColor: "rgba(225, 190, 231, 0.3)",
+        borderColor: "#AB47BC"
+      });
+      datasetsArr.push({
+        label: "2020년 개업",
+        data: open_20_data,
+        fill: false,
+        borderColor: "#E91E63"
+      });
+      setDataAndOptions(labelsArr, datasetsArr);
+    }, 500);
+  }, []);
+
+  const setDataAndOptions = (labelsArr, datasetsArr) => {
     setData({
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-      datasets: [
-        {
-          label: "First dataset",
-          data: [33, 53, 85, 41, 44, 65],
-          fill: true,
-          backgroundColor: "rgba(75,192,192,0.2)",
-          borderColor: "rgba(75,192,192,1)"
-        },
-        {
-          label: "Second dataset",
-          data: [33, 25, 35, 51, 54, 76],
-          fill: false,
-          borderColor: "#742774"
-        },
-        {
-          label: "Thrid dataset",
-          data: [25, 35, 76, 54, 35, 33],
-          fill: false,
-          borderColor: "rgba(75,192,192,0.2)"
-        }
-      ]
+      labels: labelsArr,
+      datasets: datasetsArr
     });
     setOptions({
       responsive: true,
@@ -74,8 +78,7 @@ const CityMonthLineChart = (props) => {
           {
             display: true,
             scaleLabel: {
-              display: true,
-              labelString: "Month"
+              display: true
             }
           }
         ],
