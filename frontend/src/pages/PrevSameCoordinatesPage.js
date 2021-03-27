@@ -4,7 +4,7 @@ import PrevPageHeader from "../components/Navigation/PrevPageHeader";
 import PrevSameCoordinatesMap from "../components/Map/PrevSameCoordinatesMap";
 import PrevLoading from "../components/Loading/PrevLoading";
 
-export default class SameCoordinatesPage extends Component {
+export default class PrevSameCoordinatesPage extends Component {
   state = {
     isLoading: true,
     most_area: [],
