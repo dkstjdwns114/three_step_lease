@@ -202,24 +202,58 @@ const StandardTabs = (props) => {
               />
             </div>
             <div className="tab-pane" id="exampleTabsTwo" role="tabpanel">
-              Negant parvos fructu nostram mutans supplicii ac dissentias, maius
-              tibi licebit ruinae philosophia. Salutatus repellere titillaret
-              expetendum ipsi. Cupiditates intellegam exercitumque privatio
-              concederetur, sempiternum, verbis malint dissensio nullas
-              noctesque earumque.
+              <PolarChart
+                yearsValue={years}
+                close_19={culture_close_19}
+                close_20={culture_close_20}
+                open_19={culture_open_19}
+                open_20={culture_open_20}
+              />
             </div>
             <div className="tab-pane" id="exampleTabsThree" role="tabpanel">
-              Benivole horrent tantalo fuisset adamare fugiendam tractatos
-              indicaverunt animis chaere, brevi minuendas, ubi angoribus iisque
-              deorsum audita haec dedocendi utilitas. Panaetium erimus platonem
-              varias imperitos animum, iudiciorumque operis multa disputando.
+              <PolarChart
+                yearsValue={years}
+                close_19={environment_close_19}
+                close_20={environment_close_20}
+                open_19={environment_open_19}
+                open_20={environment_open_20}
+              />
             </div>
             <div className="tab-pane" id="exampleTabsFour" role="tabpanel">
-              Metus subtilius texit consilio fugiendam, opinionum levius amici
-              inertissimae pecuniae tribus ordiamur, alienus artes solitudo,
-              minime praesidia proficiscuntur reiciat detracta involuta veterum.
-              Rutilius quis honestatis hominum, quisquis percussit sibi
-              explicari.
+              <PolarChart
+                yearsValue={years}
+                close_19={food_close_19}
+                close_20={food_close_20}
+                open_19={food_open_19}
+                open_20={food_open_20}
+              />
+            </div>
+            <div className="tab-pane" id="exampleTabsFive" role="tabpanel">
+              <PolarChart
+                yearsValue={years}
+                close_19={health_close_19}
+                close_20={health_close_20}
+                open_19={health_open_19}
+                open_20={health_open_20}
+              />
+            </div>
+            <div className="tab-pane" id="exampleTabsSix" role="tabpanel">
+              <PolarChart
+                yearsValue={years}
+                close_19={life_close_19}
+                close_20={life_close_20}
+                open_19={life_open_19}
+                open_20={life_open_20}
+              />
+            </div>
+            <div className="tab-pane" id="exampleTabsSeven" role="tabpanel">
+              <PolarChart
+                yearsValue={years}
+                close_19={other_close_19}
+                close_20={other_close_20}
+                open_19={other_open_19}
+                open_20={other_open_20}
+              />
             </div>
           </div>
         </div>
