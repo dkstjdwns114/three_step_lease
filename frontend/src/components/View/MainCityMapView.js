@@ -61,7 +61,7 @@ export default class MainCityMapView extends Component {
                         <i className="icon md-star" aria-hidden="true"></i>
                         <br />
                         <span className="text-uppercase hidden-sm-down">
-                          2019년도 폐업
+                          19년 폐업
                         </span>
                       </button>
                     </div>
@@ -75,7 +75,7 @@ export default class MainCityMapView extends Component {
                         <i className="icon md-time" aria-hidden="true"></i>
                         <br />
                         <span className="text-uppercase hidden-sm-down">
-                          2019년도 개업
+                          19년 개업
                         </span>
                       </button>
                     </div>
@@ -89,7 +89,7 @@ export default class MainCityMapView extends Component {
                         <i className="icon md-account" aria-hidden="true"></i>
                         <br />
                         <span className="text-uppercase hidden-sm-down">
-                          2020년도 폐업
+                          20년 폐업
                         </span>
                       </button>
                     </div>
@@ -103,7 +103,7 @@ export default class MainCityMapView extends Component {
                         <i className="icon md-account" aria-hidden="true"></i>
                         <br />
                         <span className="text-uppercase hidden-sm-down">
-                          2020년도 개업
+                          20년 개업
                         </span>
                       </button>
                     </div>
