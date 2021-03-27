@@ -28,11 +28,11 @@ export default class CityPage extends Component {
       })
       .then((resData) => {
         this.setState({
-          isLoading: false,
-          indsLclsCds: resData.indsLclsCds,
-          signgus: resData.signgus,
-          most_coordinates: resData.most_coordinates,
-          cityName: resData.title
+          // isLoading: false,
+          // indsLclsCds: resData.indsLclsCds,
+          // signgus: resData.signgus,
+          // most_coordinates: resData.most_coordinates,
+          // cityName: resData.title
         });
       });
   };
@@ -54,7 +54,7 @@ export default class CityPage extends Component {
           <PrevLoading />
         ) : (
           <>
-            <PrevPageHeader headerTitle={`${this.state.cityName} 폐업 현황`} />
+            {/* <PrevPageHeader headerTitle={`${this.state.cityName} 폐업 현황`} />
             <div className="content">
               <div className="row">
                 <PrevPieChart
@@ -75,7 +75,7 @@ export default class CityPage extends Component {
                 numberComma={this.numberWithCommas}
                 contents={this.state.signgus}
               />
-            </div>
+            </div> */}
           </>
         )}
       </>
