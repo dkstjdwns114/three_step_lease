@@ -7,6 +7,7 @@ import MainMonthView from "../components/View/MainMonthView";
 import TypeDetailView from "../components/View/TypeDetailView";
 
 import PrevSameCoordinatesPage from "./PrevSameCoordinatesPage";
+import MainCityMapView from "../components/View/MainCityMapView";
 
 export default class HomePage extends Component {
   state = {
@@ -19,7 +20,10 @@ export default class HomePage extends Component {
     type_detail_open_19: [],
     type_detail_close_20: [],
     type_detail_open_20: [],
+    city_close_19: [],
+    city_open_19: [],
     city_close_20: [],
+    city_open_20: [],
     month_close_19: [],
     month_open_19: [],
     month_close_20: [],
@@ -49,7 +53,10 @@ export default class HomePage extends Component {
           type_detail_open_19: resData.type_detail_open_19,
           type_detail_close_20: resData.type_detail_close_20,
           type_detail_open_20: resData.type_detail_open_20,
+          city_close_19: resData.city_close_19,
+          city_open_19: resData.city_open_19,
           city_close_20: resData.city_close_20,
+          city_open_20: resData.city_open_20,
           month_close_19: resData.month_close_19,
           month_open_19: resData.month_open_19,
           month_close_20: resData.month_close_20,
@@ -94,11 +101,12 @@ export default class HomePage extends Component {
                 <TabsAccording
                   nationwide_most_close_20={this.state.nationwide_most_close_20}
                 />
-                <CityMap
-                  cardTitle={"2020년 시도별 폐업 현황"}
-                  cardDesc={`도시 클릭시 해당 도시의 상세페이지로 이동합니다.`}
-                  cities={this.state.city_close_20}
-                  numberComma={this.numberWithCommas}
+                <MainCityMapView
+                  city_close_19={this.state.city_close_19}
+                  city_open_19={this.state.city_open_19}
+                  city_close_20={this.state.city_close_20}
+                  city_open_20={this.state.city_open_20}
+                  numberWithCommas={this.numberWithCommas}
                 />
                 {/* <PrevSameCoordinatesPage /> */}
               </div>
