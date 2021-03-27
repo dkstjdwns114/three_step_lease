@@ -100,7 +100,12 @@ export default class CityPage extends Component {
                   month_close_20={this.state.month_close_20}
                   month_open_20={this.state.month_open_20}
                 />
-                <CityTypeStackedBar />
+                <CityTypeStackedBar
+                  type_close_19={this.state.type_close_19}
+                  type_open_19={this.state.type_open_19}
+                  type_close_20={this.state.type_close_20}
+                  type_open_20={this.state.type_open_20}
+                />
                 {/* <CityMonthLineChart />
                 <div className="content">
                   <div className="row">

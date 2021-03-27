@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 
-const data = {
+const test_data = {
   labels: ["Risk Level", "hello", "world", "test", "test1", "test2", "test3"],
   datasets: [
     {
@@ -29,7 +29,62 @@ const options = {
   }
 };
 
-export default function CityTypeStackedBar() {
+export default function CityTypeStackedBar(props) {
+  const [data, setData] = useState({});
+  useEffect(() => {
+    let labelArr = [];
+    let datasetsArr = [];
+
+    let close_19_data = [];
+    let open_19_data = [];
+    let close_20_data = [];
+    let open_20_data = [];
+
+    props.type_close_19.forEach((data) => {
+      labelArr.push(data.type);
+      close_19_data.push(data.count);
+    });
+    props.type_open_19.forEach((data) => {
+      open_19_data.push(data.count);
+    });
+    props.type_close_20.forEach((data) => {
+      close_20_data.push(data.count);
+    });
+    props.type_open_20.forEach((data) => {
+      open_20_data.push(data.count);
+    });
+
+    setTimeout(() => {
+      datasetsArr.push({
+        label: "2019년 폐업",
+        data: close_19_data,
+        backgroundColor: "#D6E9C6"
+      });
+      datasetsArr.push({
+        label: "2020년 폐업",
+        data: close_20_data,
+        backgroundColor: "#FAEBCC"
+      });
+      datasetsArr.push({
+        label: "2019년 개업",
+        data: open_19_data,
+        backgroundColor: "#EBCCD1"
+      });
+      datasetsArr.push({
+        label: "2020년 개업",
+        data: open_20_data,
+        backgroundColor: "#CE93D8"
+      });
+      setDataHandler(labelArr, datasetsArr);
+    }, 500);
+  }, []);
+
+  const setDataHandler = (labelArr, datasetsArr) => {
+    setData({
+      labels: labelArr,
+      datasets: datasetsArr
+    });
+  };
   return (
     <>
       <div className="col-xxl-6 col-lg-6 col-md-12">
