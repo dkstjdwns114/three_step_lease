@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ChartistMonth from "../Chart/ChartistMonth";
 import SmartTable from "../Table/SmartTable";
 
