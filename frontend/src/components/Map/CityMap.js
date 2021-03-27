@@ -41,7 +41,7 @@ const CityMap = (props) => {
       res.city === "ulsan" && (ulsan = res.count);
     });
 
-    const container = document.getElementById("map_marker_simple");
+    const container = document.getElementById("city_map");
     const options = {
       center: new kakao.maps.LatLng(35.6783, 127.9558),
       level: 13,
@@ -477,7 +477,7 @@ const CityMap = (props) => {
             </div>
             <div
               className="map-container mt-30"
-              id="map_marker_simple"
+              id="city_map"
               style={{ height: "650px" }}
             ></div>
           </div>
