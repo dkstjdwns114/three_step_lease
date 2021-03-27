@@ -4,7 +4,7 @@ import FixedHeaderTable from "../Table/FixedHeaderTable";
 const TabsAccording = (props) => {
   return (
     <>
-      <div className="col-xxl-12 col-lg-12 col-md-12">
+      <div className="col-xxl-8 col-lg-8 col-md-12">
         {/* <!-- Example Continuous Accordion --> */}
         <div className="card">
           <div className="card-block p-0 p-30 h-full">
