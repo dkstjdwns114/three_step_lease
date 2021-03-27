@@ -10,11 +10,20 @@ import CityMonthView from "../components/View/CityMonthView";
 export default class CityPage extends Component {
   state = {
     isLoading: true,
-    cityName: "",
-    indsLclsCds: [],
-    signgus: [],
-    most_coordinates: [],
-    path: ""
+    month_close_19: [],
+    month_open_19: [],
+    month_close_20: [],
+    month_open_20: [],
+    type_close_19: [],
+    type_open_19: [],
+    type_close_20: [],
+    type_open_20: [],
+    type_detail_close_19: [],
+    type_detail_open_19: [],
+    type_detail_close_20: [],
+    type_detail_open_20: [],
+    most_close_20: [],
+    same_address: []
   };
 
   componentDidMount() {
@@ -31,11 +40,37 @@ export default class CityPage extends Component {
       .then((resData) => {
         this.setState({
           isLoading: false,
-          indsLclsCds: resData.indsLclsCds,
-          signgus: resData.signgus,
-          most_coordinates: resData.most_coordinates,
-          cityName: resData.title
+          month_close_19: resData.month_data["month_close_19"],
+          month_open_19: resData.month_data["month_open_19"],
+          month_close_20: resData.month_data["month_close_20"],
+          month_open_20: resData.month_data["month_open_20"],
+          type_close_19: resData.type_data["type_close_19"],
+          type_open_19: resData.type_data["type_open_19"],
+          type_close_20: resData.type_data["type_close_20"],
+          type_open_20: resData.type_data["type_open_20"],
+          type_detail_close_19:
+            resData.type_detail_data["type_detail_close_19"],
+          type_detail_open_19: resData.type_detail_data["type_detail_open_19"],
+          type_detail_close_20:
+            resData.type_detail_data["type_detail_close_20"],
+          type_detail_open_20: resData.type_detail_data["type_detail_open_20"],
+          most_close_20: resData.most_close_20,
+          same_address: resData.same_address
         });
+        console.log("month_close_19", this.state.month_close_19);
+        console.log("month_open_19", this.state.month_open_19);
+        console.log("month_close_20", this.state.month_close_20);
+        console.log("month_open_20", this.state.month_open_20);
+        console.log("type_close_19", this.state.type_close_19);
+        console.log("type_open_19", this.state.type_open_19);
+        console.log("type_close_20", this.state.type_close_20);
+        console.log("type_open_20", this.state.type_open_20);
+        console.log("type_detail_close_19", this.state.type_detail_close_19);
+        console.log("type_detail_open_19", this.state.type_detail_open_19);
+        console.log("type_detail_close_20", this.state.type_detail_close_20);
+        console.log("type_detail_open_20", this.state.type_detail_open_20);
+        console.log("most_close_20", this.state.most_close_20);
+        console.log("same_address", this.state.same_address);
       });
   };
 
