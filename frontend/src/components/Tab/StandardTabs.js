@@ -34,6 +34,18 @@ const StandardTabs = (props) => {
 
   useEffect(() => {
     setYears(props.yearsValue);
+    if (props.yearsValue === "type_detail_close_19") {
+      type_detail_close_19_handler();
+    } else if (props.yearsValue === "type_detail_close_20") {
+      type_detail_close_20_handler();
+    } else if (props.yearsValue === "type_detail_open_19") {
+      type_detail_open_19_handler();
+    } else if (props.yearsValue === "type_detail_open_20") {
+      type_detail_open_20_handler();
+    }
+  }, [props.yearsValue]);
+
+  const type_detail_close_19_handler = () => {
     props.type_detail_close_19.forEach((data) => {
       if (data["category"] === "animal") {
         set_animal_close_19(data);
@@ -51,6 +63,9 @@ const StandardTabs = (props) => {
         set_other_close_19(data);
       }
     });
+  };
+
+  const type_detail_close_20_handler = () => {
     props.type_detail_close_20.forEach((data) => {
       if (data["category"] === "animal") {
         set_animal_close_20(data);
@@ -68,6 +83,9 @@ const StandardTabs = (props) => {
         set_other_close_20(data);
       }
     });
+  };
+
+  const type_detail_open_19_handler = () => {
     props.type_detail_open_19.forEach((data) => {
       if (data["category"] === "animal") {
         set_animal_open_19(data);
@@ -85,6 +103,9 @@ const StandardTabs = (props) => {
         set_other_open_19(data);
       }
     });
+  };
+
+  const type_detail_open_20_handler = () => {
     props.type_detail_open_20.forEach((data) => {
       if (data["category"] === "animal") {
         set_animal_open_20(data);
@@ -102,7 +123,7 @@ const StandardTabs = (props) => {
         set_other_open_20(data);
       }
     });
-  }, [props.yearsValue]);
+  };
 
   return (
     <>
