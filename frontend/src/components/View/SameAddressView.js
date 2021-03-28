@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PrevLoading from "../Loading/PrevLoading";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
 import SameAddressMap from "../Map/SameAddressMap";
 

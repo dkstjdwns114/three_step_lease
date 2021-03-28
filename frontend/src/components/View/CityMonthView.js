@@ -1,5 +1,4 @@
 import React from "react";
-import ChartistMonth from "../Chart/ChartistMonth";
 import CityMonthLineChart from "../Chart/CityMonthLineChart";
 import SmartTable from "../Table/SmartTable";
 
