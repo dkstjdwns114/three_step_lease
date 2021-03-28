@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import PrevSameCoordinatesMap from "../Map/PrevSameCoordinatesMap";
 import PrevLoading from "../Loading/PrevLoading";
 import SameAddressMap from "../Map/SameAddressMap";
-import TestMap from "../Map/TestMap";
 
 export default class SameAddressView extends Component {
   state = {
@@ -69,9 +67,6 @@ export default class SameAddressView extends Component {
                           this.props.same_address_map_level
                         }
                       />
-                      {/* <PrevSameCoordinatesMap
-                        coordinates={this.state.same_coordinates}
-                      /> */}
                     </div>
                   </div>
                 </div>
