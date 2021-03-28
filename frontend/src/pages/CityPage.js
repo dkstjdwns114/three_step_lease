@@ -8,6 +8,7 @@ import CityMonthLineChart from "../components/Chart/CityMonthLineChart";
 import CityMonthView from "../components/View/CityMonthView";
 import CityTypeStackedBar from "../components/Chart/CityTypeStackedBar";
 import TypeDetailView from "../components/View/TypeDetailView";
+import SameAddressView from "../components/View/SameAddressView";
 
 export default class CityPage extends Component {
   state = {
@@ -25,15 +26,21 @@ export default class CityPage extends Component {
     type_detail_close_20: [],
     type_detail_open_20: [],
     most_close_20: [],
-    same_address: []
+    same_address: [],
+    path: "",
+    city_code: ""
   };
 
   componentDidMount() {
-    this.setState({ path: this.props.match.path });
+    this.setState({
+      path: this.props.match.path,
+      city_code: this.props.match.params.code
+    });
     this.fetchData();
   }
 
   fetchData = () => {
+    this.setState({ city_code: this.props.match.params.code });
     let cityCode = this.props.match.params.code;
     fetch(`/api/city/${cityCode}`)
       .then((res) => {
@@ -100,6 +107,7 @@ export default class CityPage extends Component {
                   month_open_19={this.state.month_open_19}
                   month_close_20={this.state.month_close_20}
                   month_open_20={this.state.month_open_20}
+                  numberComma={this.numberWithCommas}
                 />
                 <CityTypeStackedBar
                   type_close_19={this.state.type_close_19}
@@ -113,6 +121,7 @@ export default class CityPage extends Component {
                   type_detail_close_20={this.state.type_detail_close_20}
                   type_detail_open_20={this.state.type_detail_open_20}
                 />
+                <SameAddressView city={this.state.city_code} />
                 {/* <CityMonthLineChart />
                 <div className="content">
                   <div className="row">
