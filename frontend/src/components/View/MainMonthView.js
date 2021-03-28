@@ -14,8 +14,8 @@ const MainMonthView = (props) => {
             >
               <div className="row">
                 <div className="col-8 pt-30 px-30">
-                  <p className="font-size-20 grey-700">CSS ANIMATION</p>
-                  <p>Quisque volutpat condimentum velit. Class aptent taciti</p>
+                  <p className="font-size-20 grey-700">{props.title}</p>
+                  <p>{props.desc}</p>
                 </div>
 
                 <div className="col-4 pt-30 px-30">
@@ -23,31 +23,31 @@ const MainMonthView = (props) => {
                     <ul className="list-unstyled">
                       <li className="mb-5">
                         <i
-                          className="icon md-circle green-600 mr-5"
-                          aria-hidden="true"
-                        ></i>{" "}
-                        Diretary intake
-                      </li>
-                      <li className="mb-5">
-                        <i
-                          className="icon md-circle orange-600 mr-5"
-                          aria-hidden="true"
-                        ></i>{" "}
-                        Motion
-                      </li>
-                      <li className="mb-5">
-                        <i
                           className="icon md-circle red-600 mr-5"
                           aria-hidden="true"
                         ></i>{" "}
-                        Other
+                        2019년 폐업
                       </li>
                       <li className="mb-5">
                         <i
-                          className="icon md-circle red-600 mr-5"
+                          className="icon md-circle pink-400 mr-5"
                           aria-hidden="true"
                         ></i>{" "}
-                        Other
+                        2019년 개업
+                      </li>
+                      <li className="mb-5">
+                        <i
+                          className="icon md-circle yellow-a300 mr-5"
+                          aria-hidden="true"
+                        ></i>{" "}
+                        2020년 폐업
+                      </li>
+                      <li className="mb-5">
+                        <i
+                          className="icon md-circle brown-400 mr-5"
+                          aria-hidden="true"
+                        ></i>{" "}
+                        2020년 개업
                       </li>
                     </ul>
                   </div>
@@ -70,6 +70,7 @@ const MainMonthView = (props) => {
                 month_close_20={props.month_close_20}
                 month_open_20={props.month_open_20}
                 numberComma={props.numberComma}
+                city_name={props.city_name}
               />
             </div>
           </div>
