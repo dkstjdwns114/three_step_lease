@@ -15,7 +15,7 @@ const SameAddressMap = (props) => {
     let clusterer = new kakao.maps.MarkerClusterer({
       map: map,
       averageCenter: true,
-      minLevel: 10
+      minLevel: 8
     });
     let coordinates = [];
     await props.address.forEach((info) => {
