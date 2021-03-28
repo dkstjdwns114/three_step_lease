@@ -78,24 +78,24 @@ def cityView(request, pk):
 
 
 @api_view(['GET'])
-def sameCoordinatesView(request):
-    main_api = db['main_api']
-    same_coordinates = db['same_coordinates']
+def sameAddressView(request, pk):
+    same_address = db['same_address']
+    same_address_info_data = same_address.find({})
 
-    page_info = main_api.find_one({"_id": ObjectId("604b2995d7d574b83dc7ca48")})
+    if pk != "nationwide":
+        same_address_info_data = same_address.find({"city": pk})
 
-    same_coordinates_info = same_coordinates.find({})
+    same_address_list = []
 
-    coordinates_list = []
-
-    for location in same_coordinates_info:
-        coordinates_list.append({'rdmAdr': location['rdmAdr'], 'lon': location['lon'], 'lat': location['lat']})
+    for info in same_address_info_data:
+        stores_info_list = []
+        for store in info['stores_info']:
+            stores_info_list.append({"store_name": store['store_name'], "open_service": store['open_service'], "detailed_classification": store['detailed_classification'], "closed_store_date": store['closed_store_date']})
+        same_address_list.append({"address": info['address'], "x": info['coordinates']['x'], "y": info['coordinates']['y'], "stores_info": stores_info_list})
 
     api_json = {
-        'title' : "Same coordinates View",
-        'most_area': page_info['most_area'],
-        'most_coordinates': page_info['most_coordinates'],
-        'same_coordinates': coordinates_list
+        'title' : "Same address View",
+        'same_address_list' : same_address_list
     }
 
     return Response(api_json)
