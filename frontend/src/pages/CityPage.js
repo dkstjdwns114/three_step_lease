@@ -9,6 +9,7 @@ import CityMonthView from "../components/View/CityMonthView";
 import CityTypeStackedBar from "../components/Chart/CityTypeStackedBar";
 import TypeDetailView from "../components/View/TypeDetailView";
 import SameAddressView from "../components/View/SameAddressView";
+import TabsAccording from "../components/Tab/TabsAccording";
 
 export default class CityPage extends Component {
   state = {
@@ -108,6 +109,10 @@ export default class CityPage extends Component {
                   type_detail_open_20={this.state.type_detail_open_20}
                 />
                 <SameAddressView city={this.state.city_code} />
+                <TabsAccording
+                  most_close_20={this.state.most_close_20}
+                  city={this.state.city_code}
+                />
                 {/* <CityMonthLineChart />
                 <div className="content">
                   <div className="row">
