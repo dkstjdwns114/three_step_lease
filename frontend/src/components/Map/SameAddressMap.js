@@ -3,7 +3,6 @@ const { kakao } = window;
 
 const SameAddressMap = (props) => {
   useEffect(async () => {
-    console.log("props.address", props.address);
     const container = document.getElementById("map_marker_simple");
 
     let map = new kakao.maps.Map(container, {

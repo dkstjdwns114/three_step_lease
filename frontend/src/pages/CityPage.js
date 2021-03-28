@@ -66,20 +66,6 @@ export default class CityPage extends Component {
           most_close_20: resData.most_close_20,
           same_address: resData.same_address
         });
-        console.log("month_close_19", this.state.month_close_19);
-        console.log("month_open_19", this.state.month_open_19);
-        console.log("month_close_20", this.state.month_close_20);
-        console.log("month_open_20", this.state.month_open_20);
-        console.log("type_close_19", this.state.type_close_19);
-        console.log("type_open_19", this.state.type_open_19);
-        console.log("type_close_20", this.state.type_close_20);
-        console.log("type_open_20", this.state.type_open_20);
-        console.log("type_detail_close_19", this.state.type_detail_close_19);
-        console.log("type_detail_open_19", this.state.type_detail_open_19);
-        console.log("type_detail_close_20", this.state.type_detail_close_20);
-        console.log("type_detail_open_20", this.state.type_detail_open_20);
-        console.log("most_close_20", this.state.most_close_20);
-        console.log("same_address", this.state.same_address);
       });
   };
 
