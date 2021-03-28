@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import PrevLoading from "../components/Loading/PrevLoading";
 import CategoryChart from "../components/Chart/CategoryChart";
 import TabsAccording from "../components/Tab/TabsAccording";
 import MainMonthView from "../components/View/MainMonthView";
 import TypeDetailView from "../components/View/TypeDetailView";
-
 import MainCityMapView from "../components/View/MainCityMapView";
 import SameAddressView from "../components/View/SameAddressView";
+import PageLoading from "../components/Loading/PageLoading";
 
 export default class HomePage extends Component {
   state = {
@@ -81,7 +80,7 @@ export default class HomePage extends Component {
     return (
       <>
         {this.state.isLoading ? (
-          <PrevLoading />
+          <PageLoading />
         ) : (
           <>
             <div className="page-content container-fluid">

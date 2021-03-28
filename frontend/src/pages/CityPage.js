@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import PrevLoading from "../components/Loading/PrevLoading";
 import CityMonthView from "../components/View/CityMonthView";
 import CityTypeStackedBar from "../components/Chart/CityTypeStackedBar";
 import TypeDetailView from "../components/View/TypeDetailView";
 import SameAddressView from "../components/View/SameAddressView";
 import TabsAccording from "../components/Tab/TabsAccording";
+import PageLoading from "../components/Loading/PageLoading";
 
 export default class CityPage extends Component {
   state = {
@@ -185,7 +185,7 @@ export default class CityPage extends Component {
     return (
       <>
         {this.state.isLoading ? (
-          <PrevLoading />
+          <PageLoading />
         ) : (
           <>
             <div className="page-content container-fluid">
