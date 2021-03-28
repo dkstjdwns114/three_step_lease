@@ -71,14 +71,6 @@ const CategoryChart = (props) => {
         data: open_19_data
       });
       datasetsArr.push({
-        label: "2020년 폐업",
-        backgroundColor: "rgba(240, 98, 146, 0.2)",
-        pointBackgroundColor: "rgba(240, 98, 146, 1)",
-        pointHighlightStroke: "rgba(240, 98, 146, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: close_20_data
-      });
-      datasetsArr.push({
         label: "2020년 개업",
         hidden: true,
         backgroundColor: "rgba(100, 181, 246, 0.2)",
