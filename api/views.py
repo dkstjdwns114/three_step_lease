@@ -17,7 +17,7 @@ def mainView(request):
 
     main_data = local_data_api.find_one({"_id": ObjectId("605df841edbe1c94c43aa8c2")})
     month_data = local_data_api.find_one({"_id": ObjectId("605dfbcf892151899bd2569d")})
-    same_address_data = local_data_api.find_one({"_id": ObjectId("605e031ec45a68634c5dab17")})
+    most_same_address_data = local_data_api.find_one({"_id": ObjectId("605e031ec45a68634c5dab17")})
     type_detail_data = local_data_api.find_one({"_id": ObjectId("605dfb4bb1e716ecc4e2cb52")})
 
     api_json = {
@@ -38,7 +38,7 @@ def mainView(request):
         'month_open_19' : month_data['month_open_19'],
         'month_close_20' : month_data['month_close_20'],
         'month_open_20' : month_data['month_open_20'],
-        'nationwide_most_close_20' : same_address_data['nationwide'],
+        'nationwide_most_close_20' : most_same_address_data['nationwide']
     }
 
     return Response(api_json)
