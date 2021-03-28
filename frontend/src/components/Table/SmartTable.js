@@ -33,9 +33,10 @@ const SmartTableTest = (props) => {
         <div className="panel">
           <header className="panel-heading">
             <h3 className="panel-title">
-              Kitchen Sink
+              {props.city_name} 월별 개·폐업 표
               <span className="panel-desc">
-                Swipe Mode, ModeSwitch, Minimap, Sortable, SortableSwitch
+                화살표 클릭시 해당 열 기준으로 내림차순 또는 오름차순으로
+                정렬됩니다.
               </span>
             </h3>
           </header>

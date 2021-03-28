@@ -30,7 +30,8 @@ export default class HomePage extends Component {
     path: "",
     city_hoall_lat: "",
     city_hoall_lng: "",
-    same_address_map_level: ""
+    same_address_map_level: "",
+    city_name: ""
   };
 
   componentDidMount() {
@@ -67,7 +68,8 @@ export default class HomePage extends Component {
           month_open_19: resData.month_open_19,
           month_close_20: resData.month_close_20,
           month_open_20: resData.month_open_20,
-          most_close_20: resData.nationwide_most_close_20
+          most_close_20: resData.nationwide_most_close_20,
+          city_name: "전국"
         });
       });
   };
@@ -86,11 +88,16 @@ export default class HomePage extends Component {
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
                 <MainMonthView
+                  title={"2019년, 2020년 전국 월별 개·폐업 현황"}
+                  desc={
+                    "차트 포인트에 마우스를 올려놓으면 상세 정보를 확인할 수 있습니다"
+                  }
                   month_close_19={this.state.month_close_19}
                   month_open_19={this.state.month_open_19}
                   month_close_20={this.state.month_close_20}
                   month_open_20={this.state.month_open_20}
                   numberComma={this.numberWithCommas}
+                  city_name={this.state.city_name}
                 />
                 <CategoryChart
                   type_close_19={this.state.type_close_19}
