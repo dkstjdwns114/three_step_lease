@@ -36,8 +36,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousOne"
                       aria-expanded="true"
                     >
-                      1. {props.nationwide_most_close_20[0].address} / 총{" "}
-                      {props.nationwide_most_close_20[0].count}개 가게 폐업
+                      1. {props.most_close_20[0].address} / 총{" "}
+                      {props.most_close_20[0].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -48,7 +48,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[0].stores_info}
+                        dataArr={props.most_close_20[0].stores_info}
                       />
                     </div>
                   </div>
@@ -67,8 +67,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousTwo"
                       aria-expanded="false"
                     >
-                      2. {props.nationwide_most_close_20[1].address} / 총{" "}
-                      {props.nationwide_most_close_20[1].count}개 가게 폐업
+                      2. {props.most_close_20[1].address} / 총{" "}
+                      {props.most_close_20[1].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -79,7 +79,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[1].stores_info}
+                        dataArr={props.most_close_20[1].stores_info}
                       />
                     </div>
                   </div>
@@ -98,8 +98,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousThree"
                       aria-expanded="false"
                     >
-                      3. {props.nationwide_most_close_20[2].address} / 총{" "}
-                      {props.nationwide_most_close_20[2].count}개 가게 폐업
+                      3. {props.most_close_20[2].address} / 총{" "}
+                      {props.most_close_20[2].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -110,7 +110,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[2].stores_info}
+                        dataArr={props.most_close_20[2].stores_info}
                       />
                     </div>
                   </div>
@@ -129,8 +129,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousFour"
                       aria-expanded="false"
                     >
-                      4. {props.nationwide_most_close_20[3].address} / 총{" "}
-                      {props.nationwide_most_close_20[3].count}개 가게 폐업
+                      4. {props.most_close_20[3].address} / 총{" "}
+                      {props.most_close_20[3].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -141,7 +141,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[3].stores_info}
+                        dataArr={props.most_close_20[3].stores_info}
                       />
                     </div>
                   </div>
@@ -160,8 +160,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousFive"
                       aria-expanded="false"
                     >
-                      5. {props.nationwide_most_close_20[4].address} / 총{" "}
-                      {props.nationwide_most_close_20[4].count}개 가게 폐업
+                      5. {props.most_close_20[4].address} / 총{" "}
+                      {props.most_close_20[4].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -172,7 +172,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[4].stores_info}
+                        dataArr={props.most_close_20[4].stores_info}
                       />
                     </div>
                   </div>
@@ -191,8 +191,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousSix"
                       aria-expanded="false"
                     >
-                      6. {props.nationwide_most_close_20[5].address} / 총{" "}
-                      {props.nationwide_most_close_20[5].count}개 가게 폐업
+                      6. {props.most_close_20[5].address} / 총{" "}
+                      {props.most_close_20[5].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -203,7 +203,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[5].stores_info}
+                        dataArr={props.most_close_20[5].stores_info}
                       />
                     </div>
                   </div>
@@ -222,8 +222,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousSeven"
                       aria-expanded="false"
                     >
-                      7. {props.nationwide_most_close_20[6].address} / 총{" "}
-                      {props.nationwide_most_close_20[6].count}개 가게 폐업
+                      7. {props.most_close_20[6].address} / 총{" "}
+                      {props.most_close_20[6].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -234,7 +234,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[6].stores_info}
+                        dataArr={props.most_close_20[6].stores_info}
                       />
                     </div>
                   </div>
@@ -253,8 +253,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousEight"
                       aria-expanded="false"
                     >
-                      8. {props.nationwide_most_close_20[7].address} / 총{" "}
-                      {props.nationwide_most_close_20[7].count}개 가게 폐업
+                      8. {props.most_close_20[7].address} / 총{" "}
+                      {props.most_close_20[7].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -265,7 +265,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[7].stores_info}
+                        dataArr={props.most_close_20[7].stores_info}
                       />
                     </div>
                   </div>
@@ -284,8 +284,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousNine"
                       aria-expanded="false"
                     >
-                      9. {props.nationwide_most_close_20[8].address} / 총{" "}
-                      {props.nationwide_most_close_20[8].count}개 가게 폐업
+                      9. {props.most_close_20[8].address} / 총{" "}
+                      {props.most_close_20[8].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -296,7 +296,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[8].stores_info}
+                        dataArr={props.most_close_20[8].stores_info}
                       />
                     </div>
                   </div>
@@ -315,8 +315,8 @@ const TabsAccording = (props) => {
                       aria-controls="exampleCollapseContinuousTen"
                       aria-expanded="false"
                     >
-                      10. {props.nationwide_most_close_20[9].address} / 총{" "}
-                      {props.nationwide_most_close_20[9].count}개 가게 폐업
+                      10. {props.most_close_20[9].address} / 총{" "}
+                      {props.most_close_20[9].count}개 가게 폐업
                     </a>
                   </div>
                   <div
@@ -327,7 +327,7 @@ const TabsAccording = (props) => {
                   >
                     <div className="panel-body">
                       <FixedHeaderTable
-                        dataArr={props.nationwide_most_close_20[9].stores_info}
+                        dataArr={props.most_close_20[9].stores_info}
                       />
                     </div>
                   </div>
