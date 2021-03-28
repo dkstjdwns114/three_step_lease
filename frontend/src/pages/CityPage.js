@@ -45,16 +45,17 @@ export default class CityPage extends Component {
   }
 
   setCityHallCoordinates = (city_code) => {
-    this.setState({ same_address_map_level: 10 });
+    this.setState({ same_address_map_level: 11 });
     if (city_code === "busan") {
       this.setState({
         city_hoall_lat: 35.17973293209222,
-        city_hoall_lng: 129.0750704595212
+        city_hoall_lng: 129.0750704595212,
+        same_address_map_level: 9
       });
     } else if (city_code === "chungbuk") {
       this.setState({
-        city_hoall_lat: 36.874946715060034,
-        city_hoall_lng: 127.73432343720448
+        city_hoall_lat: 36.63560796649084,
+        city_hoall_lng: 127.97655434409023
       });
     } else if (city_code === "chungnam") {
       this.setState({
@@ -64,42 +65,48 @@ export default class CityPage extends Component {
     } else if (city_code === "daegu") {
       this.setState({
         city_hoall_lat: 35.8713744530893,
-        city_hoall_lng: 128.6018020525962
+        city_hoall_lng: 128.6018020525962,
+        same_address_map_level: 9
       });
     } else if (city_code === "daejeon") {
       this.setState({
         city_hoall_lat: 36.35055017278345,
-        city_hoall_lng: 127.38483211714157
+        city_hoall_lng: 127.38483211714157,
+        same_address_map_level: 9
       });
     } else if (city_code === "gangwon") {
       this.setState({
-        city_hoall_lat: 37.734357905984076,
-        city_hoall_lng: 128.28311662871485
+        city_hoall_lat: 37.75822603443413,
+        city_hoall_lng: 128.48496644112984,
+        same_address_map_level: 12
       });
     } else if (city_code === "gwangju") {
       this.setState({
         city_hoall_lat: 35.160092943069934,
-        city_hoall_lng: 126.85163270703299
+        city_hoall_lng: 126.85163270703299,
+        same_address_map_level: 8
       });
     } else if (city_code === "gyeongbuk") {
       this.setState({
-        city_hoall_lat: 36.47186014604201,
-        city_hoall_lng: 128.70191240674714
+        city_hoall_lat: 36.15443113386747,
+        city_hoall_lng: 128.86658989473156,
+        same_address_map_level: 12
       });
     } else if (city_code === "gyeongnam") {
       this.setState({
-        city_hoall_lat: 35.423368815860336,
-        city_hoall_lng: 128.22859195100813
+        city_hoall_lat: 35.1999127160616,
+        city_hoall_lng: 128.49595212710528
       });
     } else if (city_code === "gyeonggi") {
       this.setState({
-        city_hoall_lat: 37.3833168679448,
-        city_hoall_lng: 127.46351126313633
+        city_hoall_lat: 37.44003915579736,
+        city_hoall_lng: 127.06051113622638
       });
     } else if (city_code === "incheon") {
       this.setState({
         city_hoall_lat: 37.45599996769455,
-        city_hoall_lng: 126.705260913291
+        city_hoall_lng: 126.705260913291,
+        same_address_map_level: 10
       });
     } else if (city_code === "jeju") {
       this.setState({
@@ -118,18 +125,21 @@ export default class CityPage extends Component {
       });
     } else if (city_code === "sejong") {
       this.setState({
-        city_hoall_lat: 36.48006535521265,
-        city_hoall_lng: 127.28919811607972
+        city_hoall_lat: 36.53373898033548,
+        city_hoall_lng: 127.30948380077793,
+        same_address_map_level: 9
       });
     } else if (city_code === "seoul") {
       this.setState({
         city_hoall_lat: 37.56682195018582,
-        city_hoall_lng: 126.97865225946583
+        city_hoall_lng: 126.97865225946583,
+        same_address_map_level: 9
       });
     } else if (city_code === "ulsan") {
       this.setState({
         city_hoall_lat: 35.53947778181926,
-        city_hoall_lng: 129.31147053145742
+        city_hoall_lng: 129.31147053145742,
+        same_address_map_level: 9
       });
     }
   };
