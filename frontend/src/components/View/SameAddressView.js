@@ -46,9 +46,11 @@ export default class SameAddressView extends Component {
                 <div className="row">
                   <div className="col-8 pt-30 px-30">
                     <p className="font-size-20 grey-700">CSS ANIMATION</p>
-                    <p>
-                      Quisque volutpat condimentum velit. Class aptent taciti
-                    </p>
+                    {!this.state.isLoading && (
+                      <p>
+                        Quisque volutpat condimentum velit. Class aptent taciti
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
