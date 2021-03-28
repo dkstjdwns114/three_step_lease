@@ -7,6 +7,7 @@ import PrevLoading from "../components/Loading/PrevLoading";
 import CityMonthLineChart from "../components/Chart/CityMonthLineChart";
 import CityMonthView from "../components/View/CityMonthView";
 import CityTypeStackedBar from "../components/Chart/CityTypeStackedBar";
+import TypeDetailView from "../components/View/TypeDetailView";
 
 export default class CityPage extends Component {
   state = {
@@ -105,6 +106,12 @@ export default class CityPage extends Component {
                   type_open_19={this.state.type_open_19}
                   type_close_20={this.state.type_close_20}
                   type_open_20={this.state.type_open_20}
+                />
+                <TypeDetailView
+                  type_detail_close_19={this.state.type_detail_close_19}
+                  type_detail_open_19={this.state.type_detail_open_19}
+                  type_detail_close_20={this.state.type_detail_close_20}
+                  type_detail_open_20={this.state.type_detail_open_20}
                 />
                 {/* <CityMonthLineChart />
                 <div className="content">
