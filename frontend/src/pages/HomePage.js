@@ -6,6 +6,7 @@ import MainMonthView from "../components/View/MainMonthView";
 import TypeDetailView from "../components/View/TypeDetailView";
 
 import MainCityMapView from "../components/View/MainCityMapView";
+import SameAddressView from "../components/View/SameAddressView";
 
 export default class HomePage extends Component {
   state = {
@@ -106,6 +107,7 @@ export default class HomePage extends Component {
                   city_open_20={this.state.city_open_20}
                   numberWithCommas={this.numberWithCommas}
                 />
+                <SameAddressView city={"nationwide"} />
               </div>
             </div>
           </>
