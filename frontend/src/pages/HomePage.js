@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import PrevLoading from "../components/Loading/PrevLoading";
 import CategoryChart from "../components/Chart/CategoryChart";
-import CityMap from "../components/Map/CityMap";
 import TabsAccording from "../components/Tab/TabsAccording";
 import MainMonthView from "../components/View/MainMonthView";
 import TypeDetailView from "../components/View/TypeDetailView";
 
-import PrevSameCoordinatesPage from "./PrevSameCoordinatesPage";
 import MainCityMapView from "../components/View/MainCityMapView";
 
 export default class HomePage extends Component {
@@ -108,7 +106,6 @@ export default class HomePage extends Component {
                   city_open_20={this.state.city_open_20}
                   numberWithCommas={this.numberWithCommas}
                 />
-                {/* <PrevSameCoordinatesPage /> */}
               </div>
             </div>
           </>

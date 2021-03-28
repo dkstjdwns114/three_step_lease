@@ -29,11 +29,7 @@ const SameCoordinatesMap = (props) => {
   return (
     <>
       <div className="card">
-        <div className="card-header header-elements-inline">
-          <h5 className="card-title">{props.cardTitle}</h5>
-        </div>
         <div className="card-body">
-          <p className="mb-3">{props.cardDesc}</p>
           <div
             className="map-container"
             id="map_marker_simple"

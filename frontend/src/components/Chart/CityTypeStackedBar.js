@@ -1,27 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 
-const test_data = {
-  labels: ["Risk Level", "hello", "world", "test", "test1", "test2", "test3"],
-  datasets: [
-    {
-      label: "Low",
-      data: [67.8, 100, 10, 20, 30, 40, 50],
-      backgroundColor: "#D6E9C6"
-    },
-    {
-      label: "Moderate",
-      data: [20.7, 13, 20, 10, 20, 30, 40],
-      backgroundColor: "#FAEBCC"
-    },
-    {
-      label: "High",
-      data: [11.4, 20, 30, 40, 50, 20, 10],
-      backgroundColor: "#EBCCD1"
-    }
-  ]
-};
-
 const options = {
   scales: {
     xAxes: [{ stacked: true }],
