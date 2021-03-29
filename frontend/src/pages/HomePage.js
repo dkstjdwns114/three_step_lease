@@ -39,7 +39,8 @@ export default class HomePage extends Component {
       path: this.props.match.path,
       city_hoall_lat: 35.6783,
       city_hoall_lng: 127.9558,
-      same_address_map_level: 13
+      same_address_map_level: 13,
+      city_name: "전국"
     });
     this.fetchData();
   }
@@ -68,8 +69,7 @@ export default class HomePage extends Component {
           month_open_19: resData.month_open_19,
           month_close_20: resData.month_close_20,
           month_open_20: resData.month_open_20,
-          most_close_20: resData.nationwide_most_close_20,
-          city_name: "전국"
+          most_close_20: resData.nationwide_most_close_20
         });
       });
   };
@@ -88,9 +88,9 @@ export default class HomePage extends Component {
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
                 <MainMonthView
-                  title={"2019년, 2020년 전국 월별 개·폐업 현황"}
+                  title={"전국 월별 개·폐업 현황"}
                   desc={
-                    "차트 포인트에 마우스를 올려놓으면 상세 정보를 확인할 수 있습니다"
+                    "차트 포인트에 마우스를 올려놓으면 해당 항목의 상세 정보를 확인할 수 있습니다"
                   }
                   month_close_19={this.state.month_close_19}
                   month_open_19={this.state.month_open_19}
@@ -110,10 +110,12 @@ export default class HomePage extends Component {
                   type_detail_open_19={this.state.type_detail_open_19}
                   type_detail_close_20={this.state.type_detail_close_20}
                   type_detail_open_20={this.state.type_detail_open_20}
+                  city_name={this.state.city_name}
                 />
                 <TabsAccording
                   most_close_20={this.state.most_close_20}
                   city={"nationwide"}
+                  city_name={this.state.city_name}
                 />
                 <MainCityMapView
                   city_close_19={this.state.city_close_19}
