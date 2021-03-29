@@ -105,7 +105,7 @@ const CategoryChart = (props) => {
           <div className="card-block p-0 p-30 h-full">
             <div className="counter text-left">
               <span className="counter-number">
-                2019년, 2020년 전국 업종 대분류 개·폐업 현황
+                전국 업종 대분류 개·폐업 현황
               </span>
               <div className="counter-label text-uppercase mb-10 mt-10">
                 아래의 라벨 클릭시 해당 값이 제거 또는 추가됩니다.

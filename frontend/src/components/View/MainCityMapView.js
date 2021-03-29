@@ -11,7 +11,10 @@ export default class MainCityMapView extends Component {
   }
 
   componentDidMount() {
-    this.setState({ currentValue: "city_close_20" });
+    this.setState({
+      currentValue: "city_close_20",
+      currentValueKor: "2020년 폐업"
+    });
   }
 
   changeYearsValue = (value) => {
@@ -19,16 +22,28 @@ export default class MainCityMapView extends Component {
   };
 
   close_19_click_handler = () => {
-    this.setState({ currentValue: "city_close_19" });
+    this.setState({
+      currentValue: "city_close_19",
+      currentValueKor: "2019년 폐업"
+    });
   };
   close_20_click_handler = () => {
-    this.setState({ currentValue: "city_close_20" });
+    this.setState({
+      currentValue: "city_close_20",
+      currentValueKor: "2020년 폐업"
+    });
   };
   open_19_click_handler = () => {
-    this.setState({ currentValue: "city_open_19" });
+    this.setState({
+      currentValue: "city_open_19",
+      currentValueKor: "2019년 개업"
+    });
   };
   open_20_click_handler = () => {
-    this.setState({ currentValue: "city_open_20" });
+    this.setState({
+      currentValue: "city_open_20",
+      currentValueKor: "2020년 개업"
+    });
   };
 
   render() {
@@ -38,38 +53,30 @@ export default class MainCityMapView extends Component {
           <div className="card">
             <div className="card-block p-0 p-30 h-full">
               <div className="counter text-left">
-                <span className="counter-number">3650</span>
+                <span className="counter-number">전국 행정구역별 현황</span>
                 <div className="counter-label text-uppercase mb-20">
-                  views of your project
+                  {this.state.currentValueKor}
                 </div>
-                <p>
-                  To use justified button groups with{" "}
-                  <code>&lt;button&gt;</code> elements, you must wrap each
-                  button in a button group. Most browsers don't properly apply
-                  our CSS for justification to
-                  <code>&lt;button&gt;</code> elements, but since we support
-                  button dropdowns, we can work around that.
-                </p>
+                <p>년도별 개·폐업 버튼 클릭시 해당 년도로 변경됩니다.</p>
                 <div className="example example-buttons">
                   <div className="btn-group btn-group-justified">
                     <div className="btn-group" role="group">
                       <button
                         type="button"
-                        className="btn btn-primary"
+                        className="btn btn-danger"
                         onClick={this.close_19_click_handler}
                       >
-                        <i className="icon md-star" aria-hidden="true"></i>
+                        <i className="icon md-time" aria-hidden="true"></i>
                         <br />
                         <span className="text-uppercase hidden-sm-down">
                           19년 폐업
                         </span>
                       </button>
                     </div>
-
                     <div className="btn-group" role="group">
                       <button
                         type="button"
-                        className="btn btn-info"
+                        className="btn btn-success"
                         onClick={this.open_19_click_handler}
                       >
                         <i className="icon md-time" aria-hidden="true"></i>
@@ -79,28 +86,26 @@ export default class MainCityMapView extends Component {
                         </span>
                       </button>
                     </div>
-
                     <div className="btn-group" role="group">
                       <button
                         type="button"
-                        className="btn btn-success"
+                        className="btn btn-danger"
                         onClick={this.close_20_click_handler}
                       >
-                        <i className="icon md-account" aria-hidden="true"></i>
+                        <i className="icon md-time" aria-hidden="true"></i>
                         <br />
                         <span className="text-uppercase hidden-sm-down">
                           20년 폐업
                         </span>
                       </button>
                     </div>
-
                     <div className="btn-group" role="group">
                       <button
                         type="button"
                         className="btn btn-success"
                         onClick={this.open_20_click_handler}
                       >
-                        <i className="icon md-account" aria-hidden="true"></i>
+                        <i className="icon md-time" aria-hidden="true"></i>
                         <br />
                         <span className="text-uppercase hidden-sm-down">
                           20년 개업
