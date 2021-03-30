@@ -14,8 +14,10 @@ const CityMonthView = (props) => {
             >
               <div className="row">
                 <div className="col-8 pt-30 px-30">
-                  <p className="font-size-20 grey-700">CSS ANIMATION</p>
-                  <p>Quisque volutpat condimentum velit. Class aptent taciti</p>
+                  <p className="font-size-20 grey-700">
+                    {props.city_name} {props.title}
+                  </p>
+                  <p>{props.desc}</p>
                 </div>
               </div>
             </div>
@@ -34,6 +36,7 @@ const CityMonthView = (props) => {
                 month_close_20={props.month_close_20}
                 month_open_20={props.month_open_20}
                 numberComma={props.numberComma}
+                city_name={props.city_name}
               />
             </div>
           </div>
