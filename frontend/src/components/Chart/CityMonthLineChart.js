@@ -15,7 +15,7 @@ const CityMonthLineChart = (props) => {
     let datasetsArr = [];
 
     props.month_close_19.forEach((data) => {
-      labelsArr.push(data.month);
+      labelsArr.push(data.month_num + "월");
       close_19_data.push(data.count);
     });
     props.month_open_19.forEach((data) => {

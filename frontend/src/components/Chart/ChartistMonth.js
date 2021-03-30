@@ -50,7 +50,7 @@ const ChartistTest = (props) => {
     let month = [];
 
     props.month_close_19.forEach((data) => {
-      month.push(data.month);
+      month.push(data.month_num + "월");
       close_19.push({ meta: "2019년 폐업", value: data.count });
     });
     props.month_open_19.forEach((data) => {
