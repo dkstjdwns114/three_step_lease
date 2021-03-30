@@ -3,7 +3,14 @@ import CityMap from "../Map/CityMap";
 
 export default class MainCityMapView extends Component {
   state = {
-    currentValue: ""
+    currentValue: "",
+    currentValueKor: "",
+    defaultBtnClass: "",
+    activeBtnClass: "",
+    active1: false,
+    active2: false,
+    active3: true,
+    active4: false
   };
 
   constructor(props) {
@@ -13,7 +20,9 @@ export default class MainCityMapView extends Component {
   componentDidMount() {
     this.setState({
       currentValue: "city_close_20",
-      currentValueKor: "2020년 폐업"
+      currentValueKor: "2020년 폐업",
+      defaultBtnClass: "btn btn-default",
+      activeBtnClass: "btn btn-info"
     });
   }
 
@@ -24,25 +33,41 @@ export default class MainCityMapView extends Component {
   close_19_click_handler = () => {
     this.setState({
       currentValue: "city_close_19",
-      currentValueKor: "2019년 폐업"
+      currentValueKor: "2019년 폐업",
+      active1: true,
+      active2: false,
+      active3: false,
+      active4: false
     });
   };
   close_20_click_handler = () => {
     this.setState({
       currentValue: "city_close_20",
-      currentValueKor: "2020년 폐업"
+      currentValueKor: "2020년 폐업",
+      active1: false,
+      active2: false,
+      active3: true,
+      active4: false
     });
   };
   open_19_click_handler = () => {
     this.setState({
       currentValue: "city_open_19",
-      currentValueKor: "2019년 개업"
+      currentValueKor: "2019년 개업",
+      active1: false,
+      active2: true,
+      active3: false,
+      active4: false
     });
   };
   open_20_click_handler = () => {
     this.setState({
       currentValue: "city_open_20",
-      currentValueKor: "2020년 개업"
+      currentValueKor: "2020년 개업",
+      active1: false,
+      active2: false,
+      active3: false,
+      active4: true
     });
   };
 
@@ -63,7 +88,11 @@ export default class MainCityMapView extends Component {
                     <div className="btn-group" role="group">
                       <button
                         type="button"
-                        className="btn btn-danger"
+                        className={
+                          this.state.active1
+                            ? this.state.activeBtnClass
+                            : this.state.defaultBtnClass
+                        }
                         onClick={this.close_19_click_handler}
                       >
                         <i className="icon md-time" aria-hidden="true"></i>
@@ -76,7 +105,11 @@ export default class MainCityMapView extends Component {
                     <div className="btn-group" role="group">
                       <button
                         type="button"
-                        className="btn btn-success"
+                        className={
+                          this.state.active2
+                            ? this.state.activeBtnClass
+                            : this.state.defaultBtnClass
+                        }
                         onClick={this.open_19_click_handler}
                       >
                         <i className="icon md-time" aria-hidden="true"></i>
@@ -89,7 +122,11 @@ export default class MainCityMapView extends Component {
                     <div className="btn-group" role="group">
                       <button
                         type="button"
-                        className="btn btn-danger"
+                        className={
+                          this.state.active3
+                            ? this.state.activeBtnClass
+                            : this.state.defaultBtnClass
+                        }
                         onClick={this.close_20_click_handler}
                       >
                         <i className="icon md-time" aria-hidden="true"></i>
@@ -102,7 +139,11 @@ export default class MainCityMapView extends Component {
                     <div className="btn-group" role="group">
                       <button
                         type="button"
-                        className="btn btn-success"
+                        className={
+                          this.state.active4
+                            ? this.state.activeBtnClass
+                            : this.state.defaultBtnClass
+                        }
                         onClick={this.open_20_click_handler}
                       >
                         <i className="icon md-time" aria-hidden="true"></i>
