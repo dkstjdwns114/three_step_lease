@@ -10,16 +10,16 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-  { id: "index", label: "Index", minWidth: 100 },
-  { id: "store_name", label: "Store Name", minWidth: 150 },
+  { id: "index", label: " ", minWidth: 50 },
+  { id: "store_name", label: "가게 이름", minWidth: 150 },
   {
     id: "classification",
-    label: "Classification",
+    label: "업종",
     minWidth: 130
   },
   {
     id: "close_date",
-    label: "Closed Date",
+    label: "폐업일자",
     minWidth: 120
   }
 ];
