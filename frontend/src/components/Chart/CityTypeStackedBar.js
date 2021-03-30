@@ -77,7 +77,7 @@ export default function CityTypeStackedBar(props) {
                 아래의 라벨 클릭시 해당 값이 제거 또는 추가됩니다.
               </div>
               <div className="counter-label text-uppercase mb-20">
-                <Bar data={data} options={options} />
+                <Bar data={data} options={options} height={"400"} />
               </div>
             </div>
           </div>
