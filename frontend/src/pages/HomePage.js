@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import CategoryChart from "../components/Chart/CategoryChart";
 import TabsAccording from "../components/Tab/TabsAccording";
 import MainMonthView from "../components/View/MainMonthView";
 import TypeDetailView from "../components/View/TypeDetailView";
 import MainCityMapView from "../components/View/MainCityMapView";
 import SameAddressView from "../components/View/SameAddressView";
 import PageLoading from "../components/Loading/PageLoading";
+import CategoryChart from "../components/Chart/CategoryChart";
+import CategoryView from "../components/View/CategoryView";
 
 export default class HomePage extends Component {
   state = {
@@ -99,11 +100,12 @@ export default class HomePage extends Component {
                   numberComma={this.numberWithCommas}
                   city_name={this.state.city_name}
                 />
-                <CategoryChart
+                <CategoryView
                   type_close_19={this.state.type_close_19}
                   type_open_19={this.state.type_open_19}
                   type_close_20={this.state.type_close_20}
                   type_open_20={this.state.type_open_20}
+                  city_name={this.state.city_name}
                 />
                 <TypeDetailView
                   type_detail_close_19={this.state.type_detail_close_19}
