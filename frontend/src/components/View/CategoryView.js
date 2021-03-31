@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CategoryChart from "../Chart/CategoryChart";
+import CategorylTabs from "../Tab/CategoryTabs";
 
 export default class CategoryView extends Component {
   state = {
@@ -79,14 +79,12 @@ export default class CategoryView extends Component {
             <div className="card-block p-0 p-30 h-full">
               <div className="counter text-left">
                 <span className="counter-number">
-                  {this.props.city_name} 업종 중분류 개·폐업 현황
+                  {this.props.city_name} 업종 대분류 개·폐업 현황
                 </span>
-                <div className="counter-label text-uppercase mb-20">
-                  {this.state.currentValueKor}
-                </div>
+                <div className="counter-label text-uppercase mb-20"> </div>
                 <p>
                   년도별 개·폐업 버튼 클릭시 해당 년도로 변경됩니다. <br />
-                  업종 대분류 버튼 클릭시 해당 항목의 중분류 차트가 보여집니다.
+                  그래프 버튼 클릭시 그래프가 변경됩니다.
                 </p>
                 <div className="example example-buttons">
                   <div className="btn-group btn-group-justified">
@@ -163,13 +161,16 @@ export default class CategoryView extends Component {
                     </div>
                   </div>
                 </div>
-                <CategoryChart
-                  type_close_19={this.props.type_close_19}
-                  type_open_19={this.props.type_open_19}
-                  type_close_20={this.props.type_close_20}
-                  type_open_20={this.props.type_open_20}
-                  yearsValue={this.state.currentValue}
-                />
+                <div className="counter-label text-uppercase mb-20">
+                  <CategorylTabs
+                    type_close_19={this.props.type_close_19}
+                    type_open_19={this.props.type_open_19}
+                    type_close_20={this.props.type_close_20}
+                    type_open_20={this.props.type_open_20}
+                    yearsValue={this.state.currentValue}
+                    city_name={this.props.city_name}
+                  />
+                </div>
               </div>
             </div>
           </div>
