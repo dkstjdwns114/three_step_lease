@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 const { kakao } = window;
 
 const SameAddressMap = (props) => {
-  useEffect(async () => {
+  useEffect(() => {
     const container = document.getElementById("map_marker_simple");
 
     let map = new kakao.maps.Map(container, {
@@ -10,30 +10,38 @@ const SameAddressMap = (props) => {
       level: props.same_address_map_level
     });
 
-    let geocoder = new kakao.maps.services.Geocoder();
-
     let clusterer = new kakao.maps.MarkerClusterer({
       map: map,
       averageCenter: true,
-      minLevel: 8
+      minLevel: 8,
+      disableClickZoom: true
     });
-    let coordinates = [];
-    await props.address.forEach((info) => {
-      geocoder.addressSearch(info["address"], (result, status) => {
-        if (status === kakao.maps.services.Status.OK) {
-          coordinates.push({ lat: result[0].y, lng: result[0].x });
+
+    let markers = props.same_address_list.map((coordinate, idx) => {
+      if (props.city_name === "전국") {
+        let stores_cnt = coordinate.stores_info.length;
+        if (stores_cnt < 70) {
+          return new kakao.maps.Marker({
+            text: coordinate.address,
+            position: new kakao.maps.LatLng(coordinate.lat, coordinate.lon)
+          });
         }
-      });
-    });
-    setTimeout(() => {
-      let markers = coordinates.map((coordinate) => {
+      } else {
         return new kakao.maps.Marker({
-          position: new kakao.maps.LatLng(coordinate.lat, coordinate.lng)
+          text: coordinate.address,
+          position: new kakao.maps.LatLng(coordinate.lat, coordinate.lon)
         });
-      });
-      clusterer.addMarkers(markers);
-    }, [1000]);
-  }, []);
+      }
+    });
+
+    clusterer.addMarkers(markers);
+
+    kakao.maps.event.addListener(clusterer, "clusterclick", function (cluster) {
+      let level = map.getLevel() - 1;
+
+      map.setLevel(level, { anchor: cluster.getCenter() });
+    });
+  }, [props]);
 
   return (
     <>
