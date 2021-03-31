@@ -18,7 +18,7 @@ const MainMonthView = (props) => {
                   <p>{props.desc}</p>
                 </div>
 
-                <div className="col-4 pt-30 px-30">
+                <div className="col-4 pt-30 px-30 mt-50">
                   <div className="float-right clearfix">
                     <ul className="list-unstyled">
                       <li className="mb-5">
@@ -64,15 +64,15 @@ const MainMonthView = (props) => {
                   numberComma={props.numberWithCommas}
                 />
               </div>
-              <SmartTable
-                month_close_19={props.month_close_19}
-                month_open_19={props.month_open_19}
-                month_close_20={props.month_close_20}
-                month_open_20={props.month_open_20}
-                numberComma={props.numberComma}
-                city_name={props.city_name}
-              />
             </div>
+            <SmartTable
+              month_close_19={props.month_close_19}
+              month_open_19={props.month_open_19}
+              month_close_20={props.month_close_20}
+              month_open_20={props.month_open_20}
+              numberComma={props.numberComma}
+              city_name={props.city_name}
+            />
           </div>
         </div>
       </div>
