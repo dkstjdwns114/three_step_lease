@@ -1,120 +1,100 @@
 import React, { useEffect, useState } from "react";
-import { Radar } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
+
+const options = {
+  legend: { display: false }
+};
 
 const CategoryChart = (props) => {
   const [data, setData] = useState({});
-  const [options, setOptions] = useState({});
 
   useEffect(() => {
-    setOptions({
-      scale: {
-        reverse: false,
-        gridLines: {
-          color: [
-            "#424242",
-            "#F50057",
-            "#9FA8DA",
-            "#64B5F6",
-            "#FF7043",
-            "#AED581",
-            "#B3E5FC",
-            "#F06292",
-            "#42A5F5",
-            "#9C27B0",
-            "#FF1744"
-          ]
-        },
-        ticks: {
-          suggestedMin: 5000,
-          suggestedMax: 200000
-        }
-      }
-    });
-    let labelArr = [];
-    let datasetsArr = [];
+    if (props.yearsValue === "type_detail_close_19") {
+      type_close_19_handler();
+    } else if (props.yearsValue === "type_detail_open_19") {
+      type_open_19_handler();
+    } else if (props.yearsValue === "type_detail_close_20") {
+      type_close_20_handler();
+    } else if (props.yearsValue === "type_detail_open_20") {
+      type_open_20_handler();
+    }
+  }, [props.yearsValue]);
 
-    let close_19_data = [];
-    let open_19_data = [];
-    let close_20_data = [];
-    let open_20_data = [];
+  const type_close_19_handler = async () => {
+    const sorted_close_19 = await props.type_close_19.sort((a, b) => {
+      return a.count > b.count ? -1 : a.count < b.count ? 1 : 0;
+    });
+    const labels = await sorted_close_19.map((data) => {
+      return data.type;
+    });
+    const datas = await sorted_close_19.map((data) => {
+      return data.count;
+    });
+    setDataAndOptions(labels, datas);
+  };
 
-    props.type_close_19.forEach((data) => {
-      labelArr.push(data.type);
-      close_19_data.push(data.count);
+  const type_close_20_handler = async () => {
+    const sorted_close_20 = await props.type_close_20.sort((a, b) => {
+      return a.count > b.count ? -1 : a.count < b.count ? 1 : 0;
     });
-    props.type_open_19.forEach((data) => {
-      open_19_data.push(data.count);
+    const labels = await sorted_close_20.map((data) => {
+      return data.type;
     });
-    props.type_close_20.forEach((data) => {
-      close_20_data.push(data.count);
+    const datas = await sorted_close_20.map((data) => {
+      return data.count;
     });
-    props.type_open_20.forEach((data) => {
-      open_20_data.push(data.count);
-    });
+    setDataAndOptions(labels, datas);
+  };
 
-    setTimeout(() => {
-      datasetsArr.push({
-        label: "2019년 폐업",
-        backgroundColor: "rgba(238, 255, 65, 0.2)",
-        pointBackgroundColor: "rgba(238, 255, 65, 1)",
-        pointHighlightStroke: "rgba(238, 255, 65, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: close_19_data
-      });
-      datasetsArr.push({
-        label: "2020년 폐업",
-        backgroundColor: "rgba(240, 98, 146, 0.2)",
-        pointBackgroundColor: "rgba(240, 98, 146, 1)",
-        pointHighlightStroke: "rgba(240, 98, 146, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: close_20_data
-      });
-      datasetsArr.push({
-        label: "2019년 개업",
-        hidden: true,
-        backgroundColor: "rgba(105, 240, 174, 0.2)",
-        pointBackgroundColor: "rgba(105, 240, 174, 1)",
-        pointHighlightStroke: "rgba(105, 240, 174, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: open_19_data
-      });
-      datasetsArr.push({
-        label: "2020년 개업",
-        hidden: true,
-        backgroundColor: "rgba(100, 181, 246, 0.2)",
-        pointBackgroundColor: "rgba(100, 181, 246, 1)",
-        pointHighlightStroke: "rgba(100, 181, 246, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: open_20_data
-      });
-      setDataAndOptions(labelArr, datasetsArr);
-    }, 500);
-  }, []);
+  const type_open_19_handler = async () => {
+    const sorted_open_19 = await props.type_open_19.sort((a, b) => {
+      return a.count > b.count ? -1 : a.count < b.count ? 1 : 0;
+    });
+    const labels = await sorted_open_19.map((data) => {
+      return data.type;
+    });
+    const datas = await sorted_open_19.map((data) => {
+      return data.count;
+    });
+    setDataAndOptions(labels, datas);
+  };
 
-  const setDataAndOptions = (labelArr, datasetsArr) => {
+  const type_open_20_handler = async () => {
+    const sorted_open_20 = await props.type_open_20.sort((a, b) => {
+      return a.count > b.count ? -1 : a.count < b.count ? 1 : 0;
+    });
+    const labels = await sorted_open_20.map((data) => {
+      return data.type;
+    });
+    const datas = await sorted_open_20.map((data) => {
+      return data.count;
+    });
+    setDataAndOptions(labels, datas);
+  };
+
+  const setDataAndOptions = (myLabels, myData) => {
     setData({
-      labels: labelArr,
-      datasets: datasetsArr
+      labels: myLabels,
+      datasets: [
+        {
+          backgroundColor: [
+            "#AB47BC",
+            "#F06292",
+            "#4FC3F7",
+            "#D4E157",
+            "#B9F6CA",
+            "#9FA8DA",
+            "#FF7043"
+          ],
+          data: myData
+        }
+      ]
     });
   };
 
   return (
     <>
-      <div className="col-xxl-6 col-lg-6 col-md-12">
-        <div className="card">
-          <div className="card-block p-0 p-30 h-full">
-            <div className="counter text-left">
-              <span className="counter-number">
-                전국 업종 대분류 개·폐업 현황
-              </span>
-              <div className="counter-label text-uppercase mb-10 mt-10">
-                아래의 라벨 클릭시 해당 값이 제거 또는 추가됩니다.
-              </div>
-            </div>
-            <Radar data={data} options={options} width={150} height={150} />
-          </div>
-        </div>
-      </div>
+      <HorizontalBar data={data} options={options} width={150} height={150} />
     </>
   );
 };
