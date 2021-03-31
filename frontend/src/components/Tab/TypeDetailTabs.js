@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PolarChart from "../Chart/PolarChart";
 
-const StandardTabs = (props) => {
+const TypeDetailTabs = (props) => {
   const [years, setYears] = useState("");
   const [animal_close_19, set_animal_close_19] = useState({});
   const [culture_close_19, set_culture_close_19] = useState({});
@@ -282,4 +282,4 @@ const StandardTabs = (props) => {
     </>
   );
 };
-export default StandardTabs;
+export default TypeDetailTabs;
