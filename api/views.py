@@ -91,7 +91,7 @@ def sameAddressView(request, pk):
         stores_info_list = []
         for store in info['stores_info']:
             stores_info_list.append({"store_name": store['store_name'], "open_service": store['open_service'], "detailed_classification": store['detailed_classification'], "closed_store_date": store['closed_store_date']})
-        same_address_list.append({"address": info['address'], "x": info['coordinates']['x'], "y": info['coordinates']['y'], "stores_info": stores_info_list})
+        same_address_list.append({"address": info['address'], "lat": info['lat'], "lon": info['lon'], "stores_info": stores_info_list})
 
     api_json = {
         'title' : "Same address View",
