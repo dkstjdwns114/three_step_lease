@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
 import SameAddressMap from "../Map/SameAddressMap";
-import TestMap from "../Map/TestMap";
 
 export default class SameAddressView extends Component {
   state = {
@@ -69,15 +68,6 @@ export default class SameAddressView extends Component {
                           this.props.same_address_map_level
                         }
                       /> */}
-                      <TestMap
-                        same_address_list={this.state.same_address_list}
-                        city_hoall_lat={this.props.city_hoall_lat}
-                        city_hoall_lng={this.props.city_hoall_lng}
-                        same_address_map_level={
-                          this.props.same_address_map_level
-                        }
-                        city_name={this.props.city_name}
-                      />
                     </>
                   )}
                 </div>
@@ -85,16 +75,6 @@ export default class SameAddressView extends Component {
             </div>
           </div>
         </div>
-        {/* <div className="content">
-              <div className="row"></div>
-              <PrevSameCoordinatesMap
-                cardTitle={"지도"}
-                cardDesc={`2019년, 2020년 모두 폐업한 상가 위치 총 ${this.numberWithCommas(
-                  this.state.same_coordinates.length
-                )}개`}
-                coordinates={this.state.same_coordinates}
-              />
-            </div> */}
       </>
     );
   }
