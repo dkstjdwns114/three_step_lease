@@ -5,10 +5,10 @@ import "react-smart-data-table/dist/react-smart-data-table.css";
 const SmartTableTest = (props) => {
   const [tableData, setTableData] = useState([]);
   useEffect(() => {
-    let close19 = { classification: "2019년 폐업" };
-    let open19 = { classification: "2019년 개업" };
-    let close20 = { classification: "2020년 폐업" };
-    let open20 = { classification: "2020년 개업" };
+    let close19 = { index: "2019년 폐업" };
+    let open19 = { index: "2019년 개업" };
+    let close20 = { index: "2020년 폐업" };
+    let open20 = { index: "2020년 개업" };
 
     props.month_close_19.forEach((data) => {
       close19[data.abbreviations] = props.numberComma(data.count);
