@@ -29,16 +29,18 @@ const SmartTableTest = (props) => {
 
   return (
     <>
-      <div className="col-xxl-12">
+      <div className="col-xxl-12 mt-20">
         <div className="panel">
           <header className="panel-heading">
-            <h3 className="panel-title">
-              {props.city_name} 월별 개·폐업 표
+            <div className="panel-title">
+              <p className="font-size-20 grey-700">
+                {props.city_name} 월별 개·폐업 표
+              </p>
               <span className="panel-desc">
                 화살표 클릭시 해당 열 기준으로 내림차순 또는 오름차순으로
                 정렬됩니다.
               </span>
-            </h3>
+            </div>
           </header>
           <div className="panel-body">
             <SmartDataTable
