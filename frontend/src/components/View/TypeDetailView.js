@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import StandardTabs from "../Tab/StandardTabs";
+import TypeDetailTabs from "../Tab/TypeDetailTabs";
 
 export default class TypeDetailView extends Component {
   state = {
@@ -81,9 +81,7 @@ export default class TypeDetailView extends Component {
                 <span className="counter-number">
                   {this.props.city_name} 업종 중분류 개·폐업 현황
                 </span>
-                <div className="counter-label text-uppercase mb-20">
-                  {this.state.currentValueKor}
-                </div>
+                <div className="counter-label text-uppercase mb-20"> </div>
                 <p>
                   년도별 개·폐업 버튼 클릭시 해당 년도로 변경됩니다. <br />
                   업종 대분류 버튼 클릭시 해당 항목의 중분류 차트가 보여집니다.
@@ -164,7 +162,7 @@ export default class TypeDetailView extends Component {
                   </div>
                 </div>
                 <div className="counter-label text-uppercase mb-20">
-                  <StandardTabs
+                  <TypeDetailTabs
                     type_detail_close_19={this.props.type_detail_close_19}
                     type_detail_open_19={this.props.type_detail_open_19}
                     type_detail_close_20={this.props.type_detail_close_20}

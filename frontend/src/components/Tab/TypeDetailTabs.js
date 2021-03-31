@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PolarChart from "../Chart/PolarChart";
+import PieChart from "../Chart/PieChart";
 
 const TypeDetailTabs = (props) => {
   const [years, setYears] = useState("");
@@ -214,7 +214,7 @@ const TypeDetailTabs = (props) => {
               id="exampleTabsOne"
               role="tabpanel"
             >
-              <PolarChart
+              <PieChart
                 yearsValue={years}
                 close_19={animal_close_19}
                 close_20={animal_close_20}
@@ -223,7 +223,7 @@ const TypeDetailTabs = (props) => {
               />
             </div>
             <div className="tab-pane" id="exampleTabsTwo" role="tabpanel">
-              <PolarChart
+              <PieChart
                 yearsValue={years}
                 close_19={culture_close_19}
                 close_20={culture_close_20}
@@ -232,7 +232,7 @@ const TypeDetailTabs = (props) => {
               />
             </div>
             <div className="tab-pane" id="exampleTabsThree" role="tabpanel">
-              <PolarChart
+              <PieChart
                 yearsValue={years}
                 close_19={environment_close_19}
                 close_20={environment_close_20}
@@ -241,7 +241,7 @@ const TypeDetailTabs = (props) => {
               />
             </div>
             <div className="tab-pane" id="exampleTabsFour" role="tabpanel">
-              <PolarChart
+              <PieChart
                 yearsValue={years}
                 close_19={food_close_19}
                 close_20={food_close_20}
@@ -250,7 +250,7 @@ const TypeDetailTabs = (props) => {
               />
             </div>
             <div className="tab-pane" id="exampleTabsFive" role="tabpanel">
-              <PolarChart
+              <PieChart
                 yearsValue={years}
                 close_19={health_close_19}
                 close_20={health_close_20}
@@ -259,7 +259,7 @@ const TypeDetailTabs = (props) => {
               />
             </div>
             <div className="tab-pane" id="exampleTabsSix" role="tabpanel">
-              <PolarChart
+              <PieChart
                 yearsValue={years}
                 close_19={life_close_19}
                 close_20={life_close_20}
@@ -268,7 +268,7 @@ const TypeDetailTabs = (props) => {
               />
             </div>
             <div className="tab-pane" id="exampleTabsSeven" role="tabpanel">
-              <PolarChart
+              <PieChart
                 yearsValue={years}
                 close_19={other_close_19}
                 close_20={other_close_20}

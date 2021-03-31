@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Polar } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
-const PolarChart = (props) => {
+const PieChart = (props) => {
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -40,9 +40,9 @@ const PolarChart = (props) => {
         {
           backgroundColor: [
             "#90CAF9",
-            "#CE93D8",
+            "#E040FB",
             "#84FFFF",
-            "#B0BEC5",
+            "#4DB6AC",
             "#FFCDD2",
             "#CDDC39",
             "#F57C00",
@@ -57,7 +57,7 @@ const PolarChart = (props) => {
     });
   };
 
-  return <Polar data={data} width={120} height={120} />;
+  return <Pie data={data} width={120} height={120} />;
 };
 
-export default PolarChart;
+export default PieChart;
