@@ -192,17 +192,17 @@ const ChartistTest = (props) => {
       }
     });
 
-    // mobile은 주석
-    chart.on("created", function () {
-      if (window.__exampleAnimateTimeout) {
-        clearTimeout(window.__exampleAnimateTimeout);
-        window.__exampleAnimateTimeout = null;
-      }
-      window.__exampleAnimateTimeout = setTimeout(
-        chart.update.bind(chart),
-        30000
-      );
-    });
+    // 애니메이션 반복
+    // chart.on("created", function () {
+    //   if (window.__exampleAnimateTimeout) {
+    //     clearTimeout(window.__exampleAnimateTimeout);
+    //     window.__exampleAnimateTimeout = null;
+    //   }
+    //   window.__exampleAnimateTimeout = setTimeout(
+    //     chart.update.bind(chart),
+    //     30000
+    //   );
+    // });
   };
 
   return (
