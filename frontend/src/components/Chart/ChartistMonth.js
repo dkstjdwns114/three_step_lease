@@ -92,14 +92,13 @@ const ChartistTest = (props) => {
       },
       {
         low: 17500,
-        // fullWidth: true,
         plugins: [ChartistTooltip()]
       }
     );
 
     let seq = 0;
-    let delays = 100;
-    let durations = 500;
+    let delays = 50;
+    let durations = 250;
 
     chart.on("created", function () {
       seq = 0;
