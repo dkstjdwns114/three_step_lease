@@ -15,10 +15,9 @@ const TabsAccording = (props) => {
         <div className="card">
           <div className="card-block p-0 p-30 h-full">
             <div className="counter text-left">
-              <h4 className="font-size-16 grey-700">
-                {props.city_name} 2019년 2020년 모두 폐업 이력이 있는 주소 중
-                가게가 많은 주소 Top10
-              </h4>
+              <span className="counter-number">
+                {props.city_name} 2019년, 2020년 모두 폐업한 상가 주소 Top10
+              </span>
               <div
                 className="panel-group panel-group-continuous"
                 id="exampleAccordionContinuous"
