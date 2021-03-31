@@ -5,7 +5,7 @@ const options = {
   legend: { display: false }
 };
 
-const CategoryChart = (props) => {
+const HorizontalBarChart = (props) => {
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -99,4 +99,4 @@ const CategoryChart = (props) => {
   );
 };
 
-export default CategoryChart;
+export default HorizontalBarChart;
