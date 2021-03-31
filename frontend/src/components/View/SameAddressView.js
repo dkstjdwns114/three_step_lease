@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
 import SameAddressMap from "../Map/SameAddressMap";
+import TestMap from "../Map/TestMap";
 
 export default class SameAddressView extends Component {
   state = {
     isLoading: true,
-    same_address: []
+    same_address_list: []
   };
 
   constructor(props) {
@@ -24,7 +25,7 @@ export default class SameAddressView extends Component {
       .then((resData) => {
         this.setState({
           isLoading: false,
-          same_address: resData.same_address_list
+          same_address_list: resData.same_address_list
         });
       });
   };
@@ -68,6 +69,15 @@ export default class SameAddressView extends Component {
                           this.props.same_address_map_level
                         }
                       /> */}
+                      <TestMap
+                        same_address_list={this.state.same_address_list}
+                        city_hoall_lat={this.props.city_hoall_lat}
+                        city_hoall_lng={this.props.city_hoall_lng}
+                        same_address_map_level={
+                          this.props.same_address_map_level
+                        }
+                        city_name={this.props.city_name}
+                      />
                     </>
                   )}
                 </div>
