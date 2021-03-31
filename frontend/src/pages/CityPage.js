@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import CityMonthView from "../components/View/CityMonthView";
-import CityTypeStackedBar from "../components/Chart/CityTypeStackedBar";
 import TypeDetailView from "../components/View/TypeDetailView";
 import SameAddressView from "../components/View/SameAddressView";
 import TabsAccording from "../components/Tab/TabsAccording";
 import PageLoading from "../components/Loading/PageLoading";
+import CategoryView from "../components/View/CategoryView";
 
 export default class CityPage extends Component {
   state = {
@@ -220,7 +220,7 @@ export default class CityPage extends Component {
                     "차트 포인트에 마우스를 올려놓으면 해당 항목의 상세 정보를 확인할 수 있습니다"
                   }
                 />
-                <CityTypeStackedBar
+                <CategoryView
                   type_close_19={this.state.type_close_19}
                   type_open_19={this.state.type_open_19}
                   type_close_20={this.state.type_close_20}

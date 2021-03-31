@@ -5,7 +5,6 @@ import TypeDetailView from "../components/View/TypeDetailView";
 import MainCityMapView from "../components/View/MainCityMapView";
 import SameAddressView from "../components/View/SameAddressView";
 import PageLoading from "../components/Loading/PageLoading";
-import CategoryChart from "../components/Chart/CategoryChart";
 import CategoryView from "../components/View/CategoryView";
 
 export default class HomePage extends Component {
