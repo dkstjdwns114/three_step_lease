@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DownLoadCsv from "../Csv/DownLoadCsv";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
 import SameAddressMap from "../Map/SameAddressMap";
 
@@ -45,11 +46,31 @@ export default class SameAddressView extends Component {
               >
                 <div className="row">
                   <div className="col-8 pt-30 px-30">
-                    <p className="font-size-20 grey-700">CSS ANIMATION</p>
+                    <p className="font-size-20 grey-700">
+                      {this.props.city_name} 2019년, 2020년 모두 폐업한 상가
+                      지도
+                    </p>
                     {!this.state.isLoading && (
-                      <p>
-                        Quisque volutpat condimentum velit. Class aptent taciti
-                      </p>
+                      <>
+                        {this.props.city_name === "전국" ? (
+                          <p>
+                            전국의 경우 성능상의 이유로 일부 데이터만 지도에
+                            표시됩니다. 모든 데이터&nbsp;
+                            <DownLoadCsv
+                              same_address_list={this.state.same_address_list}
+                              city_name={this.props.city_name}
+                            />
+                          </p>
+                        ) : (
+                          <p>
+                            지도에 표시된 모든 데이터&nbsp;
+                            <DownLoadCsv
+                              same_address_list={this.state.same_address_list}
+                              city_name={this.props.city_name}
+                            />
+                          </p>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
