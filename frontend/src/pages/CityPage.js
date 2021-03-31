@@ -244,6 +244,7 @@ export default class CityPage extends Component {
                   city_hoall_lat={this.state.city_hoall_lat}
                   city_hoall_lng={this.state.city_hoall_lng}
                   same_address_map_level={this.state.same_address_map_level}
+                  city_name={this.state.city_name}
                 />
               </div>
             </div>
