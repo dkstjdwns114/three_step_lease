@@ -16,9 +16,7 @@ const CityMap = (props) => {
       cities = props.city_open_20;
     }
 
-    setTimeout(() => {
-      kakaoMapHandler(cities);
-    }, 500);
+    kakaoMapHandler(cities);
   }, [props.valueStr]);
 
   const kakaoMapHandler = (cities) => {
