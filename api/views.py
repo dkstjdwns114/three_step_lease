@@ -526,155 +526,477 @@ def realTimeView(request, pk):
         "one_days_ago": {
             "close": {
                 "total": d1_close_cnt,
-                "animal": d1_animal_close_cnt,
-                "culture": d1_culture_close_cnt,
-                "environment": d1_environment_close_cnt,
-                "food": d1_food_close_cnt,
-                "health": d1_health_close_cnt,
-                "life": d1_life_close_cnt,
-                "other": d1_other_close_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d1_animal_close_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d1_culture_close_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d1_environment_close_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d1_food_close_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d1_health_close_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d1_life_close_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d1_other_close_cnt
+                    }
+                ]
             },
             "open": {
                 "total": d1_open_cnt,
-                "animal": d1_animal_open_cnt,
-                "culture": d1_culture_open_cnt,
-                "environment": d1_environment_open_cnt,
-                "food": d1_food_open_cnt,
-                "health": d1_health_open_cnt,
-                "life": d1_life_open_cnt,
-                "other": d1_other_open_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d1_animal_open_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d1_culture_open_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d1_environment_open_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d1_food_open_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d1_health_open_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d1_life_open_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d1_other_open_cnt
+                    }
+                ]
             }
         },
         "two_days_ago": {
             "close": {
                 "total": d2_close_cnt,
-                "animal": d2_animal_close_cnt,
-                "culture": d2_culture_close_cnt,
-                "environment": d2_environment_close_cnt,
-                "food": d2_food_close_cnt,
-                "health": d2_health_close_cnt,
-                "life": d2_life_close_cnt,
-                "other": d2_other_close_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d2_animal_close_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d2_culture_close_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d2_environment_close_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d2_food_close_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d2_health_close_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d2_life_close_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d2_other_close_cnt
+                    }
+                ]
             },
             "open": {
                 "total": d2_open_cnt,
-                "animal": d2_animal_open_cnt,
-                "culture": d2_culture_open_cnt,
-                "environment": d2_environment_open_cnt,
-                "food": d2_food_open_cnt,
-                "health": d2_health_open_cnt,
-                "life": d2_life_open_cnt,
-                "other": d2_other_open_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d2_animal_open_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d2_culture_open_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d2_environment_open_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d2_food_open_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d2_health_open_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d2_life_open_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d2_other_open_cnt
+                    }
+                ]
             }
         },
         "three_days_ago": {
             "close": {
                 "total": d3_close_cnt,
-                "animal": d3_animal_close_cnt,
-                "culture": d3_culture_close_cnt,
-                "environment": d3_environment_close_cnt,
-                "food": d3_food_close_cnt,
-                "health": d3_health_close_cnt,
-                "life": d3_life_close_cnt,
-                "other": d3_other_close_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d3_animal_close_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d3_culture_close_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d3_environment_close_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d3_food_close_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d3_health_close_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d3_life_close_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d3_other_close_cnt
+                    }
+                ]
             },
             "open": {
                 "total": d3_open_cnt,
-                "animal": d3_animal_open_cnt,
-                "culture": d3_culture_open_cnt,
-                "environment": d3_environment_open_cnt,
-                "food": d3_food_open_cnt,
-                "health": d3_health_open_cnt,
-                "life": d3_life_open_cnt,
-                "other": d3_other_open_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d3_animal_open_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d3_culture_open_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d3_environment_open_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d3_food_open_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d3_health_open_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d3_life_open_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d3_other_open_cnt
+                    }
+                ]
             }
         },
         "four_days_ago": {
             "close": {
                 "total": d4_close_cnt,
-                "animal": d4_animal_close_cnt,
-                "culture": d4_culture_close_cnt,
-                "environment": d4_environment_close_cnt,
-                "food": d4_food_close_cnt,
-                "health": d4_health_close_cnt,
-                "life": d4_life_close_cnt,
-                "other": d4_other_close_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d4_animal_close_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d4_culture_close_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d4_environment_close_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d4_food_close_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d4_health_close_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d4_life_close_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d4_other_close_cnt
+                    }
+                ]
             },
             "open": {
                 "total": d4_open_cnt,
-                "animal": d4_animal_open_cnt,
-                "culture": d4_culture_open_cnt,
-                "environment": d4_environment_open_cnt,
-                "food": d4_food_open_cnt,
-                "health": d4_health_open_cnt,
-                "life": d4_life_open_cnt,
-                "other": d4_other_open_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d4_animal_open_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d4_culture_open_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d4_environment_open_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d4_food_open_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d4_health_open_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d4_life_open_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d4_other_open_cnt
+                    }
+                ]
             }
         },
         "five_days_ago": {
             "close": {
                 "total": d5_close_cnt,
-                "animal": d5_animal_close_cnt,
-                "culture": d5_culture_close_cnt,
-                "environment": d5_environment_close_cnt,
-                "food": d5_food_close_cnt,
-                "health": d5_health_close_cnt,
-                "life": d5_life_close_cnt,
-                "other": d5_other_close_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d5_animal_close_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d5_culture_close_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d5_environment_close_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d5_food_close_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d5_health_close_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d5_life_close_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d5_other_close_cnt
+                    }
+                ]
             },
             "open": {
                 "total": d5_open_cnt,
-                "animal": d5_animal_open_cnt,
-                "culture": d5_culture_open_cnt,
-                "environment": d5_environment_open_cnt,
-                "food": d5_food_open_cnt,
-                "health": d5_health_open_cnt,
-                "life": d5_life_open_cnt,
-                "other": d5_other_open_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d5_animal_open_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d5_culture_open_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d5_environment_open_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d5_food_open_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d5_health_open_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d5_life_open_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d5_other_open_cnt
+                    }
+                ]
             }
         },
         "six_days_ago": {
             "close": {
                 "total": d6_close_cnt,
-                "animal": d6_animal_close_cnt,
-                "culture": d6_culture_close_cnt,
-                "environment": d6_environment_close_cnt,
-                "food": d6_food_close_cnt,
-                "health": d6_health_close_cnt,
-                "life": d6_life_close_cnt,
-                "other": d6_other_close_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d6_animal_close_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d6_culture_close_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d6_environment_close_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d6_food_close_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d6_health_close_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d6_life_close_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d6_other_close_cnt
+                    }
+                ]
             },
             "open": {
                 "total": d6_open_cnt,
-                "animal": d6_animal_open_cnt,
-                "culture": d6_culture_open_cnt,
-                "environment": d6_environment_open_cnt,
-                "food": d6_food_open_cnt,
-                "health": d6_health_open_cnt,
-                "life": d6_life_open_cnt,
-                "other": d6_other_open_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d6_animal_open_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d6_culture_open_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d6_environment_open_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d6_food_open_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d6_health_open_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d6_life_open_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d6_other_open_cnt
+                    }
+                ]
             }
         },
         "seven_days_ago": {
             "close": {
                 "total": d7_close_cnt,
-                "animal": d7_animal_close_cnt,
-                "culture": d7_culture_close_cnt,
-                "environment": d7_environment_close_cnt,
-                "food": d7_food_close_cnt,
-                "health": d7_health_close_cnt,
-                "life": d7_life_close_cnt,
-                "other": d7_other_close_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d7_animal_close_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d7_culture_close_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d7_environment_close_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d7_food_close_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d7_health_close_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d7_life_close_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d7_other_close_cnt
+                    }
+                ]
             },
             "open": {
                 "total": d7_open_cnt,
-                "animal": d7_animal_open_cnt,
-                "culture": d7_culture_open_cnt,
-                "environment": d7_environment_open_cnt,
-                "food": d7_food_open_cnt,
-                "health": d7_health_open_cnt,
-                "life": d7_life_open_cnt,
-                "other": d7_other_open_cnt,
+                "category": [
+                    {
+                        "type": "동물",
+                        "count": d7_animal_open_cnt
+                    },
+                    {
+                        "type": "문화",
+                        "count": d7_culture_open_cnt
+                    },
+                    {
+                        "type": "환경",
+                        "count": d7_environment_open_cnt
+                    },
+                    {
+                        "type": "식품",
+                        "count": d7_food_open_cnt
+                    },
+                    {
+                        "type": "건강",
+                        "count": d7_health_open_cnt
+                    },
+                    {
+                        "type": "생활",
+                        "count": d7_life_open_cnt
+                    },
+                    {
+                        "type": "기타",
+                        "count": d7_other_open_cnt
+                    }
+                ]
             }
         }
     }
