@@ -5,6 +5,7 @@ import SameAddressView from "../components/View/SameAddressView";
 import TabsAccording from "../components/Tab/TabsAccording";
 import PageLoading from "../components/Loading/PageLoading";
 import CategoryView from "../components/View/CategoryView";
+import RealTimeView from "../components/View/RealTimeView";
 
 export default class CityPage extends Component {
   state = {
@@ -208,6 +209,7 @@ export default class CityPage extends Component {
           <>
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
+                <RealTimeView city_name={this.state.city_name} />
                 <CityMonthView
                   month_close_19={this.state.month_close_19}
                   month_open_19={this.state.month_open_19}

@@ -6,6 +6,7 @@ import MainCityMapView from "../components/View/MainCityMapView";
 import SameAddressView from "../components/View/SameAddressView";
 import PageLoading from "../components/Loading/PageLoading";
 import CategoryView from "../components/View/CategoryView";
+import RealTimeView from "../components/View/RealTimeView";
 
 export default class HomePage extends Component {
   state = {
@@ -87,6 +88,7 @@ export default class HomePage extends Component {
           <>
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
+                <RealTimeView city_name={this.state.city_name} />
                 <MainMonthView
                   title={"전국 월별 개·폐업 현황"}
                   desc={
