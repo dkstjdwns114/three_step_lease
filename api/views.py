@@ -524,6 +524,7 @@ def realTimeView(request, pk):
     api_json = {
         "title": "Real Time View",
         "one_days_ago": {
+            "date": d1,
             "close": {
                 "total": d1_close_cnt,
                 "category": [
@@ -592,6 +593,7 @@ def realTimeView(request, pk):
             }
         },
         "two_days_ago": {
+            "date": d1,
             "close": {
                 "total": d2_close_cnt,
                 "category": [
@@ -660,6 +662,7 @@ def realTimeView(request, pk):
             }
         },
         "three_days_ago": {
+            "date": d1,
             "close": {
                 "total": d3_close_cnt,
                 "category": [
@@ -728,6 +731,7 @@ def realTimeView(request, pk):
             }
         },
         "four_days_ago": {
+            "date": d1,
             "close": {
                 "total": d4_close_cnt,
                 "category": [
@@ -796,6 +800,7 @@ def realTimeView(request, pk):
             }
         },
         "five_days_ago": {
+            "date": d1,
             "close": {
                 "total": d5_close_cnt,
                 "category": [
@@ -864,6 +869,7 @@ def realTimeView(request, pk):
             }
         },
         "six_days_ago": {
+            "date": d1,
             "close": {
                 "total": d6_close_cnt,
                 "category": [
@@ -932,6 +938,7 @@ def realTimeView(request, pk):
             }
         },
         "seven_days_ago": {
+            "date": d1,
             "close": {
                 "total": d7_close_cnt,
                 "category": [
