@@ -80,9 +80,11 @@ def cityView(request, pk):
 @api_view(['GET'])
 def sameAddressView(request, pk):
     same_address = db['same_address']
-    same_address_info_data = same_address.find({})
+    same_address_info_data = []
 
-    if pk != "nationwide":
+    if pk == "nationwide":
+        same_address_info_data = same_address.find({})
+    else:
         same_address_info_data = same_address.find({"city": pk})
 
     same_address_list = []
