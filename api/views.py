@@ -40,7 +40,6 @@ def mainView(request):
         'month_open_20' : month_data['month_open_20'],
         'nationwide_most_close_20' : most_same_address_data['nationwide']
     }
-
     return Response(api_json)
 
 
@@ -99,5 +98,9 @@ def sameAddressView(request, pk):
         'title' : "Same address View",
         'same_address_list' : same_address_list
     }
-
     return Response(api_json)
+
+@api_view(['GET'])
+def realTimeView(request, pk):
+    local_realtime_close = db['local_realtime_close']
+    local_realtime_open = db['local_realtime_open']
