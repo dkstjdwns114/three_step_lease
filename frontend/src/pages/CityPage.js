@@ -209,7 +209,7 @@ export default class CityPage extends Component {
           <>
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
-                <RealTimeView city_name={this.state.city_name} />
+                <RealTimeView city_code={this.state.city_code} />
                 <CityMonthView
                   month_close_19={this.state.month_close_19}
                   month_open_19={this.state.month_open_19}

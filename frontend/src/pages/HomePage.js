@@ -32,7 +32,8 @@ export default class HomePage extends Component {
     city_hoall_lat: "",
     city_hoall_lng: "",
     same_address_map_level: "",
-    city_name: ""
+    city_name: "",
+    city_code: ""
   };
 
   componentDidMount() {
@@ -41,7 +42,8 @@ export default class HomePage extends Component {
       city_hoall_lat: 35.6783,
       city_hoall_lng: 127.9558,
       same_address_map_level: 13,
-      city_name: "전국"
+      city_name: "전국",
+      city_code: "nationwide"
     });
     this.fetchData();
   }
@@ -88,7 +90,7 @@ export default class HomePage extends Component {
           <>
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
-                <RealTimeView city_name={this.state.city_name} />
+                <RealTimeView city_code={this.state.city_code} />
                 <MainMonthView
                   title={"전국 월별 개·폐업 현황"}
                   desc={

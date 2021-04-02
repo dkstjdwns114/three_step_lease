@@ -26,7 +26,7 @@ export default class RealTimeView extends Component {
   }
 
   fetchData = () => {
-    fetch(`/api/real_time/${this.props.city}`)
+    fetch(`/api/real_time/${this.props.city_code}`)
       .then((res) => {
         return res.json();
       })
@@ -41,6 +41,8 @@ export default class RealTimeView extends Component {
           six_days_ago: resData.six_days_ago,
           seven_days_ago: resData.seven_days_ago
         });
+        console.log(resData);
+        // console.log(resData.one_days_ago);
       });
   };
 
