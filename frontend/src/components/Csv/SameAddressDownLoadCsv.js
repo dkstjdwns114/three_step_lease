@@ -11,7 +11,7 @@ const headers = [
   { label: "경도", key: "lon" }
 ];
 
-const DownLoadCsv = (props) => {
+const SameAddressDownLoadCsv = (props) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     setListHandler();
@@ -47,4 +47,4 @@ const DownLoadCsv = (props) => {
   );
 };
 
-export default DownLoadCsv;
+export default SameAddressDownLoadCsv;

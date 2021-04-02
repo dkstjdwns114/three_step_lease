@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DownLoadCsv from "../Csv/DownLoadCsv";
+import SameAddressDownLoadCsv from "../Csv/SameAddressDownLoadCsv";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
 import SameAddressMap from "../Map/SameAddressMap";
 
@@ -56,7 +56,7 @@ export default class SameAddressView extends Component {
                           <p>
                             전국의 경우 성능상의 이유로 일부 데이터만 지도에
                             표시됩니다. 모든 데이터&nbsp;
-                            <DownLoadCsv
+                            <SameAddressDownLoadCsv
                               same_address_list={this.state.same_address_list}
                               city_name={this.props.city_name}
                             />
@@ -64,7 +64,7 @@ export default class SameAddressView extends Component {
                         ) : (
                           <p>
                             지도에 표시된 모든 데이터&nbsp;
-                            <DownLoadCsv
+                            <SameAddressDownLoadCsv
                               same_address_list={this.state.same_address_list}
                               city_name={this.props.city_name}
                             />
