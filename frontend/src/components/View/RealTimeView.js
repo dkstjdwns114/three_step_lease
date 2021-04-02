@@ -3,7 +3,6 @@ import RealTimeBarChart from "../Chart/RealTimeBarChart";
 import RealTimePolarChart from "../Chart/RealTimePolarChart";
 import DownLoadCsv from "../Csv/DownLoadCsv";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
-import SameAddressMap from "../Map/SameAddressMap";
 
 export default class RealTimeView extends Component {
   state = {

@@ -5,7 +5,6 @@ const RealTimeBarChart = (props) => {
   const [resultData, setResultData] = useState({});
 
   useEffect(() => {
-    console.log(props);
     const getDataHandler = async () => {
       const openData = await openDataHandler();
       const closeData = await closeDataHandler();
