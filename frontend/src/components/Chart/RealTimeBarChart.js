@@ -38,8 +38,8 @@ const RealTimeBarChart = (props) => {
         two_days_ago,
         one_days_ago
       ],
-      backgroundColor: "rgba(0, 99, 132, 0.6)",
-      borderColor: "rgba(0, 99, 132, 1)"
+      backgroundColor: "rgba(77, 208, 225, 0.6)",
+      borderColor: "rgba(77, 208, 225, 1)"
     };
   };
 
@@ -63,9 +63,8 @@ const RealTimeBarChart = (props) => {
         two_days_ago,
         one_days_ago
       ],
-      backgroundColor: "rgba(0, 99, 132, 0.6)",
-      backgroundColor: "rgba(99, 132, 0, 0.6)",
-      borderColor: "rgba(99, 132, 0, 1)"
+      backgroundColor: "rgba(240, 98, 146, 0.6)",
+      borderColor: "rgba(240, 98, 146, 1)"
     };
   };
 
