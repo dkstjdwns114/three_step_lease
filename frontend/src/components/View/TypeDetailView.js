@@ -22,7 +22,7 @@ export default class TypeDetailView extends Component {
       currentValue: "type_detail_close_20",
       currentValueKor: "2020년 폐업",
       defaultBtnClass: "btn btn-default",
-      activeBtnClass: "btn btn-info"
+      activeBtnClass: "btn btn-success"
     });
   }
 
@@ -98,8 +98,6 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.close_19_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
                         <span className="text-uppercase hidden-sm-down">
                           2019년도 폐업
                         </span>
@@ -116,8 +114,6 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.open_19_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
                         <span className="text-uppercase hidden-sm-down">
                           2019년도 개업
                         </span>
@@ -134,8 +130,6 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.close_20_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
                         <span className="text-uppercase hidden-sm-down">
                           2020년도 폐업
                         </span>
@@ -152,8 +146,6 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.open_20_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
                         <span className="text-uppercase hidden-sm-down">
                           2020년도 개업
                         </span>
