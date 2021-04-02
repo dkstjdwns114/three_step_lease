@@ -21,7 +21,8 @@ export default class RealTimeView extends Component {
     four_days_ago_date: "",
     five_days_ago_date: "",
     six_days_ago_date: "",
-    seven_days_ago_date: ""
+    seven_days_ago_date: "",
+    current_date_value: ""
   };
 
   constructor(props) {
@@ -67,7 +68,8 @@ export default class RealTimeView extends Component {
       four_days_ago_date: four_days_ago_date,
       five_days_ago_date: five_days_ago_date,
       six_days_ago_date: six_days_ago_date,
-      seven_days_ago_date: seven_days_ago_date
+      seven_days_ago_date: seven_days_ago_date,
+      total_current_date_value: one_days_ago_date
     });
   };
 
@@ -76,6 +78,41 @@ export default class RealTimeView extends Component {
     const day = date.substr(6, 2);
     const result = month + "/" + day;
     return result;
+  };
+
+  oneDaysChangeClickHandler = () => {
+    const value = this.state.one_days_ago_date;
+    this.setState({ total_current_date_value: value });
+  };
+
+  twoDaysChangeClickHandler = () => {
+    const value = this.state.two_days_ago_date;
+    this.setState({ total_current_date_value: value });
+  };
+
+  threeDaysChangeClickHandler = () => {
+    const value = this.state.three_days_ago_date;
+    this.setState({ total_current_date_value: value });
+  };
+
+  fourDaysChangeClickHandler = () => {
+    const value = this.state.four_days_ago_date;
+    this.setState({ total_current_date_value: value });
+  };
+
+  fiveDaysChangeClickHandler = () => {
+    const value = this.state.five_days_ago_date;
+    this.setState({ total_current_date_value: value });
+  };
+
+  sixDaysChangeClickHandler = () => {
+    const value = this.state.six_days_ago_date;
+    this.setState({ total_current_date_value: value });
+  };
+
+  sevenDaysChangeClickHandler = () => {
+    const value = this.state.seven_days_ago_date;
+    this.setState({ total_current_date_value: value });
   };
 
   render() {
@@ -94,35 +131,61 @@ export default class RealTimeView extends Component {
                       {this.props.city_name} 최근 7일 개·폐업 현황
                     </p>
                     <p>매일 오전 9시에 전날 데이터가 업데이트 됩니다.</p>
-                    <div class="btn-group" role="group">
-                      <button
-                        type="button"
-                        class="btn btn-info dropdown-toggle"
-                        id="exampleIconDropdown3"
+                    <div className="btn-group" role="group">
+                      <div
+                        className="btn btn-info dropdown-toggle"
+                        id="countIconDropdown"
                         data-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <i class="icon md-calendar" aria-hidden="true"></i>
-                      </button>
-                      <div
-                        class="dropdown-menu"
-                        aria-labelledby="exampleIconDropdown3"
-                        role="menu"
-                      >
-                        <a
-                          class="dropdown-item"
-                          href="javascript:void(0)"
-                          role="menuitem"
+                        <i className="icon md-calendar" aria-hidden="true"></i>
+                        <span className="text-uppercase hidden-sm-down pb-5">
+                          &nbsp;{this.state.total_current_date_value}&nbsp;
+                        </span>
+                      </div>
+                      <div className="dropdown-menu">
+                        <button
+                          className="dropdown-item"
+                          onClick={this.oneDaysChangeClickHandler}
                         >
-                          Dropdown link
-                        </a>
-                        <a
-                          class="dropdown-item"
-                          href="javascript:void(0)"
-                          role="menuitem"
+                          {this.state.one_days_ago_date}
+                        </button>
+                        <button
+                          className="dropdown-item"
+                          onClick={this.twoDaysChangeClickHandler}
                         >
-                          Dropdown link
-                        </a>
+                          {this.state.two_days_ago_date}
+                        </button>
+                        <button
+                          className="dropdown-item"
+                          onClick={this.threeDaysChangeClickHandler}
+                        >
+                          {this.state.three_days_ago_date}
+                        </button>
+                        <button
+                          className="dropdown-item"
+                          onClick={this.fourDaysChangeClickHandler}
+                        >
+                          {this.state.four_days_ago_date}
+                        </button>
+                        <button
+                          className="dropdown-item"
+                          onClick={this.fiveDaysChangeClickHandler}
+                        >
+                          {this.state.five_days_ago_date}
+                        </button>
+                        <button
+                          className="dropdown-item"
+                          onClick={this.sixDaysChangeClickHandler}
+                        >
+                          {this.state.six_days_ago_date}
+                        </button>
+                        <button
+                          className="dropdown-item"
+                          onClick={this.sevenDaysChangeClickHandler}
+                        >
+                          {this.state.seven_days_ago_date}
+                        </button>
                       </div>
                     </div>
                     <span>&nbsp; 데이터 다운로드 다운로드 다운로드</span>
@@ -171,30 +234,30 @@ export default class RealTimeView extends Component {
                       {this.props.city_name} 최근 7일 개·폐업 업종 대분류
                     </p>
                     <p>매일 오전 9시에 전날 데이터가 업데이트 됩니다.</p>
-                    <div class="btn-group" role="group">
+                    <div className="btn-group" role="group">
                       <button
                         type="button"
-                        class="btn btn-info dropdown-toggle"
+                        className="btn btn-info dropdown-toggle"
                         id="exampleIconDropdown3"
                         data-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <i class="icon md-calendar" aria-hidden="true"></i>
+                        <i className="icon md-calendar" aria-hidden="true"></i>
                       </button>
                       <div
-                        class="dropdown-menu"
+                        className="dropdown-menu"
                         aria-labelledby="exampleIconDropdown3"
                         role="menu"
                       >
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="javascript:void(0)"
                           role="menuitem"
                         >
                           Dropdown link
                         </a>
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="javascript:void(0)"
                           role="menuitem"
                         >
