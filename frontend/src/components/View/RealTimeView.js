@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RealTimeBarChart from "../Chart/RealTimeBarChart";
+import RealTimePolarChart from "../Chart/RealTimePolarChart";
 import DownLoadCsv from "../Csv/DownLoadCsv";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
 import SameAddressMap from "../Map/SameAddressMap";
@@ -105,14 +106,7 @@ export default class RealTimeView extends Component {
                     <RoundCircleLoading />
                   ) : (
                     <>
-                      {/* <SameAddressMap
-                        address={this.state.same_address}
-                        city_hoall_lat={this.props.city_hoall_lat}
-                        city_hoall_lng={this.props.city_hoall_lng}
-                        same_address_map_level={
-                          this.props.same_address_map_level
-                        }
-                      /> */}
+                      <RealTimePolarChart />
                     </>
                   )}
                 </div>
