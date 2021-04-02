@@ -94,6 +94,38 @@ export default class RealTimeView extends Component {
                       {this.props.city_name} 최근 7일 개·폐업 현황
                     </p>
                     <p>매일 오전 9시에 전날 데이터가 업데이트 됩니다.</p>
+                    <div class="btn-group" role="group">
+                      <button
+                        type="button"
+                        class="btn btn-info dropdown-toggle"
+                        id="exampleIconDropdown3"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="icon md-calendar" aria-hidden="true"></i>
+                      </button>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="exampleIconDropdown3"
+                        role="menu"
+                      >
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0)"
+                          role="menuitem"
+                        >
+                          Dropdown link
+                        </a>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0)"
+                          role="menuitem"
+                        >
+                          Dropdown link
+                        </a>
+                      </div>
+                    </div>
+                    <span>&nbsp; 데이터 다운로드 다운로드 다운로드</span>
                   </div>
                 </div>
               </div>
@@ -138,10 +170,7 @@ export default class RealTimeView extends Component {
                     <p className="font-size-20 grey-700">
                       {this.props.city_name} 최근 7일 개·폐업 업종 대분류
                     </p>
-                    <p>
-                      일요일을 제외한 매일 오전 9시에 전날 데이터가 업데이트
-                      됩니다.
-                    </p>
+                    <p>매일 오전 9시에 전날 데이터가 업데이트 됩니다.</p>
                     <div class="btn-group" role="group">
                       <button
                         type="button"
@@ -173,6 +202,7 @@ export default class RealTimeView extends Component {
                         </a>
                       </div>
                     </div>
+                    <span>&nbsp; 3/4</span>
                   </div>
                 </div>
               </div>
