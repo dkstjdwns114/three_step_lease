@@ -14,7 +14,14 @@ export default class RealTimeView extends Component {
     four_days_ago: {},
     five_days_ago: {},
     six_days_ago: {},
-    seven_days_ago: {}
+    seven_days_ago: {},
+    one_days_ago_date: "",
+    two_days_ago_date: "",
+    three_days_ago_date: "",
+    four_days_ago_date: "",
+    five_days_ago_date: "",
+    six_days_ago_date: "",
+    seven_days_ago_date: ""
   };
 
   constructor(props) {
@@ -41,11 +48,34 @@ export default class RealTimeView extends Component {
           six_days_ago: resData.six_days_ago,
           seven_days_ago: resData.seven_days_ago
         });
+        this.setDateHandler();
       });
   };
 
-  numberWithCommas = (n) => {
-    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  setDateHandler = () => {
+    const one_days_ago_date = this.substrDate(this.state.one_days_ago.date);
+    const two_days_ago_date = this.substrDate(this.state.two_days_ago.date);
+    const three_days_ago_date = this.substrDate(this.state.three_days_ago.date);
+    const four_days_ago_date = this.substrDate(this.state.four_days_ago.date);
+    const five_days_ago_date = this.substrDate(this.state.five_days_ago.date);
+    const six_days_ago_date = this.substrDate(this.state.six_days_ago.date);
+    const seven_days_ago_date = this.substrDate(this.state.seven_days_ago.date);
+    this.setState({
+      one_days_ago_date: one_days_ago_date,
+      two_days_ago_date: two_days_ago_date,
+      three_days_ago_date: three_days_ago_date,
+      four_days_ago_date: four_days_ago_date,
+      five_days_ago_date: five_days_ago_date,
+      six_days_ago_date: six_days_ago_date,
+      seven_days_ago_date: seven_days_ago_date
+    });
+  };
+
+  substrDate = (date) => {
+    const month = date.substr(4, 2);
+    const day = date.substr(6, 2);
+    const result = month + "/" + day;
+    return result;
   };
 
   render() {
@@ -81,6 +111,13 @@ export default class RealTimeView extends Component {
                         five_days_ago={this.state.five_days_ago}
                         six_days_ago={this.state.six_days_ago}
                         seven_days_ago={this.state.seven_days_ago}
+                        one_days_ago_date={this.state.one_days_ago_date}
+                        two_days_ago_date={this.state.two_days_ago_date}
+                        three_days_ago_date={this.state.three_days_ago_date}
+                        four_days_ago_date={this.state.four_days_ago_date}
+                        five_days_ago_date={this.state.five_days_ago_date}
+                        six_days_ago_date={this.state.six_days_ago_date}
+                        seven_days_ago_date={this.state.seven_days_ago_date}
                       />
                     </>
                   )}

@@ -16,7 +16,7 @@ const RealTimeBarChart = (props) => {
       });
     };
     getDataHandler();
-  }, [props.one_days_ago]);
+  }, [props.one_days_ago_date]);
 
   const openDataHandler = () => {
     const one_days_ago = props.one_days_ago.open.total;
@@ -69,31 +69,17 @@ const RealTimeBarChart = (props) => {
   };
 
   const labelDataHandler = () => {
-    const one_days_ago = substrDate(props.one_days_ago.date);
-    const two_days_ago = substrDate(props.two_days_ago.date);
-    const three_days_ago = substrDate(props.three_days_ago.date);
-    const four_days_ago = substrDate(props.four_days_ago.date);
-    const five_days_ago = substrDate(props.five_days_ago.date);
-    const six_days_ago = substrDate(props.six_days_ago.date);
-    const seven_days_ago = substrDate(props.seven_days_ago.date);
-
     return [
-      seven_days_ago,
-      six_days_ago,
-      five_days_ago,
-      four_days_ago,
-      three_days_ago,
-      two_days_ago,
-      one_days_ago
+      props.seven_days_ago_date,
+      props.six_days_ago_date,
+      props.five_days_ago_date,
+      props.four_days_ago_date,
+      props.three_days_ago_date,
+      props.two_days_ago_date,
+      props.one_days_ago_date
     ];
   };
 
-  const substrDate = (date) => {
-    const month = date.substr(4, 2);
-    const day = date.substr(6, 2);
-    const result = month + "/" + day;
-    return result;
-  };
   return (
     <>
       <Bar data={resultData} />
