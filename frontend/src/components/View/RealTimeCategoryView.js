@@ -134,7 +134,7 @@ const RealTimeCategorylView = (props) => {
       </div>
 
       <div className="row pt-30 px-30">
-        <div className="col-lg-12">
+        <div className="col-lg-12 mb-50">
           <RealTimePolarChart />
         </div>
       </div>

@@ -96,7 +96,7 @@ const RealTimeTotalView = (props) => {
       </div>
       <span>&nbsp; 데이터 다운로드 다운로드 다운로드</span>
       <div className="row pt-30 px-30">
-        <div className="col-lg-12">
+        <div className="col-lg-12 mb-50">
           <RealTimeBarChart
             one_days_ago={props.one_days_ago}
             two_days_ago={props.two_days_ago}
