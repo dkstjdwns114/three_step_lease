@@ -321,6 +321,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d1_animal_close_cnt += 1
@@ -347,6 +348,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d2_animal_close_cnt += 1
@@ -373,6 +375,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d3_animal_close_cnt += 1
@@ -399,6 +402,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d4_animal_close_cnt += 1
@@ -425,6 +429,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d5_animal_close_cnt += 1
@@ -451,6 +456,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d6_animal_close_cnt += 1
@@ -477,6 +483,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d7_animal_close_cnt += 1
@@ -503,6 +510,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d1_animal_open_cnt += 1
@@ -529,6 +537,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d2_animal_open_cnt += 1
@@ -555,6 +564,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d3_animal_open_cnt += 1
@@ -581,6 +591,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d4_animal_open_cnt += 1
@@ -607,6 +618,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d5_animal_open_cnt += 1
@@ -633,6 +645,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d6_animal_open_cnt += 1
@@ -659,6 +672,7 @@ def realTimeView(request, pk):
             "state": info['state'],
             "open_service": info['open_service'],
             "detailed_classification": info['detailed_classification'],
+            "category_kor": info['category_kor'],
         })
         if info['category_name'] == "animal":
             d7_animal_open_cnt += 1
