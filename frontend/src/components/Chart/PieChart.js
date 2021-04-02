@@ -28,9 +28,7 @@ const PieChart = (props) => {
         myData.push(list.count);
       });
     }
-    setTimeout(() => {
-      setDataAndOptions(myLabels, myData);
-    }, 500);
+    setDataAndOptions(myLabels, myData);
   }, [props.yearsValue]);
 
   const setDataAndOptions = (myLabels, myData) => {

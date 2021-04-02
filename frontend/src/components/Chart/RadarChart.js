@@ -46,43 +46,41 @@ const RadarChart = (props) => {
     props.type_open_20.forEach((data) => {
       open_20_data.push(data.count);
     });
-    setTimeout(() => {
-      datasetsArr.push({
-        label: "2019년 폐업",
-        backgroundColor: "rgba(238, 255, 65, 0.2)",
-        pointBackgroundColor: "rgba(238, 255, 65, 1)",
-        pointHighlightStroke: "rgba(238, 255, 65, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: close_19_data
-      });
-      datasetsArr.push({
-        label: "2020년 폐업",
-        backgroundColor: "rgba(240, 98, 146, 0.2)",
-        pointBackgroundColor: "rgba(240, 98, 146, 1)",
-        pointHighlightStroke: "rgba(240, 98, 146, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: close_20_data
-      });
-      datasetsArr.push({
-        label: "2019년 개업",
-        hidden: true,
-        backgroundColor: "rgba(105, 240, 174, 0.2)",
-        pointBackgroundColor: "rgba(105, 240, 174, 1)",
-        pointHighlightStroke: "rgba(105, 240, 174, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: open_19_data
-      });
-      datasetsArr.push({
-        label: "2020년 개업",
-        hidden: true,
-        backgroundColor: "rgba(100, 181, 246, 0.2)",
-        pointBackgroundColor: "rgba(100, 181, 246, 1)",
-        pointHighlightStroke: "rgba(100, 181, 246, 1)",
-        hoverPointBackgroundColor: "#fff",
-        data: open_20_data
-      });
-      setDataAndOptions(labelArr, datasetsArr);
-    }, 500);
+    datasetsArr.push({
+      label: "2019년 폐업",
+      backgroundColor: "rgba(238, 255, 65, 0.2)",
+      pointBackgroundColor: "rgba(238, 255, 65, 1)",
+      pointHighlightStroke: "rgba(238, 255, 65, 1)",
+      hoverPointBackgroundColor: "#fff",
+      data: close_19_data
+    });
+    datasetsArr.push({
+      label: "2020년 폐업",
+      backgroundColor: "rgba(240, 98, 146, 0.2)",
+      pointBackgroundColor: "rgba(240, 98, 146, 1)",
+      pointHighlightStroke: "rgba(240, 98, 146, 1)",
+      hoverPointBackgroundColor: "#fff",
+      data: close_20_data
+    });
+    datasetsArr.push({
+      label: "2019년 개업",
+      hidden: true,
+      backgroundColor: "rgba(105, 240, 174, 0.2)",
+      pointBackgroundColor: "rgba(105, 240, 174, 1)",
+      pointHighlightStroke: "rgba(105, 240, 174, 1)",
+      hoverPointBackgroundColor: "#fff",
+      data: open_19_data
+    });
+    datasetsArr.push({
+      label: "2020년 개업",
+      hidden: true,
+      backgroundColor: "rgba(100, 181, 246, 0.2)",
+      pointBackgroundColor: "rgba(100, 181, 246, 1)",
+      pointHighlightStroke: "rgba(100, 181, 246, 1)",
+      hoverPointBackgroundColor: "#fff",
+      data: open_20_data
+    });
+    setDataAndOptions(labelArr, datasetsArr);
   }, []);
 
   const setDataAndOptions = (labelArr, datasetsArr) => {
