@@ -90,7 +90,10 @@ export default class HomePage extends Component {
           <>
             <div className="page-content container-fluid">
               <div className="row" data-plugin="matchHeight" data-by-row="true">
-                <RealTimeView city_code={this.state.city_code} />
+                <RealTimeView
+                  city_code={this.state.city_code}
+                  city_name={this.state.city_name}
+                />
                 <MainMonthView
                   title={"전국 월별 개·폐업 현황"}
                   desc={
