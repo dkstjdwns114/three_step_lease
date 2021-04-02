@@ -105,6 +105,37 @@ export default class RealTimeView extends Component {
                       일요일을 제외한 매일 오전 9시에 전날 데이터가 업데이트
                       됩니다.
                     </p>
+                    <div class="btn-group" role="group">
+                      <button
+                        type="button"
+                        class="btn btn-info dropdown-toggle"
+                        id="exampleIconDropdown3"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="icon md-calendar" aria-hidden="true"></i>
+                      </button>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="exampleIconDropdown3"
+                        role="menu"
+                      >
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0)"
+                          role="menuitem"
+                        >
+                          Dropdown link
+                        </a>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0)"
+                          role="menuitem"
+                        >
+                          Dropdown link
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
