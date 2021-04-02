@@ -20,7 +20,13 @@ export default class RealTimeView extends Component {
     five_days_ago_date: "",
     six_days_ago_date: "",
     seven_days_ago_date: "",
-    current_date_value: ""
+    one_days_ago_date_kor: "",
+    two_days_ago_date_kor: "",
+    three_days_ago_date_kor: "",
+    four_days_ago_date_kor: "",
+    five_days_ago_date_kor: "",
+    six_days_ago_date_kor: "",
+    seven_days_ago_date_kor: ""
   };
 
   constructor(props) {
@@ -59,6 +65,27 @@ export default class RealTimeView extends Component {
     const five_days_ago_date = this.substrDate(this.state.five_days_ago.date);
     const six_days_ago_date = this.substrDate(this.state.six_days_ago.date);
     const seven_days_ago_date = this.substrDate(this.state.seven_days_ago.date);
+    const one_days_ago_date_kor = this.substrKorDate(
+      this.state.one_days_ago.date
+    );
+    const two_days_ago_date_kor = this.substrKorDate(
+      this.state.two_days_ago.date
+    );
+    const three_days_ago_date_kor = this.substrKorDate(
+      this.state.three_days_ago.date
+    );
+    const four_days_ago_date_kor = this.substrKorDate(
+      this.state.four_days_ago.date
+    );
+    const five_days_ago_date_kor = this.substrKorDate(
+      this.state.five_days_ago.date
+    );
+    const six_days_ago_date_kor = this.substrKorDate(
+      this.state.six_days_ago.date
+    );
+    const seven_days_ago_date_kor = this.substrKorDate(
+      this.state.seven_days_ago.date
+    );
     this.setState({
       one_days_ago_date: one_days_ago_date,
       two_days_ago_date: two_days_ago_date,
@@ -67,7 +94,13 @@ export default class RealTimeView extends Component {
       five_days_ago_date: five_days_ago_date,
       six_days_ago_date: six_days_ago_date,
       seven_days_ago_date: seven_days_ago_date,
-      total_current_date_value: one_days_ago_date
+      one_days_ago_date_kor: one_days_ago_date_kor,
+      two_days_ago_date_kor: two_days_ago_date_kor,
+      three_days_ago_date_kor: three_days_ago_date_kor,
+      four_days_ago_date_kor: four_days_ago_date_kor,
+      five_days_ago_date_kor: five_days_ago_date_kor,
+      six_days_ago_date_kor: six_days_ago_date_kor,
+      seven_days_ago_date_kor: seven_days_ago_date_kor
     });
   };
 
@@ -78,39 +111,11 @@ export default class RealTimeView extends Component {
     return result;
   };
 
-  oneDaysChangeClickHandler = () => {
-    const value = this.state.one_days_ago_date;
-    this.setState({ total_current_date_value: value });
-  };
-
-  twoDaysChangeClickHandler = () => {
-    const value = this.state.two_days_ago_date;
-    this.setState({ total_current_date_value: value });
-  };
-
-  threeDaysChangeClickHandler = () => {
-    const value = this.state.three_days_ago_date;
-    this.setState({ total_current_date_value: value });
-  };
-
-  fourDaysChangeClickHandler = () => {
-    const value = this.state.four_days_ago_date;
-    this.setState({ total_current_date_value: value });
-  };
-
-  fiveDaysChangeClickHandler = () => {
-    const value = this.state.five_days_ago_date;
-    this.setState({ total_current_date_value: value });
-  };
-
-  sixDaysChangeClickHandler = () => {
-    const value = this.state.six_days_ago_date;
-    this.setState({ total_current_date_value: value });
-  };
-
-  sevenDaysChangeClickHandler = () => {
-    const value = this.state.seven_days_ago_date;
-    this.setState({ total_current_date_value: value });
+  substrKorDate = (date) => {
+    const month = date.substr(4, 2);
+    const day = date.substr(6, 2);
+    const result = month + "월" + day + "일";
+    return result;
   };
 
   render() {
