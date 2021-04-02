@@ -4,7 +4,6 @@ import RealTimePolarChart from "../Chart/RealTimePolarChart";
 const RealTimeCategorylView = (props) => {
   const [currentValue, setCurrentValue] = useState("");
   const [leftBtnActive, setLeftBtnActive] = useState(true);
-  const [rightBtnActive, setRightBtnActive] = useState(false);
   const [leftBtnClass, setLeftBtnClass] = useState(
     "btn btn-round btn-success btn-pill-left"
   );
@@ -13,7 +12,6 @@ const RealTimeCategorylView = (props) => {
   );
 
   useEffect(() => {
-    console.log("props", props);
     setCurrentValue(props.one_days_ago_date);
   }, [props.one_days_ago_date]);
 
@@ -56,12 +54,10 @@ const RealTimeCategorylView = (props) => {
     if (leftBtnActive) {
       setLeftBtnActive(false);
       setLeftBtnClass("btn btn-round btn-default btn-pill-left");
-      setRightBtnActive(true);
       setRightBtnClass("btn btn-round btn-success btn-pill-right");
     } else {
       setLeftBtnActive(true);
       setLeftBtnClass("btn btn-round btn-success btn-pill-left");
-      setRightBtnActive(false);
       setRightBtnClass("btn btn-round btn-default btn-pill-right");
     }
   };
