@@ -283,8 +283,33 @@ def realTimeView(request, pk):
         d6_open_find_dict = {"authorization_date": d6, "city_name": pk}
         d7_open_find_dict = {"authorization_date": d7, "city_name": pk}
 
+    d1_close_list = []
+    d2_close_list = []
+    d3_close_list = []
+    d4_close_list = []
+    d5_close_list = []
+    d6_close_list = []
+    d7_close_list = []
+
+    d1_open_list = []
+    d2_open_list = []
+    d3_open_list = []
+    d4_open_list = []
+    d5_open_list = []
+    d6_open_list = []
+    d7_open_list = []
+
     for info in local_realtime_close.find(d1_close_find_dict):
         d1_close_cnt += 1
+        d1_close_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d1_animal_close_cnt += 1
         elif info['category_name'] == "culture":
@@ -302,6 +327,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_close.find(d2_close_find_dict):
         d2_close_cnt += 1
+        d2_close_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d2_animal_close_cnt += 1
         elif info['category_name'] == "culture":
@@ -319,6 +353,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_close.find(d3_close_find_dict):
         d3_close_cnt += 1
+        d3_close_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d3_animal_close_cnt += 1
         elif info['category_name'] == "culture":
@@ -336,6 +379,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_close.find(d4_close_find_dict):
         d4_close_cnt += 1
+        d4_close_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d4_animal_close_cnt += 1
         elif info['category_name'] == "culture":
@@ -353,6 +405,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_close.find(d5_close_find_dict):
         d5_close_cnt += 1
+        d5_close_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d5_animal_close_cnt += 1
         elif info['category_name'] == "culture":
@@ -370,6 +431,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_close.find(d6_close_find_dict):
         d6_close_cnt += 1
+        d6_close_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d6_animal_close_cnt += 1
         elif info['category_name'] == "culture":
@@ -387,6 +457,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_close.find(d7_close_find_dict):
         d7_close_cnt += 1
+        d7_close_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d7_animal_close_cnt += 1
         elif info['category_name'] == "culture":
@@ -404,6 +483,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_open.find(d1_open_find_dict):
         d1_open_cnt += 1
+        d1_open_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d1_animal_open_cnt += 1
         elif info['category_name'] == "culture":
@@ -421,6 +509,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_open.find(d2_open_find_dict):
         d2_open_cnt += 1
+        d2_open_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d2_animal_open_cnt += 1
         elif info['category_name'] == "culture":
@@ -438,6 +535,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_open.find(d3_open_find_dict):
         d3_open_cnt += 1
+        d3_open_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d3_animal_open_cnt += 1
         elif info['category_name'] == "culture":
@@ -455,6 +561,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_open.find(d4_open_find_dict):
         d4_open_cnt += 1
+        d4_open_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d4_animal_open_cnt += 1
         elif info['category_name'] == "culture":
@@ -472,6 +587,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_open.find(d5_open_find_dict):
         d5_open_cnt += 1
+        d5_open_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d5_animal_open_cnt += 1
         elif info['category_name'] == "culture":
@@ -489,6 +613,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_open.find(d6_open_find_dict):
         d6_open_cnt += 1
+        d6_open_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d6_animal_open_cnt += 1
         elif info['category_name'] == "culture":
@@ -506,6 +639,15 @@ def realTimeView(request, pk):
 
     for info in local_realtime_open.find(d7_open_find_dict):
         d7_open_cnt += 1
+        d7_open_list.append({
+            "authorization_date": info['authorization_date'],
+            "closed_date": info['closed_date'],
+            "store_name": info['store_name'],
+            "address": info['address'],
+            "state": info['state'],
+            "open_service": info['open_service'],
+            "detailed_classification": info['detailed_classification'],
+        })
         if info['category_name'] == "animal":
             d7_animal_open_cnt += 1
         elif info['category_name'] == "culture":
@@ -528,6 +670,7 @@ def realTimeView(request, pk):
             "date": d1,
             "close": {
                 "total": d1_close_cnt,
+                "data_list": d1_close_list,
                 "category": [
                     {
                         "type": "동물",
@@ -561,6 +704,7 @@ def realTimeView(request, pk):
             },
             "open": {
                 "total": d1_open_cnt,
+                "data_list": d1_open_list,
                 "category": [
                     {
                         "type": "동물",
@@ -597,6 +741,7 @@ def realTimeView(request, pk):
             "date": d2,
             "close": {
                 "total": d2_close_cnt,
+                "data_list": d2_close_list,
                 "category": [
                     {
                         "type": "동물",
@@ -630,6 +775,7 @@ def realTimeView(request, pk):
             },
             "open": {
                 "total": d2_open_cnt,
+                "data_list": d2_open_list,
                 "category": [
                     {
                         "type": "동물",
@@ -666,6 +812,7 @@ def realTimeView(request, pk):
             "date": d3,
             "close": {
                 "total": d3_close_cnt,
+                "data_list": d3_close_list,
                 "category": [
                     {
                         "type": "동물",
@@ -699,6 +846,7 @@ def realTimeView(request, pk):
             },
             "open": {
                 "total": d3_open_cnt,
+                "data_list": d3_open_list,
                 "category": [
                     {
                         "type": "동물",
@@ -735,6 +883,7 @@ def realTimeView(request, pk):
             "date": d4,
             "close": {
                 "total": d4_close_cnt,
+                "data_list": d4_close_list,
                 "category": [
                     {
                         "type": "동물",
@@ -768,6 +917,7 @@ def realTimeView(request, pk):
             },
             "open": {
                 "total": d4_open_cnt,
+                "data_list": d4_open_list,
                 "category": [
                     {
                         "type": "동물",
@@ -804,6 +954,7 @@ def realTimeView(request, pk):
             "date": d5,
             "close": {
                 "total": d5_close_cnt,
+                "data_list": d5_close_list,
                 "category": [
                     {
                         "type": "동물",
@@ -837,6 +988,7 @@ def realTimeView(request, pk):
             },
             "open": {
                 "total": d5_open_cnt,
+                "data_list": d5_open_list,
                 "category": [
                     {
                         "type": "동물",
@@ -873,6 +1025,7 @@ def realTimeView(request, pk):
             "date": d6,
             "close": {
                 "total": d6_close_cnt,
+                "data_list": d6_close_list,
                 "category": [
                     {
                         "type": "동물",
@@ -906,6 +1059,7 @@ def realTimeView(request, pk):
             },
             "open": {
                 "total": d6_open_cnt,
+                "data_list": d6_open_list,
                 "category": [
                     {
                         "type": "동물",
@@ -942,6 +1096,7 @@ def realTimeView(request, pk):
             "date": d7,
             "close": {
                 "total": d7_close_cnt,
+                "data_list": d7_close_list,
                 "category": [
                     {
                         "type": "동물",
@@ -975,6 +1130,7 @@ def realTimeView(request, pk):
             },
             "open": {
                 "total": d7_open_cnt,
+                "data_list": d7_open_list,
                 "category": [
                     {
                         "type": "동물",
