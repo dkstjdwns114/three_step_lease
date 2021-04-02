@@ -523,6 +523,7 @@ def realTimeView(request, pk):
     
     api_json = {
         "title": "Real Time View",
+        "description": pk + " 실시간 데이터",
         "one_days_ago": {
             "date": d1,
             "close": {
@@ -593,7 +594,7 @@ def realTimeView(request, pk):
             }
         },
         "two_days_ago": {
-            "date": d1,
+            "date": d2,
             "close": {
                 "total": d2_close_cnt,
                 "category": [
@@ -662,7 +663,7 @@ def realTimeView(request, pk):
             }
         },
         "three_days_ago": {
-            "date": d1,
+            "date": d3,
             "close": {
                 "total": d3_close_cnt,
                 "category": [
@@ -731,7 +732,7 @@ def realTimeView(request, pk):
             }
         },
         "four_days_ago": {
-            "date": d1,
+            "date": d4,
             "close": {
                 "total": d4_close_cnt,
                 "category": [
@@ -800,7 +801,7 @@ def realTimeView(request, pk):
             }
         },
         "five_days_ago": {
-            "date": d1,
+            "date": d5,
             "close": {
                 "total": d5_close_cnt,
                 "category": [
@@ -869,7 +870,7 @@ def realTimeView(request, pk):
             }
         },
         "six_days_ago": {
-            "date": d1,
+            "date": d6,
             "close": {
                 "total": d6_close_cnt,
                 "category": [
@@ -938,7 +939,7 @@ def realTimeView(request, pk):
             }
         },
         "seven_days_ago": {
-            "date": d1,
+            "date": d7,
             "close": {
                 "total": d7_close_cnt,
                 "category": [
