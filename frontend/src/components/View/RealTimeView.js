@@ -41,8 +41,6 @@ export default class RealTimeView extends Component {
           six_days_ago: resData.six_days_ago,
           seven_days_ago: resData.seven_days_ago
         });
-        console.log(resData);
-        // console.log(resData.one_days_ago);
       });
   };
 
@@ -75,7 +73,15 @@ export default class RealTimeView extends Component {
                     <RoundCircleLoading />
                   ) : (
                     <>
-                      <RealTimeBarChart />
+                      <RealTimeBarChart
+                        one_days_ago={this.state.one_days_ago}
+                        two_days_ago={this.state.two_days_ago}
+                        three_days_ago={this.state.three_days_ago}
+                        four_days_ago={this.state.four_days_ago}
+                        five_days_ago={this.state.five_days_ago}
+                        six_days_ago={this.state.six_days_ago}
+                        seven_days_ago={this.state.seven_days_ago}
+                      />
                     </>
                   )}
                 </div>
@@ -93,7 +99,7 @@ export default class RealTimeView extends Component {
                 <div className="row">
                   <div className="col-12 pt-20 px-20">
                     <p className="font-size-20 grey-700">
-                      {this.props.city_name} 최근 7일 개·폐업 현황
+                      {this.props.city_name} 최근 7일 개·폐업 업종 대분류
                     </p>
                     <p>
                       일요일을 제외한 매일 오전 9시에 전날 데이터가 업데이트
