@@ -3,6 +3,15 @@ import RealTimePolarChart from "../Chart/RealTimePolarChart";
 
 const RealTimeCategorylView = (props) => {
   const [currentValue, setCurrentValue] = useState("");
+  const [leftBtnActive, setLeftBtnActive] = useState(true);
+  const [rightBtnActive, setRightBtnActive] = useState(false);
+  const [leftBtnClass, setLeftBtnClass] = useState(
+    "btn btn-round btn-success btn-pill-left"
+  );
+  const [rightBtnClass, setRightBtnClass] = useState(
+    "btn btn-round btn-default btn-pill-right"
+  );
+
   useEffect(() => {
     console.log("props", props);
     setCurrentValue(props.one_days_ago_date);
@@ -41,6 +50,20 @@ const RealTimeCategorylView = (props) => {
   const sevenDaysChangeClickHandler = () => {
     const value = props.seven_days_ago_date;
     setCurrentValue(value);
+  };
+
+  const btnClickHandler = () => {
+    if (leftBtnActive) {
+      setLeftBtnActive(false);
+      setLeftBtnClass("btn btn-round btn-default btn-pill-left");
+      setRightBtnActive(true);
+      setRightBtnClass("btn btn-round btn-success btn-pill-right");
+    } else {
+      setLeftBtnActive(true);
+      setLeftBtnClass("btn btn-round btn-success btn-pill-left");
+      setRightBtnActive(false);
+      setRightBtnClass("btn btn-round btn-default btn-pill-right");
+    }
   };
 
   return (
@@ -93,7 +116,23 @@ const RealTimeCategorylView = (props) => {
           </button>
         </div>
       </div>
-      <span>&nbsp; 데이터 다운로드 다운로드 다운로드</span>
+      <div className="float-right clearfix">
+        <button
+          type="button"
+          className={leftBtnClass}
+          onClick={btnClickHandler}
+        >
+          폐업
+        </button>
+        <button
+          type="button"
+          className={rightBtnClass}
+          onClick={btnClickHandler}
+        >
+          개업
+        </button>
+      </div>
+
       <div className="row pt-30 px-30">
         <div className="col-lg-12">
           <RealTimePolarChart />
