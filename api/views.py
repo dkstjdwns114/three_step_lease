@@ -7,6 +7,7 @@ from django.http import JsonResponse
 from pymongo import MongoClient
 from bson import ObjectId
 from datetime import date, timedelta
+import time
 
 cluster = MongoClient("mongodb://test1:KQ2DmS5BaPpKIBxL@cluster0-shard-00-00.6v20o.mongodb.net:27017,cluster0-shard-00-01.6v20o.mongodb.net:27017,cluster0-shard-00-02.6v20o.mongodb.net:27017/three-step?ssl=true&replicaSet=atlas-1s13em-shard-0&authSource=admin&retryWrites=true&w=majority")
 
@@ -110,6 +111,17 @@ def realTimeView(request, pk):
     d5_form = date.today() - timedelta(5)
     d6_form = date.today() - timedelta(6)
     d7_form = date.today() - timedelta(7)
+
+    now = time.localtime()
+
+    if now.tm_hour < 9:
+        d1_form = date.today() - timedelta(2)
+        d2_form = date.today() - timedelta(3)
+        d3_form = date.today() - timedelta(4)
+        d4_form = date.today() - timedelta(5)
+        d5_form = date.today() - timedelta(6)
+        d6_form = date.today() - timedelta(7)
+        d7_form = date.today() - timedelta(8)
 
     d1 = d1_form.strftime('%Y%m%d')
     d2 = d2_form.strftime('%Y%m%d')
