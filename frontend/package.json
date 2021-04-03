@@ -33,6 +33,7 @@
     "react-csv": "^2.0.3",
     "react-google-charts": "^3.0.15",
     "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.2",
     "react-smart-data-table": "^0.10.1",
     "style-loader": "^2.0.0"
   }
