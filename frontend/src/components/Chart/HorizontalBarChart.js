@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { HorizontalBar } from "react-chartjs-2";
 
-const options = {
-  legend: { display: false }
-};
-
 const HorizontalBarChart = (props) => {
   const [data, setData] = useState({});
+  const [options, setOptions] = useState({});
 
   useEffect(() => {
     if (props.yearsValue === "type_detail_close_19") {
@@ -30,7 +27,7 @@ const HorizontalBarChart = (props) => {
     const datas = await sorted_close_19.map((data) => {
       return data.count;
     });
-    setDataAndOptions(labels, datas);
+    setDataAndOptions(labels, datas, "2019년 폐업");
   };
 
   const type_close_20_handler = async () => {
@@ -43,7 +40,7 @@ const HorizontalBarChart = (props) => {
     const datas = await sorted_close_20.map((data) => {
       return data.count;
     });
-    setDataAndOptions(labels, datas);
+    setDataAndOptions(labels, datas, "2020년 폐업");
   };
 
   const type_open_19_handler = async () => {
@@ -56,7 +53,7 @@ const HorizontalBarChart = (props) => {
     const datas = await sorted_open_19.map((data) => {
       return data.count;
     });
-    setDataAndOptions(labels, datas);
+    setDataAndOptions(labels, datas, "2019년 개업");
   };
 
   const type_open_20_handler = async () => {
@@ -69,10 +66,10 @@ const HorizontalBarChart = (props) => {
     const datas = await sorted_open_20.map((data) => {
       return data.count;
     });
-    setDataAndOptions(labels, datas);
+    setDataAndOptions(labels, datas, "2020년 개업");
   };
 
-  const setDataAndOptions = (myLabels, myData) => {
+  const setDataAndOptions = (myLabels, myData, tooltipTitle) => {
     setData({
       labels: myLabels,
       datasets: [
@@ -89,6 +86,21 @@ const HorizontalBarChart = (props) => {
           data: myData
         }
       ]
+    });
+    setOptions({
+      legend: { display: false },
+      tooltips: {
+        callbacks: {
+          title: (context) => {
+            return tooltipTitle;
+          },
+          label: (context) => {
+            let label = " " + context.label + ": ";
+            label += props.numberWithCommas(context.xLabel) + "개";
+            return label;
+          }
+        }
+      }
     });
   };
 

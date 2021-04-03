@@ -44,6 +44,7 @@ const CategorylTabs = (props) => {
                 type_open_20={props.type_open_20}
                 city_name={props.city_name}
                 yearsValue={props.yearsValue}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="categoryTabsTwo" role="tabpanel">
@@ -53,6 +54,7 @@ const CategorylTabs = (props) => {
                 type_close_20={props.type_close_20}
                 type_open_20={props.type_open_20}
                 city_name={props.city_name}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
           </div>

@@ -161,6 +161,7 @@ export default class CategoryView extends Component {
                     type_open_20={this.props.type_open_20}
                     yearsValue={this.state.currentValue}
                     city_name={this.props.city_name}
+                    numberWithCommas={this.props.numberWithCommas}
                   />
                 </div>
               </div>

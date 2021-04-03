@@ -120,6 +120,7 @@ export default class HomePage extends Component {
                     type_close_20={this.state.type_close_20}
                     type_open_20={this.state.type_open_20}
                     city_name={this.state.city_name}
+                    numberWithCommas={this.numberWithCommas}
                   />
                   <TypeDetailView
                     type_detail_close_19={this.state.type_detail_close_19}
