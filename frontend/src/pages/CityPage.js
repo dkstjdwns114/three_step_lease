@@ -222,6 +222,7 @@ export default class CityPage extends Component {
                   <RealTimeView
                     city_code={this.state.city_code}
                     city_name={this.state.city_name}
+                    numberWithCommas={this.numberWithCommas}
                   />
                   <CityMonthView
                     month_close_19={this.state.month_close_19}

@@ -100,6 +100,7 @@ export default class HomePage extends Component {
                   <RealTimeView
                     city_code={this.state.city_code}
                     city_name={this.state.city_name}
+                    numberWithCommas={this.numberWithCommas}
                   />
                   <MainMonthView
                     title={"전국 월별 개·폐업 현황"}

@@ -3,6 +3,7 @@ import { Bar } from "react-chartjs-2";
 
 const RealTimeBarChart = (props) => {
   const [resultData, setResultData] = useState({});
+  const [myOptions, setMyOptions] = useState({});
 
   useEffect(() => {
     const getDataHandler = async () => {
@@ -14,6 +15,37 @@ const RealTimeBarChart = (props) => {
         datasets: [openData, closeData]
       });
     };
+    setMyOptions({
+      tooltips: {
+        callbacks: {
+          labelColor: (context) => {
+            if (context.datasetIndex === 0) {
+              return {
+                borderColor: "rgba(77, 208, 225, 1)",
+                backgroundColor: "rgba(77, 208, 225, 0.6)"
+              };
+            } else {
+              return {
+                borderColor: "rgba(240, 98, 146, 1)",
+                backgroundColor: "rgba(240, 98, 146, 0.6)"
+              };
+            }
+          },
+          label: (context) => {
+            let label = " ";
+            if (context.datasetIndex === 0) {
+              label += "개업: ";
+            } else {
+              label += "폐업: ";
+            }
+            if (context.yLabel !== null) {
+              label += props.numberWithCommas(context.yLabel) + "개";
+            }
+            return label;
+          }
+        }
+      }
+    });
     getDataHandler();
   }, [props.one_days_ago_date]);
 
@@ -81,7 +113,7 @@ const RealTimeBarChart = (props) => {
 
   return (
     <>
-      <Bar data={resultData} />
+      <Bar data={resultData} options={myOptions} />
     </>
   );
 };

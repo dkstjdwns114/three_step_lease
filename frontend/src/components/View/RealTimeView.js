@@ -186,6 +186,7 @@ export default class RealTimeView extends Component {
                           seven_days_ago_date_kor={
                             this.state.seven_days_ago_date_kor
                           }
+                          numberWithCommas={this.props.numberWithCommas}
                         />
                       </>
                     )}
@@ -253,6 +254,7 @@ export default class RealTimeView extends Component {
                           seven_days_ago_date_kor={
                             this.state.seven_days_ago_date_kor
                           }
+                          numberWithCommas={this.props.numberWithCommas}
                         />
                       </>
                     )}

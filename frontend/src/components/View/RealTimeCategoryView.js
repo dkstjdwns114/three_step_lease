@@ -7,6 +7,7 @@ const RealTimeCategorylView = (props) => {
   const [openOrClose, setOpenOrClose] = useState("");
   const [categoryData, setCategoryData] = useState([]);
   const [leftBtnActive, setLeftBtnActive] = useState(true);
+  const [tooltipTitle, setTooltipTitle] = useState("");
   const [leftBtnClass, setLeftBtnClass] = useState(
     "btn btn-round btn-success btn-pill-left"
   );
@@ -19,6 +20,7 @@ const RealTimeCategorylView = (props) => {
     setCurrentKorValue(props.one_days_ago_date_kor);
     setOpenOrClose("폐업");
     setCategoryData(props.one_days_ago.close.category);
+    setTooltipTitle(props.one_days_ago_date + " 폐업");
   }, [props.one_days_ago_date, props.city_name]);
 
   const oneDaysChangeClickHandler = () => {
@@ -29,8 +31,10 @@ const RealTimeCategorylView = (props) => {
 
     if (openOrClose === "개업") {
       setCategoryData(props.one_days_ago.open.category);
+      setTooltipTitle(value + " 개업");
     } else if (openOrClose === "폐업") {
       setCategoryData(props.one_days_ago.close.category);
+      setTooltipTitle(value + " 폐업");
     }
   };
 
@@ -42,8 +46,10 @@ const RealTimeCategorylView = (props) => {
 
     if (openOrClose === "개업") {
       setCategoryData(props.two_days_ago.open.category);
+      setTooltipTitle(value + " 개업");
     } else if (openOrClose === "폐업") {
       setCategoryData(props.two_days_ago.close.category);
+      setTooltipTitle(value + " 폐업");
     }
   };
 
@@ -55,8 +61,10 @@ const RealTimeCategorylView = (props) => {
 
     if (openOrClose === "개업") {
       setCategoryData(props.three_days_ago.open.category);
+      setTooltipTitle(value + " 개업");
     } else if (openOrClose === "폐업") {
       setCategoryData(props.three_days_ago.close.category);
+      setTooltipTitle(value + " 폐업");
     }
   };
 
@@ -68,8 +76,10 @@ const RealTimeCategorylView = (props) => {
 
     if (openOrClose === "개업") {
       setCategoryData(props.four_days_ago.open.category);
+      setTooltipTitle(value + " 개업");
     } else if (openOrClose === "폐업") {
       setCategoryData(props.four_days_ago.close.category);
+      setTooltipTitle(value + " 폐업");
     }
   };
 
@@ -81,8 +91,10 @@ const RealTimeCategorylView = (props) => {
 
     if (openOrClose === "개업") {
       setCategoryData(props.five_days_ago.open.category);
+      setTooltipTitle(value + " 개업");
     } else if (openOrClose === "폐업") {
       setCategoryData(props.five_days_ago.close.category);
+      setTooltipTitle(value + " 폐업");
     }
   };
 
@@ -94,8 +106,10 @@ const RealTimeCategorylView = (props) => {
 
     if (openOrClose === "개업") {
       setCategoryData(props.six_days_ago.open.category);
+      setTooltipTitle(value + " 개업");
     } else if (openOrClose === "폐업") {
       setCategoryData(props.six_days_ago.close.category);
+      setTooltipTitle(value + " 폐업");
     }
   };
 
@@ -107,8 +121,10 @@ const RealTimeCategorylView = (props) => {
 
     if (openOrClose === "개업") {
       setCategoryData(props.seven_days_ago.open.category);
+      setTooltipTitle(value + " 개업");
     } else if (openOrClose === "폐업") {
       setCategoryData(props.seven_days_ago.close.category);
+      setTooltipTitle(value + " 폐업");
     }
   };
 
@@ -121,18 +137,25 @@ const RealTimeCategorylView = (props) => {
 
       if (currentDateValue === props.one_days_ago_date) {
         setCategoryData(props.one_days_ago.open.category);
+        setTooltipTitle(props.one_days_ago_date + " 개업");
       } else if (currentDateValue === props.two_days_ago_date) {
         setCategoryData(props.two_days_ago.open.category);
+        setTooltipTitle(props.two_days_ago_date + " 개업");
       } else if (currentDateValue === props.three_days_ago_date) {
         setCategoryData(props.three_days_ago.open.category);
+        setTooltipTitle(props.three_days_ago_date + " 개업");
       } else if (currentDateValue === props.four_days_ago_date) {
         setCategoryData(props.four_days_ago.open.category);
+        setTooltipTitle(props.four_days_ago_date + " 개업");
       } else if (currentDateValue === props.five_days_ago_date) {
         setCategoryData(props.five_days_ago.open.category);
+        setTooltipTitle(props.five_days_ago_date + " 개업");
       } else if (currentDateValue === props.six_days_ago_date) {
         setCategoryData(props.six_days_ago.open.category);
+        setTooltipTitle(props.six_days_ago_date + " 개업");
       } else if (currentDateValue === props.seven_days_ago_date) {
         setCategoryData(props.seven_days_ago.open.category);
+        setTooltipTitle(props.seven_days_ago_date + " 개업");
       }
     } else {
       setLeftBtnActive(true);
@@ -142,18 +165,25 @@ const RealTimeCategorylView = (props) => {
 
       if (currentDateValue === props.one_days_ago_date) {
         setCategoryData(props.one_days_ago.close.category);
+        setTooltipTitle(props.one_days_ago_date + " 폐업");
       } else if (currentDateValue === props.two_days_ago_date) {
         setCategoryData(props.two_days_ago.close.category);
+        setTooltipTitle(props.two_days_ago_date + " 폐업");
       } else if (currentDateValue === props.three_days_ago_date) {
         setCategoryData(props.three_days_ago.close.category);
+        setTooltipTitle(props.three_days_ago_date + " 폐업");
       } else if (currentDateValue === props.four_days_ago_date) {
         setCategoryData(props.four_days_ago.close.category);
+        setTooltipTitle(props.four_days_ago_date + " 폐업");
       } else if (currentDateValue === props.five_days_ago_date) {
         setCategoryData(props.five_days_ago.close.category);
+        setTooltipTitle(props.five_days_ago_date + " 폐업");
       } else if (currentDateValue === props.six_days_ago_date) {
         setCategoryData(props.six_days_ago.close.category);
+        setTooltipTitle(props.six_days_ago_date + " 폐업");
       } else if (currentDateValue === props.seven_days_ago_date) {
         setCategoryData(props.seven_days_ago.close.category);
+        setTooltipTitle(props.seven_days_ago_date + " 폐업");
       }
     }
   };
@@ -230,7 +260,11 @@ const RealTimeCategorylView = (props) => {
 
       <div className="row pt-30 px-30">
         <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
-          <RealTimePolarChart data_list={categoryData} />
+          <RealTimePolarChart
+            data_list={categoryData}
+            numberWithCommas={props.numberWithCommas}
+            tooltipTitle={tooltipTitle}
+          />
         </div>
       </div>
     </>

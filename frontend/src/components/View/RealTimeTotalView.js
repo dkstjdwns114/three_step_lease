@@ -250,6 +250,7 @@ const RealTimeTotalView = (props) => {
             five_days_ago_date={props.five_days_ago_date}
             six_days_ago_date={props.six_days_ago_date}
             seven_days_ago_date={props.seven_days_ago_date}
+            numberWithCommas={props.numberWithCommas}
           />
         </div>
       </div>
