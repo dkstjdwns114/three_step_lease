@@ -1,5 +1,8 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import * as Scroll from "react-scroll";
+
+const ScrollLink = Scroll.Link;
 
 const mainNavigation = (props) => {
   return (
@@ -112,6 +115,10 @@ const mainNavigation = (props) => {
                               ></i>
                               <Link to="/city/gwangju">광주광역시</Link>
                             </li>
+                          </ul>
+                        </li>
+                        <li className="mega-menu m-0">
+                          <ul className="list-icons">
                             <li>
                               <i
                                 className="md-chevron-right"
@@ -119,10 +126,6 @@ const mainNavigation = (props) => {
                               ></i>
                               <Link to="/city/daegu">대구광역시</Link>
                             </li>
-                          </ul>
-                        </li>
-                        <li className="mega-menu m-0">
-                          <ul className="list-icons">
                             <li>
                               <i
                                 className="md-chevron-right"
@@ -158,6 +161,10 @@ const mainNavigation = (props) => {
                               ></i>
                               <Link to="/city/ulsan">울산광역시</Link>
                             </li>
+                          </ul>
+                        </li>
+                        <li className="mega-menu m-0">
+                          <ul className="list-icons">
                             <li>
                               <i
                                 className="md-chevron-right"
@@ -165,10 +172,6 @@ const mainNavigation = (props) => {
                               ></i>
                               <Link to="/city/incheon">인천광역시</Link>
                             </li>
-                          </ul>
-                        </li>
-                        <li className="mega-menu m-0">
-                          <ul className="list-icons">
                             <li>
                               <i
                                 className="md-chevron-right"
@@ -209,84 +212,169 @@ const mainNavigation = (props) => {
                       </ul>
                     </div>
                     <div className="col-md-4">
-                      <h5>
-                        Media
-                        <span className="badge badge-pill badge-success">
-                          4
-                        </span>
-                      </h5>
-                      <ul className="blocks-3">
-                        <li>
-                          <a
-                            className="thumbnail m-0"
-                            href="javascript:void(0)"
-                          >
-                            <img
-                              className="w-full"
-                              // src="../../global/photos/placeholder.png"
-                              alt="..."
-                            />
-                          </a>
+                      <h5>정보</h5>
+                      <ul className="blocks-2">
+                        <li className="mega-menu m-0">
+                          <ul className="list-icons">
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <ScrollLink
+                                to="realtime_total"
+                                spy={true}
+                                smooth={true}
+                              >
+                                <a href="#">실시간 총합</a>
+                              </ScrollLink>
+                            </li>
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <ScrollLink
+                                to="realtime_category"
+                                spy={true}
+                                smooth={true}
+                              >
+                                <a href="#">실시간 업종대분류</a>
+                              </ScrollLink>
+                            </li>
+                            {props.isHome ? (
+                              <li>
+                                <i
+                                  className="md-chevron-right"
+                                  aria-hidden="true"
+                                ></i>
+                                <ScrollLink
+                                  to="main_month_chart"
+                                  spy={true}
+                                  smooth={true}
+                                >
+                                  <a href="#">월별 차트</a>
+                                </ScrollLink>
+                              </li>
+                            ) : (
+                              <li>
+                                <i
+                                  className="md-chevron-right"
+                                  aria-hidden="true"
+                                ></i>
+                                <ScrollLink
+                                  to="city_month_chart"
+                                  spy={true}
+                                  smooth={true}
+                                >
+                                  <a href="#">월별 차트</a>
+                                </ScrollLink>
+                              </li>
+                            )}
+
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <ScrollLink
+                                to="month_table"
+                                spy={true}
+                                smooth={true}
+                              >
+                                <a href="#">월별 테이블</a>
+                              </ScrollLink>
+                            </li>
+                            {props.isHome && (
+                              <li>
+                                <i
+                                  className="md-chevron-right"
+                                  aria-hidden="true"
+                                ></i>
+                                <ScrollLink
+                                  to="category_view"
+                                  spy={true}
+                                  smooth={true}
+                                >
+                                  <a href="#">업종 대분류 차트</a>
+                                </ScrollLink>
+                              </li>
+                            )}
+                          </ul>
                         </li>
-                        <li>
-                          <a
-                            className="thumbnail m-0"
-                            href="javascript:void(0)"
-                          >
-                            <img
-                              className="w-full"
-                              // src="../../global/photos/placeholder.png"
-                              alt="..."
-                            />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="thumbnail m-0"
-                            href="javascript:void(0)"
-                          >
-                            <img
-                              className="w-full"
-                              // src="../../global/photos/placeholder.png"
-                              alt="..."
-                            />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="thumbnail m-0"
-                            href="javascript:void(0)"
-                          >
-                            <img
-                              className="w-full"
-                              // src="../../global/photos/placeholder.png"
-                              alt="..."
-                            />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="thumbnail m-0"
-                            href="javascript:void(0)"
-                          >
-                            <img
-                              className="w-full"
-                              // src="../../global/photos/placeholder.png"
-                              alt="..."
-                            />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="thumbnail m-0"
-                            href="javascript:void(0)"
-                          >
-                            <img
-                              className="w-full"
-                              // src="../../global/photos/placeholder.png"
-                              alt="..."
-                            />
-                          </a>
+                        <li className="mega-menu m-0">
+                          <ul className="list-icons">
+                            {!props.isHome && (
+                              <li>
+                                <i
+                                  className="md-chevron-right"
+                                  aria-hidden="true"
+                                ></i>
+                                <ScrollLink
+                                  to="category_view"
+                                  spy={true}
+                                  smooth={true}
+                                >
+                                  <a href="#">업종 대분류 차트</a>
+                                </ScrollLink>
+                              </li>
+                            )}
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <ScrollLink
+                                to="type_detail_view"
+                                spy={true}
+                                smooth={true}
+                              >
+                                <a href="#">업종 중분류 차트</a>
+                              </ScrollLink>
+                            </li>
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <ScrollLink
+                                to="same_address_table"
+                                spy={true}
+                                smooth={true}
+                              >
+                                <a href="#">같은주소 테이블</a>
+                              </ScrollLink>
+                            </li>
+                            {props.isHome && (
+                              <li>
+                                <i
+                                  className="md-chevron-right"
+                                  aria-hidden="true"
+                                ></i>
+                                <ScrollLink
+                                  to="main_city_map"
+                                  spy={true}
+                                  smooth={true}
+                                >
+                                  <a href="#">행정구역별 현황</a>
+                                </ScrollLink>
+                              </li>
+                            )}
+
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <ScrollLink
+                                to="same_address_map"
+                                spy={true}
+                                smooth={true}
+                              >
+                                <a href="#">같은주소 지도</a>
+                              </ScrollLink>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </div>
@@ -435,7 +523,7 @@ const mainNavigation = (props) => {
           {/* <!-- End Navbar Toolbar Right --> */}
 
           <div className="navbar-brand navbar-brand-center">
-            <Link to="index.html">
+            <Link to="/">
               <img
                 className="navbar-brand-logo navbar-brand-logo-normal"
                 src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
