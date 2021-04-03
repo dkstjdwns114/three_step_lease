@@ -66,8 +66,8 @@ const mainNavigation = (props) => {
                 <div className="mega-content">
                   <div className="row">
                     <div className="col-md-4">
-                      <h5>UI Kit</h5>
-                      <ul className="blocks-2">
+                      <h5>행정구역</h5>
+                      <ul className="blocks-3">
                         <li className="mega-menu m-0">
                           <ul className="list-icons">
                             <li>
@@ -75,42 +75,42 @@ const mainNavigation = (props) => {
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="advanced/animation.html">Animation</a>
+                              <Link to="/city/gangwon">강원도</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/buttons.html">Buttons</a>
+                              <Link to="/city/gyeonggi">경기도</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/colors.html">Colors</a>
+                              <Link to="/city/gyeongnam">경상남도</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/dropdowns.html">Dropdowns</a>
+                              <Link to="/city/gyeongbuk">경상북도</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/icons.html">Icons</a>
+                              <Link to="/city/gwangju">광주광역시</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="advanced/lightbox.html">Lightbox</a>
+                              <Link to="/city/daegu">대구광역시</Link>
                             </li>
                           </ul>
                         </li>
@@ -121,42 +121,81 @@ const mainNavigation = (props) => {
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/modals.html">Modals</a>
+                              <Link to="/city/daejeon">대전광역시</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/panel-structure.html">Panels</a>
+                              <Link to="/city/busan">부산광역시</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="structure/overlay.html">Overlay</a>
+                              <Link to="/city/seoul">서울특별시</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/tooltip-popover.html ">Tooltips</a>
+                              <Link to="/city/sejong">세종특별자치시</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="advanced/scrollable.html">Scrollable</a>
+                              <Link to="/city/ulsan">울산광역시</Link>
                             </li>
                             <li>
                               <i
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
-                              <a href="uikit/typography.html">Typography</a>
+                              <Link to="/city/incheon">인천광역시</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="mega-menu m-0">
+                          <ul className="list-icons">
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <Link to="/city/jeonnam">전라남도</Link>
+                            </li>
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <Link to="/city/jeonbuk">전라북도</Link>
+                            </li>
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <Link to="/city/jeju">제주특별자치도</Link>
+                            </li>
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <Link to="/city/chungnam">충청남도</Link>
+                            </li>
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
+                              <Link to="/city/chungbuk">충청북도</Link>
                             </li>
                           </ul>
                         </li>
@@ -389,7 +428,7 @@ const mainNavigation = (props) => {
           {/* <!-- End Navbar Toolbar Right --> */}
 
           <div className="navbar-brand navbar-brand-center">
-            <a href="index.html">
+            <Link to="index.html">
               <img
                 className="navbar-brand-logo navbar-brand-logo-normal"
                 src="https://res.cloudinary.com/anstagram123/image/upload/v1616484448/dev_setups/white_smal_logo_wmp3zk.png"
@@ -400,7 +439,7 @@ const mainNavigation = (props) => {
                 src="https://res.cloudinary.com/anstagram123/image/upload/v1616518702/dev_setups/black_small_logo_i8satl.png"
                 title="THREESTEPLEASE"
               />
-            </a>
+            </Link>
           </div>
         </div>
         {/* <!-- End Navbar Collapse --> */}
