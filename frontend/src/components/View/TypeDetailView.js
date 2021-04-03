@@ -160,6 +160,7 @@ export default class TypeDetailView extends Component {
                     type_detail_close_20={this.props.type_detail_close_20}
                     type_detail_open_20={this.props.type_detail_open_20}
                     yearsValue={this.state.currentValue}
+                    numberWithCommas={this.props.numberWithCommas}
                   />
                 </div>
               </div>

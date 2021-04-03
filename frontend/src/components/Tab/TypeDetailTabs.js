@@ -220,6 +220,7 @@ const TypeDetailTabs = (props) => {
                 close_20={animal_close_20}
                 open_19={animal_open_19}
                 open_20={animal_open_20}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="exampleTabsTwo" role="tabpanel">
@@ -229,6 +230,7 @@ const TypeDetailTabs = (props) => {
                 close_20={culture_close_20}
                 open_19={culture_open_19}
                 open_20={culture_open_20}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="exampleTabsThree" role="tabpanel">
@@ -238,6 +240,7 @@ const TypeDetailTabs = (props) => {
                 close_20={environment_close_20}
                 open_19={environment_open_19}
                 open_20={environment_open_20}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="exampleTabsFour" role="tabpanel">
@@ -247,6 +250,7 @@ const TypeDetailTabs = (props) => {
                 close_20={food_close_20}
                 open_19={food_open_19}
                 open_20={food_open_20}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="exampleTabsFive" role="tabpanel">
@@ -256,6 +260,7 @@ const TypeDetailTabs = (props) => {
                 close_20={health_close_20}
                 open_19={health_open_19}
                 open_20={health_open_20}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="exampleTabsSix" role="tabpanel">
@@ -265,6 +270,7 @@ const TypeDetailTabs = (props) => {
                 close_20={life_close_20}
                 open_19={life_open_19}
                 open_20={life_open_20}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="exampleTabsSeven" role="tabpanel">
@@ -274,6 +280,7 @@ const TypeDetailTabs = (props) => {
                 close_20={other_close_20}
                 open_19={other_open_19}
                 open_20={other_open_20}
+                numberWithCommas={props.numberWithCommas}
               />
             </div>
           </div>

@@ -250,6 +250,7 @@ export default class CityPage extends Component {
                     type_detail_close_20={this.state.type_detail_close_20}
                     type_detail_open_20={this.state.type_detail_open_20}
                     city_name={this.state.city_name}
+                    numberWithCommas={this.numberWithCommas}
                   />
                   <TabsAccording
                     most_close_20={this.state.most_close_20}
