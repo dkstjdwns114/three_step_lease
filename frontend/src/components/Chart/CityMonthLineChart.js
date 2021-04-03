@@ -36,17 +36,17 @@ const CityMonthLineChart = (props) => {
         borderColor: "#4DD0E1"
       });
       datasetsArr.push({
-        label: "2019년 개업",
-        data: open_19_data,
-        fill: false,
-        borderColor: "#81C784"
-      });
-      datasetsArr.push({
         label: "2020년 폐업",
         data: close_20_data,
         fill: true,
         backgroundColor: "rgba(225, 190, 231, 0.3)",
         borderColor: "#AB47BC"
+      });
+      datasetsArr.push({
+        label: "2019년 개업",
+        data: open_19_data,
+        fill: false,
+        borderColor: "#81C784"
       });
       datasetsArr.push({
         label: "2020년 개업",
@@ -67,7 +67,49 @@ const CityMonthLineChart = (props) => {
       responsive: true,
       tooltips: {
         mode: "index",
-        intersect: false
+        intersect: false,
+        callbacks: {
+          labelColor: (context) => {
+            if (context.datasetIndex === 0) {
+              return {
+                borderColor: "#4DD0E1",
+                backgroundColor: "#4DD0E1"
+              };
+            } else if (context.datasetIndex === 1) {
+              return {
+                borderColor: "#AB47BC",
+                backgroundColor: "#AB47BC"
+              };
+            } else if (context.datasetIndex === 2) {
+              return {
+                borderColor: "#81C784",
+                backgroundColor: "#81C784"
+              };
+            } else if (context.datasetIndex === 3) {
+              return {
+                borderColor: "#E91E63",
+                backgroundColor: "#E91E63"
+              };
+            }
+          },
+          label: (context) => {
+            let label = "";
+            if (context.datasetIndex === 0) {
+              label += "2019년 폐업: ";
+              label += props.numberWithCommas(context.yLabel) + "개";
+            } else if (context.datasetIndex === 1) {
+              label += "2020년 폐업: ";
+              label += props.numberWithCommas(context.yLabel) + "개";
+            } else if (context.datasetIndex === 2) {
+              label += "2019년 개업: ";
+              label += props.numberWithCommas(context.yLabel) + "개";
+            } else if (context.datasetIndex === 3) {
+              label += "2020년 개업: ";
+              label += props.numberWithCommas(context.yLabel) + "개";
+            }
+            return label;
+          }
+        }
       },
       hover: {
         mode: "nearest",

@@ -11,16 +11,16 @@ const SmartTableTest = (props) => {
     let open20 = { index: "2020년 개업" };
 
     props.month_close_19.forEach((data) => {
-      close19[data.abbreviations] = props.numberComma(data.count);
+      close19[data.abbreviations] = props.numberWithCommas(data.count);
     });
     props.month_open_19.forEach((data) => {
-      open19[data.abbreviations] = props.numberComma(data.count);
+      open19[data.abbreviations] = props.numberWithCommas(data.count);
     });
     props.month_close_20.forEach((data) => {
-      close20[data.abbreviations] = props.numberComma(data.count);
+      close20[data.abbreviations] = props.numberWithCommas(data.count);
     });
     props.month_open_20.forEach((data) => {
-      open20[data.abbreviations] = props.numberComma(data.count);
+      open20[data.abbreviations] = props.numberWithCommas(data.count);
     });
     setTimeout(() => {
       setTableData([close19, close20, open19, open20]);

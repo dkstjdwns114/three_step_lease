@@ -229,7 +229,7 @@ export default class CityPage extends Component {
                     month_open_19={this.state.month_open_19}
                     month_close_20={this.state.month_close_20}
                     month_open_20={this.state.month_open_20}
-                    numberComma={this.numberWithCommas}
+                    numberWithCommas={this.numberWithCommas}
                     city_name={this.state.city_name}
                     title={"월별 개·폐업 현황"}
                     desc={

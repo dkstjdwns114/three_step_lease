@@ -61,7 +61,7 @@ const MainMonthView = (props) => {
                   month_open_19={props.month_open_19}
                   month_close_20={props.month_close_20}
                   month_open_20={props.month_open_20}
-                  numberComma={props.numberWithCommas}
+                  numberWithCommas={props.numberWithCommas}
                 />
               </div>
             </div>
@@ -70,7 +70,7 @@ const MainMonthView = (props) => {
               month_open_19={props.month_open_19}
               month_close_20={props.month_close_20}
               month_open_20={props.month_open_20}
-              numberComma={props.numberComma}
+              numberWithCommas={props.numberWithCommas}
               city_name={props.city_name}
             />
           </div>
