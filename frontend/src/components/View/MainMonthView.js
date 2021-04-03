@@ -55,7 +55,7 @@ const MainMonthView = (props) => {
               </div>
             </div>
             <div className="row pt-30 px-30">
-              <div className="col-lg-12">
+              <div className="col-lg-12" id="main_month_chart">
                 <ChartistMonth
                   month_close_19={props.month_close_19}
                   month_open_19={props.month_open_19}

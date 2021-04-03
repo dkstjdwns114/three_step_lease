@@ -12,7 +12,7 @@ const TabsAccording = (props) => {
     <>
       <div className={sizeClass}>
         {/* <!-- Example Continuous Accordion --> */}
-        <div className="card">
+        <div className="card" id="same_address_table">
           <div className="card-block p-0 p-30 h-full">
             <div className="counter text-left">
               <span className="counter-number">

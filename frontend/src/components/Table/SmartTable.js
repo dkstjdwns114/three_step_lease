@@ -29,7 +29,7 @@ const SmartTableTest = (props) => {
 
   return (
     <>
-      <div className="panel-title">
+      <div className="panel-title" id="month_table">
         <p className="font-size-20 grey-700">
           {props.city_name} 월별 개·폐업 표
         </p>

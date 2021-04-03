@@ -74,7 +74,7 @@ export default class MainCityMapView extends Component {
   render() {
     return (
       <>
-        <div className="col-xxl-4 col-lg-4 col-md-12">
+        <div className="col-xxl-4 col-lg-4 col-md-12" id="main_city_map">
           <div className="card">
             <div className="card-block p-0 p-30 h-full">
               <div className="counter text-left">

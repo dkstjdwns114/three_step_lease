@@ -37,7 +37,7 @@ export default class SameAddressView extends Component {
   render() {
     return (
       <>
-        <div className="col-xxl-12 col-md-12">
+        <div className="col-xxl-12 col-md-12" id="same_address_map">
           <div className="card">
             <div className="card-block p-0 h-full">
               <div

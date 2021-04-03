@@ -74,7 +74,7 @@ export default class TypeDetailView extends Component {
   render() {
     return (
       <>
-        <div className="col-xxl-6 col-lg-6 col-md-12">
+        <div className="col-xxl-6 col-lg-6 col-md-12" id="type_detail_view">
           <div className="card">
             <div className="card-block p-0 p-30 h-full">
               <div className="counter text-left">

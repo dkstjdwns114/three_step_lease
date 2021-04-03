@@ -74,7 +74,7 @@ export default class CategoryView extends Component {
   render() {
     return (
       <>
-        <div className="col-xxl-6 col-lg-6 col-md-12">
+        <div className="col-xxl-6 col-lg-6 col-md-12" id="category_view">
           <div className="card">
             <div className="card-block p-0 p-30 h-full">
               <div className="counter text-left">
