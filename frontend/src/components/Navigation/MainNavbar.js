@@ -75,6 +75,13 @@ const mainNavigation = (props) => {
                                 className="md-chevron-right"
                                 aria-hidden="true"
                               ></i>
+                              <Link to="/">전국</Link>
+                            </li>
+                            <li>
+                              <i
+                                className="md-chevron-right"
+                                aria-hidden="true"
+                              ></i>
                               <Link to="/city/gangwon">강원도</Link>
                             </li>
                             <li>
