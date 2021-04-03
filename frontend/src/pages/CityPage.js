@@ -207,12 +207,12 @@ export default class CityPage extends Component {
   render() {
     return (
       <>
+        <MainNavigation isHome={false} />
         {this.state.isLoading ? (
           <PageLoading />
         ) : (
           <>
-            <MainNavigation isHome={false} />
-            <div className="content-wrapper">
+            <div className="page">
               <div className="page-content container-fluid">
                 <div
                   className="row"

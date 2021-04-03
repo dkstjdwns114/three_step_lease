@@ -85,12 +85,12 @@ export default class HomePage extends Component {
   render() {
     return (
       <>
+        <MainNavigation isHome={true} />
         {this.state.isLoading ? (
           <PageLoading />
         ) : (
           <>
-            <MainNavigation isHome={true} />
-            <div className="content-wrapper">
+            <div className="page">
               <div className="page-content container-fluid">
                 <div
                   className="row"
