@@ -19,7 +19,7 @@ const RealTimeCategorylView = (props) => {
     setCurrentKorValue(props.one_days_ago_date_kor);
     setOpenOrClose("폐업");
     setCategoryData(props.one_days_ago.close.category);
-  }, [props.one_days_ago_date]);
+  }, [props.one_days_ago_date, props.city_name]);
 
   const oneDaysChangeClickHandler = () => {
     const value = props.one_days_ago_date;

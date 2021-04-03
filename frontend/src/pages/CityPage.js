@@ -159,9 +159,8 @@ export default class CityPage extends Component {
   };
 
   fetchData = () => {
-    this.setState({ city_code: this.props.match.params.code });
+    this.setState({ city_code: this.props.match.params.code, isLoading: true });
     let cityCode = this.props.match.params.code;
-
     fetch(`/api/city/${cityCode}`)
       .then((res) => {
         return res.json();
@@ -192,6 +191,10 @@ export default class CityPage extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.props.match.params.code !== prevProps.match.params.code) {
       this.setCityHallCoordinates(this.props.match.params.code);
+      this.setState({
+        path: this.props.match.path,
+        city_code: this.props.match.params.code
+      });
       this.fetchData();
     }
   }

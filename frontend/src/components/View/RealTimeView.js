@@ -38,6 +38,7 @@ export default class RealTimeView extends Component {
   }
 
   fetchData = () => {
+    this.setState({ isLoading: true });
     fetch(`/api/real_time/${this.props.city_code}`)
       .then((res) => {
         return res.json();
@@ -56,6 +57,12 @@ export default class RealTimeView extends Component {
         this.setDateHandler();
       });
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.city_code !== prevProps.city_code) {
+      this.fetchData();
+    }
+  }
 
   setDateHandler = () => {
     const one_days_ago_date = this.substrDate(this.state.one_days_ago.date);
