@@ -12,15 +12,14 @@ export default class App extends Component {
 
   render() {
     return (
-      <Router>
-        <MainNavbar />
-        <Switch>
-          <div className="content-wrapper">
+      <>
+        <Router>
+          <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/city/:code" component={CityPage} />
-          </div>
-        </Switch>
-      </Router>
+          </Switch>
+        </Router>
+      </>
     );
   }
 }
