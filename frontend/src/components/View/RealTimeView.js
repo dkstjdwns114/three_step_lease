@@ -121,7 +121,7 @@ export default class RealTimeView extends Component {
   render() {
     return (
       <>
-        <div className="col-xxl-6 col-md-6">
+        <div className="col-xxl-6 col-lg-6 col-md-12">
           <div className="card">
             <div className="card-block p-0 h-full">
               <div
@@ -188,7 +188,7 @@ export default class RealTimeView extends Component {
             </div>
           </div>
         </div>
-        <div className="col-xxl-6 col-md-6">
+        <div className="col-xxl-6 col-lg-6 col-md-12">
           <div className="card">
             <div className="card-block p-0 h-full">
               <div

@@ -229,7 +229,7 @@ const RealTimeCategorylView = (props) => {
       </div>
 
       <div className="row pt-30 px-30">
-        <div className="col-lg-12 mb-50">
+        <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
           <RealTimePolarChart data_list={categoryData} />
         </div>
       </div>
