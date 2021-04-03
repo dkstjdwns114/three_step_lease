@@ -18,7 +18,7 @@ const RealTimePolarChart = (props) => {
     });
     setLabelArr(myLabels);
     setDataAndOptions(myLabels, myData);
-  }, [props.data_list]);
+  }, [props.data_list, props.tooltipTitle]);
 
   const setDataAndOptions = (myLabels, myData) => {
     setData({
