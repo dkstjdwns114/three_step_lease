@@ -96,11 +96,7 @@ export default class MainCityMapView extends Component {
                         }
                         onClick={this.close_19_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
-                        <span className="text-uppercase hidden-sm-down">
-                          19년 폐업
-                        </span>
+                        <span className="text-uppercase">19년 폐업</span>
                       </button>
                     </div>
                     <div className="btn-group" role="group">
@@ -113,11 +109,7 @@ export default class MainCityMapView extends Component {
                         }
                         onClick={this.open_19_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
-                        <span className="text-uppercase hidden-sm-down">
-                          19년 개업
-                        </span>
+                        <span className="text-uppercase">19년 개업</span>
                       </button>
                     </div>
                     <div className="btn-group" role="group">
@@ -130,11 +122,7 @@ export default class MainCityMapView extends Component {
                         }
                         onClick={this.close_20_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
-                        <span className="text-uppercase hidden-sm-down">
-                          20년 폐업
-                        </span>
+                        <span className="text-uppercase">20년 폐업</span>
                       </button>
                     </div>
                     <div className="btn-group" role="group">
@@ -147,11 +135,7 @@ export default class MainCityMapView extends Component {
                         }
                         onClick={this.open_20_click_handler}
                       >
-                        <i className="icon md-time" aria-hidden="true"></i>
-                        <br />
-                        <span className="text-uppercase hidden-sm-down">
-                          20년 개업
-                        </span>
+                        <span className="text-uppercase">20년 개업</span>
                       </button>
                     </div>
                   </div>
