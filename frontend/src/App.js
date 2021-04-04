@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { render } from "react-dom";
-import MainNavbar from "./components/Navigation/MainNavbar";
 import HomePage from "./pages/HomePage";
 import CityPage from "./pages/CityPage";
 
