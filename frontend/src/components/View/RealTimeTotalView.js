@@ -168,7 +168,7 @@ const RealTimeTotalView = (props) => {
           aria-expanded="false"
         >
           <i className="icon md-calendar" aria-hidden="true"></i>
-          <span className="text-uppercase hidden-sm-down pb-5">
+          <span className="text-uppercase pb-5">
             &nbsp;{currentDateValue}&nbsp;
           </span>
         </div>
@@ -208,15 +208,6 @@ const RealTimeTotalView = (props) => {
           </button>
         </div>
       </div>
-      <span>
-        &nbsp; {currentKorValue} {openOrClose}데이터{" "}
-        <RealTimeDownLoadCsv
-          data_list={csvDownData}
-          date_kor={currentKorValue}
-          city_name={props.city_name}
-          openOrClose={openOrClose}
-        />
-      </span>
       <div className="float-right clearfix">
         <button
           type="button"
@@ -233,6 +224,15 @@ const RealTimeTotalView = (props) => {
           개업
         </button>
       </div>
+      <p className="pt-20">
+        &nbsp; {currentKorValue} {openOrClose}데이터{" "}
+        <RealTimeDownLoadCsv
+          data_list={csvDownData}
+          date_kor={currentKorValue}
+          city_name={props.city_name}
+          openOrClose={openOrClose}
+        />
+      </p>
       <div className="row pt-30 px-30">
         <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
           <RealTimeBarChart
