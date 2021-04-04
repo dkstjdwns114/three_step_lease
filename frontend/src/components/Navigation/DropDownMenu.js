@@ -25,7 +25,7 @@ const DropDownMenu = (props) => {
           <div className="dropdown-menu" role="menu">
             <div className="mega-content">
               <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-6">
                   <h5>행정구역</h5>
                   <ul className="blocks-3">
                     <li className="mega-menu m-0">
@@ -168,7 +168,7 @@ const DropDownMenu = (props) => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <h5>정보</h5>
                   <ul className="blocks-2">
                     <li className="mega-menu m-0">
@@ -331,7 +331,7 @@ const DropDownMenu = (props) => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <h5 className="mb-0">Q&amp;A</h5>
                   {/* <!-- Accordion --> */}
                   <div
