@@ -93,6 +93,7 @@ export default class HomePage extends Component {
         ) : (
           <>
             <div className="page">
+              <PageHeader isHome={true} />
               <div className="page-content container-fluid">
                 <div
                   className="row"
@@ -154,6 +155,7 @@ export default class HomePage extends Component {
                 </div>
               </div>
             </div>
+            <PageFooter />
           </>
         )}
       </>

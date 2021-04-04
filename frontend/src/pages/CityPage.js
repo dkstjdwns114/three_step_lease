@@ -215,6 +215,7 @@ export default class CityPage extends Component {
         ) : (
           <>
             <div className="page">
+              <PageHeader isHome={false} city_name={this.state.city_name} />
               <div className="page-content container-fluid">
                 <div
                   className="row"
@@ -269,6 +270,7 @@ export default class CityPage extends Component {
                 </div>
               </div>
             </div>
+            <PageFooter />
           </>
         )}
       </>
