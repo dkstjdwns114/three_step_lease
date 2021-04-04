@@ -332,7 +332,7 @@ const DropDownMenu = (props) => {
                   </ul>
                 </div>
                 <div className="col-md-4">
-                  <h5 className="mb-0">Accordion</h5>
+                  <h5 className="mb-0">Q&amp;A</h5>
                   {/* <!-- Accordion --> */}
                   <div
                     className="panel-group panel-group-simple"
@@ -354,7 +354,7 @@ const DropDownMenu = (props) => {
                           aria-expanded="false"
                           aria-controls="siteMegaCollapseOne"
                         >
-                          Collapsible Group Item #1
+                          1. 데이터의 출처는 어디인가요?
                         </a>
                       </div>
                       <div
@@ -364,10 +364,12 @@ const DropDownMenu = (props) => {
                         role="tabpanel"
                       >
                         <div className="panel-body">
-                          De moveat laudatur vestra parum doloribus labitur
-                          sentire partes, eripuit praesenti congressus ostendit
-                          alienae, voluptati ornateque accusamus clamat
-                          reperietur convicia albucius.
+                          지방 행정 인허가 데이터입니다.
+                          <br />
+                          실시간 데이터는 매일 오전 9시에 업데이트되며,
+                          <br />
+                          2019년, 2020년 데이터의 경우 약 820만건의 데이터를
+                          가공하여 제작하였습니다.
                         </div>
                       </div>
                     </div>
@@ -385,7 +387,7 @@ const DropDownMenu = (props) => {
                           aria-expanded="false"
                           aria-controls="siteMegaCollapseTwo"
                         >
-                          Collapsible Group Item #2
+                          2. 이 프로그램이 주로 어디에 활용되나요?
                         </a>
                       </div>
                       <div
@@ -395,14 +397,15 @@ const DropDownMenu = (props) => {
                         role="tabpanel"
                       >
                         <div className="panel-body">
-                          Praestabiliorem. Pellat excruciant legantur ullum
-                          leniter vacare foris voluptate loco ignavi, credo
-                          videretur multoque choro fatemur mortis animus
-                          adoptionem, bello statuat expediunt naturales.
+                          어디에 직접 활용하려고 만들었다기보다는 현재
+                          COVID-19로 인해 폐업한 가게들이 많아 뉴스에 '삼보임대'
+                          라는 말이 나왔었는데 개발자가 길거리를 보니 진짜 임대
+                          나온 상가들이 많아서 실제로 얼마나 많은 가게들이
+                          폐업을 했는지, 개업 대비 폐업 수가 어떻게되는지
+                          궁금해서 프로그램을 제작하게 되었습니다.
                         </div>
                       </div>
                     </div>
-
                     <div className="panel">
                       <div
                         className="panel-heading"
@@ -417,7 +420,8 @@ const DropDownMenu = (props) => {
                           aria-expanded="false"
                           aria-controls="siteMegaCollapseThree"
                         >
-                          Collapsible Group Item #3
+                          3. 핸드폰으로 접속하니 화면이 잘 안보이는 경우가
+                          있는데 해결방법이 있나요?
                         </a>
                       </div>
                       <div
@@ -427,10 +431,15 @@ const DropDownMenu = (props) => {
                         role="tabpanel"
                       >
                         <div className="panel-body">
-                          Horum, antiquitate perciperet d conspectum locus
-                          obruamus animumque perspici probabis suscipere.
-                          Desiderat magnum, contenta poena desiderant
-                          concederetur menandri damna disputandum corporum.
+                          모바일용이 아니라 PC용으로 제작해서 그렇습니다. <br />
+                          테블릿의 경우 불편함 없이 이용하실 수 있으며,
+                          안드로이드 핸드폰의 경우 어플을 제공하고 있으며 구글
+                          앱스토어에 등록하는데 오랜 기간이 걸리기 때문에
+                          등록하기 이전에는 sungjoon256@gmail.com 으로 메일을
+                          주시면 어플 apk파일을 보내드립니다.
+                          <br />
+                          어플 이용시 매일 업데이트 되는 정보를 푸시알림으로
+                          받아보실 수 있습니다.
                         </div>
                       </div>
                     </div>
