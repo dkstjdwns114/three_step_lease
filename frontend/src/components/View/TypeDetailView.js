@@ -98,12 +98,9 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.close_19_click_handler}
                       >
-                        <span className="text-uppercase hidden-sm-down">
-                          2019년도 폐업
-                        </span>
+                        <span className="text-uppercase">19년 폐업</span>
                       </button>
                     </div>
-
                     <div className="btn-group" role="group">
                       <button
                         type="button"
@@ -114,9 +111,7 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.open_19_click_handler}
                       >
-                        <span className="text-uppercase hidden-sm-down">
-                          2019년도 개업
-                        </span>
+                        <span className="text-uppercase">19년 개업</span>
                       </button>
                     </div>
 
@@ -130,9 +125,7 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.close_20_click_handler}
                       >
-                        <span className="text-uppercase hidden-sm-down">
-                          2020년도 폐업
-                        </span>
+                        <span className="text-uppercase">20년 폐업</span>
                       </button>
                     </div>
 
@@ -146,9 +139,7 @@ export default class TypeDetailView extends Component {
                         }
                         onClick={this.open_20_click_handler}
                       >
-                        <span className="text-uppercase hidden-sm-down">
-                          2020년도 개업
-                        </span>
+                        <span className="text-uppercase">20년 개업</span>
                       </button>
                     </div>
                   </div>
