@@ -7,6 +7,8 @@ import PageLoading from "../components/Loading/PageLoading";
 import CategoryView from "../components/View/CategoryView";
 import RealTimeView from "../components/View/RealTimeView";
 import MainNavigation from "../components/Navigation/MainNavbar";
+import PageHeader from "../components/Navigation/PageHeader";
+import PageFooter from "../components/Navigation/PageFooter";
 
 export default class CityPage extends Component {
   state = {
