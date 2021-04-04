@@ -441,7 +441,7 @@ const DropDownMenu = (props) => {
             </div>
           </div>
         </li>
-        <li className="nav-item hidden-float">
+        <li className="nav-item">
           <a
             className="nav-link icon md-search"
             data-toggle="collapse"
