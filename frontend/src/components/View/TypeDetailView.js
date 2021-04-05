@@ -86,62 +86,56 @@ export default class TypeDetailView extends Component {
                   년도별 개·폐업 버튼 클릭시 해당 년도로 변경됩니다. <br />
                   업종 대분류 버튼 클릭시 해당 항목의 중분류 차트가 보여집니다.
                 </p>
-                <div className="example example-buttons">
-                  <div className="btn-group btn-group-justified">
-                    <div className="btn-group" role="group">
-                      <button
-                        type="button"
-                        className={
-                          this.state.active1
-                            ? this.state.activeBtnClass
-                            : this.state.defaultBtnClass
-                        }
-                        onClick={this.close_19_click_handler}
-                      >
-                        <span className="text-uppercase">19년 폐업</span>
-                      </button>
-                    </div>
-                    <div className="btn-group" role="group">
-                      <button
-                        type="button"
-                        className={
-                          this.state.active2
-                            ? this.state.activeBtnClass
-                            : this.state.defaultBtnClass
-                        }
-                        onClick={this.open_19_click_handler}
-                      >
-                        <span className="text-uppercase">19년 개업</span>
-                      </button>
-                    </div>
-
-                    <div className="btn-group" role="group">
-                      <button
-                        type="button"
-                        className={
-                          this.state.active3
-                            ? this.state.activeBtnClass
-                            : this.state.defaultBtnClass
-                        }
-                        onClick={this.close_20_click_handler}
-                      >
-                        <span className="text-uppercase">20년 폐업</span>
-                      </button>
-                    </div>
-
-                    <div className="btn-group" role="group">
-                      <button
-                        type="button"
-                        className={
-                          this.state.active4
-                            ? this.state.activeBtnClass
-                            : this.state.defaultBtnClass
-                        }
-                        onClick={this.open_20_click_handler}
-                      >
-                        <span className="text-uppercase">20년 개업</span>
-                      </button>
-                    </div>
+                <div className="example example-buttons text-center">
+                  <div
+                    className="btn-group"
+                    aria-label="Default button group"
+                    role="group"
+                  >
+                    <button
+                      type="button"
+                      className={
+                        this.state.active1
+                          ? this.state.activeBtnClass
+                          : this.state.defaultBtnClass
+                      }
+                      onClick={this.close_19_click_handler}
+                    >
+                      <span className="text-uppercase">19년 폐업</span>
+                    </button>
+                    <button
+                      type="button"
+                      className={
+                        this.state.active2
+                          ? this.state.activeBtnClass
+                          : this.state.defaultBtnClass
+                      }
+                      onClick={this.open_19_click_handler}
+                    >
+                      <span className="text-uppercase">19년 개업</span>
+                    </button>
+                    <button
+                      type="button"
+                      className={
+                        this.state.active3
+                          ? this.state.activeBtnClass
+                          : this.state.defaultBtnClass
+                      }
+                      onClick={this.close_20_click_handler}
+                    >
+                      <span className="text-uppercase">20년 폐업</span>
+                    </button>
+                    <button
+                      type="button"
+                      className={
+                        this.state.active4
+                          ? this.state.activeBtnClass
+                          : this.state.defaultBtnClass
+                      }
+                      onClick={this.open_20_click_handler}
+                    >
+                      <span className="text-uppercase">20년 개업</span>
+                    </button>
                   </div>
                 </div>
                 <div className="counter-label text-uppercase mb-20">
