@@ -84,7 +84,7 @@ export default class MainCityMapView extends Component {
                 </div>
                 <p>년도별 개·폐업 버튼 클릭시 해당 년도로 변경됩니다.</p>
                 <p>지역 클릭시 해당 지역 상세페이지로 이동합니다.</p>
-                <div className="example example-buttons text-center">
+                <div className="example example-buttons">
                   <div
                     className="btn-group mb-0"
                     aria-label="Default button group"
@@ -135,16 +135,16 @@ export default class MainCityMapView extends Component {
                       <span className="text-uppercase">20년 개업</span>
                     </button>
                   </div>
-                  <div className="counter-label text-uppercase mb-20">
-                    <CityMap
-                      city_close_19={this.props.city_close_19}
-                      city_open_19={this.props.city_open_19}
-                      city_close_20={this.props.city_close_20}
-                      city_open_20={this.props.city_open_20}
-                      valueStr={this.state.currentValue}
-                      numberComma={this.props.numberWithCommas}
-                    />
-                  </div>
+                </div>
+                <div className="counter-label text-uppercase mb-20">
+                  <CityMap
+                    city_close_19={this.props.city_close_19}
+                    city_open_19={this.props.city_open_19}
+                    city_close_20={this.props.city_close_20}
+                    city_open_20={this.props.city_open_20}
+                    valueStr={this.state.currentValue}
+                    numberComma={this.props.numberWithCommas}
+                  />
                 </div>
               </div>
             </div>
