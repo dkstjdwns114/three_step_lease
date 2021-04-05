@@ -10,7 +10,8 @@ export default class CategoryView extends Component {
     active1: false,
     active2: false,
     active3: true,
-    active4: false
+    active4: false,
+    isRadar: false
   };
 
   constructor(props) {
@@ -31,16 +32,66 @@ export default class CategoryView extends Component {
   };
 
   close_19_click_handler = () => {
+    if (!this.state.isRadar) {
+      this.setState({
+        currentValue: "type_detail_close_19",
+        currentValueKor: "2019년 폐업",
+        active1: true,
+        active2: false,
+        active3: false,
+        active4: false
+      });
+    }
+  };
+  close_20_click_handler = () => {
+    if (!this.state.isRadar) {
+      this.setState({
+        currentValue: "type_detail_close_20",
+        currentValueKor: "2020년 폐업",
+        active1: false,
+        active2: false,
+        active3: true,
+        active4: false
+      });
+    }
+  };
+  open_19_click_handler = () => {
+    if (!this.state.isRadar) {
+      this.setState({
+        currentValue: "type_detail_open_19",
+        currentValueKor: "2019년 개업",
+        active1: false,
+        active2: true,
+        active3: false,
+        active4: false
+      });
+    }
+  };
+  open_20_click_handler = () => {
+    if (!this.state.isRadar) {
+      this.setState({
+        currentValue: "type_detail_open_20",
+        currentValueKor: "2020년 개업",
+        active1: false,
+        active2: false,
+        active3: false,
+        active4: true
+      });
+    }
+  };
+
+  isRadarClickHandler = () => {
     this.setState({
-      currentValue: "type_detail_close_19",
-      currentValueKor: "2019년 폐업",
-      active1: true,
+      isRadar: true,
+      active1: false,
       active2: false,
       active3: false,
       active4: false
     });
   };
-  close_20_click_handler = () => {
+
+  isHorizontalClickHandler = () => {
+    this.setState({ isRadar: false });
     this.setState({
       currentValue: "type_detail_close_20",
       currentValueKor: "2020년 폐업",
@@ -48,26 +99,6 @@ export default class CategoryView extends Component {
       active2: false,
       active3: true,
       active4: false
-    });
-  };
-  open_19_click_handler = () => {
-    this.setState({
-      currentValue: "type_detail_open_19",
-      currentValueKor: "2019년 개업",
-      active1: false,
-      active2: true,
-      active3: false,
-      active4: false
-    });
-  };
-  open_20_click_handler = () => {
-    this.setState({
-      currentValue: "type_detail_open_20",
-      currentValueKor: "2020년 개업",
-      active1: false,
-      active2: false,
-      active3: false,
-      active4: true
     });
   };
 
@@ -153,6 +184,8 @@ export default class CategoryView extends Component {
                     yearsValue={this.state.currentValue}
                     city_name={this.props.city_name}
                     numberWithCommas={this.props.numberWithCommas}
+                    isRadarClickHandler={this.isRadarClickHandler}
+                    isHorizontalClickHandler={this.isHorizontalClickHandler}
                   />
                 </div>
               </div>

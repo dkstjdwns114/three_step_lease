@@ -15,6 +15,7 @@ const CategorylTabs = (props) => {
                 href="#categoryTabsOne"
                 aria-controls="categoryTabsOne"
                 role="tab"
+                onClick={props.isHorizontalClickHandler}
               >
                 막대그래프
               </a>
@@ -26,6 +27,7 @@ const CategorylTabs = (props) => {
                 href="#categoryTabsTwo"
                 aria-controls="categoryTabsTwo"
                 role="tab"
+                onClick={props.isRadarClickHandler}
               >
                 레이더 그래프
               </a>
