@@ -8,6 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
+import Typography from "@material-ui/core/Typography";
 
 const columns = [
   { id: "index", label: " ", minWidth: 50 },
@@ -91,7 +92,9 @@ const StickyHeadTable = (props) => {
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
                 >
-                  {column.label}
+                  <Typography variant="subtitle1" gutterBottom>
+                    {column.label}
+                  </Typography>
                 </TableCell>
               ))}
             </TableRow>
@@ -106,9 +109,11 @@ const StickyHeadTable = (props) => {
                       const value = row[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === "number"
-                            ? column.format(value)
-                            : value}
+                          <Typography variant="body1" gutterBottom>
+                            {column.format && typeof value === "number"
+                              ? column.format(value)
+                              : value}
+                          </Typography>
                         </TableCell>
                       );
                     })}
