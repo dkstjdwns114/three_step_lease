@@ -100,7 +100,7 @@ const mainNavigation = (props) => {
         {/* <!-- End Navbar Collapse --> */}
 
         {/* <!-- Site Navbar Seach --> */}
-        <div className="collapse navbar-search-overlap" id="site-navbar-search">
+        {/* <div className="collapse navbar-search-overlap" id="site-navbar-search">
           <form role="search">
             <div className="form-group">
               <div className="input-search">
@@ -124,7 +124,7 @@ const mainNavigation = (props) => {
               </div>
             </div>
           </form>
-        </div>
+        </div> */}
         {/* <!-- End Site Navbar Seach --> */}
       </div>
     </nav>
