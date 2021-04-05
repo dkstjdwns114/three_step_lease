@@ -23,28 +23,28 @@ const MainMonthView = (props) => {
                     <ul className="list-unstyled">
                       <li className="mb-5">
                         <i
-                          className="icon md-circle red-600 mr-5"
+                          className="icon md-circle blue-500 mr-5"
                           aria-hidden="true"
                         ></i>{" "}
                         2019년 폐업
                       </li>
                       <li className="mb-5">
                         <i
-                          className="icon md-circle pink-400 mr-5"
+                          className="icon md-circle green-a300 mr-5"
                           aria-hidden="true"
                         ></i>{" "}
                         2019년 개업
                       </li>
                       <li className="mb-5">
                         <i
-                          className="icon md-circle yellow-a300 mr-5"
+                          className="icon md-circle red-500 mr-5"
                           aria-hidden="true"
                         ></i>{" "}
                         2020년 폐업
                       </li>
                       <li className="mb-5">
                         <i
-                          className="icon md-circle brown-400 mr-5"
+                          className="icon md-circle purple-500 mr-5"
                           aria-hidden="true"
                         ></i>{" "}
                         2020년 개업
