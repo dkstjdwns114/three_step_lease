@@ -38,13 +38,16 @@ const mainNavigation = (props) => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link">
+            <a
+              className="nav-link"
+              data-target="#exampleTabs"
+              data-toggle="modal"
+            >
               <i className="icon md-notifications" aria-hidden="true"></i>
             </a>
           </li>
         </ul>
       </div>
-
       <div className="navbar-container container-fluid">
         {/* <!-- Navbar Collapse --> */}
         <div
@@ -68,7 +71,11 @@ const mainNavigation = (props) => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a
+                className="nav-link"
+                data-target="#exampleTabs"
+                data-toggle="modal"
+              >
                 <i className="icon md-notifications" aria-hidden="true"></i>
               </a>
             </li>
