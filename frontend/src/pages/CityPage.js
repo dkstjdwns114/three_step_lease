@@ -9,6 +9,7 @@ import RealTimeView from "../components/View/RealTimeView";
 import MainNavigation from "../components/Navigation/MainNavbar";
 import PageHeader from "../components/Navigation/PageHeader";
 import PageFooter from "../components/Navigation/PageFooter";
+import Modal from "../components/Modal/Modal";
 
 export default class CityPage extends Component {
   state = {
@@ -214,6 +215,7 @@ export default class CityPage extends Component {
           <PageLoading />
         ) : (
           <>
+            <Modal />
             <div className="page">
               <PageHeader isHome={false} city_name={this.state.city_name} />
               <div className="page-content container-fluid">

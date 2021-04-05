@@ -10,6 +10,7 @@ import RealTimeView from "../components/View/RealTimeView";
 import MainNavigation from "../components/Navigation/MainNavbar";
 import PageHeader from "../components/Navigation/PageHeader";
 import PageFooter from "../components/Navigation/PageFooter";
+import Modal from "../components/Modal/Modal";
 
 export default class HomePage extends Component {
   state = {
@@ -92,6 +93,7 @@ export default class HomePage extends Component {
           <PageLoading />
         ) : (
           <>
+            <Modal />
             <div className="page">
               <PageHeader isHome={true} />
               <div className="page-content container-fluid">
