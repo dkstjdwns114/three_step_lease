@@ -75,20 +75,21 @@ export default class SameAddressView extends Component {
                   </div>
                 </div>
               </div>
-              <div className="row pt-30 px-30">
+              <div className="row px-30">
                 <div className="col-lg-12">
                   {this.state.isLoading ? (
                     <RoundCircleLoading />
                   ) : (
                     <>
-                      {/* <SameAddressMap
-                        address={this.state.same_address}
+                      <SameAddressMap
+                        same_address_list={this.state.same_address_list}
                         city_hoall_lat={this.props.city_hoall_lat}
                         city_hoall_lng={this.props.city_hoall_lng}
                         same_address_map_level={
                           this.props.same_address_map_level
                         }
-                      /> */}
+                        city_name={this.props.city_name}
+                      />
                     </>
                   )}
                 </div>
