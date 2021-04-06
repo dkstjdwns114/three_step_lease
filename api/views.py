@@ -114,8 +114,6 @@ def realTimeView(request, pk):
 
     now = time.localtime()
 
-    print(date.today())
-
     if now.tm_hour < 9:
         d1_form = date.today() - timedelta(days=2)
         d2_form = date.today() - timedelta(days=3)
