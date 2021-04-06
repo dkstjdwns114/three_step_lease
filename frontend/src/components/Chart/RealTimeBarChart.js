@@ -113,7 +113,7 @@ const RealTimeBarChart = (props) => {
 
   return (
     <>
-      <Bar data={resultData} options={myOptions} />
+      <Bar data={resultData} options={myOptions} width={800} height={600} />
     </>
   );
 };
