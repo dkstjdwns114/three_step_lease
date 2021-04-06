@@ -106,6 +106,7 @@ export default class HomePage extends Component {
                     city_code={this.state.city_code}
                     city_name={this.state.city_name}
                     numberWithCommas={this.numberWithCommas}
+                    isHome={true}
                   />
                   <MainMonthView
                     title={"전국 최근 2년 월별 개·폐업 현황"}
