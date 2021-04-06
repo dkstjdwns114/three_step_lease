@@ -236,7 +236,7 @@ export default class CityPage extends Component {
                     month_open_20={this.state.month_open_20}
                     numberWithCommas={this.numberWithCommas}
                     city_name={this.state.city_name}
-                    title={"월별 개·폐업 현황"}
+                    title={"최근 2년 월별 개·폐업 현황"}
                     desc={
                       "차트 포인트에 마우스를 올려놓으면 해당 항목의 상세 정보를 확인할 수 있습니다"
                     }
