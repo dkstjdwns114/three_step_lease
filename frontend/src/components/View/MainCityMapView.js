@@ -78,7 +78,9 @@ export default class MainCityMapView extends Component {
           <div className="card">
             <div className="card-block p-0 p-30 h-full">
               <div className="counter text-left">
-                <span className="counter-number">전국 행정구역별 현황</span>
+                <span className="counter-number">
+                  전국 최근 2년 행정구역별 현황
+                </span>
                 <div className="counter-label text-uppercase mb-20">
                   {this.state.currentValueKor}
                 </div>

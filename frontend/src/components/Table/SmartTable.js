@@ -31,7 +31,7 @@ const SmartTableTest = (props) => {
     <>
       <div className="panel-title" id="month_table">
         <p className="font-size-20 grey-700">
-          {props.city_name} 월별 개·폐업 표
+          {props.city_name} 최근 2년 월별 개·폐업 표
         </p>
         <span className="panel-desc">
           화살표 클릭시 해당 열 기준으로 내림차순 또는 오름차순으로 정렬됩니다.

@@ -79,7 +79,7 @@ export default class TypeDetailView extends Component {
             <div className="card-block p-0 p-30 h-full">
               <div className="counter text-left">
                 <span className="counter-number">
-                  {this.props.city_name} 업종 중분류 개·폐업 현황
+                  {this.props.city_name} 최근 2년 업종 중분류 개·폐업 현황
                 </span>
                 <div className="counter-label text-uppercase mb-20"> </div>
                 <p>
