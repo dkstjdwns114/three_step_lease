@@ -104,24 +104,26 @@ def sameAddressView(request, pk):
 
 @api_view(['GET'])
 def realTimeView(request, pk):
-    d1_form = date.today() - timedelta(1)
-    d2_form = date.today() - timedelta(2)
-    d3_form = date.today() - timedelta(3)
-    d4_form = date.today() - timedelta(4)
-    d5_form = date.today() - timedelta(5)
-    d6_form = date.today() - timedelta(6)
-    d7_form = date.today() - timedelta(7)
+    d1_form = date.today() - timedelta(days=1)
+    d2_form = date.today() - timedelta(days=2)
+    d3_form = date.today() - timedelta(days=3)
+    d4_form = date.today() - timedelta(days=4)
+    d5_form = date.today() - timedelta(days=5)
+    d6_form = date.today() - timedelta(days=6)
+    d7_form = date.today() - timedelta(days=7)
 
     now = time.localtime()
 
+    print(date.today())
+
     if now.tm_hour < 9:
-        d1_form = date.today() - timedelta(2)
-        d2_form = date.today() - timedelta(3)
-        d3_form = date.today() - timedelta(4)
-        d4_form = date.today() - timedelta(5)
-        d5_form = date.today() - timedelta(6)
-        d6_form = date.today() - timedelta(7)
-        d7_form = date.today() - timedelta(8)
+        d1_form = date.today() - timedelta(days=2)
+        d2_form = date.today() - timedelta(days=3)
+        d3_form = date.today() - timedelta(days=4)
+        d4_form = date.today() - timedelta(days=5)
+        d5_form = date.today() - timedelta(days=6)
+        d6_form = date.today() - timedelta(days=7)
+        d7_form = date.today() - timedelta(days=8)
 
     d1 = d1_form.strftime('%Y%m%d')
     d2 = d2_form.strftime('%Y%m%d')
