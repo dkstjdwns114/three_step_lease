@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import RoundCircleLoading from "../Loading/RoundCircleLoading";
 import RealTimeCategorylView from "./RealTimeCategoryView";
 import RealTimeCityMapView from "./RealTimeCityMapView";
+import RealTimeTableView from "./RealTimeTableView";
 import RealTimeTotalView from "./RealTimeTotalView";
 
 export default class RealTimeView extends Component {
@@ -260,7 +261,7 @@ export default class RealTimeView extends Component {
           </div>
         </div>
         {this.props.isHome && (
-          <div className="col-xxl-6 col-lg-6 col-md-12" id="realtime_category">
+          <div className="col-xxl-4 col-lg-4 col-md-12" id="realtime_category">
             <div className="card">
               <div className="card-block p-0 h-full">
                 <div className="pt-20 px-20">
@@ -325,6 +326,78 @@ export default class RealTimeView extends Component {
             </div>
           </div>
         )}
+        <div
+          className={
+            this.props.isHome
+              ? "col-xxl-8 col-lg-8 col-md-12"
+              : "col-xxl-12 col-lg-12 col-md-12"
+          }
+          id="realtime_category"
+        >
+          <div className="card">
+            <div className="card-block p-0 h-full">
+              <div className="pt-20 px-20">
+                <div className="row">
+                  <div className="col-12 pt-20 px-20">
+                    <p className="font-size-20 grey-700">
+                      {this.props.city_name} 최근 7일 개·폐업 데이터
+                    </p>
+                    {this.state.isLoading ? (
+                      <RoundCircleLoading />
+                    ) : (
+                      <>
+                        <p>
+                          왼쪽에 날짜와 오른쪽에 개·폐업 선택시 해당 데이터를
+                          확인할 수 있습니다. <br />
+                          데이터 다운로드시 상세 정보를 확인할 수 있습니다.
+                        </p>
+                        <RealTimeTableView
+                          city_name={this.props.city_name}
+                          one_days_ago={this.state.one_days_ago}
+                          two_days_ago={this.state.two_days_ago}
+                          three_days_ago={this.state.three_days_ago}
+                          four_days_ago={this.state.four_days_ago}
+                          five_days_ago={this.state.five_days_ago}
+                          six_days_ago={this.state.six_days_ago}
+                          seven_days_ago={this.state.seven_days_ago}
+                          one_days_ago_date={this.state.one_days_ago_date}
+                          two_days_ago_date={this.state.two_days_ago_date}
+                          three_days_ago_date={this.state.three_days_ago_date}
+                          four_days_ago_date={this.state.four_days_ago_date}
+                          five_days_ago_date={this.state.five_days_ago_date}
+                          six_days_ago_date={this.state.six_days_ago_date}
+                          seven_days_ago_date={this.state.seven_days_ago_date}
+                          one_days_ago_date_kor={
+                            this.state.one_days_ago_date_kor
+                          }
+                          two_days_ago_date_kor={
+                            this.state.two_days_ago_date_kor
+                          }
+                          three_days_ago_date_kor={
+                            this.state.three_days_ago_date_kor
+                          }
+                          four_days_ago_date_kor={
+                            this.state.four_days_ago_date_kor
+                          }
+                          five_days_ago_date_kor={
+                            this.state.five_days_ago_date_kor
+                          }
+                          six_days_ago_date_kor={
+                            this.state.six_days_ago_date_kor
+                          }
+                          seven_days_ago_date_kor={
+                            this.state.seven_days_ago_date_kor
+                          }
+                          numberWithCommas={this.props.numberWithCommas}
+                        />
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </>
     );
   }

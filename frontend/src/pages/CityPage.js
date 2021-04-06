@@ -228,6 +228,7 @@ export default class CityPage extends Component {
                     city_code={this.state.city_code}
                     city_name={this.state.city_name}
                     numberWithCommas={this.numberWithCommas}
+                    isHome={false}
                   />
                   <CityMonthView
                     month_close_19={this.state.month_close_19}
