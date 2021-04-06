@@ -5,10 +5,6 @@ import HomePage from "./pages/HomePage";
 import CityPage from "./pages/CityPage";
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <>
