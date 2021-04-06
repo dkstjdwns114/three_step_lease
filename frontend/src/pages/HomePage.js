@@ -43,7 +43,7 @@ export default class HomePage extends Component {
   componentDidMount() {
     this.setState({
       path: this.props.match.path,
-      city_hoall_lat: 35.6783,
+      city_hoall_lat: 35.8583,
       city_hoall_lng: 127.9558,
       same_address_map_level: 13,
       city_name: "전국",
