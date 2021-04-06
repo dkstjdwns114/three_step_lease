@@ -4,34 +4,25 @@ import { Link } from "react-router-dom";
 const pageHeader = (props) => {
   return (
     <>
-      {/* Page header */}
-      <div className="page-header page-header-light">
-        <div className="page-header-content header-elements-md-inline">
-          <div className="page-title d-flex">
-            <h4>
-              <i className="icon-arrow-left52 mr-2"></i> {props.headerTitle}
-            </h4>
-          </div>
-        </div>
-
-        <div className="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
-          <div className="d-flex">
-            <div className="breadcrumb">
-              <Link to="/" className="breadcrumb-item">
-                <i className="icon-home2 mr-2"></i> Home
-              </Link>
-            </div>
-
-            <Link
-              to="#"
-              className="header-elements-toggle text-default d-md-none"
-            >
-              <i className="icon-more"></i>
-            </Link>
-          </div>
-        </div>
+      <div className="page-header">
+        {props.isHome ? (
+          <h1 className="page-title">THREESTEPLEASE</h1>
+        ) : (
+          <h1 className="page-title">행정구역 상세페이지</h1>
+        )}
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
+            <Link to="/">홈</Link>
+          </li>
+          {props.isHome && <li className="breadcrumb-item active">전국</li>}
+          {!props.isHome && (
+            <>
+              <li className="breadcrumb-item">행정구역</li>
+              <li className="breadcrumb-item active">{props.city_name}</li>
+            </>
+          )}
+        </ol>
       </div>
-      {/* /page header */}
     </>
   );
 };

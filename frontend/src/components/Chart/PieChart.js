@@ -1,118 +1,82 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Chart from "react-google-charts";
-
-const pieOptions = {
-  title: "",
-  slices: [
-    {
-      color: "#2ec7c9"
-    },
-    {
-      color: "#b6a2de"
-    },
-    {
-      color: "#5ab1ef"
-    },
-    {
-      color: "#ffb980"
-    },
-    {
-      color: "#d87a80"
-    },
-    {
-      color: "#8d98b3"
-    },
-    {
-      color: "#e5cf0d"
-    },
-    {
-      color: "#97b552"
-    },
-    {
-      color: "#e6693e"
-    }
-  ],
-  chartArea: {
-    left: 50,
-    width: "100%",
-    height: "100%"
-  },
-  fontName: "Roboto",
-  backgroundColor: "transparent"
-};
+import { Pie } from "react-chartjs-2";
 
 const PieChart = (props) => {
-  const [qCnt, setQCnt] = useState(0);
-  const [pCnt, setPCnt] = useState(0);
-  const [rCnt, setRCnt] = useState(0);
-  const [dCnt, setDCnt] = useState(0);
-  const [nCnt, setNCnt] = useState(0);
-  const [sCnt, setSCnt] = useState(0);
-  const [fCnt, setFCnt] = useState(0);
-  const [oCnt, setOCnt] = useState(0);
-  const [lCnt, setLCnt] = useState(0);
-  const [totalCnt, setTotalCnt] = useState(0);
-  const [chartHeight, setChartHeight] = useState("");
+  const [data, setData] = useState({});
+  const [options, setOptions] = useState({});
 
   useEffect(() => {
-    let total = 0;
-    props.indsLcls.forEach((res) => {
-      res.type === "소매" && setDCnt(res.count);
-      res.type === "생활서비스" && setFCnt(res.count);
-      res.type === "부동산" && setLCnt(res.count);
-      res.type === "관광/여가/오락" && setNCnt(res.count);
-      res.type === "숙박" && setOCnt(res.count);
-      res.type === "스포츠" && setPCnt(res.count);
-      res.type === "음식" && setQCnt(res.count);
-      res.type === "학문/교육" && setRCnt(res.count);
-      res.type === "의료" && setSCnt(res.count);
-      total += res.count;
-    });
-    setTotalCnt(total);
-    if (props.path === "/") {
-      setChartHeight("340px");
-    } else if (props.path === "/city/:code") {
-      setChartHeight("230px");
+    let myLabels = [];
+    let myData = [];
+    let tooltipTitle = "";
+    if (props.yearsValue === "type_detail_close_19") {
+      tooltipTitle = "2019년 폐업";
+      props.close_19.type_list.forEach((list) => {
+        myLabels.push(list.kor_type);
+        myData.push(list.count);
+      });
+    } else if (props.yearsValue === "type_detail_open_19") {
+      tooltipTitle = "2019년 개업";
+      props.open_19.type_list.forEach((list) => {
+        myLabels.push(list.kor_type);
+        myData.push(list.count);
+      });
+    } else if (props.yearsValue === "type_detail_close_20") {
+      tooltipTitle = "2020년 폐업";
+      props.close_20.type_list.forEach((list) => {
+        myLabels.push(list.kor_type);
+        myData.push(list.count);
+      });
+    } else if (props.yearsValue === "type_detail_open_20") {
+      tooltipTitle = "2020년 개업";
+      props.open_20.type_list.forEach((list) => {
+        myLabels.push(list.kor_type);
+        myData.push(list.count);
+      });
     }
-  }, [props]);
-  return (
-    <>
-      <div className="col-md-6">
-        <div className="card">
-          <div className="card-header header-elements-inline">
-            <h5 className="card-title">{props.cardTitle}</h5>
-          </div>
-          <div className="card-body">
-            <p className="mb-3">{`총 ${props.numberComma(totalCnt)}개`}</p>
-            <div className="chart-container has-scroll text-center">
-              <div className="d-inline-block">
-                <Chart
-                  width="500px"
-                  height={chartHeight}
-                  chartType="PieChart"
-                  loader={<div>Loading Chart</div>}
-                  data={[
-                    ["", ""],
-                    ["소매", dCnt],
-                    ["생활서비스", fCnt],
-                    ["부동산", lCnt],
-                    ["관광/여가/오락", nCnt],
-                    ["숙박", oCnt],
-                    ["스포츠", pCnt],
-                    ["음식", qCnt],
-                    ["학문/교육", rCnt],
-                    ["의료", sCnt]
-                  ]}
-                  options={pieOptions}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    setDataAndOptions(myLabels, myData, tooltipTitle);
+  }, [props.yearsValue]);
+
+  const setDataAndOptions = (myLabels, myData, tooltipTitle) => {
+    setData({
+      labels: myLabels,
+      datasets: [
+        {
+          backgroundColor: [
+            "#90CAF9",
+            "#E040FB",
+            "#84FFFF",
+            "#4DB6AC",
+            "#FFCDD2",
+            "#CDDC39",
+            "#F57C00",
+            "#A1887F",
+            "#69F0AE",
+            "#FFD180",
+            "#388E3C"
+          ],
+          data: myData
+        }
+      ]
+    });
+    setOptions({
+      tooltips: {
+        callbacks: {
+          title: (context) => {
+            return tooltipTitle;
+          },
+          label: (context) => {
+            let label = " ";
+            label += myLabels[context.index] + ": ";
+            label += props.numberWithCommas(myData[context.index]) + "개";
+            return label;
+          }
+        }
+      }
+    });
+  };
+
+  return <Pie data={data} options={options} width={120} height={120} />;
 };
 
 export default PieChart;

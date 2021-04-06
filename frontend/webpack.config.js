@@ -15,12 +15,17 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
   optimization: {
     minimize: true
   },
+  devtool: "eval-cheap-source-map",
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
@@ -28,5 +33,10 @@ module.exports = {
         NODE_ENV: JSON.stringify("production")
       }
     })
-  ]
+  ],
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  }
 };

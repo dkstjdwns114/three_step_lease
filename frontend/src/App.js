@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { render } from "react-dom";
 import HomePage from "./pages/HomePage";
-import CoordinateMapPage from "./pages/SameCoordinatesPage";
-import MainNavbar from "./components/Navigation/MainNavbar";
-import SideNavbar from "./components/Navigation/SideNavbar";
 import CityPage from "./pages/CityPage";
 
 export default class App extends Component {
@@ -14,22 +11,17 @@ export default class App extends Component {
 
   render() {
     return (
-      <Router>
-        <MainNavbar />
-        <div className="page-content">
-          <Route path="/" component={SideNavbar} />
+      <>
+        <Router>
           <Switch>
-            <div className="content-wrapper">
-              <Route exact path="/" component={HomePage} />
-              <Route path="/same_coordinates" component={CoordinateMapPage} />
-              <Route path="/city/:code" component={CityPage} />
-            </div>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/city/:code" component={CityPage} />
           </Switch>
-        </div>
-      </Router>
+        </Router>
+      </>
     );
   }
 }
 
-const appDiv = document.getElementById("app");
+const appDiv = document.getElementById("root");
 render(<App />, appDiv);
