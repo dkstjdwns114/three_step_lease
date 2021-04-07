@@ -40,39 +40,33 @@ export default class SameAddressView extends Component {
         <div className="col-xxl-12 col-md-12" id="same_address_map">
           <div className="card">
             <div className="card-block p-0 h-full">
-              <div
-                className="pt-30 px-30"
-                style={{ height: "calc(100% - 250px);" }}
-              >
-                <div className="row">
-                  <div className="col-8 pt-30 px-30">
-                    <p className="font-size-20 grey-700">
-                      {this.props.city_name} 2019년, 2020년 모두 폐업한 상가
-                      지도
-                    </p>
-                    {!this.state.isLoading && (
-                      <>
-                        {this.props.city_name === "전국" ? (
-                          <p>
-                            전국의 경우 성능상의 이유로 일부 데이터만 지도에
-                            표시됩니다. 모든 데이터&nbsp;
-                            <SameAddressDownLoadCsv
-                              same_address_list={this.state.same_address_list}
-                              city_name={this.props.city_name}
-                            />
-                          </p>
-                        ) : (
-                          <p>
-                            지도에 표시된 모든 데이터&nbsp;
-                            <SameAddressDownLoadCsv
-                              same_address_list={this.state.same_address_list}
-                              city_name={this.props.city_name}
-                            />
-                          </p>
-                        )}
-                      </>
-                    )}
-                  </div>
+              <div className="row">
+                <div className="col-12 pt-30 px-50">
+                  <p className="font-size-20 grey-700">
+                    {this.props.city_name} 2019년, 2020년 모두 폐업한 상가 지도
+                  </p>
+                  {!this.state.isLoading && (
+                    <>
+                      {this.props.city_name === "전국" ? (
+                        <p>
+                          전국의 경우 성능상의 이유로 일부 데이터만 지도에
+                          표시됩니다. 모든 데이터&nbsp;
+                          <SameAddressDownLoadCsv
+                            same_address_list={this.state.same_address_list}
+                            city_name={this.props.city_name}
+                          />
+                        </p>
+                      ) : (
+                        <p>
+                          지도에 표시된 모든 데이터&nbsp;
+                          <SameAddressDownLoadCsv
+                            same_address_list={this.state.same_address_list}
+                            city_name={this.props.city_name}
+                          />
+                        </p>
+                      )}
+                    </>
+                  )}
                 </div>
               </div>
               <div className="row px-30">
