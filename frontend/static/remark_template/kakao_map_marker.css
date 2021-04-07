@@ -38,3 +38,7 @@ ul {
 .overlaybox li .title {
   font-size: 11px;
 }
+.overlaybox:hover {
+  color: #fff;
+  background: #009cb0;
+}
