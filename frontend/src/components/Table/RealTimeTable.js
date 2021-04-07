@@ -15,7 +15,8 @@ const useStyles = makeStyles({
     width: "100%"
   },
   container: {
-    maxHeight: 550
+    maxHeight: 550,
+    minHeight: 550
   }
 });
 
