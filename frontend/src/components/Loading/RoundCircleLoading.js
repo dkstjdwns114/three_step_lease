@@ -4,8 +4,8 @@ const RoundCircleLoading = (props) => {
   useEffect(() => {});
   return (
     <>
-      <div class="h-150 vertical-align text-center">
-        <div class="loader vertical-align-middle loader-round-circle"></div>
+      <div className="h-150 vertical-align text-center">
+        <div className="loader vertical-align-middle loader-round-circle"></div>
       </div>
     </>
   );
