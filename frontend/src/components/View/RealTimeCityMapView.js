@@ -227,7 +227,7 @@ const RealTimeCityMapView = (props) => {
       <p className="pt-20">
         &nbsp; {currentKorValue} {openOrClose}데이터
       </p>
-      <div className="row px-30">
+      <div className="row">
         <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
           <RealTimeCityMap
             city_data={cityData}

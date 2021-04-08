@@ -69,7 +69,7 @@ export default class SameAddressView extends Component {
                   )}
                 </div>
               </div>
-              <div className="row px-30">
+              <div className="row">
                 <div className="col-lg-12">
                   {this.state.isLoading ? (
                     <RoundCircleLoading />

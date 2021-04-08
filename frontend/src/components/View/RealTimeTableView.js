@@ -234,7 +234,7 @@ const RealTimeTableView = (props) => {
           openOrClose={openOrClose}
         />
       </p>
-      <div className="row px-30">
+      <div className="row">
         <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
           <RealTimeTable
             data_list={csvDownData}
