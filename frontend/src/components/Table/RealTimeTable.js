@@ -40,7 +40,7 @@ const RealTimeTable = (props) => {
         {
           id: "date",
           label: "개업일자",
-          minWidth: 130
+          minWidth: 150
         },
         {
           id: "city",
@@ -69,16 +69,16 @@ const RealTimeTable = (props) => {
     } else if (props.openOrClose === "폐업") {
       setColumns([
         { id: "index", label: " ", minWidth: 50 },
-        { id: "store_name", label: "가게 이름", minWidth: 150 },
+        { id: "store_name", label: "가게 이름", minWidth: 160 },
         {
           id: "classification",
           label: "업종",
-          minWidth: 130
+          minWidth: 80
         },
         {
           id: "date",
           label: "폐업일자",
-          minWidth: 120
+          minWidth: 150
         },
         {
           id: "city",
