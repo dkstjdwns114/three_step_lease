@@ -2,58 +2,84 @@ import React, { useEffect } from "react";
 const { kakao } = window;
 
 const TestMap = (props) => {
-  useEffect(() => {
-    const container = document.getElementById("map_marker_simple");
+  useEffect(async () => {
+    const container = document.getElementById("test_map");
 
     let map = new kakao.maps.Map(container, {
-      center: new kakao.maps.LatLng(props.city_hoall_lat, props.city_hoall_lng), // 지도의 중심좌표
-      level: props.same_address_map_level
+      center: new kakao.maps.LatLng(35.6783, 127.9558), // 지도의 중심좌표
+      level: 13
     });
+
+    let geocoder = new kakao.maps.services.Geocoder();
 
     let clusterer = new kakao.maps.MarkerClusterer({
       map: map,
       averageCenter: true,
-      minLevel: 8,
-      disableClickZoom: true
+      minLevel: 10
     });
-
-    let markers = props.same_address_list.map((coordinate, idx) => {
-      if (props.city_name === "전국") {
-        let stores_cnt = coordinate.stores_info.length;
-        if (stores_cnt < 70) {
-          return new kakao.maps.Marker({
-            text: coordinate.address,
-            position: new kakao.maps.LatLng(coordinate.lat, coordinate.lon)
+    let coordinates = [];
+    await props.data_list.forEach((data) => {
+      geocoder.addressSearch(data.address, (result, status) => {
+        if (status === kakao.maps.services.Status.OK) {
+          coordinates.push({
+            lat: result[0].y,
+            lng: result[0].x,
+            store_name: data.store_name
           });
         }
-      } else {
-        return new kakao.maps.Marker({
-          text: coordinate.address,
-          position: new kakao.maps.LatLng(coordinate.lat, coordinate.lon)
+      });
+    });
+    let markers = [];
+    setTimeout(() => {
+      for (var i = 0; i < coordinates.length; i++) {
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+          map: map, // 마커를 표시할 지도
+          position: new kakao.maps.LatLng(
+            coordinates[i].lat,
+            coordinates[i].lng
+          )
         });
+        markers.push(marker);
+
+        var infowindow = new kakao.maps.InfoWindow({
+          content: `<div class ="label"><span class="left"></span><span class="center">${coordinates[i].store_name}</span><span class="right"></span></div>`
+        });
+
+        kakao.maps.event.addListener(
+          marker,
+          "mouseover",
+          makeOverListener(map, marker, infowindow)
+        );
+        kakao.maps.event.addListener(
+          marker,
+          "mouseout",
+          makeOutListener(infowindow)
+        );
       }
-    });
+      clusterer.addMarkers(markers);
 
-    clusterer.addMarkers(markers);
+      function makeOverListener(map, marker, infowindow) {
+        return function () {
+          infowindow.open(map, marker);
+        };
+      }
 
-    kakao.maps.event.addListener(clusterer, "clusterclick", function (cluster) {
-      let level = map.getLevel() - 1;
-
-      map.setLevel(level, { anchor: cluster.getCenter() });
-    });
+      function makeOutListener(infowindow) {
+        return function () {
+          infowindow.close();
+        };
+      }
+    }, [500]);
   }, [props]);
 
   return (
     <>
-      <div className="card">
-        <div className="card-body">
-          <div
-            className="map-container"
-            id="map_marker_simple"
-            style={{ height: "600px" }}
-          ></div>
-        </div>
-      </div>
+      <div
+        className="map-container mt-10"
+        id="test_map"
+        style={{ height: "600px" }}
+      ></div>
     </>
   );
 };
