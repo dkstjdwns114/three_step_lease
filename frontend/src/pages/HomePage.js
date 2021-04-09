@@ -141,7 +141,7 @@ export default class HomePage extends Component {
                   />
                   <TabsAccording
                     most_close_20={this.state.most_close_20}
-                    city={"nationwide"}
+                    city_code={"nationwide"}
                     city_name={this.state.city_name}
                   />
                   <MainCityMapView
@@ -152,7 +152,7 @@ export default class HomePage extends Component {
                     numberWithCommas={this.numberWithCommas}
                   />
                   <SameAddressView
-                    city={"nationwide"}
+                    city_code={"nationwide"}
                     city_hoall_lat={this.state.city_hoall_lat}
                     city_hoall_lng={this.state.city_hoall_lng}
                     same_address_map_level={this.state.same_address_map_level}
