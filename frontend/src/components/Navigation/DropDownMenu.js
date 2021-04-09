@@ -205,6 +205,19 @@ const DropDownMenu = (props) => {
                             aria-hidden="true"
                           ></i>
                           <ScrollLink
+                            to="realtime_city_view"
+                            spy={true}
+                            smooth={true}
+                          >
+                            <a href="#">실시간 데이터 지도</a>
+                          </ScrollLink>
+                        </li>
+                        <li>
+                          <i
+                            className="md-chevron-right"
+                            aria-hidden="true"
+                          ></i>
+                          <ScrollLink
                             to="realtime_data_table_view"
                             spy={true}
                             smooth={true}
@@ -212,51 +225,6 @@ const DropDownMenu = (props) => {
                             <a href="#">실시간 데이터 테이블</a>
                           </ScrollLink>
                         </li>
-                        {props.isHome ? (
-                          <>
-                            <li>
-                              <i
-                                className="md-chevron-right"
-                                aria-hidden="true"
-                              ></i>
-                              <ScrollLink
-                                to="realtime_city_view"
-                                spy={true}
-                                smooth={true}
-                              >
-                                <a href="#">실시간 행정구역 현황</a>
-                              </ScrollLink>
-                            </li>
-                            <li>
-                              <i
-                                className="md-chevron-right"
-                                aria-hidden="true"
-                              ></i>
-                              <ScrollLink
-                                to="main_month_chart"
-                                spy={true}
-                                smooth={true}
-                              >
-                                <a href="#">월별 차트</a>
-                              </ScrollLink>
-                            </li>
-                          </>
-                        ) : (
-                          <li>
-                            <i
-                              className="md-chevron-right"
-                              aria-hidden="true"
-                            ></i>
-                            <ScrollLink
-                              to="city_month_chart"
-                              spy={true}
-                              smooth={true}
-                            >
-                              <a href="#">월별 차트</a>
-                            </ScrollLink>
-                          </li>
-                        )}
-
                         <li>
                           <i
                             className="md-chevron-right"
