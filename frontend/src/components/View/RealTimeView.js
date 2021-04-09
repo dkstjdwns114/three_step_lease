@@ -200,7 +200,6 @@ export default class RealTimeView extends Component {
                     <p className="font-size-20 grey-700">
                       {this.props.city_name} 최근 7일 개·폐업 업종 대분류
                     </p>
-                    {/* <p>매일 오전 9시에 전날 데이터가 업데이트 됩니다.</p> */}
                     {this.state.isLoading ? (
                       <RoundCircleLoading />
                     ) : (
