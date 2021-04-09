@@ -233,6 +233,9 @@ const RealTimeCityMapView = (props) => {
             date_kor={currentKorValue}
             city_name={props.city_name}
             openOrClose={openOrClose}
+            city_hoall_lat={props.city_hoall_lat}
+            city_hoall_lng={props.city_hoall_lng}
+            same_address_map_level={props.same_address_map_level}
           />
         </div>
       </div>

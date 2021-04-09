@@ -318,6 +318,11 @@ export default class RealTimeView extends Component {
                               this.state.seven_days_ago_date_kor
                             }
                             numberWithCommas={this.props.numberWithCommas}
+                            city_hoall_lat={this.props.city_hoall_lat}
+                            city_hoall_lng={this.props.city_hoall_lng}
+                            same_address_map_level={
+                              this.props.same_address_map_level
+                            }
                           />
                         </>
                       )}

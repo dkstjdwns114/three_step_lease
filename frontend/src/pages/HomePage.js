@@ -106,6 +106,9 @@ export default class HomePage extends Component {
                     city_code={this.state.city_code}
                     city_name={this.state.city_name}
                     numberWithCommas={this.numberWithCommas}
+                    city_hoall_lat={this.state.city_hoall_lat}
+                    city_hoall_lng={this.state.city_hoall_lng}
+                    same_address_map_level={this.state.same_address_map_level}
                     isHome={true}
                   />
                   <MainMonthView

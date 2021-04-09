@@ -6,8 +6,8 @@ const RealTimeCityMap = (props) => {
     const container = document.getElementById("real_time_city_map");
 
     let map = new kakao.maps.Map(container, {
-      center: new kakao.maps.LatLng(35.6783, 127.9558), // 지도의 중심좌표
-      level: 13
+      center: new kakao.maps.LatLng(props.city_hoall_lat, props.city_hoall_lng), // 지도의 중심좌표
+      level: props.same_address_map_level
     });
 
     let geocoder = new kakao.maps.services.Geocoder();
