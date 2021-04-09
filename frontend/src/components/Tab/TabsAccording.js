@@ -4,7 +4,7 @@ import FixedHeaderTable from "../Table/FixedHeaderTable";
 const TabsAccording = (props) => {
   const [sizeClass, setSizeClass] = useState("col-xxl-8 col-lg-8 col-md-12");
   useEffect(() => {
-    if (props.city !== "nationwide") {
+    if (props.city_code !== "nationwide") {
       setSizeClass("col-xxl-12 col-lg-12 col-md-12");
     }
   }, []);

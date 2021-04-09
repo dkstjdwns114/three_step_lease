@@ -260,11 +260,11 @@ export default class CityPage extends Component {
                   />
                   <TabsAccording
                     most_close_20={this.state.most_close_20}
-                    city={this.state.city_code}
+                    city_code={this.state.city_code}
                     city_name={this.state.city_name}
                   />
                   <SameAddressView
-                    city={this.state.city_code}
+                    city_code={this.state.city_code}
                     city_hoall_lat={this.state.city_hoall_lat}
                     city_hoall_lng={this.state.city_hoall_lng}
                     same_address_map_level={this.state.same_address_map_level}

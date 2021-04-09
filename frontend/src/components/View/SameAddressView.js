@@ -18,7 +18,7 @@ export default class SameAddressView extends Component {
   }
 
   fetchData = () => {
-    fetch(`/api/same_address/${this.props.city}`)
+    fetch(`/api/same_address/${this.props.city_code}`)
       .then((res) => {
         return res.json();
       })
