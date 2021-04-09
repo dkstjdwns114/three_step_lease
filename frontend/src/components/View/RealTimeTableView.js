@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import RealTimeBarChart from "../Chart/RealTimeBarChart";
 import RealTimeDownLoadCsv from "../Csv/RealTimeDownLoadCsv";
 import RealTimeTable from "../Table/RealTimeTable";
 
