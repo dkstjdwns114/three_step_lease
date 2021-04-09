@@ -262,7 +262,7 @@ export default class RealTimeView extends Component {
                 <div className="row">
                   <div className="col-12 pt-20 px-20">
                     <p className="font-size-20 grey-700">
-                      {this.props.city_name} 최근 7일 행정구역별 개·폐업 현황
+                      {this.props.city_name} 최근 7일 개·폐업 지도
                     </p>
                     {this.state.isLoading ? (
                       <RoundCircleLoading />
