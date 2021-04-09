@@ -5,7 +5,7 @@ const RealTimeCityMapView = (props) => {
   const [currentDateValue, setCurrentDateValue] = useState("");
   const [currentKorValue, setCurrentKorValue] = useState("");
   const [openOrClose, setOpenOrClose] = useState("");
-  const [cityData, setCityData] = useState([]);
+  const [csvDownData, setCsvDownData] = useState([]);
   const [leftBtnActive, setLeftBtnActive] = useState(true);
   const [leftBtnClass, setLeftBtnClass] = useState(
     "btn btn-round btn-success btn-pill-left"
@@ -13,12 +13,11 @@ const RealTimeCityMapView = (props) => {
   const [rightBtnClass, setRightBtnClass] = useState(
     "btn btn-round btn-default btn-pill-right"
   );
-
   useEffect(() => {
     setCurrentDateValue(props.one_days_ago_date);
     setCurrentKorValue(props.one_days_ago_date_kor);
     setOpenOrClose("폐업");
-    setCityData(props.one_days_ago.close.city);
+    setCsvDownData(props.one_days_ago.close.data_list);
   }, [props.one_days_ago_date, props.city_name]);
 
   const oneDaysChangeClickHandler = () => {
@@ -28,9 +27,9 @@ const RealTimeCityMapView = (props) => {
     setCurrentKorValue(korValue);
 
     if (openOrClose === "개업") {
-      setCityData(props.one_days_ago.open.city);
+      setCsvDownData(props.one_days_ago.open.data_list);
     } else if (openOrClose === "폐업") {
-      setCityData(props.one_days_ago.close.city);
+      setCsvDownData(props.one_days_ago.close.data_list);
     }
   };
 
@@ -41,9 +40,9 @@ const RealTimeCityMapView = (props) => {
     setCurrentKorValue(korValue);
 
     if (openOrClose === "개업") {
-      setCityData(props.two_days_ago.open.city);
+      setCsvDownData(props.two_days_ago.open.data_list);
     } else if (openOrClose === "폐업") {
-      setCityData(props.two_days_ago.close.city);
+      setCsvDownData(props.two_days_ago.close.data_list);
     }
   };
 
@@ -54,9 +53,9 @@ const RealTimeCityMapView = (props) => {
     setCurrentKorValue(korValue);
 
     if (openOrClose === "개업") {
-      setCityData(props.three_days_ago.open.city);
+      setCsvDownData(props.three_days_ago.open.data_list);
     } else if (openOrClose === "폐업") {
-      setCityData(props.three_days_ago.close.city);
+      setCsvDownData(props.three_days_ago.close.data_list);
     }
   };
 
@@ -67,9 +66,9 @@ const RealTimeCityMapView = (props) => {
     setCurrentKorValue(korValue);
 
     if (openOrClose === "개업") {
-      setCityData(props.four_days_ago.open.city);
+      setCsvDownData(props.four_days_ago.open.data_list);
     } else if (openOrClose === "폐업") {
-      setCityData(props.four_days_ago.close.city);
+      setCsvDownData(props.four_days_ago.close.data_list);
     }
   };
 
@@ -80,9 +79,9 @@ const RealTimeCityMapView = (props) => {
     setCurrentKorValue(korValue);
 
     if (openOrClose === "개업") {
-      setCityData(props.five_days_ago.open.city);
+      setCsvDownData(props.five_days_ago.open.data_list);
     } else if (openOrClose === "폐업") {
-      setCityData(props.five_days_ago.close.city);
+      setCsvDownData(props.five_days_ago.close.data_list);
     }
   };
 
@@ -93,9 +92,9 @@ const RealTimeCityMapView = (props) => {
     setCurrentKorValue(korValue);
 
     if (openOrClose === "개업") {
-      setCityData(props.six_days_ago.open.city);
+      setCsvDownData(props.six_days_ago.open.data_list);
     } else if (openOrClose === "폐업") {
-      setCityData(props.six_days_ago.close.city);
+      setCsvDownData(props.six_days_ago.close.data_list);
     }
   };
 
@@ -106,9 +105,9 @@ const RealTimeCityMapView = (props) => {
     setCurrentKorValue(korValue);
 
     if (openOrClose === "개업") {
-      setCityData(props.seven_days_ago.open.city);
+      setCsvDownData(props.seven_days_ago.open.data_list);
     } else if (openOrClose === "폐업") {
-      setCityData(props.seven_days_ago.close.city);
+      setCsvDownData(props.seven_days_ago.close.data_list);
     }
   };
 
@@ -120,19 +119,19 @@ const RealTimeCityMapView = (props) => {
       setRightBtnClass("btn btn-round btn-success btn-pill-right");
 
       if (currentDateValue === props.one_days_ago_date) {
-        setCityData(props.one_days_ago.open.city);
+        setCsvDownData(props.one_days_ago.open.data_list);
       } else if (currentDateValue === props.two_days_ago_date) {
-        setCityData(props.two_days_ago.open.city);
+        setCsvDownData(props.two_days_ago.open.data_list);
       } else if (currentDateValue === props.three_days_ago_date) {
-        setCityData(props.three_days_ago.open.city);
+        setCsvDownData(props.three_days_ago.open.data_list);
       } else if (currentDateValue === props.four_days_ago_date) {
-        setCityData(props.four_days_ago.open.city);
+        setCsvDownData(props.four_days_ago.open.data_list);
       } else if (currentDateValue === props.five_days_ago_date) {
-        setCityData(props.five_days_ago.open.city);
+        setCsvDownData(props.five_days_ago.open.data_list);
       } else if (currentDateValue === props.six_days_ago_date) {
-        setCityData(props.six_days_ago.open.city);
+        setCsvDownData(props.six_days_ago.open.data_list);
       } else if (currentDateValue === props.seven_days_ago_date) {
-        setCityData(props.seven_days_ago.open.city);
+        setCsvDownData(props.seven_days_ago.open.data_list);
       }
     } else {
       setLeftBtnActive(true);
@@ -141,19 +140,19 @@ const RealTimeCityMapView = (props) => {
       setRightBtnClass("btn btn-round btn-default btn-pill-right");
 
       if (currentDateValue === props.one_days_ago_date) {
-        setCityData(props.one_days_ago.close.city);
+        setCsvDownData(props.one_days_ago.close.data_list);
       } else if (currentDateValue === props.two_days_ago_date) {
-        setCityData(props.two_days_ago.close.city);
+        setCsvDownData(props.two_days_ago.close.data_list);
       } else if (currentDateValue === props.three_days_ago_date) {
-        setCityData(props.three_days_ago.close.city);
+        setCsvDownData(props.three_days_ago.close.data_list);
       } else if (currentDateValue === props.four_days_ago_date) {
-        setCityData(props.four_days_ago.close.city);
+        setCsvDownData(props.four_days_ago.close.data_list);
       } else if (currentDateValue === props.five_days_ago_date) {
-        setCityData(props.five_days_ago.close.city);
+        setCsvDownData(props.five_days_ago.close.data_list);
       } else if (currentDateValue === props.six_days_ago_date) {
-        setCityData(props.six_days_ago.close.city);
+        setCsvDownData(props.six_days_ago.close.data_list);
       } else if (currentDateValue === props.seven_days_ago_date) {
-        setCityData(props.seven_days_ago.close.city);
+        setCsvDownData(props.seven_days_ago.close.data_list);
       }
     }
   };
@@ -230,8 +229,10 @@ const RealTimeCityMapView = (props) => {
       <div className="row">
         <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
           <RealTimeCityMap
-            city_data={cityData}
-            numberComma={props.numberWithCommas}
+            data_list={csvDownData}
+            date_kor={currentKorValue}
+            city_name={props.city_name}
+            openOrClose={openOrClose}
           />
         </div>
       </div>
