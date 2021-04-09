@@ -261,7 +261,7 @@ export default class RealTimeView extends Component {
           </div>
         </div>
         {this.props.isHome && (
-          <div className="col-xxl-4 col-lg-4 col-md-12" id="realtime_city_view">
+          <div className="col-xxl-5 col-lg-5 col-md-12" id="realtime_city_view">
             <div className="card">
               <div className="card-block p-0 h-full">
                 <div className="pt-20 px-20">
@@ -277,6 +277,8 @@ export default class RealTimeView extends Component {
                           <p>
                             왼쪽에 날짜와 오른쪽에 개·폐업 선택시 해당 데이터를
                             확인할 수 있습니다.
+                            <br /> 마커에 마우스를 올리면 가게 이름이
+                            표시됩니다.
                           </p>
                           <RealTimeCityMapView
                             city_name={this.props.city_name}
@@ -329,7 +331,7 @@ export default class RealTimeView extends Component {
         <div
           className={
             this.props.isHome
-              ? "col-xxl-8 col-lg-8 col-md-12"
+              ? "col-xxl-7 col-lg-7 col-md-12"
               : "col-xxl-12 col-lg-12 col-md-12"
           }
           id="realtime_data_table_view"
