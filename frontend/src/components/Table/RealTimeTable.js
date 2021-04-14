@@ -31,12 +31,12 @@ const RealTimeTable = (props) => {
     if (props.openOrClose === "개업") {
       setColumns([
         { id: "index", label: " ", minWidth: 30 },
+        { id: "store_name", label: "가게 이름", minWidth: 160 },
         {
           id: "city",
           label: "행정구역",
           minWidth: 170
         },
-        { id: "store_name", label: "가게 이름", minWidth: 160 },
         {
           id: "classification",
           label: "업종",
@@ -60,8 +60,8 @@ const RealTimeTable = (props) => {
           store.address.split(" ")[0] + " " + store.address.split(" ")[1];
         return createData(
           idx + 1,
-          city,
           store.store_name,
+          city,
           store.category_kor,
           authorization_date
         );
@@ -70,12 +70,12 @@ const RealTimeTable = (props) => {
     } else if (props.openOrClose === "폐업") {
       setColumns([
         { id: "index", label: " ", minWidth: 30 },
+        { id: "store_name", label: "가게 이름", minWidth: 160 },
         {
           id: "city",
           label: "행정구역",
           minWidth: 170
         },
-        { id: "store_name", label: "가게 이름", minWidth: 160 },
         {
           id: "classification",
           label: "업종",
@@ -99,8 +99,8 @@ const RealTimeTable = (props) => {
           store.address.split(" ")[0] + " " + store.address.split(" ")[1];
         return createData(
           idx + 1,
-          city,
           store.store_name,
+          city,
           store.category_kor,
           closed_date
         );
@@ -118,8 +118,8 @@ const RealTimeTable = (props) => {
     setPage(0);
   };
 
-  const createData = (index, city, store_name, classification, date) => {
-    return { index, city, store_name, classification, date };
+  const createData = (index, store_name, city, classification, date) => {
+    return { index, store_name, city, classification, date };
   };
 
   return (
