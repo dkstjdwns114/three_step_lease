@@ -30,7 +30,12 @@ const RealTimeTable = (props) => {
   useEffect(() => {
     if (props.openOrClose === "개업") {
       setColumns([
-        { id: "index", label: " ", minWidth: 50 },
+        { id: "index", label: " ", minWidth: 30 },
+        {
+          id: "city",
+          label: "행정구역",
+          minWidth: 170
+        },
         { id: "store_name", label: "가게 이름", minWidth: 160 },
         {
           id: "classification",
@@ -41,11 +46,6 @@ const RealTimeTable = (props) => {
           id: "date",
           label: "개업일자",
           minWidth: 150
-        },
-        {
-          id: "city",
-          label: "행정구역",
-          minWidth: 120
         }
       ]);
       const rowsData = props.data_list.map((store, idx) => {
@@ -56,19 +56,25 @@ const RealTimeTable = (props) => {
           "월 " +
           store.authorization_date.substr(6) +
           "일";
-        let city = store.address.split(" ")[0];
+        let city =
+          store.address.split(" ")[0] + " " + store.address.split(" ")[1];
         return createData(
           idx + 1,
+          city,
           store.store_name,
           store.category_kor,
-          authorization_date,
-          city
+          authorization_date
         );
       });
       setRows(rowsData);
     } else if (props.openOrClose === "폐업") {
       setColumns([
-        { id: "index", label: " ", minWidth: 50 },
+        { id: "index", label: " ", minWidth: 30 },
+        {
+          id: "city",
+          label: "행정구역",
+          minWidth: 170
+        },
         { id: "store_name", label: "가게 이름", minWidth: 160 },
         {
           id: "classification",
@@ -79,11 +85,6 @@ const RealTimeTable = (props) => {
           id: "date",
           label: "폐업일자",
           minWidth: 150
-        },
-        {
-          id: "city",
-          label: "행정구역",
-          minWidth: 120
         }
       ]);
       const rowsData = props.data_list.map((store, idx) => {
@@ -94,13 +95,14 @@ const RealTimeTable = (props) => {
           "월 " +
           store.closed_date.substr(6) +
           "일";
-        let city = store.address.split(" ")[0];
+        let city =
+          store.address.split(" ")[0] + " " + store.address.split(" ")[1];
         return createData(
           idx + 1,
+          city,
           store.store_name,
           store.category_kor,
-          closed_date,
-          city
+          closed_date
         );
       });
       setRows(rowsData);
@@ -116,8 +118,8 @@ const RealTimeTable = (props) => {
     setPage(0);
   };
 
-  const createData = (index, store_name, classification, date, city) => {
-    return { index, store_name, classification, date, city };
+  const createData = (index, city, store_name, classification, date) => {
+    return { index, city, store_name, classification, date };
   };
 
   return (
