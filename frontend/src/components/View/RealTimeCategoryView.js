@@ -257,8 +257,8 @@ const RealTimeCategorylView = (props) => {
       <p className="pt-20">
         &nbsp; {currentKorValue} {openOrClose}데이터
       </p>
-      <div className="row pt-30 px-30">
-        <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
+      <div className="row px-20">
+        <div className="col-xxl-12 col-lg-12 col-md-12 mb-20">
           <RealTimePolarChart
             data_list={categoryData}
             numberWithCommas={props.numberWithCommas}

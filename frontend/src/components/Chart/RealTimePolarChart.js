@@ -65,7 +65,7 @@ const RealTimePolarChart = (props) => {
     });
   };
 
-  return <Polar data={data} options={options} width={500} height={260} />;
+  return <Polar data={data} options={options} width={510} height={320} />;
 };
 
 export default RealTimePolarChart;
