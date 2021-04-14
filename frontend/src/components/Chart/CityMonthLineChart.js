@@ -32,27 +32,27 @@ const CityMonthLineChart = (props) => {
         label: "2019년 폐업",
         data: close_19_data,
         fill: true,
-        backgroundColor: "rgba(178, 235, 242, 0.3)",
-        borderColor: "#4DD0E1"
+        backgroundColor: "rgba(240, 98, 146, 0.3)",
+        borderColor: "#F06292"
       });
       datasetsArr.push({
         label: "2020년 폐업",
         data: close_20_data,
         fill: true,
-        backgroundColor: "rgba(225, 190, 231, 0.3)",
-        borderColor: "#AB47BC"
+        backgroundColor: "rgba(239, 83, 80, 0.3)",
+        borderColor: "#EF5350"
       });
       datasetsArr.push({
         label: "2019년 개업",
         data: open_19_data,
         fill: false,
-        borderColor: "#81C784"
+        borderColor: "#29B6F6"
       });
       datasetsArr.push({
         label: "2020년 개업",
         data: open_20_data,
         fill: false,
-        borderColor: "#E91E63"
+        borderColor: "#4DB6AC"
       });
       setDataAndOptions(labelsArr, datasetsArr);
     }, 500);
@@ -72,23 +72,23 @@ const CityMonthLineChart = (props) => {
           labelColor: (context) => {
             if (context.datasetIndex === 0) {
               return {
-                borderColor: "#4DD0E1",
-                backgroundColor: "#4DD0E1"
+                borderColor: "#F06292",
+                backgroundColor: "#F06292"
               };
             } else if (context.datasetIndex === 1) {
               return {
-                borderColor: "#AB47BC",
-                backgroundColor: "#AB47BC"
+                borderColor: "#EF5350",
+                backgroundColor: "#EF5350"
               };
             } else if (context.datasetIndex === 2) {
               return {
-                borderColor: "#81C784",
-                backgroundColor: "#81C784"
+                borderColor: "#29B6F6",
+                backgroundColor: "#29B6F6"
               };
             } else if (context.datasetIndex === 3) {
               return {
-                borderColor: "#E91E63",
-                backgroundColor: "#E91E63"
+                borderColor: "#4DB6AC",
+                backgroundColor: "#4DB6AC"
               };
             }
           },
