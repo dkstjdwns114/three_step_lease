@@ -22,7 +22,7 @@ export default class MainCityMapView extends Component {
       currentValue: "city_close_20",
       currentValueKor: "2020년 폐업",
       defaultBtnClass: "btn btn-default",
-      activeBtnClass: "btn btn-info"
+      activeBtnClass: "btn btn-success"
     });
   }
 
