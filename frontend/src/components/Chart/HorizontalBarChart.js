@@ -75,13 +75,13 @@ const HorizontalBarChart = (props) => {
       datasets: [
         {
           backgroundColor: [
-            "#AB47BC",
-            "#F06292",
-            "#4FC3F7",
-            "#D4E157",
-            "#B9F6CA",
-            "#9FA8DA",
-            "#FF7043"
+            "rgba(171, 71, 188, 0.6)",
+            "rgba(240, 98, 146, 0.6)",
+            "rgba(79, 195, 247, 0.6)",
+            "rgba(212, 225, 87, 0.6)",
+            "rgba(185, 246, 202, 0.6)",
+            "rgba(159, 168, 218, 0.6)",
+            "rgba(255, 112, 67, 0.6)"
           ],
           data: myData
         }
