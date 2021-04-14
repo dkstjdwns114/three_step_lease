@@ -138,7 +138,7 @@ const TypeDetailTabs = (props) => {
                 aria-controls="exampleTabsOne"
                 role="tab"
               >
-                동물
+                문화
               </a>
             </li>
             <li className="nav-item" role="presentation">
@@ -149,7 +149,7 @@ const TypeDetailTabs = (props) => {
                 aria-controls="exampleTabsTwo"
                 role="tab"
               >
-                문화
+                동물
               </a>
             </li>
             <li className="nav-item" role="presentation">
@@ -216,20 +216,20 @@ const TypeDetailTabs = (props) => {
             >
               <PieChart
                 yearsValue={years}
-                close_19={animal_close_19}
-                close_20={animal_close_20}
-                open_19={animal_open_19}
-                open_20={animal_open_20}
+                close_19={culture_close_19}
+                close_20={culture_close_20}
+                open_19={culture_open_19}
+                open_20={culture_open_20}
                 numberWithCommas={props.numberWithCommas}
               />
             </div>
             <div className="tab-pane" id="exampleTabsTwo" role="tabpanel">
               <PieChart
                 yearsValue={years}
-                close_19={culture_close_19}
-                close_20={culture_close_20}
-                open_19={culture_open_19}
-                open_20={culture_open_20}
+                close_19={animal_close_19}
+                close_20={animal_close_20}
+                open_19={animal_open_19}
+                open_20={animal_open_20}
                 numberWithCommas={props.numberWithCommas}
               />
             </div>
