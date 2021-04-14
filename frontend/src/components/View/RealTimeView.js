@@ -143,7 +143,9 @@ export default class RealTimeView extends Component {
                       <RoundCircleLoading />
                     ) : (
                       <>
-                        <p>매일 오전 9시에 전날 데이터가 업데이트 됩니다.</p>
+                        <p>
+                          매일 오전 9시에 지난 1주일 데이터가 업데이트 됩니다.
+                        </p>
                         <RealTimeTotalView
                           city_name={this.props.city_name}
                           one_days_ago={this.state.one_days_ago}
