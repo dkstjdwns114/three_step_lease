@@ -51,7 +51,7 @@ export default class CityPage extends Component {
       this.setState({
         city_hoall_lat: 35.17973293209222,
         city_hoall_lng: 129.0750704595212,
-        same_address_map_level: 9,
+        same_address_map_level: 10,
         city_name: "부산광역시"
       });
     } else if (city_code === "chungbuk") {
@@ -156,7 +156,7 @@ export default class CityPage extends Component {
       this.setState({
         city_hoall_lat: 35.53947778181926,
         city_hoall_lng: 129.31147053145742,
-        same_address_map_level: 9,
+        same_address_map_level: 10,
         city_name: "울산광역시"
       });
     }
