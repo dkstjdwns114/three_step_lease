@@ -18,7 +18,7 @@ const columns = [
   { field: "October", headerName: "10월", width: 95 },
   { field: "November", headerName: "11월", width: 95 },
   { field: "December", headerName: "12월", width: 95 },
-  { field: "total", headerName: "합계", width: 100 }
+  { field: "total", headerName: "합계", width: 105 }
 ];
 
 const MonthTable = (props) => {
