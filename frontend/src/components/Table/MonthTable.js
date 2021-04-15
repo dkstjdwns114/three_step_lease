@@ -6,18 +6,18 @@ import "./dataGrid.css";
 
 const columns = [
   { field: "id", headerName: "분류", width: 120 },
-  { field: "January", headerName: "1월", width: 90 },
-  { field: "February", headerName: "2월", width: 90 },
-  { field: "March", headerName: "3월", width: 90 },
-  { field: "April", headerName: "4월", width: 90 },
-  { field: "May", headerName: "5월", width: 90 },
-  { field: "June", headerName: "6월", width: 90 },
-  { field: "July", headerName: "7월", width: 90 },
-  { field: "August", headerName: "8월", width: 90 },
-  { field: "September", headerName: "9월", width: 90 },
-  { field: "October", headerName: "10월", width: 90 },
-  { field: "November", headerName: "11월", width: 90 },
-  { field: "December", headerName: "12월", width: 90 },
+  { field: "January", headerName: "1월", width: 95 },
+  { field: "February", headerName: "2월", width: 95 },
+  { field: "March", headerName: "3월", width: 95 },
+  { field: "April", headerName: "4월", width: 95 },
+  { field: "May", headerName: "5월", width: 95 },
+  { field: "June", headerName: "6월", width: 95 },
+  { field: "July", headerName: "7월", width: 95 },
+  { field: "August", headerName: "8월", width: 95 },
+  { field: "September", headerName: "9월", width: 95 },
+  { field: "October", headerName: "10월", width: 95 },
+  { field: "November", headerName: "11월", width: 95 },
+  { field: "December", headerName: "12월", width: 95 },
   { field: "total", headerName: "합계", width: 100 }
 ];
 
@@ -62,7 +62,7 @@ const MonthTable = (props) => {
   return (
     <>
       <div className="panel-title" id="month_table">
-        <p className="font-size-20 grey-700">
+        <p className="font-size-20 grey-700 mb-5">
           {props.city_name} 최근 2년 월별 개·폐업 표
         </p>
         <span className="panel-desc">
