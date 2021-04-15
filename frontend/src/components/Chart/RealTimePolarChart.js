@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Polar } from "react-chartjs-2";
+import RealTimeCategoryEmpty from "../Table/RealTimeCategoryEmpty";
 
 const RealTimePolarChart = (props) => {
   const [data, setData] = useState({});
   const [options, setOptions] = useState({});
+  const [isEmpty, setIsEmpty] = useState(false);
 
   useEffect(() => {
+    setIsEmpty(false);
     let myLabels = [];
     let myData = [];
 
@@ -16,6 +19,9 @@ const RealTimePolarChart = (props) => {
       }
     });
     setDataAndOptions(myLabels, myData);
+    if (myData.length === 0) {
+      setIsEmpty(true);
+    }
   }, [props.data_list, props.tooltipTitle]);
 
   const setDataAndOptions = (myLabels, myData) => {
@@ -65,12 +71,18 @@ const RealTimePolarChart = (props) => {
 
   return (
     <>
-      <p className="text-center mb-5">
-        업종 라벨 클릭시
-        <br />
-        해당 항목이 추가/제거 됩니다.
-      </p>
-      <Polar data={data} options={options} width={510} height={320} />
+      {isEmpty ? (
+        <RealTimeCategoryEmpty />
+      ) : (
+        <>
+          <p className="text-center mb-5">
+            업종 라벨 클릭시
+            <br />
+            해당 항목이 추가/제거 됩니다.
+          </p>
+          <Polar data={data} options={options} width={510} height={320} />
+        </>
+      )}
     </>
   );
 };
