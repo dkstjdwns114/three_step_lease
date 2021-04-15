@@ -4,7 +4,6 @@ import { Polar } from "react-chartjs-2";
 const RealTimePolarChart = (props) => {
   const [data, setData] = useState({});
   const [options, setOptions] = useState({});
-  const [labelArr, setLabelArr] = useState({});
 
   useEffect(() => {
     let myLabels = [];
@@ -16,7 +15,6 @@ const RealTimePolarChart = (props) => {
         myData.push(info.count);
       }
     });
-    setLabelArr(myLabels);
     setDataAndOptions(myLabels, myData);
   }, [props.data_list, props.tooltipTitle]);
 
@@ -50,7 +48,7 @@ const RealTimePolarChart = (props) => {
           },
           label: (context) => {
             let label = " ";
-            labelArr.forEach((myLabel, idx) => {
+            myLabels.forEach((myLabel, idx) => {
               if (context.index === idx) {
                 label += myLabel + ": ";
               }
