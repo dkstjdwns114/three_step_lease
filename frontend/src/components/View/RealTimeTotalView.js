@@ -4,7 +4,7 @@ import RealTimeBarChart from "../Chart/RealTimeBarChart";
 const RealTimeTotalView = (props) => {
   return (
     <>
-      <div className="row pt-10 px-30">
+      <div className="row pt-10">
         <div className="col-xxl-12 col-lg-12 col-md-12 mb-50">
           <RealTimeBarChart
             one_days_ago={props.one_days_ago}
