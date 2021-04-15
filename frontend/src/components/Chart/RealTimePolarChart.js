@@ -65,7 +65,16 @@ const RealTimePolarChart = (props) => {
     });
   };
 
-  return <Polar data={data} options={options} width={510} height={320} />;
+  return (
+    <>
+      <p className="text-center mb-5">
+        업종 라벨 클릭시
+        <br />
+        해당 항목이 추가/제거 됩니다.
+      </p>
+      <Polar data={data} options={options} width={510} height={320} />
+    </>
+  );
 };
 
 export default RealTimePolarChart;

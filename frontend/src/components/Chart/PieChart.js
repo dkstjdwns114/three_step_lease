@@ -76,7 +76,16 @@ const PieChart = (props) => {
     });
   };
 
-  return <Pie data={data} options={options} width={120} height={120} />;
+  return (
+    <>
+      <p className="text-center mb-5">
+        업종 라벨 클릭시
+        <br />
+        해당 항목이 추가/제거 됩니다.
+      </p>
+      <Pie data={data} options={options} width={120} height={120} />
+    </>
+  );
 };
 
 export default PieChart;

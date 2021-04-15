@@ -113,6 +113,11 @@ const RealTimeBarChart = (props) => {
 
   return (
     <>
+      <p className="text-center mb-5">
+        개업/폐업 라벨 클릭시
+        <br />
+        해당 항목이 추가/제거 됩니다.
+      </p>
       <Bar data={resultData} options={myOptions} width={800} height={600} />
     </>
   );
