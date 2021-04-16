@@ -28,7 +28,7 @@
 
 6. 최근 2년간 모두 폐업 이력이 있는 상가 지도입니다.<br/>다운로드 링크 클릭시 해당 데이터가 CSV 파일로 다운로드됩니다.
 
-   ![최근2년같은주소및행정구역](./readmeImg/top10andMap.png)
+   ![같은주소지도](./readmeImg/sameAddressMap.png)
 
 ### 문서 구조
 
